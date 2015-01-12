@@ -3,9 +3,9 @@
 <head>
 
 	<meta charset="utf-8">
-    <title>People's Trust Insurance</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">	
+	<title>People's Trust Insurance</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">	
 	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,10 +22,10 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 	
@@ -40,28 +40,29 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 visible-lg visible-md">
-						<div class="text-sizing">
+						<div class="text-sizing push-down">
 						    Text Size
 							<i class="sm"><a href="#">A</a></i>
 							<i class="med"><a href="#">A</a></i>
 							<i class="lg"><a href="#">A</a></i>
 						</div>
 					</div>
-					<div class="col-md-2 col-sm-6 col-xs-12">
+					<div class="col-md-3 col-sm-6 col-xs-12">
 						<ul class="call-us">
-							<li>Give us a call: <strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong></li>
+							<li class="push-down">Give us a call: <strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong></li>
 						</ul>
 					</div>
-					<div class="col-md-3 col-md-sm-6 col-xs-12">
+					<div class="col-md-2 col-md-sm-6 col-xs-12">
 						<div class="sign-in policy">
-							<button class="visible-lg visible-md visible-sm btn btn-default" type="button">Policyholder Sign In</button>
+							<!-- hidden on xs screens -->
+							<button class="hidden-xs btn btn-dark" type="button">Policyholder Sign In</button>
 						</div>
 					</div>
-					<div class="col-md-3 col-md-sm-6 col-xs-12">
+					<div class="col-md-2 col-md-sm-6 col-xs-12">
 						<div class="sign-in agent">
-							<button class="visible-lg visible-md btn btn-default" type="button">Agent Sign In</button>
+							<button class="visible-lg visible-md btn btn-dark square" type="button">Agent Sign In</button>
 							<!-- get a quote link added & replaces agent sign in on md/sm/xs screen -->
-							<button class="visible-sm visible-xs btn btn-default" type="button">Get a Quote</button>
+							<button class="visible-sm visible-xs btn btn-dark square" type="button">Get a Quote</button>
 						</div>
 					</div>
 				</div><!-- Row end -->
@@ -81,12 +82,12 @@
 				    </button>
 				    <div class="navbar-brand">
 					    <a href="index.html" title="People's Trust Insurance">
-					    	<div class="logo"><img src="images/placeholder-logo.png"></div>
+					    	<div class="logo"><img rel="logo" src="images/placeholder-logo.png"></div>
 					    </a> 
 				    </div>                   
 				</div><!--/ Logo end -->
 
-				<nav class="collapse navbar-collapse navbar-right" role="navigation">
+				<nav class="collapse navbar-collapse" role="navigation">
 					<ul class="nav navbar-nav">
 						
 						<!-- About Us -->
@@ -180,10 +181,10 @@
 						</li>
 						<!-- Get a Quote, visible on lg,md, then collapses inside nav li -->
 						<li class="visible-lg visible-md quote">
-							<button class="btn btn-default" type="button">Get a Quote</button>
+							<button class="btn btn-default rounded quote push-down" type="button">Get a Quote</button>
 						</li>
-						<!-- TO DO: Search -->
-						<li class="visible-lg visible-md">
+						<!-- Search -->
+						<li class="hidden-xs search push-down">
 							<i class="fa fa-search fa-2x"></i>
 						</li>
 						
@@ -227,15 +228,22 @@
 					<div class="footer-left">
 						<h3 class="footer-title">Our Story</h3>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<!-- SOCIAL MEDIA LINKS -->
+						<div class="footer-social">
+							<a class="fb" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+							<a class="gp" href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
+							<a class="tw" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+							<a class="yt" href="#" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+						</div>
 					</div><!--/ end footer-left -->
 				</div>
 				
-				<div class="col-md-6 col-sm-6">
-					<div class="footer-about-us">
+				<div class="col-md-6 col-sm-6 border-left">
+					<div class="footer-right">
 						<!-- NESTED COLUMNS -->
 						<div class="row">
 							<div class="col-md-4 col-sm-4">
-								<div class="footer-right">
+								<div class="footer-policyholders">
 									<h5 class="footer-title">Policyholders</h5>
 										<ul class="footer" role="menu">
 								        	<li><a href="#">Sign In</a></li>
@@ -246,8 +254,8 @@
 							            </ul>
 								</div><!--/ end footer-policyholders -->
 							</div>
-							<div class="col-md-4 col-sm-4">
-								<div class="footer-about-us">
+							<div class="col-md-4 col-sm-4 border-left">
+								<div class="footer-insurance-choices">
 									<h5 class="footer-title">Insurance Choices</h5>
 										<ul class="footer" role="menu">
 							                <li><a href="#">Homeowner's Insurance</a></li>
@@ -257,7 +265,7 @@
 							            </ul>
 								</div><!--/ end footer-insurance-choices -->
 							</div>
-							<div class="col-md-4 col-sm-4">
+							<div class="col-md-4 col-sm-4 border-left">
 								<div class="footer-company-info">
 									<h5 class="footer-title">Company Info</h5>
 										<ul class="footer" role="menu">
@@ -271,11 +279,22 @@
 							                <li><a href="#">Terms of Use</a></li>
 							            </ul>
 								</div><!--/ end footer-company-info -->
-							</div>
-						</div>
+							</div><!--/ end col -->
+						</div><!-- Row end -->
 						<!-- NESTED COLUMNS -->
+						<div class="col-md-7 col-sm-6 footer-address">
+							<address>
+								<p>People's Trust Insurance</p>
+								<p>18 People's Trust Way</p>
+								<p>Deerfield Beach, FL 33441-6270</p>
+							</address>
+						</div>
+						<div class="col-md-5 col-sm-6 footer-ph">
+							<p>Give Us a Call</p>
+							<p><a href="tel:1-888-524-6003"><strong>1-888-524-6003</strong></a></p>
+						</div>
 					</div><!--/ end footer-right -->
-				</div>
+				</div><!--/ end col -->
 			</div><!-- Row end -->
 		</div><!-- Container end -->
 	</footer>

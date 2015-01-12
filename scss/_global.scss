@@ -21,7 +21,9 @@ body{
 	position: relative;
 	overflow: hidden;
 }
-
+a {
+	transition: all 350ms;
+}
 a:link,
 a:visited{
     text-decoration: none;

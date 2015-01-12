@@ -6435,6 +6435,9 @@ body {
   position: relative;
   overflow: hidden; }
 
+a {
+  transition: all 350ms; }
+
 a:link,
 a:visited {
   text-decoration: none; }
@@ -6809,7 +6812,6 @@ footer {
   text-align: center;
   color: white;
   display: inline-block;
-  transition: all 350ms;
   padding: 8px; }
 
 .footer-social a.fb {

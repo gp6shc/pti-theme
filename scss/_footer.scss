@@ -1,0 +1,107 @@
+/* Footer Styles
+================================================== */
+/* Footer
+================================================== */
+footer {
+	position: relative;
+	padding: 40px 0;
+	color: white;
+	background: $brand-blue;
+	z-index: 99;
+	
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	li a {
+		color: white;
+	}
+	
+}
+
+.footer-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.footer-social a {
+	background: #050505;
+	width: 42px;
+	height: 44px;
+	line-height: 42px;
+	margin-right: 10px;
+	text-align: center;
+	color: white;
+	display: inline-block;
+	transition: all 350ms;
+	padding: 8px;
+	
+}
+	
+.footer-social a.fb {
+	background: $facebook;
+	
+	&:hover {
+		background: darken($facebook,7%);
+	}
+	
+}
+
+.footer-social a.gp {
+	background: $gplus;
+	
+	&:hover {
+		background: darken($gplus,7%);
+	}
+	
+}
+
+.footer-social a.tw {
+	background: $twitter;
+	
+	&:hover {
+		background: darken($twitter,7%);
+	}
+}
+
+.footer-social a.yt {
+	background: $youtube;
+	
+	&:hover {
+		background: darken($youtube,7%);
+	}
+	
+}
+
+
+/* Copyright Section, #copyright, below footer
+================================================== */
+#copyright {
+	position: relative;
+	padding: 60px 0 0 0; //remove bottom padding
+	background: $brand-blue;
+	z-index: 99;
+}
+
+#top {
+    text-align: center;
+    background: transparent;
+    color: white;
+    padding-top: 20px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    
+    &.active {
+        opacity: 1;
+        transition: all .5s ease-in-out;
+    }
+        
+    a i {
+	    background: lighten($brand-blue,7%);
+	    color: white;
+	    padding: 5px 15px;
+    }
+    
+}

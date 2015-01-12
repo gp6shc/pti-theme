@@ -6737,12 +6737,12 @@ ul.navbar-nav > li > a i {
 /* Section 2: #quote
 ================================================== */
 #quote {
-  background: #222; }
+  background: #ccc; }
 
 /* Section 3: #about
 ================================================== */
 #about {
-  background: #333; }
+  background: white; }
 
 /* Section 4: #slideshow
 ================================================== */

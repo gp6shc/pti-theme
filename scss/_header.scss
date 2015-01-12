@@ -154,7 +154,7 @@ ul.navbar-nav > li:last-child a{
 
 ul.navbar-nav > li.active > a,
 ul.navbar-nav > li > a:hover{
-
+	color: $brand-black;
 }
 
 ul.navbar-nav > li > a i{
@@ -183,8 +183,8 @@ ul.navbar-nav > li > a i{
 		margin-right: auto;
 		margin-bottom: 0;
 		margin-top: 20px;
-		background: #fff;
-		background-color: rgba(255,255,255,0.95);
+		background: white;
+		background-color: $brand-blue;
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
 	}
 }

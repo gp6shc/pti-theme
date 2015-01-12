@@ -6656,6 +6656,10 @@ ul.navbar-nav > li > a {
 ul.navbar-nav > li:last-child a {
   padding-right: 0; }
 
+ul.navbar-nav > li.active > a,
+ul.navbar-nav > li > a:hover {
+  color: #333; }
+
 ul.navbar-nav > li > a i {
   font-weight: 700; }
 
@@ -6679,8 +6683,8 @@ ul.navbar-nav > li > a i {
     margin-right: auto;
     margin-bottom: 0;
     margin-top: 20px;
-    background: #fff;
-    background-color: rgba(255, 255, 255, 0.95);
+    background: white;
+    background-color: #005dbc;
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
 
 .dropdown-menu > ul > li > a {
@@ -6896,7 +6900,7 @@ footer {
       padding: 0 10px; }
 
   .navbar-collapse {
-    background: #333;
+    background: #005dbc;
     margin-top: 10px; }
 
   .navbar-collapse ul.navbar-nav > li > a {

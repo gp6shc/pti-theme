@@ -8,8 +8,7 @@ custom events
 	 /* ----------------------------------------------------------- */
 	 /*  Fixed header
 	 /* ----------------------------------------------------------- */
-
-		(function() {
+	 (function() {
 				
 				var docElem = document.documentElement,
 					didScroll = false,

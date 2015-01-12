@@ -28,6 +28,7 @@ footer {
 
 .footer-title {
 	font-size: 20px;
+	margin-top: -2px;
 	margin-bottom: 20px;
 }
 
@@ -82,8 +83,16 @@ footer {
 	
 }
 
+.border-left {
+	border-left: 2px solid $brand-black;
+}
+
 .footer-social, .footer-address, .footer-ph {
 	padding-top: 60px;
+}
+
+.footer-address, .footer-ph {
+	padding-left: 0;
 }
 
 .footer-ph {
@@ -100,6 +109,7 @@ footer {
 #copyright {
 	position: relative;
 	padding: 60px 0 0 0; //remove bottom padding
+	color: white;
 	background: $brand-blue;
 	z-index: 99;
 }

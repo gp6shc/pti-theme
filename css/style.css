@@ -6774,6 +6774,20 @@ ul.navbar-nav > li > a i {
 #academy {
   background: #999; }
 
+/* Footer
+================================================== */
+footer {
+  position: relative;
+  background: #005dbc;
+  z-index: 99; }
+
+/* Section 10: #copyright - below footer
+================================================== */
+#copyright {
+  position: relative;
+  background: #005dbc;
+  z-index: 99; }
+
 /* Responsive Styles
 ================================================== */
 /* 1200 and above */

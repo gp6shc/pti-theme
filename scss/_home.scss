@@ -77,3 +77,19 @@
 #academy{
 	background: #999;
 }
+
+/* Footer
+================================================== */
+footer{
+	position: relative;
+	background: $brand-blue;
+	z-index: 99;
+}
+
+/* Section 10: #copyright - below footer
+================================================== */
+#copyright{
+	position: relative;
+	background: $brand-blue;
+	z-index: 99;
+}

@@ -6779,14 +6779,60 @@ ul.navbar-nav > li > a i {
 #academy {
   background: #999; }
 
+/* Footer Styles
+================================================== */
 /* Footer
 ================================================== */
 footer {
   position: relative;
+  padding: 40px 0;
+  color: white;
   background: #005dbc;
   z-index: 99; }
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  footer li a {
+    color: white; }
 
-/* Section 10: #copyright - below footer
+.footer-title {
+  font-size: 20px;
+  margin-bottom: 20px; }
+
+.footer-social a {
+  background: #050505;
+  width: 42px;
+  height: 44px;
+  line-height: 42px;
+  margin-right: 10px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  transition: all 350ms;
+  padding: 8px; }
+
+.footer-social a.fb {
+  background: #48649f; }
+  .footer-social a.fb:hover {
+    background: #3d5586; }
+
+.footer-social a.gp {
+  background: #dd4b39; }
+  .footer-social a.gp:hover {
+    background: #cf3624; }
+
+.footer-social a.tw {
+  background: #55acee; }
+  .footer-social a.tw:hover {
+    background: #359ceb; }
+
+.footer-social a.yt {
+  background: #cc181e; }
+  .footer-social a.yt:hover {
+    background: #ac1419; }
+
+/* Copyright Section, #copyright, below footer
 ================================================== */
 #copyright {
   position: relative;

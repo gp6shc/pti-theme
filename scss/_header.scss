@@ -38,6 +38,10 @@ header {
 	color: white;
 }
 
+.push-down {
+	margin-top: 5px;
+}
+
 .text-sizing{
 	display: inline-block;
 	
@@ -63,7 +67,6 @@ ul.call-us{
 	li {
 		float: left;
 		font-size: 12px;
-		margin-top: 8px;
 		margin-left: 10px;
 		font-weight: 700;	
 	}
@@ -71,15 +74,13 @@ ul.call-us{
 
 .sign-in{
 	float: right;
-	margin-top: 5px;
 	
 	.policy {
-		
 	}
 	
 	.agent {
-		
 	}
+	
 }
 
 /* Navbar: main navigation below top-bar
@@ -94,6 +95,7 @@ ul.call-us{
 		padding-bottom: 20px;
 		transition: padding .6s;
 	}
+	
 }
 
 .navbar-header{
@@ -183,7 +185,6 @@ ul.navbar-nav > li > a i{
 		margin-right: auto;
 		margin-bottom: 0;
 		margin-top: 20px;
-		background: white;
 		background-color: $brand-blue;
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
 	}
@@ -196,7 +197,7 @@ ul.navbar-nav > li > a i{
 	line-height: normal;
 	text-decoration: none;
 	padding: 15px;
-	color: #333;
+	color: white;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	
 }
@@ -235,4 +236,16 @@ ul.navbar-nav > li > a i{
 	
 }
 
+/* Get a Quote */
+button.quote {
+	margin-left: 60px;
+}
+/* button styling located in _global.scss */
+	
+
+
 /* Search */
+.search {
+	padding: 5px 20px;
+	color: white;
+}

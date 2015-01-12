@@ -3,9 +3,9 @@
 <head>
 
 	<meta charset="utf-8">
-    <title>People's Trust Insurance</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">	
+	<title>People's Trust Insurance</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">	
 	<meta name="author" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -22,10 +22,10 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 	
@@ -40,7 +40,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 visible-lg visible-md">
-						<div class="text-sizing">
+						<div class="text-sizing push-down">
 						    Text Size
 							<i class="sm"><a href="#">A</a></i>
 							<i class="med"><a href="#">A</a></i>
@@ -49,19 +49,20 @@
 					</div>
 					<div class="col-md-2 col-sm-6 col-xs-12">
 						<ul class="call-us">
-							<li>Give us a call: <strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong></li>
+							<li class="push-down">Give us a call: <strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-md-sm-6 col-xs-12">
 						<div class="sign-in policy">
-							<button class="visible-lg visible-md visible-sm btn btn-default" type="button">Policyholder Sign In</button>
+							<!-- hidden on xs screens -->
+							<button class="hidden-xs btn btn-dark" type="button">Policyholder Sign In</button>
 						</div>
 					</div>
 					<div class="col-md-3 col-md-sm-6 col-xs-12">
 						<div class="sign-in agent">
-							<button class="visible-lg visible-md btn btn-default" type="button">Agent Sign In</button>
+							<button class="visible-lg visible-md btn btn-dark square" type="button">Agent Sign In</button>
 							<!-- get a quote link added & replaces agent sign in on md/sm/xs screen -->
-							<button class="visible-sm visible-xs btn btn-default" type="button">Get a Quote</button>
+							<button class="visible-sm visible-xs btn btn-dark square" type="button">Get a Quote</button>
 						</div>
 					</div>
 				</div><!-- Row end -->
@@ -81,12 +82,12 @@
 				    </button>
 				    <div class="navbar-brand">
 					    <a href="index.html" title="People's Trust Insurance">
-					    	<div class="logo"><img src="images/placeholder-logo.png"></div>
+					    	<div class="logo"><img rel="logo" src="images/placeholder-logo.png"></div>
 					    </a> 
 				    </div>                   
 				</div><!--/ Logo end -->
 
-				<nav class="collapse navbar-collapse navbar-right" role="navigation">
+				<nav class="collapse navbar-collapse" role="navigation">
 					<ul class="nav navbar-nav">
 						
 						<!-- About Us -->
@@ -180,10 +181,10 @@
 						</li>
 						<!-- Get a Quote, visible on lg,md, then collapses inside nav li -->
 						<li class="visible-lg visible-md quote">
-							<button class="btn btn-default" type="button">Get a Quote</button>
+							<button class="btn btn-default rounded quote" type="button">Get a Quote</button>
 						</li>
-						<!-- TO DO: Search -->
-						<li class="visible-lg visible-md">
+						<!-- Search -->
+						<li class="hidden-xs search">
 							<i class="fa fa-search fa-2x"></i>
 						</li>
 						

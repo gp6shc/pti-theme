@@ -135,26 +135,41 @@ img.pull-right, .pull-right > img {
 }
 
 /* Buttons */
-
-.btn.btn-default{
-	background: #333;
-	color: #fff;
-}
-
-.btn.btn-primary, .readmore, input[type="submit"], button {
-	padding: 6px 15px;
-	text-transform: uppercase;
-	border: 2px solid transparent !important;
+.btn {
 	display: inline-block;
+	text-transform: uppercase;
+	border: 0;
 	text-shadow: none;
 	box-shadow: none;
 	background-image: none;
-	border-radius: 2px;
-	transition: all .5s;
+}
+/* Get a Quote (in header) will be used as .btn-default */
+.btn.btn-default {
+	padding: 6px 15px;
+	background: $brand-green;
+	color: white;
+	
+	&:hover {
+		color: darken (white,7%);
+		background: darken($brand-green,7%);
+	}
 }
 
-.btn.btn-primary:hover, 
-.readmore:hover, input[type="submit"]:hover{
-	text-shadow: none;
-	background: none!important;
+.btn.btn-dark {
+	padding: 6px 15px;
+	background: darken($brand-black,3%);
+	color: white;
+	
+	&:hover {
+		color: darken (white,7%);
+		background: darken($brand-black,10%);
+	}
+}
+
+.square {
+	border-radius: 0;
+}
+
+.rounded {
+	border-radius: 5px;
 }

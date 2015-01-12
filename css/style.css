@@ -6528,25 +6528,36 @@ img.pull-right, .pull-right > img {
   border: 1px solid #e7e7e7; }
 
 /* Buttons */
-.btn.btn-default {
-  background: #333;
-  color: #fff; }
-
-.btn.btn-primary, .readmore, input[type="submit"], button {
-  padding: 6px 15px;
-  text-transform: uppercase;
-  border: 2px solid transparent !important;
+.btn {
   display: inline-block;
+  text-transform: uppercase;
+  border: 0;
   text-shadow: none;
   box-shadow: none;
-  background-image: none;
-  border-radius: 2px;
-  transition: all .5s; }
+  background-image: none; }
 
-.btn.btn-primary:hover,
-.readmore:hover, input[type="submit"]:hover {
-  text-shadow: none;
-  background: none !important; }
+/* Get a Quote (in header) will be used as .btn-default */
+.btn.btn-default {
+  padding: 6px 15px;
+  background: #00ab71;
+  color: white; }
+  .btn.btn-default:hover {
+    color: darken white, 7%;
+    background: #008759; }
+
+.btn.btn-dark {
+  padding: 6px 15px;
+  background: #2b2b2b;
+  color: white; }
+  .btn.btn-dark:hover {
+    color: darken white, 7%;
+    background: #1a1a1a; }
+
+.square {
+  border-radius: 0; }
+
+.rounded {
+  border-radius: 5px; }
 
 /* Header 
 ================================================== */
@@ -6580,6 +6591,9 @@ header {
   background: #333;
   color: white; }
 
+.push-down {
+  margin-top: 5px; }
+
 .text-sizing {
   display: inline-block; }
   .text-sizing i.sm {
@@ -6596,13 +6610,11 @@ ul.call-us {
   ul.call-us li {
     float: left;
     font-size: 12px;
-    margin-top: 8px;
     margin-left: 10px;
     font-weight: 700; }
 
 .sign-in {
-  float: right;
-  margin-top: 5px; }
+  float: right; }
 
 /* Navbar: main navigation below top-bar
 ================================================== */
@@ -6683,7 +6695,6 @@ ul.navbar-nav > li > a i {
     margin-right: auto;
     margin-bottom: 0;
     margin-top: 20px;
-    background: white;
     background-color: #005dbc;
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
 
@@ -6694,7 +6705,7 @@ ul.navbar-nav > li > a i {
   line-height: normal;
   text-decoration: none;
   padding: 15px;
-  color: #333;
+  color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .dropdown-menu > ul > li:last-child > a {
@@ -6717,7 +6728,16 @@ ul.navbar-nav > li > a i {
       margin-top: 4px;
       padding: 20px; }
 
+/* Get a Quote */
+button.quote {
+  margin-left: 60px; }
+
+/* button styling located in _global.scss */
 /* Search */
+.search {
+  padding: 5px 20px;
+  color: white; }
+
 /* Homepage Styles
 ================================================== */
 /* Section 1: #video

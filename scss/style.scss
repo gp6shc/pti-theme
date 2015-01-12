@@ -1,0 +1,33 @@
+/* 
+Stylesheet Name: style.css
+Description: framework uses Bootstrap 3 and Sass to comiple to "css/style.css"
+Author: SMG
+*/
+
+/* variables
+-------------------------------------------------------------- */
+//brand colors
+$brand-blue: #005dbc; //ex. - nav bar background color
+$brand-green: #00ab71; //get a quote button background color
+$brand-black: #333; //ex. - topbar background color
+
+//element colors
+$nav-grey: #333;
+$text-grey: #ddd;
+
+//fonts (add in when determinded)
+$font-body: Helvetica,Arial,sans-serif;
+$font-heading: Helvetica,Arial,sans-serif;
+
+/* imports
+-------------------------------------------------------------- */
+// Vendors
+@import "bootstrap";
+@import "font-awesome";
+// Base
+@import "global"; //typography, body, headings
+@import "header"; //header + nav
+@import "home"; //homepage, broken out into sections
+//@import "footer";
+// Responsive
+@import "responsive"; 

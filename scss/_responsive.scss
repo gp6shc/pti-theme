@@ -1,0 +1,106 @@
+/* Responsive Styles
+================================================== */
+$screen-lg: 1200px;
+$screen-md: 992px; 
+$screen-sm: 768px; 
+$screen-xs: 480px; 
+
+/* 1200 and above */
+@media (min-width: $screen-lg) {
+
+}
+
+/* Above 992 */
+@media (min-width: $screen-md) {
+
+}
+
+/* 768 and above: nav collapse */
+@media (min-width: $screen-sm) {
+
+	.container {
+		max-width: 1170px; //override bootstrap default
+	}
+	
+}
+
+/* Below 768: nav collapse */
+@media (max-width: $screen-sm) {
+
+	.navbar-brand {
+		padding: 6px 15px 0;
+		margin-bottom: -5px;
+	}
+	
+	.navbar-brand .logo {
+		width: 175px;
+		height: 50px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.pti .container {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	.navbar-nav {
+		margin: 7.5px 0;
+			
+		li > a {
+			padding: 0 10px;
+		}
+		
+	}
+	
+	.navbar-collapse{
+		background: $brand-black;
+		margin-top: 10px;
+	}
+
+	.navbar-collapse ul.navbar-nav > li > a{
+		color: white;
+	}
+	
+	.dropdown-menu{
+		top: 0;
+		padding: 0!important;
+		
+		ul {
+			margin: 0;
+			background: none;
+			border: 0;
+			box-shadow: none;
+		}
+		
+		li a {
+			color: white!important;
+		}
+		
+		&:hover, &:focus, .active {
+			color: white!important;
+		}
+		
+	}
+	
+	.nav > li.megamenu .dropdown-menu {
+		margin-top: 0;
+		padding: 0px 20px!important;
+		
+		ul {
+			padding: 0;
+		}
+	}
+	
+
+}
+
+/* 480 and above */
+@media (min-width: $screen-xs) {
+}
+
+/* Images and Media */
+img {
+	width: 100%!important;
+	height: auto!important;
+}

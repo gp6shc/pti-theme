@@ -1,0 +1,152 @@
+/* Global styles
+================================================== */
+html{
+	overflow-x: hidden !important;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	color: #333333;
+	background: #fff;
+}
+
+.body-inner{
+	position: relative;
+	overflow: hidden;
+}
+
+a:link,
+a:visited{
+    text-decoration: none;
+}
+
+
+a:hover{
+	text-decoration: none;
+	color: #000;
+}
+
+
+/* Typography
+================================================== */
+
+body, p{
+	font-family: 'Source Sans Pro';
+	font-weight: 400; 
+	font-size: 14px;
+	line-height: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Droid Serif', serif;
+}
+
+h1{
+    font-size: 36px;
+    line-height: 48px;
+}
+
+h2{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+h5{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Content */
+section{
+	padding: 60px 0;
+	position: relative;
+}
+.center {
+	text-align: center;
+}
+.no-padding{
+	padding: 0;
+}
+
+.gap-80 {
+	clear: both;
+	height: 80px;
+}
+
+.gap-40 {
+	clear: both;
+	height: 40px;
+}
+
+.gap-30 {
+	clear: both;
+	height: 30px;
+}
+.gap-20 {
+	clear: both;
+	height: 20px;
+}
+
+a:focus{
+	outline: 0;
+}
+
+img.pull-left, .pull-left > img {
+	margin-right: 15px !important;
+}
+
+img.pull-right, .pull-right > img {
+	margin-left: 15px !important;
+}
+
+.img-thumbnail {
+	padding: 5px;
+	background: #f2f2f2;
+	margin: 5px 15px 5px 0;
+	border: 1px solid #e7e7e7;
+}
+
+/* Buttons */
+
+.btn.btn-default{
+	background: #333;
+	color: #fff;
+}
+
+.btn.btn-primary, .readmore, input[type="submit"], button {
+	padding: 6px 15px;
+	text-transform: uppercase;
+	border: 2px solid transparent !important;
+	display: inline-block;
+	text-shadow: none;
+	box-shadow: none;
+	background-image: none;
+	border-radius: 2px;
+	transition: all .5s;
+}
+
+.btn.btn-primary:hover, 
+.readmore:hover, input[type="submit"]:hover{
+	text-shadow: none;
+	background: none!important;
+}

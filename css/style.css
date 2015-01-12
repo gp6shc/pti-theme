@@ -6590,6 +6590,8 @@ header {
   padding: 0;
   background: #333;
   color: white; }
+  #top-bar .container {
+    max-width: 1200px; }
 
 .push-down {
   margin-top: 5px; }
@@ -6609,12 +6611,10 @@ ul.call-us {
   padding: 0; }
   ul.call-us li {
     float: left;
-    font-size: 12px;
-    margin-left: 10px;
     font-weight: 700; }
 
 .sign-in {
-  float: right; }
+  float: none; }
 
 /* Navbar: main navigation below top-bar
 ================================================== */
@@ -6901,7 +6901,10 @@ footer {
 /* Responsive Styles
 ================================================== */
 /* 1200 and above */
-/* Above 992 */
+/* Below 992 */
+@media (max-width: 992px) {
+  .sign-in {
+    float: right; } }
 /* 768 and above: nav collapse */
 @media (min-width: 768px) {
   .container {

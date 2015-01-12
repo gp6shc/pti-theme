@@ -36,6 +36,11 @@ header {
 	padding: 0;
 	background: $brand-black;
 	color: white;
+	
+	.container {
+		max-width: 1200px; //remove default container width, per design
+	}
+	
 }
 
 .push-down {
@@ -66,14 +71,12 @@ ul.call-us{
 	
 	li {
 		float: left;
-		font-size: 12px;
-		margin-left: 10px;
 		font-weight: 700;	
 	}
 }
 
 .sign-in{
-	float: right;
+	float: none;
 	
 	.policy {
 	}

@@ -12,7 +12,7 @@ custom events
 				
 				var docElem = document.documentElement,
 					didScroll = false,
-					changeHeaderOn = 500; //when scrolled > #video section height
+					changeHeaderOn = 100; //when scrolled > x
 					document.querySelector( 'header' );
 					
 				function init() {

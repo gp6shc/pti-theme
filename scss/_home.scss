@@ -1,16 +1,79 @@
 /* Homepage Styles
 ================================================== */
-/* Section 1: #better-way
+/* Section 1: #video
 ================================================== */
-#better-way {
-	
+#video {
+	margin-top: 95px;
+	background: red;
+	height: 500px;
 }
-.top-gap{
-	margin-top: 160px;
+.video-wrapper {	
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	color: black;
+	
+	video {
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	    width: 100%;
+	    height: auto;
+	    min-width: 100%;
+	    min-height: 100%;
+	    z-index: -1000;
+	}
+
 }
 
 /* Section 2: #quote
 ================================================== */
 #quote {
-	background: #ccc;
+	background: #222;
+}
+
+/* Section 3: #about
+================================================== */
+#about {
+	background: #333;
+}
+
+/* Section 4: #slideshow
+================================================== */
+#slideshow {
+	background: #444;
+}
+
+/* Section 5: #customers
+================================================== */
+#customers {
+	background: #555;
+}
+
+/* Section 6: #ceo
+================================================== */
+#ceo {
+	background: #666;
+}
+
+/* Section 7: #family
+================================================== */
+#family {
+	background: #777;
+}
+
+/* Section 8: #emergency
+================================================== */
+#emergency {
+	background: #888;
+}
+
+/* Section 9: #academy
+================================================== */
+#academy{
+	background: #999;
 }

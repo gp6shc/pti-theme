@@ -6792,6 +6792,9 @@ footer {
   color: white;
   background: #005dbc;
   z-index: 99; }
+  footer .container {
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px; }
   footer ul {
     list-style: none;
     margin: 0;
@@ -6833,6 +6836,12 @@ footer {
   background: #cc181e; }
   .footer-social a.yt:hover {
     background: #ac1419; }
+
+.footer-social, .footer-address, .footer-ph {
+  padding-top: 60px; }
+
+.footer-ph a {
+  color: white; }
 
 /* Copyright Section, #copyright, below footer
 ================================================== */

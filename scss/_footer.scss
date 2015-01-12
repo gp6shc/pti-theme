@@ -9,6 +9,11 @@ footer {
 	background: $brand-blue;
 	z-index: 99;
 	
+	.container {
+		border-bottom: 2px solid $brand-black;
+		padding-bottom: 20px;
+	}
+	
 	ul {
 		list-style: none;
 		margin: 0;
@@ -24,6 +29,9 @@ footer {
 .footer-title {
 	font-size: 20px;
 	margin-bottom: 20px;
+}
+
+.footer-social {
 }
 
 .footer-social a {
@@ -72,6 +80,18 @@ footer {
 		background: darken($youtube,7%);
 	}
 	
+}
+
+.footer-social, .footer-address, .footer-ph {
+	padding-top: 60px;
+}
+
+.footer-ph {
+	
+	a {
+		color: white;
+	}
+
 }
 
 

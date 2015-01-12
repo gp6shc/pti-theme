@@ -6712,7 +6712,7 @@ ul.navbar-nav > li > a i {
 ================================================== */
 #video {
   margin-top: 95px;
-  background: red;
+  background: #333;
   height: 500px; }
 
 .video-wrapper {
@@ -6787,6 +6787,21 @@ footer {
   position: relative;
   background: #005dbc;
   z-index: 99; }
+
+#top {
+  text-align: center;
+  background: transparent;
+  color: white;
+  padding: 20px;
+  opacity: 0;
+  transition: all .5s ease-in-out; }
+  #top.active {
+    opacity: 1;
+    transition: all .5s ease-in-out; }
+  #top i {
+    background: #006fe0;
+    color: white;
+    padding: 5px 15px; }
 
 /* Responsive Styles
 ================================================== */

@@ -90,6 +90,7 @@ footer {
 ================================================== */
 #copyright {
 	position: relative;
+	padding: 60px 0 0 0; //remove bottom padding
 	background: $brand-blue;
 	z-index: 99;
 }
@@ -98,7 +99,7 @@ footer {
     text-align: center;
     background: transparent;
     color: white;
-    padding: 20px;
+    padding-top: 20px;
     opacity: 0;
     transition: all .5s ease-in-out;
     
@@ -107,7 +108,7 @@ footer {
         transition: all .5s ease-in-out;
     }
     
-    i {
+    a i {
 	    background: lighten($brand-blue,7%);
 	    color: white;
 	    padding: 5px 15px;

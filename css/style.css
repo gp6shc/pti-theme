@@ -6488,6 +6488,11 @@ section {
 .no-padding {
   padding: 0; }
 
+.top-gap {
+  position: relative;
+  margin-top: 130px;
+  padding: 20px 0; }
+
 .gap-80 {
   clear: both;
   height: 80px; }
@@ -6785,6 +6790,7 @@ footer {
 ================================================== */
 #copyright {
   position: relative;
+  padding: 60px 0 0 0;
   background: #005dbc;
   z-index: 99; }
 
@@ -6792,13 +6798,13 @@ footer {
   text-align: center;
   background: transparent;
   color: white;
-  padding: 20px;
+  padding-top: 20px;
   opacity: 0;
   transition: all .5s ease-in-out; }
   #top.active {
     opacity: 1;
     transition: all .5s ease-in-out; }
-  #top i {
+  #top a i {
     background: #006fe0;
     color: white;
     padding: 5px 15px; }

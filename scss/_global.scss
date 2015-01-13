@@ -83,17 +83,21 @@ h5{
 	color: $secondary-blue;
 	border: none;
 }
+.read-more {
+	color: $brand-green;
+}
 
 /* Content */
 section{
 	padding: 60px 0;
 	position: relative;
 }
+.full-width { //use as a container class to remove max-width & padding
+	max-width: 100%!important;
+	padding: 0;
+}
 .center {
 	text-align: center;
-}
-.read-more {
-	color: $brand-green;
 }
 .no-padding{
 	padding: 0;

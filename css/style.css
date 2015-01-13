@@ -6478,16 +6478,20 @@ h5 {
   color: #0780E2;
   border: none; }
 
+.read-more {
+  color: #00AA71; }
+
 /* Content */
 section {
   padding: 60px 0;
   position: relative; }
 
+.full-width {
+  max-width: 100% !important;
+  padding: 0; }
+
 .center {
   text-align: center; }
-
-.read-more {
-  color: #00AA71; }
 
 .no-padding {
   padding: 0; }
@@ -6816,7 +6820,11 @@ button.quote {
 /* Section 7: #family
 ================================================== */
 #family {
-  background: #777; }
+  background: #EAEBEC;
+  /*.full-width {
+  	max-width: 100%;
+  	padding: 0;
+  }*/ }
 
 /* Section 8: #emergency
 ================================================== */
@@ -6825,6 +6833,20 @@ button.quote {
   text-align: center; }
   #emergency img {
     border-radius: 50%; }
+
+.carousel-control {
+  background: transparent !important; }
+  .carousel-control i {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 5; }
+
+.carousel-control.left {
+  left: 10%; }
+
+.carousel-control.right {
+  right: 10%; }
 
 /* Section 9: #academy
 ================================================== */

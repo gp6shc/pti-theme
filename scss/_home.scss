@@ -77,7 +77,13 @@
 /* Section 7: #family
 ================================================== */
 #family {
-	background: #777;
+	background: $brand-white;
+	
+	/*.full-width {
+		max-width: 100%;
+		padding: 0;
+	}*/
+	
 }
 
 /* Section 8: #emergency
@@ -89,7 +95,25 @@
 	img {
 		border-radius: 50%;
 	}
+
+}
+.carousel-control {
+	background: transparent!important;
 	
+	i {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		z-index: 5;
+	}
+		
+}
+
+.carousel-control.left {
+	left: 10%;
+}
+.carousel-control.right {
+	right: 10%;
 }
 
 /* Section 9: #academy

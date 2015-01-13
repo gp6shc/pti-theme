@@ -23,7 +23,7 @@ $screen-xs: 480px;
 @media (min-width: $screen-sm) {
 
 	.container {
-		max-width: 1170px; //override bootstrap default
+		max-width: 1060px; //override bootstrap default
 	}
 	
 }
@@ -58,7 +58,7 @@ $screen-xs: 480px;
 	}
 	
 	.navbar-collapse{
-		background: $brand-blue;
+		background: $primary-blue;
 		margin-top: 10px;
 	}
 

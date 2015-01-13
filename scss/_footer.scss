@@ -6,7 +6,7 @@ footer {
 	position: relative;
 	padding: 40px 0;
 	color: white;
-	background: $brand-blue;
+	background: $primary-blue;
 	z-index: 99;
 	
 	.container {
@@ -110,7 +110,7 @@ footer {
 	position: relative;
 	padding: 60px 0 0 0; //remove bottom padding
 	color: white;
-	background: $brand-blue;
+	background: $primary-blue;
 	z-index: 99;
 }
 
@@ -128,7 +128,7 @@ footer {
     }
         
     a i {
-	    background: lighten($brand-blue,7%);
+	    background: lighten($primary-blue,7%);
 	    color: white;
 	    padding: 5px 15px;
     }

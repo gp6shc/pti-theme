@@ -8,16 +8,6 @@ Author: SMG
 -------------------------------------------------------------- */
 /* imports
 -------------------------------------------------------------- */
-/*!
- * Bootstrap v3.0.0
- *
- * Copyright 2013 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world by @mdo and @fat.
- */
-/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
 
@@ -6539,19 +6529,19 @@ img.pull-right, .pull-right > img {
 /* Get a Quote (in header) will be used as .btn-default */
 .btn.btn-default {
   padding: 6px 15px;
-  background: #00ab71;
+  background: #00AA71;
   color: white; }
   .btn.btn-default:hover {
     color: darken white, 7%;
-    background: #008759; }
+    background: #008659; }
 
 .btn.btn-dark {
   padding: 6px 15px;
-  background: #2b2b2b;
+  background: #2a292a;
   color: white; }
   .btn.btn-dark:hover {
     color: darken white, 7%;
-    background: #1a1a1a; }
+    background: #181818; }
 
 .square {
   border-radius: 0; }
@@ -6588,7 +6578,7 @@ header {
 ================================================== */
 #top-bar {
   padding: 0;
-  background: #333;
+  background: #323132;
   color: white; }
   #top-bar .container {
     max-width: 1200px; }
@@ -6621,7 +6611,7 @@ ul.call-us {
 .pti {
   position: relative;
   z-index: 1;
-  background: #005dbc; }
+  background: #005CBA; }
   .pti .container {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -6670,7 +6660,7 @@ ul.navbar-nav > li:last-child a {
 
 ul.navbar-nav > li.active > a,
 ul.navbar-nav > li > a:hover {
-  color: #333; }
+  color: #323132; }
 
 ul.navbar-nav > li > a i {
   font-weight: 700; }
@@ -6695,7 +6685,7 @@ ul.navbar-nav > li > a i {
     margin-right: auto;
     margin-bottom: 0;
     margin-top: 20px;
-    background-color: #005dbc;
+    background-color: #005CBA;
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
 
 .dropdown-menu > ul > li > a {
@@ -6744,7 +6734,7 @@ button.quote {
 ================================================== */
 #video {
   margin-top: 95px;
-  background: #333;
+  background: #323132;
   height: 500px; }
 
 .video-wrapper {
@@ -6814,10 +6804,10 @@ footer {
   position: relative;
   padding: 40px 0;
   color: white;
-  background: #005dbc;
+  background: #005CBA;
   z-index: 99; }
   footer .container {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #323132;
     padding-bottom: 20px; }
   footer ul {
     list-style: none;
@@ -6863,7 +6853,7 @@ footer {
     background: #ac1419; }
 
 .border-left {
-  border-left: 2px solid #333; }
+  border-left: 2px solid #323132; }
 
 .footer-social, .footer-address, .footer-ph {
   padding-top: 60px; }
@@ -6880,7 +6870,7 @@ footer {
   position: relative;
   padding: 60px 0 0 0;
   color: white;
-  background: #005dbc;
+  background: #005CBA;
   z-index: 99; }
 
 #top {
@@ -6894,7 +6884,7 @@ footer {
     opacity: 1;
     transition: all .5s ease-in-out; }
   #top a i {
-    background: #006fe0;
+    background: #006ede;
     color: white;
     padding: 5px 15px; }
 
@@ -6908,7 +6898,7 @@ footer {
 /* 768 and above: nav collapse */
 @media (min-width: 768px) {
   .container {
-    max-width: 1170px; } }
+    max-width: 1060px; } }
 /* Below 768: nav collapse */
 @media (max-width: 768px) {
   .navbar-brand {
@@ -6931,7 +6921,7 @@ footer {
       padding: 0 10px; }
 
   .navbar-collapse {
-    background: #005dbc;
+    background: #005CBA;
     margin-top: 10px; }
 
   .navbar-collapse ul.navbar-nav > li > a {

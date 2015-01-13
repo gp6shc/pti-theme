@@ -78,6 +78,12 @@ h5{
     line-height: 24px;
 }
 
+.page-header {
+	font-size: 44px;
+	color: $secondary-blue;
+	border: none;
+}
+
 /* Content */
 section{
 	padding: 60px 0;
@@ -136,7 +142,7 @@ img.pull-right, .pull-right > img {
 }
 
 /* highlight green button */
-.btn.btn-default, .btn.btn-green {
+.btn.btn-default, .btn.btn-primary, .btn.btn-green {
 	padding: 6px 15px;
 	background: $brand-green;
 	color: white;

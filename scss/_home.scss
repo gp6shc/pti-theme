@@ -33,7 +33,21 @@
 /* Section 2: #quote
 ================================================== */
 #quote {
-	background: #ccc;
+	background: $brand-white;
+	
+	h3 {
+		color: $brand-black;
+		font-weight: 300;
+	}
+	
+	h5 {
+		color: $secondary-blue;
+		font-weight: 300;
+	}
+	
+	form {
+		
+	}
 }
 
 /* Section 3: #about
@@ -75,5 +89,22 @@
 /* Section 9: #academy
 ================================================== */
 #academy {
-	background: #999;
+	background: white;
+	
+	.page-title {
+		
+	}
+	
+	.news {
+		
+	}
+	
+	.news-title {
+		color: $secondary-blue;
+	}
+	
+	.read-more {
+		color: $brand-green;
+	}
+	
 }

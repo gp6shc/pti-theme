@@ -36,6 +36,7 @@ header {
 	padding: 0;
 	background: $brand-black;
 	color: white;
+	font-family: $font-heading;
 	
 	.container {
 		max-width: 1200px; //remove default container width, per design
@@ -150,7 +151,7 @@ ul.navbar-nav > li > a{
 	color: white;
 	padding: 0 15px;
 	line-height: 46px;
-	font-family: $font-body;
+	font-family: $font-heading;
 }
 
 ul.navbar-nav > li:last-child a{

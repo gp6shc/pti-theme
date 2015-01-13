@@ -6442,7 +6442,7 @@ a:focus {
 /* Typography
 ================================================== */
 body, p {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Georgia, sans-serif, Arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.6em; }
@@ -6472,6 +6472,11 @@ h4 {
 h5 {
   font-size: 14px;
   line-height: 24px; }
+
+.page-header {
+  font-size: 44px;
+  color: #0780E2;
+  border: none; }
 
 /* Content */
 section {
@@ -6528,11 +6533,11 @@ img.pull-right, .pull-right > img {
   background-image: none; }
 
 /* highlight green button */
-.btn.btn-default, .btn.btn-green {
+.btn.btn-default, .btn.btn-primary, .btn.btn-green {
   padding: 6px 15px;
   background: #00AA71;
   color: white; }
-  .btn.btn-default:hover, .btn.btn-green:hover {
+  .btn.btn-default:hover, .btn.btn-primary:hover, .btn.btn-green:hover {
     color: darken white, 7%;
     background: #008659; }
 
@@ -6596,7 +6601,8 @@ header {
 #top-bar {
   padding: 0;
   background: #323132;
-  color: white; }
+  color: white;
+  font-family: Helvetica, Arial, sans-serif; }
   #top-bar .container {
     max-width: 1200px; }
 
@@ -6776,7 +6782,13 @@ button.quote {
 /* Section 2: #quote
 ================================================== */
 #quote {
-  background: #ccc; }
+  background: #EAEBEC; }
+  #quote h3 {
+    color: #323132;
+    font-weight: 300; }
+  #quote h5 {
+    color: #0780E2;
+    font-weight: 300; }
 
 /* Section 3: #about
 ================================================== */
@@ -6811,7 +6823,11 @@ button.quote {
 /* Section 9: #academy
 ================================================== */
 #academy {
-  background: #999; }
+  background: white; }
+  #academy .news-title {
+    color: #0780E2; }
+  #academy .read-more {
+    color: #00AA71; }
 
 /* Footer Styles
 ================================================== */

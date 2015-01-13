@@ -6418,8 +6418,8 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
-  color: #333333;
-  background: #fff; }
+  color: #323132;
+  background: white; }
 
 .body-inner {
   position: relative;
@@ -6434,18 +6434,21 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #000; }
+  color: #323132; }
+
+a:focus {
+  outline: 0; }
 
 /* Typography
 ================================================== */
 body, p {
-  font-family: 'Source Sans Pro';
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.6em; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Droid Serif', serif; }
+  font-family: Helvetica, Arial, sans-serif; }
 
 h1 {
   font-size: 36px;
@@ -6502,9 +6505,6 @@ section {
   clear: both;
   height: 20px; }
 
-a:focus {
-  outline: 0; }
-
 img.pull-left, .pull-left > img {
   margin-right: 15px !important; }
 
@@ -6520,28 +6520,45 @@ img.pull-right, .pull-right > img {
 /* Buttons */
 .btn {
   display: inline-block;
+  padding: 6px 15px;
   text-transform: uppercase;
   border: 0;
   text-shadow: none;
   box-shadow: none;
   background-image: none; }
 
-/* Get a Quote (in header) will be used as .btn-default */
-.btn.btn-default {
+/* highlight green button */
+.btn.btn-default, .btn.btn-green {
   padding: 6px 15px;
   background: #00AA71;
   color: white; }
-  .btn.btn-default:hover {
+  .btn.btn-default:hover, .btn.btn-green:hover {
     color: darken white, 7%;
     background: #008659; }
 
+/* dark grey button */
 .btn.btn-dark {
-  padding: 6px 15px;
   background: #2a292a;
   color: white; }
   .btn.btn-dark:hover {
     color: darken white, 7%;
     background: #181818; }
+
+/* medium grey button */
+.btn.btn-grey {
+  background: #5b5d61;
+  color: white; }
+  .btn.btn-grey:hover {
+    color: darken white, 7%;
+    background: #494c4f; }
+
+/* secondary blue button */
+.btn.btn-blue {
+  background: #0778d3;
+  color: white; }
+  .btn.btn-blue:hover {
+    color: darken white, 7%;
+    background: #0564b1; }
 
 .square {
   border-radius: 0; }
@@ -6884,7 +6901,7 @@ footer {
     opacity: 1;
     transition: all .5s ease-in-out; }
   #top a i {
-    background: #006ede;
+    background: #0780E2;
     color: white;
     padding: 5px 15px; }
 

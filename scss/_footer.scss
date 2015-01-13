@@ -128,7 +128,7 @@ footer {
     }
         
     a i {
-	    background: lighten($primary-blue,7%);
+	    background: $secondary-blue;
 	    color: white;
 	    padding: 5px 15px;
     }

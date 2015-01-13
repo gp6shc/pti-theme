@@ -13,8 +13,8 @@ body{
 	border: 0;
 	margin: 0;
 	padding: 0;
-	color: #333333;
-	background: #fff;
+	color: $brand-black;
+	background: white;
 }
 
 .body-inner{
@@ -28,26 +28,26 @@ a:link,
 a:visited{
     text-decoration: none;
 }
-
-
 a:hover{
 	text-decoration: none;
-	color: #000;
+	color: $brand-black;
 }
-
+a:focus{
+	outline: 0;
+}
 
 /* Typography
 ================================================== */
 
 body, p{
-	font-family: 'Source Sans Pro';
+	font-family: $font-body;
 	font-weight: 400; 
 	font-size: 14px;
 	line-height: 1.6em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Droid Serif', serif;
+	font-family: $font-heading;
 }
 
 h1{
@@ -89,23 +89,19 @@ section{
 .no-padding{
 	padding: 0;
 }
-
 .top-gap {
 	position: relative;
 	margin-top: 130px;
 	padding: 20px 0;
 }
-
 .gap-80 {
 	clear: both;
 	height: 80px;
 }
-
 .gap-40 {
 	clear: both;
 	height: 40px;
 }
-
 .gap-30 {
 	clear: both;
 	height: 30px;
@@ -114,11 +110,6 @@ section{
 	clear: both;
 	height: 20px;
 }
-
-a:focus{
-	outline: 0;
-}
-
 img.pull-left, .pull-left > img {
 	margin-right: 15px !important;
 }
@@ -126,7 +117,6 @@ img.pull-left, .pull-left > img {
 img.pull-right, .pull-right > img {
 	margin-left: 15px !important;
 }
-
 .img-thumbnail {
 	padding: 5px;
 	background: #f2f2f2;
@@ -137,14 +127,16 @@ img.pull-right, .pull-right > img {
 /* Buttons */
 .btn {
 	display: inline-block;
+	padding: 6px 15px;
 	text-transform: uppercase;
 	border: 0;
 	text-shadow: none;
 	box-shadow: none;
 	background-image: none;
 }
-/* Get a Quote (in header) will be used as .btn-default */
-.btn.btn-default {
+
+/* highlight green button */
+.btn.btn-default, .btn.btn-green {
 	padding: 6px 15px;
 	background: $brand-green;
 	color: white;
@@ -155,14 +147,36 @@ img.pull-right, .pull-right > img {
 	}
 }
 
+/* dark grey button */
 .btn.btn-dark {
-	padding: 6px 15px;
 	background: darken($brand-black,3%);
 	color: white;
 	
 	&:hover {
 		color: darken (white,7%);
 		background: darken($brand-black,10%);
+	}
+}
+
+/* medium grey button */
+.btn.btn-grey {
+	background: darken($brand-grey,3%);
+	color: white;
+	
+	&:hover {
+		color: darken (white,7%);
+		background: darken($brand-grey,10%);
+	}
+}
+
+/* secondary blue button */
+.btn.btn-blue {
+	background: darken($secondary-blue,3%);
+	color: white;
+	
+	&:hover {
+		color: darken (white,7%);
+		background: darken($secondary-blue,10%);
 	}
 }
 

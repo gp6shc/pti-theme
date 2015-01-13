@@ -6815,7 +6815,7 @@ button.quote {
 /* Section 6: #ceo
 ================================================== */
 #ceo {
-  background: #666; }
+  background: #EAEBEC; }
 
 /* Section 7: #family
 ================================================== */
@@ -6846,7 +6846,8 @@ button.quote {
   background: #EAEBEC;
   text-align: center; }
   #emergency img {
-    border-radius: 50%; }
+    border-radius: 50%;
+    width: auto !important; }
 
 /* Section 9: #academy
 ================================================== */

@@ -71,7 +71,7 @@
 /* Section 6: #ceo
 ================================================== */
 #ceo {
-	background: #666;
+	background: $brand-white;
 }
 
 /* Section 7: #family
@@ -113,6 +113,7 @@
 	
 	img {
 		border-radius: 50%;
+		width: auto!important;
 	}
 
 }

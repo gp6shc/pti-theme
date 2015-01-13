@@ -6486,6 +6486,9 @@ section {
 .center {
   text-align: center; }
 
+.read-more {
+  color: #00AA71; }
+
 .no-padding {
   padding: 0; }
 
@@ -6818,16 +6821,18 @@ button.quote {
 /* Section 8: #emergency
 ================================================== */
 #emergency {
-  background: #888; }
+  background: #EAEBEC;
+  text-align: center; }
+  #emergency img {
+    border-radius: 50%; }
 
 /* Section 9: #academy
 ================================================== */
 #academy {
-  background: white; }
+  background: white;
+  text-align: center; }
   #academy .news-title {
     color: #0780E2; }
-  #academy .read-more {
-    color: #00AA71; }
 
 /* Footer Styles
 ================================================== */

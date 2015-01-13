@@ -83,20 +83,9 @@
 		max-width: 100%;
 		padding: 0;
 	}*/
-	
-}
-
-/* Section 8: #emergency
-================================================== */
-#emergency {
-	background: $brand-white;
-	text-align: center;
-	
-	img {
-		border-radius: 50%;
-	}
 
 }
+
 .carousel-control {
 	background: transparent!important;
 	
@@ -114,6 +103,18 @@
 }
 .carousel-control.right {
 	right: 10%;
+}
+
+/* Section 8: #emergency
+================================================== */
+#emergency {
+	background: $brand-white;
+	text-align: center;
+	
+	img {
+		border-radius: 50%;
+	}
+
 }
 
 /* Section 9: #academy

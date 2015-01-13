@@ -6826,14 +6826,6 @@ button.quote {
   	padding: 0;
   }*/ }
 
-/* Section 8: #emergency
-================================================== */
-#emergency {
-  background: #EAEBEC;
-  text-align: center; }
-  #emergency img {
-    border-radius: 50%; }
-
 .carousel-control {
   background: transparent !important; }
   .carousel-control i {
@@ -6847,6 +6839,14 @@ button.quote {
 
 .carousel-control.right {
   right: 10%; }
+
+/* Section 8: #emergency
+================================================== */
+#emergency {
+  background: #EAEBEC;
+  text-align: center; }
+  #emergency img {
+    border-radius: 50%; }
 
 /* Section 9: #academy
 ================================================== */

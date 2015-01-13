@@ -1,8 +1,8 @@
 /* Homepage Styles
 ================================================== */
-/* Section 1: #video
+/* Section 1: .video
 ================================================== */
-#video {
+.video {
 	margin-top: 95px;
 	background: $brand-black; //added to see that responsive tweaks are needed
 	height: 500px;
@@ -30,9 +30,9 @@
 
 }
 
-/* Section 2: #quote
+/* Section 2: .quote
 ================================================== */
-#quote {
+.quote {
 	background: $brand-white;
 	
 	h3 {
@@ -50,9 +50,9 @@
 	}
 }
 
-/* Section 3: #about
+/* Section 3: .about
 ================================================== */
-#about {
+.about {
 	background: white;
 	
 	img {
@@ -60,27 +60,27 @@
 	}
 }
 
-/* Section 4: #carousel-1 (1st carousel)
+/* Section 4: .carousel-1 (1st carousel)
 ================================================== */
-#carousel-1 {
+.carousel-1 {
 	background: #444;
 }
 
-/* Section 5: #customers
+/* Section 5: .customers
 ================================================== */
-#customers {
+.customers {
 	background: #555;
 }
 
-/* Section 6: #ceo
+/* Section 6: .ceo
 ================================================== */
-#ceo {
+.ceo {
 	background: $brand-white;
 }
 
-/* Section 7: #carousel-2 (2nd carousel)
+/* Section 7: .carousel-2 (2nd carousel)
 ================================================== */
-#carousel-2 {
+.carousel-2 {
 	background: $brand-white;
 	
 	/*.full-width {
@@ -109,9 +109,9 @@
 	right: 10%;
 }
 
-/* Section 8: #emergency
+/* Section 8: .emergency
 ================================================== */
-#emergency {
+.emergency {
 	background: $brand-white;
 	
 	img {
@@ -120,9 +120,9 @@
 
 }
 
-/* Section 9: #academy
+/* Section 9: .academy
 ================================================== */
-#academy {
+.academy {
 	background: white;
 	
 	.page-title {

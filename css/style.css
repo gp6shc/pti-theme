@@ -6490,6 +6490,9 @@ section {
   max-width: 100% !important;
   padding: 0; }
 
+.circle {
+  border-radius: 50%; }
+
 .center {
   text-align: center; }
 
@@ -6801,10 +6804,12 @@ button.quote {
 ================================================== */
 #about {
   background: white; }
+  #about img {
+    width: auto !important; }
 
-/* Section 4: #slideshow
+/* Section 4: #carousel-1 (1st carousel)
 ================================================== */
-#slideshow {
+#carousel-1 {
   background: #444; }
 
 /* Section 5: #customers
@@ -6817,9 +6822,9 @@ button.quote {
 #ceo {
   background: #EAEBEC; }
 
-/* Section 7: #family
+/* Section 7: #carousel-2 (2nd carousel)
 ================================================== */
-#family {
+#carousel-2 {
   background: #EAEBEC;
   /*.full-width {
   	max-width: 100%;
@@ -6843,17 +6848,14 @@ button.quote {
 /* Section 8: #emergency
 ================================================== */
 #emergency {
-  background: #EAEBEC;
-  text-align: center; }
+  background: #EAEBEC; }
   #emergency img {
-    border-radius: 50%;
     width: auto !important; }
 
 /* Section 9: #academy
 ================================================== */
 #academy {
-  background: white;
-  text-align: center; }
+  background: white; }
   #academy .news-title {
     color: #0780E2; }
 

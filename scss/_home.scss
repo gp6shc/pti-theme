@@ -54,11 +54,15 @@
 ================================================== */
 #about {
 	background: white;
+	
+	img {
+		width: auto!important;
+	}
 }
 
-/* Section 4: #slideshow
+/* Section 4: #carousel-1 (1st carousel)
 ================================================== */
-#slideshow {
+#carousel-1 {
 	background: #444;
 }
 
@@ -74,9 +78,9 @@
 	background: $brand-white;
 }
 
-/* Section 7: #family
+/* Section 7: #carousel-2 (2nd carousel)
 ================================================== */
-#family {
+#carousel-2 {
 	background: $brand-white;
 	
 	/*.full-width {
@@ -109,10 +113,8 @@
 ================================================== */
 #emergency {
 	background: $brand-white;
-	text-align: center;
 	
 	img {
-		border-radius: 50%;
 		width: auto!important;
 	}
 
@@ -122,7 +124,6 @@
 ================================================== */
 #academy {
 	background: white;
-	text-align: center;
 	
 	.page-title {
 		

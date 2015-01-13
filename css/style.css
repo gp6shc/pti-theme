@@ -6763,9 +6763,9 @@ button.quote {
 
 /* Homepage Styles
 ================================================== */
-/* Section 1: #video
+/* Section 1: .video
 ================================================== */
-#video {
+.video {
   margin-top: 95px;
   background: #323132;
   height: 500px; }
@@ -6789,42 +6789,42 @@ button.quote {
     min-height: 100%;
     z-index: -1000; }
 
-/* Section 2: #quote
+/* Section 2: .quote
 ================================================== */
-#quote {
+.quote {
   background: #EAEBEC; }
-  #quote h3 {
+  .quote h3 {
     color: #323132;
     font-weight: 300; }
-  #quote h5 {
+  .quote h5 {
     color: #0780E2;
     font-weight: 300; }
 
-/* Section 3: #about
+/* Section 3: .about
 ================================================== */
-#about {
+.about {
   background: white; }
-  #about img {
+  .about img {
     width: auto !important; }
 
-/* Section 4: #carousel-1 (1st carousel)
+/* Section 4: .carousel-1 (1st carousel)
 ================================================== */
-#carousel-1 {
+.carousel-1 {
   background: #444; }
 
-/* Section 5: #customers
+/* Section 5: .customers
 ================================================== */
-#customers {
+.customers {
   background: #555; }
 
-/* Section 6: #ceo
+/* Section 6: .ceo
 ================================================== */
-#ceo {
+.ceo {
   background: #EAEBEC; }
 
-/* Section 7: #carousel-2 (2nd carousel)
+/* Section 7: .carousel-2 (2nd carousel)
 ================================================== */
-#carousel-2 {
+.carousel-2 {
   background: #EAEBEC;
   /*.full-width {
   	max-width: 100%;
@@ -6845,18 +6845,18 @@ button.quote {
 .carousel-control.right {
   right: 10%; }
 
-/* Section 8: #emergency
+/* Section 8: .emergency
 ================================================== */
-#emergency {
+.emergency {
   background: #EAEBEC; }
-  #emergency img {
+  .emergency img {
     width: auto !important; }
 
-/* Section 9: #academy
+/* Section 9: .academy
 ================================================== */
-#academy {
+.academy {
   background: white; }
-  #academy .news-title {
+  .academy .news-title {
     color: #0780E2; }
 
 /* Footer Styles
@@ -6927,14 +6927,14 @@ footer {
 .footer-ph a {
   color: white; }
 
-/* Copyright Section, #copyright, below footer
+/* Copyright Section, .copyright, below footer
 ================================================== */
-#copyright {
+.copyright {
   position: relative;
   padding: 60px 0 0 0;
   color: white;
   background: #005CBA;
-  z-index: 99; }
+  z-index: 9; }
 
 #top {
   text-align: center;

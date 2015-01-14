@@ -1,0 +1,38 @@
+/* About page
+================================================== */
+#sidebar-wrapper {
+	position: fixed;
+	height: 100%;
+	margin-top: -60px;
+	margin-left: -250px;
+	left: 250px;
+	width: 250px;
+	background: $brand-white;
+	overflow-y: auto;
+	z-index: -1;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:767px) { 
+
+    #sidebar-wrapper, .sidebar-nav {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        left: 0;
+    }
+
+
+}

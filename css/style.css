@@ -6740,7 +6740,7 @@ ul.navbar-nav > li:last-child a {
 
 ul.navbar-nav > li.active > a,
 ul.navbar-nav > li > a:hover {
-  color: #323132; }
+  color: #cccccc; }
 
 ul.navbar-nav > li > a i {
   font-weight: 700; }
@@ -6906,6 +6906,36 @@ ul.navbar-nav > li > a i {
   .academy .news-title {
     color: #0780E2; }
 
+/* About page
+================================================== */
+#sidebar-wrapper {
+  position: fixed;
+  height: 100%;
+  margin-top: -60px;
+  margin-left: -250px;
+  left: 250px;
+  width: 250px;
+  background: #EAEBEC;
+  overflow-y: auto;
+  z-index: -1; }
+
+#page-content-wrapper {
+  width: 100%; }
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+@media (max-width: 767px) {
+  #sidebar-wrapper, .sidebar-nav {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    left: 0; } }
 /* Footer Styles
 ================================================== */
 /* Footer

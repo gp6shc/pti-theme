@@ -160,7 +160,7 @@ ul.navbar-nav > li:last-child a{
 
 ul.navbar-nav > li.active > a,
 ul.navbar-nav > li > a:hover{
-	color: $brand-black;
+	color: darken(white,20%);
 }
 
 ul.navbar-nav > li > a i{

@@ -107,10 +107,17 @@ $(document).ready(function() {
 	
 	function toggleVideo() {
 		var sY =  scrollY();
-		if (sY >= 196)	{
+		var video = document.getElementsByTagName('video')[0];
+		if (sY >= 436)	{
 			$('video').addClass("opacity-0");
+			if (!video.paused) {
+				video.pause();
+			}
 		}else{
 			$('video').removeClass("opacity-0");
+			if (video.paused) {
+				video.play();
+			}
 		}
 	}
 	

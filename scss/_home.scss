@@ -17,13 +17,13 @@
 	 
 	&::before {
 		top: 0;
-		background-color: red;
+		background-color: $primary-blue;
 		transition: all 0.8s;
 	}
 	 
 	&::after {
 		top: 50%;
-		background-color: teal;
+		background-color: $brand-white;
 	}
 }
 
@@ -87,36 +87,84 @@
 ================================================== */
 .about {
 	background: white;
-	
-	img {
-		width: auto!important;
-	}
 }
 
+/* Section 3b: .branch
+================================================== */
 .branch {
 	height: 200px;
 	background: transparent;
 }
 
-/* Section 4: .carousel-1 (1st carousel)
+/* Section 4: .two-panel
+================================================== */
+.two-panels {
+	background: transparent;
+	margin-bottom: -25px;
+	
+	> div {
+		background: white;
+		width: 49.85%;
+		height: 400px;
+		padding: 80px;
+		border-bottom-right-radius: 25px;
+		
+		+ div {
+			margin-left: 0.3%;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 25px;
+		}
+		
+		div {
+			width: 80%;
+		}
+	}
+	
+	.push-right {
+		float: right;
+	}
+	.push-left {
+		float: left;
+	}
+}
+
+
+/* Section 5: .carousel-1 (1st carousel)
 ================================================== */
 .carousel-1 {
-	background: #444;
+	background: transparent;
+
 }
 
-/* Section 5: .customers
+/* Section 6: .two-panels-2
+================================================== */
+.two-panels-2 {
+	background: transparent;
+	
+	> div {
+		border-top-right-radius: 25px;
+		
+		+ div {
+			border-top-right-radius: 0;
+			border-top-left-radius: 25px;
+		}
+	}
+}
+/* Section 7: .customers
 ================================================== */
 .customers {
-	background: #555;
+	background: $primary-blue;
+	color: white;
+	
 }
 
-/* Section 6: .ceo
+/* Section 8: .ceo
 ================================================== */
 .ceo {
 	background: $brand-white;
 }
 
-/* Section 7: .carousel-2 (2nd carousel)
+/* Section 9: .carousel-2 (2nd carousel)
 ================================================== */
 .carousel-2 {
 	background: $brand-white;
@@ -147,18 +195,14 @@
 	right: 10%;
 }
 
-/* Section 8: .emergency
+/* Section 10: .emergency
 ================================================== */
 .emergency {
 	background: $brand-white;
-	
-	img {
-		width: auto!important;
-	}
 
 }
 
-/* Section 9: .academy
+/* Section 11: .academy
 ================================================== */
 .academy {
 	background: white;

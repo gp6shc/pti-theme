@@ -6571,7 +6571,9 @@ body {
   padding: 0;
   color: #323132;
   background: white;
-  position: relative; }
+  position: relative;
+  max-width: 1600px;
+  min-width: 320px; }
 
 .body-inner {
   position: relative;
@@ -6589,6 +6591,9 @@ a:hover {
 
 a:focus {
   outline: 0; }
+
+img {
+  width: auto; }
 
 /* Typography
 ================================================== */
@@ -6926,11 +6931,11 @@ button.quote {
   z-index: -1; }
 .home::before {
   top: 0;
-  background-color: red;
+  background-color: #005CBA;
   transition: all 0.8s; }
 .home::after {
   top: 50%;
-  background-color: teal; }
+  background-color: #EAEBEC; }
 
 /* Section 1: .video
 ================================================== */
@@ -6978,29 +6983,62 @@ button.quote {
 ================================================== */
 .about {
   background: white; }
-  .about img {
-    width: auto !important; }
 
+/* Section 3b: .branch
+================================================== */
 .branch {
   height: 200px;
   background: transparent; }
 
-/* Section 4: .carousel-1 (1st carousel)
+/* Section 4: .two-panel
+================================================== */
+.two-panels {
+  background: transparent;
+  margin-bottom: -25px; }
+  .two-panels > div {
+    background: white;
+    width: 49.85%;
+    height: 400px;
+    padding: 80px;
+    border-bottom-right-radius: 25px; }
+    .two-panels > div + div {
+      margin-left: 0.3%;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 25px; }
+    .two-panels > div div {
+      width: 80%; }
+  .two-panels .push-right {
+    float: right; }
+  .two-panels .push-left {
+    float: left; }
+
+/* Section 5: .carousel-1 (1st carousel)
 ================================================== */
 .carousel-1 {
-  background: #444; }
+  background: transparent; }
 
-/* Section 5: .customers
+/* Section 6: .two-panels-2
+================================================== */
+.two-panels-2 {
+  background: transparent; }
+  .two-panels-2 > div {
+    border-top-right-radius: 25px; }
+    .two-panels-2 > div + div {
+      border-top-right-radius: 0;
+      border-top-left-radius: 25px; }
+
+/* Section 7: .customers
 ================================================== */
 .customers {
-  background: #555; }
+  background: #005CBA;
+  color: white; }
 
-/* Section 6: .ceo
+/* Section 8: .ceo
 ================================================== */
 .ceo {
   background: #EAEBEC; }
 
-/* Section 7: .carousel-2 (2nd carousel)
+/* Section 9: .carousel-2 (2nd carousel)
 ================================================== */
 .carousel-2 {
   background: #EAEBEC;
@@ -7023,14 +7061,12 @@ button.quote {
 .carousel-control.right {
   right: 10%; }
 
-/* Section 8: .emergency
+/* Section 10: .emergency
 ================================================== */
 .emergency {
   background: #EAEBEC; }
-  .emergency img {
-    width: auto !important; }
 
-/* Section 9: .academy
+/* Section 11: .academy
 ================================================== */
 .academy {
   background: white; }
@@ -7196,9 +7232,5 @@ footer {
  }
 
 /* 480 and above */
-/* Images and Media */
-img {
-  width: 100% !important;
-  height: auto !important; }
 
 /*# sourceMappingURL=style.css.map */

@@ -6441,14 +6441,22 @@ a:focus {
 
 /* Typography
 ================================================== */
+/* Body */
 body, p {
-  font-family: Georgia, sans-serif, Arial;
-  font-weight: 400;
-  font-size: 14px;
+  font-family: "museo-sans", sans-serif, serif;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.6em; }
 
+p.serif {
+  font-family: Georgia, Helvetica, Arial; }
+
+p.large {
+  font-size: 20px; }
+
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: "museo-sans", sans-serif, serif; }
 
 h1 {
   font-size: 36px;
@@ -6475,11 +6483,48 @@ h5 {
 
 .page-header {
   font-size: 44px;
+  font-weight: 100;
   color: #0780E2;
   border: none; }
 
-.read-more {
+.sub-head-lg {
+  font-size: 30px;
+  font-weight: 300;
+  color: #0780E2; }
+
+.sub-head-sm {
+  font-size: 24px;
+  font-weight: 500;
+  color: #0780E2; }
+
+/* Sizings & Shapes */
+.square {
+  border-radius: 0; }
+
+.circle {
+  border-radius: 50%; }
+
+.rounded {
+  border-radius: 5px; }
+
+/* Text Color Classes: use only for color-specific elements (ex- blockquote.green) */
+.primary-blue {
+  color: #005CBA; }
+
+.secondary-blue {
+  color: #005CBA; }
+
+.green {
   color: #00AA71; }
+
+.black {
+  color: #323132; }
+
+.grey {
+  color: #626569; }
+
+.white {
+  color: #EAEBEC; }
 
 /* Content */
 section {
@@ -6490,8 +6535,8 @@ section {
   max-width: 100% !important;
   padding: 0; }
 
-.circle {
-  border-radius: 50%; }
+.read-more {
+  color: #00AA71; }
 
 .center {
   text-align: center; }
@@ -6535,23 +6580,25 @@ img.pull-right, .pull-right > img {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 6px 15px;
+  padding: 10px 25px;
+  vertical-align: middle;
+  font-family: "museo-sans", sans-serif, serif;
+  font-weight: 700;
   text-transform: uppercase;
   border: 0;
   text-shadow: none;
   box-shadow: none;
   background-image: none; }
 
-/* highlight green button */
+/* Highlight Green Btn */
 .btn.btn-default, .btn.btn-primary, .btn.btn-green {
-  padding: 6px 15px;
   background: #00AA71;
   color: white; }
   .btn.btn-default:hover, .btn.btn-primary:hover, .btn.btn-green:hover {
     color: darken white, 7%;
     background: #008659; }
 
-/* dark grey button */
+/* Dark Grey Btn */
 .btn.btn-dark {
   background: #2a292a;
   color: white; }
@@ -6559,7 +6606,7 @@ img.pull-right, .pull-right > img {
     color: darken white, 7%;
     background: #181818; }
 
-/* medium grey button */
+/* Medium Grey Btn */
 .btn.btn-grey {
   background: #5b5d61;
   color: white; }
@@ -6567,7 +6614,7 @@ img.pull-right, .pull-right > img {
     color: darken white, 7%;
     background: #494c4f; }
 
-/* secondary blue button */
+/* Secondary Blue Btn */
 .btn.btn-blue {
   background: #0778d3;
   color: white; }
@@ -6575,11 +6622,11 @@ img.pull-right, .pull-right > img {
     color: darken white, 7%;
     background: #0564b1; }
 
-.square {
-  border-radius: 0; }
-
-.rounded {
-  border-radius: 5px; }
+/* Pull/Blockquote for interior pages */
+.pullquote, blockquote {
+  font-family: "museo-sans", sans-serif, serif;
+  font-weight: 300;
+  font-style: italic; }
 
 /* Header 
 ================================================== */
@@ -6612,7 +6659,7 @@ header {
   padding: 0;
   background: #323132;
   color: white;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: "museo-sans", sans-serif, serif; }
   #top-bar .container {
     max-width: 1200px; }
 
@@ -6686,7 +6733,7 @@ ul.navbar-nav > li > a {
   color: white;
   padding: 0 15px;
   line-height: 46px;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: "museo-sans", sans-serif, serif; }
 
 ul.navbar-nav > li:last-child a {
   padding-right: 0; }

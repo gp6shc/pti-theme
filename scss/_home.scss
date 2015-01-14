@@ -1,5 +1,32 @@
 /* Homepage Styles
 ================================================== */
+/* Only when on the Home page
+================================================== */
+.home {
+	&::before, &::after {
+		/* the 2 underneath colored sections */
+		content: '';
+		position: fixed;
+		width: 100%;
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+		height: 50%;
+		z-index: -1;
+	}
+	 
+	&::before {
+		top: 0;
+		background-color: red;
+		transition: all 0.8s;
+	}
+	 
+	&::after {
+		top: 50%;
+		background-color: teal;
+	}
+}
+
 /* Section 1: .video
 ================================================== */
 .video {
@@ -21,13 +48,19 @@
 	    left: 0;
 	    bottom: 0;
 	    right: 0;
+	    opacity: 1;
 	    width: 100%;
 	    height: auto;
 	    min-width: 100%;
 	    min-height: 100%;
 	    z-index: -1000;
+	    transition: opacity 0.2s;
 	}
 
+}
+
+.opacity-0.opacity-0 {
+	opacity: 0;
 }
 
 /* Section 2: .quote
@@ -58,6 +91,11 @@
 	img {
 		width: auto!important;
 	}
+}
+
+.branch {
+	height: 200px;
+	background: transparent;
 }
 
 /* Section 4: .carousel-1 (1st carousel)

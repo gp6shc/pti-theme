@@ -1,11 +1,29 @@
 /* Homepage Styles
 ================================================== */
+/* Only when on the Home page
+================================================== */
+.home {
+	&::before{
+		content: '';
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-image: linear-gradient(to bottom,
+										$primary-blue,
+										$primary-blue 50%,
+										$brand-white 50%,
+										$brand-white 100% );
+	}
+}
+
 /* Section 1: .video
 ================================================== */
 .video {
-	margin-top: 95px;
+	margin: 0;
+	padding: 0;
 	background: $brand-black; //added to see that responsive tweaks are needed
-	height: 500px;
+	height: 100vh; // will cause issues on iOS 7 Safari... :(
 }
 .video-wrapper {	
 	position: absolute;
@@ -18,16 +36,18 @@
 	video {
 		position: fixed;
 	    top: 0;
-	    left: 0;
 	    bottom: 0;
-	    right: 0;
-	    width: 100%;
-	    height: auto;
-	    min-width: 100%;
-	    min-height: 100%;
+		left: 0;
+		width: 100%;
+	    opacity: 1;
 	    z-index: -1000;
+	    transition: opacity 0.2s;
 	}
 
+}
+
+.opacity-0.opacity-0 {
+	opacity: 0;
 }
 
 /* Section 2: .quote
@@ -54,31 +74,110 @@
 ================================================== */
 .about {
 	background: white;
+}
+
+/* Section 3b: .branch
+================================================== */
+.branch {
+	height: 200px;
+	background: transparent;
+}
+
+/* Section 4: .two-panel
+================================================== */
+.two-panels {
+	background: transparent;
+	margin-bottom: -25px;
+	z-index: 5;
 	
-	img {
-		width: auto!important;
+	> div {
+		background: white;
+		width: 49.85%;
+		height: 400px;
+		padding: 80px;
+		border-bottom-right-radius: 25px;
+		
+		+ div {
+			margin-left: 0.3%;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 25px;
+		}
+		
+		div {
+			width: 80%;
+		}
+	}
+	
+	.push-right {
+		float: right;
+	}
+	.push-left {
+		float: left;
 	}
 }
 
-/* Section 4: .carousel-1 (1st carousel)
+
+/* Section 5: .carousel-1 (1st carousel)
 ================================================== */
 .carousel-1 {
-	background: #444;
+	background: $brand-white;
+	
+	.carousel-inner {
+		margin: -25px 0;
+	}
+
 }
 
-/* Section 5: .customers
+.carousel-control {
+	
+	i {
+		display: inline-block;
+		text-shadow: none;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}		
+	
+	&.left, &.right {
+		background: none;
+
+	}
+}
+
+/* Section 6: .two-panels-2
+================================================== */
+.two-panels-2 {
+	background: transparent;
+	
+	> div {
+		border-top-right-radius: 25px;
+		
+		+ div {
+			border-top-right-radius: 0;
+			border-top-left-radius: 25px;
+		}
+	}
+}
+/* Section 7: .customers
 ================================================== */
 .customers {
-	background: #555;
+	background-color: $brand-white;
+	color: $brand-grey;
+	transition: all 0.3s;
+}
+	
+.blue-bg {
+	background-color: $primary-blue;
+	color: white;
 }
 
-/* Section 6: .ceo
+/* Section 8: .ceo
 ================================================== */
 .ceo {
 	background: $brand-white;
 }
 
-/* Section 7: .carousel-2 (2nd carousel)
+/* Section 9: .carousel-2 (2nd carousel)
 ================================================== */
 .carousel-2 {
 	background: $brand-white;
@@ -90,37 +189,14 @@
 
 }
 
-.carousel-control {
-	background: transparent!important;
-	
-	i {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		z-index: 5;
-	}
-		
-}
-
-.carousel-control.left {
-	left: 10%;
-}
-.carousel-control.right {
-	right: 10%;
-}
-
-/* Section 8: .emergency
+/* Section 10: .emergency
 ================================================== */
 .emergency {
 	background: $brand-white;
-	
-	img {
-		width: auto!important;
-	}
 
 }
 
-/* Section 9: .academy
+/* Section 11: .academy
 ================================================== */
 .academy {
 	background: white;

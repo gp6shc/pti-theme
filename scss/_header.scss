@@ -9,7 +9,6 @@ header {
 }
 
 .header-fixed {
-	opacity: 0.95;
 	box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
   	
   	.ts-mainnav .container{
@@ -17,17 +16,6 @@ header {
 		padding-bottom: 10px;
 	}
 
-}
-
-.header-fixed .navbar-brand .logo{
-	width: 170px !important;
-  	height: 40px !important;
-  	background-size: contain !important;
-  	background-repeat: no-repeat;
-}
-
-.header-fixed .dropdown-menu{
-	top: 50% !important;
 }
 
 /* Top-bar
@@ -99,7 +87,22 @@ ul.call-us{
 		padding-bottom: 20px;
 		transition: padding .6s;
 	}
-	
+}
+
+.home {
+	.pti {
+		background-color: rgba(black, 0);
+		transition: background-color 0.3s;
+		
+		&:hover {
+			background-color: rgba(black, 0.5);
+			
+		}
+	}
+		
+	.header-fixed .pti {
+		background-color: rgba($primary-blue, 0.9);
+	}
 }
 
 .navbar-header{
@@ -146,7 +149,7 @@ ul.call-us{
 	
 }
 
-ul.navbar-nav > li > a{
+.navbar-nav > li > a{
 	font-weight: 700;
 	color: white;
 	padding: 0 15px;
@@ -154,16 +157,30 @@ ul.navbar-nav > li > a{
 	font-family: $font-heading;
 }
 
-ul.navbar-nav > li:last-child a{
+.home {
+	.navbar-nav > li.active > a,
+	.navbar-nav > li > a:hover {
+		color: $secondary-blue;
+	}
+	
+	.header-fixed {
+		
+		.navbar-nav > li.active > a,
+		.navbar-nav > li > a:hover {
+			color: $brand-black;
+		}
+	}
+}
+.navbar-nav > li:last-child a{
 	padding-right: 0;
 }
 
-ul.navbar-nav > li.active > a,
-ul.navbar-nav > li > a:hover{
+.navbar-nav > li.active > a,
+.navbar-nav > li > a:hover{
 	color: $brand-black;
 }
 
-ul.navbar-nav > li > a i{
+.navbar-nav > li > a i{
 	font-weight: 700;
 }
 
@@ -189,8 +206,18 @@ ul.navbar-nav > li > a i{
 		margin-right: auto;
 		margin-bottom: 0;
 		margin-top: 20px;
-		background-color: $primary-blue;
+		background-color: rgba($primary-blue, 0.8);
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
+	}
+}
+
+.home {
+	.dropdown-menu > ul {
+		background-color: rgba(black, 0.5);
+	}
+	
+	.header-fixed .dropdown-menu > ul {
+		background-color: rgba($primary-blue, 0.8);	
 	}
 }
 
@@ -233,7 +260,7 @@ ul.navbar-nav > li > a i{
 		top: auto;
 		
 		ul {
-			margin-top: 4px;
+			margin-top: 15px;
 			padding: 20px;
 		}
 		

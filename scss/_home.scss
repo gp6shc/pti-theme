@@ -3,36 +3,27 @@
 /* Only when on the Home page
 ================================================== */
 .home {
-	&::before, &::after {
-		/* the 2 underneath colored sections */
+	&::before{
 		content: '';
 		position: fixed;
 		width: 100%;
-		left: 50%;
-		right: auto;
-		transform: translateX(-50%);
-		height: 50%;
-		z-index: -1;
-	}
-	 
-	&::before {
+		height: 100%;
 		top: 0;
-		background-color: $primary-blue;
-		transition: all 0.8s;
-	}
-	 
-	&::after {
-		top: 50%;
-		background-color: $brand-white;
+		background-image: linear-gradient(to bottom,
+										$primary-blue,
+										$primary-blue 50%,
+										$brand-white 50%,
+										$brand-white 100% );
 	}
 }
 
 /* Section 1: .video
 ================================================== */
 .video {
-	margin-top: 95px;
+	margin: 0;
+	padding: 0;
 	background: $brand-black; //added to see that responsive tweaks are needed
-	height: 500px;
+	height: 100vh; // will cause issues on iOS 7 Safari... :(
 }
 .video-wrapper {	
 	position: absolute;
@@ -45,14 +36,10 @@
 	video {
 		position: fixed;
 	    top: 0;
-	    left: 0;
 	    bottom: 0;
-	    right: 0;
+		left: 0;
+		width: 100%;
 	    opacity: 1;
-	    width: 100%;
-	    height: auto;
-	    min-width: 100%;
-	    min-height: 100%;
 	    z-index: -1000;
 	    transition: opacity 0.2s;
 	}
@@ -101,6 +88,7 @@
 .two-panels {
 	background: transparent;
 	margin-bottom: -25px;
+	z-index: 5;
 	
 	> div {
 		background: white;
@@ -132,8 +120,30 @@
 /* Section 5: .carousel-1 (1st carousel)
 ================================================== */
 .carousel-1 {
-	background: transparent;
+	background: $brand-white;
+	
+	.carousel-inner {
+		margin: -25px 0;
+	}
 
+}
+
+.carousel-control {
+	background: transparent!important;
+	
+	i {
+		display: inline-block;
+		text-shadow: none;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}		
+}
+
+.carousel-control.left i {
+
+}
+.carousel-control.right i {
 }
 
 /* Section 6: .two-panels-2
@@ -174,25 +184,6 @@
 		padding: 0;
 	}*/
 
-}
-
-.carousel-control {
-	background: transparent!important;
-	
-	i {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		z-index: 5;
-	}
-		
-}
-
-.carousel-control.left {
-	left: 10%;
-}
-.carousel-control.right {
-	right: 10%;
 }
 
 /* Section 10: .emergency

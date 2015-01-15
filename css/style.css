@@ -6876,13 +6876,13 @@ ul.call-us {
     margin-right: auto;
     margin-bottom: 0;
     margin-top: 20px;
-    background-color: rgba(0, 92, 186, 0.8);
+    background-color: rgba(0, 92, 186, 0.9);
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
 
 .home .dropdown-menu > ul {
   background-color: rgba(0, 0, 0, 0.5); }
 .home .header-fixed .dropdown-menu > ul {
-  background-color: rgba(0, 92, 186, 0.8); }
+  background-color: rgba(0, 92, 186, 0.9); }
 
 .dropdown-menu > ul > li > a {
   display: block;
@@ -6911,7 +6911,7 @@ ul.call-us {
     border-radius: 0;
     top: auto; }
     .nav > li.megamenu .dropdown-menu ul {
-      margin-top: 15px;
+      margin-top: 4px;
       padding: 20px; }
 
 /* Get a Quote */
@@ -6922,7 +6922,8 @@ ul.call-us {
 /* Search */
 .search {
   padding: 5px 20px;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 /* Homepage Styles
 ================================================== */

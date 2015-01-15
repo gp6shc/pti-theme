@@ -150,7 +150,7 @@ img.pull-right, .pull-right > img {
 /* Buttons */
 .btn {
 	display: inline-block;
-	padding: 6px 15px;
+	padding: 5px 15px;
 	text-transform: uppercase;
 	border: 0;
 	text-shadow: none;
@@ -160,12 +160,12 @@ img.pull-right, .pull-right > img {
 
 /* highlight green button */
 .btn.btn-default, .btn.btn-primary, .btn.btn-green {
-	padding: 6px 15px;
+	padding: 5px 15px;
 	background: $brand-green;
 	color: white;
 	
 	&:hover {
-		color: darken (white,7%);
+		color: darken(white,7%);
 		background: darken($brand-green,7%);
 	}
 }
@@ -176,7 +176,7 @@ img.pull-right, .pull-right > img {
 	color: white;
 	
 	&:hover {
-		color: darken (white,7%);
+		color: darken(white,7%);
 		background: darken($brand-black,10%);
 	}
 }
@@ -187,7 +187,7 @@ img.pull-right, .pull-right > img {
 	color: white;
 	
 	&:hover {
-		color: darken (white,7%);
+		color: darken(white,7%);
 		background: darken($brand-grey,10%);
 	}
 }

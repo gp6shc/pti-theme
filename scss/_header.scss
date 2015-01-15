@@ -281,6 +281,34 @@ ul.call-us{
 	padding: 5px 20px;
 	color: white;
 	cursor: pointer;
+	position: relative;
+
+	form {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 260px;
+	}
+	
+	.search-field {
+		-webkit-appearance: none;
+		border: none;
+		background-color: $brand-grey;
+		padding: 2.5px 5px 5px 5px;
+		text-indent: 5px;
+		transition: background 0.3s;
+		
+		&:focus {
+			background-color: white;
+			outline: 0 none;
+		}
+	}
+
+	.search-submit {
+		-webkit-appearance: none;
+		
+	}
 }
+
 
 

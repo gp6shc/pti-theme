@@ -143,8 +143,12 @@ section{
 .read-more {
 	color: $brand-green;
 }
-.center {
+.text-center {
 	text-align: center;
+}
+.center {
+	display: block;
+	margin: 0 auto;
 }
 .no-padding{
 	padding: 0;

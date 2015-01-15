@@ -6538,8 +6538,12 @@ section {
 .read-more {
   color: #00AA71; }
 
-.center {
+.text-center {
   text-align: center; }
+
+.center {
+  display: block;
+  margin: 0 auto; }
 
 .no-padding {
   padding: 0; }
@@ -6931,7 +6935,8 @@ ul.navbar-nav > li > a i {
 .right {
   border-top-left-radius: 40px; }
 
-.page-body {
+#page-body {
+  padding: 60px;
   background: white; }
 
 /* Sidebar */
@@ -6942,7 +6947,7 @@ ul.navbar-nav > li > a i {
   padding-bottom: 40px;
   /* min-height: 200vh; */
   background: #EAEBEC;
-  overflow-y: auto; }
+  /* overflow-y: auto; */ }
 
 .sidebar .title {
   margin-left: 15px; }

@@ -30,7 +30,8 @@
 .right {
 	border-top-left-radius: 40px;
 }
-.page-body {
+#page-body {
+	padding: 60px;
 	background: white;
 }
 
@@ -44,7 +45,7 @@
 	padding-bottom: 40px;
 	/* min-height: 200vh; */
     background: $brand-white;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 .sidebar {
 	

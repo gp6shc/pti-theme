@@ -129,7 +129,6 @@
 }
 
 .carousel-control {
-	background: transparent!important;
 	
 	i {
 		display: inline-block;
@@ -138,12 +137,11 @@
 		top: 50%;
 		transform: translate(-50%,-50%);
 	}		
-}
+	
+	&.left, &.right {
+		background: none;
 
-.carousel-control.left i {
-
-}
-.carousel-control.right i {
+	}
 }
 
 /* Section 6: .two-panels-2
@@ -163,9 +161,14 @@
 /* Section 7: .customers
 ================================================== */
 .customers {
-	background: $primary-blue;
-	color: white;
+	background-color: $brand-white;
+	color: $brand-grey;
+	transition: all 0.3s;
+}
 	
+.blue-bg {
+	background-color: $primary-blue;
+	color: white;
 }
 
 /* Section 8: .ceo

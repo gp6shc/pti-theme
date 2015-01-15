@@ -97,6 +97,7 @@ h5{
 section{
 	padding: 60px 0;
 	position: relative;
+	z-index: 1;
 }
 .full-width { //use as a container class to remove max-width & padding
 	max-width: 100%!important;

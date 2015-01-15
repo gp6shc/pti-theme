@@ -92,8 +92,11 @@ $(document).ready(function() {
 		// hides/shows the top most bar of info
 		toggleTopBar();
 		
-		//hides video
+		// hides/shows video
 		toggleVideo();
+		
+		// turns customer section blue when hit by line
+		toggleCustomerColor();
 		
 		// check when at the bottom
 		if ( isAtBottom() ) {
@@ -133,6 +136,15 @@ $(document).ready(function() {
 		}else{
 			$('.top-bar').slideDown(300);
 			$("#header").removeClass("header-fixed");
+		}
+	}
+	
+	function toggleCustomerColor() {
+		var customerPosition = $("#customers").offset().top - $(window).scrollTop();
+		if ( customerPosition <= (window.innerHeight / 2) ) {
+			$("#customers").addClass("blue-bg");	
+		}else{
+			$("#customers").removeClass("blue-bg");	
 		}
 	}
 	

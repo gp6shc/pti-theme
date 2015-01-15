@@ -42,10 +42,10 @@
 	position: relative;
 	width: 100%;
 	padding-top: 100px;
-	padding-bottom: 40px;
-	/* min-height: 200vh; */
     background: $brand-white;
-    /* overflow-y: auto; */
+    overflow: hidden; 
+    margin-bottom: -99999px;
+    padding-bottom: 99999px; /* cover height to footer */
 }
 .sidebar {
 	

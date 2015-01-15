@@ -6548,6 +6548,15 @@ section {
 .no-padding {
   padding: 0; }
 
+.pad-20 {
+  padding: 20px; }
+
+.pad-40 {
+  padding: 40px; }
+
+.pad-60 {
+  padding: 60px; }
+
 .top-gap {
   position: relative;
   margin-top: 130px; }
@@ -6912,13 +6921,20 @@ ul.navbar-nav > li > a i {
 /* Interior Page Styles
 ================================================== */
 .interior-page {
-  margin-top: 130px; }
+  margin-top: 115px;
+  /* needs work */ }
+  .interior-page .row {
+    margin: 0; }
 
 #page-intro {
   background: #0780E2; }
   #page-intro p {
     color: white;
-    padding: 60px; }
+    padding: 10px 60px; }
+
+.page-title {
+  color: white;
+  padding: 30px 60px; }
 
 #page-content-wrapper {
   position: relative;
@@ -6942,7 +6958,6 @@ ul.navbar-nav > li > a i {
 /* Sidebar */
 #sidebar-wrapper {
   position: relative;
-  width: 100%;
   padding-top: 100px;
   background: #EAEBEC;
   overflow: hidden;

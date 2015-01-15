@@ -1,7 +1,12 @@
 /* Interior Page Styles
 ================================================== */
 .interior-page {
-	margin-top: 130px;
+	margin-top: 115px; /* needs work */
+	
+	.row {
+		margin: 0;
+	}
+	
 }
 
 #page-intro {
@@ -9,9 +14,14 @@
 	
 	p {
 		color: white;
-		padding: 60px;
+		padding: 10px 60px;
 	}
 	
+}
+
+.page-title {
+	color: white;
+	padding: 30px 60px;
 }
 
 #page-content-wrapper {
@@ -40,7 +50,6 @@
 /* Sidebar */
 #sidebar-wrapper {
 	position: relative;
-	width: 100%;
 	padding-top: 100px;
     background: $brand-white;
     overflow: hidden; 

@@ -6907,31 +6907,57 @@ ul.navbar-nav > li > a i {
 
 /* Interior Page Styles
 ================================================== */
+.interior-page {
+  margin-top: 50px; }
+
 .top-gap {
   position: relative;
-  margin-top: 130px; }
+  margin-top: 135px; }
 
-/* Wrappers */
-#sidebar-wrapper {
-  position: relative;
-  width: 100%;
-  /* min-height: 200vh; */
-  background: #EAEBEC;
-  overflow-y: auto; }
+#page-intro {
+  background: #0780E2;
+  padding-bottom: 30px; }
+  #page-intro p {
+    color: white;
+    padding: 60px; }
 
 #page-content-wrapper {
   position: relative;
   width: 100%;
   padding: 20px; }
 
-/* Sidebar Styles */
+.indention {
+  background: white;
+  height: 30px; }
+
+.left {
+  border-top-right-radius: 40px; }
+
+.right {
+  border-top-left-radius: 40px; }
+
+.page-body {
+  background: white; }
+
+/* Sidebar */
+#sidebar-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 40px;
+  /* min-height: 200vh; */
+  background: #EAEBEC;
+  overflow-y: auto; }
+
+.sidebar .title {
+  margin-left: 15px; }
+
 .sidebar-nav {
   width: 100%;
-  margin: 100px 0px 0px 20px;
+  margin-left: 15px;
   padding: 0;
   list-style: none; }
   .sidebar-nav li {
-    text-indent: 20px;
     line-height: 40px; }
   .sidebar-nav li a {
     display: block;
@@ -6943,19 +6969,6 @@ ul.navbar-nav > li > a i {
       background: #005CBA; }
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
-
-.sidebar-nav li a.active {
-  backgrund: #005CBA; }
-
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  font-size: 18px;
-  line-height: 60px; }
-  .sidebar-nav > .sidebar-brand a {
-    color: #626569; }
-    .sidebar-nav > .sidebar-brand a:hover {
-      color: white;
-      background: none; }
 
 /* Footer Styles
 ================================================== */
@@ -7108,7 +7121,10 @@ footer {
       padding: 0; }
 
   .border-left {
-    border: none; } }
+    border: none; }
+
+  #sidebar-wrapper {
+    padding: 0px; } }
 /* 480 and above */
 /* Images and Media */
 img {

@@ -1,19 +1,22 @@
 /* Interior Page Styles
 ================================================== */
-.container-fluid {
+.interior-page {
+	margin-top: 50px;
 }
 .top-gap {
 	position: relative;
-	margin-top: 130px;
+	margin-top: 135px;
 }
 
-/* Wrappers */
-#sidebar-wrapper {
-	position: relative;
-	width: 100%;
-	/* min-height: 200vh; */ //for testing
-    background: $brand-white;
-    overflow-y: auto;
+#page-intro {
+	background: $secondary-blue;
+	padding-bottom: 30px; //for indention
+	
+	p {
+		color: white;
+		padding: 60px;
+	}
+	
 }
 
 #page-content-wrapper {
@@ -22,15 +25,46 @@
     padding: 20px;
 }
 
-/* Sidebar Styles */
+.indention {
+	background: white;
+	height: 30px;	
+}
+.left {
+	border-top-right-radius: 40px;
+}
+.right {
+	border-top-left-radius: 40px;
+}
+.page-body {
+	background: white;
+}
+
+
+
+/* Sidebar */
+#sidebar-wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 100px;
+	padding-bottom: 40px;
+	/* min-height: 200vh; */
+    background: $brand-white;
+    overflow-y: auto;
+}
+.sidebar {
+	
+	.title {
+		margin-left: 15px;
+	}
+	
+}
 .sidebar-nav {
 	width: 100%;
-    margin: 100px 0px 0px 20px;
+	margin-left: 15px;
     padding: 0;
     list-style: none;
     
     li {
-		text-indent: 20px;
 		line-height: 40px;  
     }
     
@@ -51,27 +85,4 @@
 	    
     }
     
-}
-.sidebar-nav li a.active {
-	backgrund: $primary-blue;
-}
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-    
-    a {
-		color: $brand-grey;
-		
-		&:hover {
-			color: white;
-			background: none;	
-		}
-		
-    }
-    
-}
-
-@media(min-width:768px) {
-
 }

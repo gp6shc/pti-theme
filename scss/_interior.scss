@@ -1,38 +1,77 @@
-/* About page
+/* Interior Page Styles
 ================================================== */
+.container-fluid {
+}
+.top-gap {
+	position: relative;
+	margin-top: 130px;
+}
+
+/* Wrappers */
 #sidebar-wrapper {
-	position: fixed;
-	height: 100%;
-	margin-top: -60px;
-	margin-left: -250px;
-	left: 250px;
-	width: 250px;
-	background: $brand-white;
-	overflow-y: auto;
-	z-index: -1;
+	position: relative;
+	width: 100%;
+	/* min-height: 200vh; */ //for testing
+    background: $brand-white;
+    overflow-y: auto;
 }
 
 #page-content-wrapper {
-  width: 100%;
+	position: relative;
+    width: 100%;
+    padding: 20px;
 }
 
+/* Sidebar Styles */
 .sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	width: 100%;
+    margin: 100px 0px 0px 20px;
+    padding: 0;
+    list-style: none;
+    
+    li {
+		text-indent: 20px;
+		line-height: 40px;  
+    }
+    
+    li a {
+	    display: block;
+	    text-decoration: none;
+	    color: $brand-black;
+	    
+	    &:hover {
+		   text-decoration: none;
+		   color: darken($brand-black,7%);
+		   background: $primary-blue;
+	    }
+	    
+	    a:active, a:focus {
+		    text-decoration: none;
+	    }
+	    
+    }
+    
+}
+.sidebar-nav li a.active {
+	backgrund: $primary-blue;
+}
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+    
+    a {
+		color: $brand-grey;
+		
+		&:hover {
+			color: white;
+			background: none;	
+		}
+		
+    }
+    
 }
 
-@media (max-width:767px) { 
-
-    #sidebar-wrapper, .sidebar-nav {
-        position: relative;
-        width: 100%;
-        margin: 0;
-        left: 0;
-    }
-
+@media(min-width:768px) {
 
 }

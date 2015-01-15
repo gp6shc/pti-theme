@@ -6546,8 +6546,7 @@ section {
 
 .top-gap {
   position: relative;
-  margin-top: 130px;
-  padding: 20px 0; }
+  margin-top: 130px; }
 
 .gap-80 {
   clear: both;
@@ -6906,36 +6905,58 @@ ul.navbar-nav > li > a i {
   .academy .news-title {
     color: #0780E2; }
 
-/* About page
+/* Interior Page Styles
 ================================================== */
+.top-gap {
+  position: relative;
+  margin-top: 130px; }
+
+/* Wrappers */
 #sidebar-wrapper {
-  position: fixed;
-  height: 100%;
-  margin-top: -60px;
-  margin-left: -250px;
-  left: 250px;
-  width: 250px;
+  position: relative;
+  width: 100%;
+  /* min-height: 200vh; */
   background: #EAEBEC;
-  overflow-y: auto;
-  z-index: -1; }
+  overflow-y: auto; }
 
 #page-content-wrapper {
-  width: 100%; }
+  position: relative;
+  width: 100%;
+  padding: 20px; }
 
+/* Sidebar Styles */
 .sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  list-style: none;
-  margin: 0;
-  padding: 0; }
+  width: 100%;
+  margin: 100px 0px 0px 20px;
+  padding: 0;
+  list-style: none; }
+  .sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px; }
+  .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #323132; }
+    .sidebar-nav li a:hover {
+      text-decoration: none;
+      color: #201f20;
+      background: #005CBA; }
+    .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
+      text-decoration: none; }
 
-@media (max-width: 767px) {
-  #sidebar-wrapper, .sidebar-nav {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    left: 0; } }
+.sidebar-nav li a.active {
+  backgrund: #005CBA; }
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px; }
+  .sidebar-nav > .sidebar-brand a {
+    color: #626569; }
+    .sidebar-nav > .sidebar-brand a:hover {
+      color: white;
+      background: none; }
+
 /* Footer Styles
 ================================================== */
 /* Footer

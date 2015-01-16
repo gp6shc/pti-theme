@@ -6888,11 +6888,9 @@ ul.navbar-nav > li > a i {
 /* Section 7: .carousel-2 (2nd carousel)
 ================================================== */
 .carousel-2 {
-  background: #EAEBEC;
-  /*.full-width {
-  	max-width: 100%;
-  	padding: 0;
-  }*/ }
+  background: #ccc; }
+  .carousel-2 .indention {
+    background: #EAEBEC; }
 
 .carousel-control {
   background: transparent !important; }
@@ -6913,7 +6911,8 @@ ul.navbar-nav > li > a i {
 .emergency {
   background: #EAEBEC; }
   .emergency h5 {
-    color: #005CBA; }
+    color: #004a96;
+    font-style: italic; }
   .emergency img {
     margin: 20px 0; }
 

@@ -81,12 +81,11 @@
 /* Section 7: .carousel-2 (2nd carousel)
 ================================================== */
 .carousel-2 {
-	background: $brand-white;
-	
-	/*.full-width {
-		max-width: 100%;
-		padding: 0;
-	}*/
+	background: #ccc;
+
+	.indention {
+		background: $brand-white; // color of above section (6)
+	}
 
 }
 
@@ -115,7 +114,8 @@
 	background: $brand-white;
 	
 	h5 {
-		color: $primary-blue;
+		color: darken($primary-blue,7%);
+		font-style: italic;
 	}
 	
 	img {

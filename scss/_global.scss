@@ -211,7 +211,7 @@ img.pull-right, .pull-right > img {
 /* Buttons */
 .btn {
 	display: inline-block;
-	padding: 10px 25px;
+	padding: 5px 15px;
 	vertical-align: middle;
 	font-family: $font-heading;
 	font-weight: 700;
@@ -228,7 +228,7 @@ img.pull-right, .pull-right > img {
 	color: white;
 	
 	&:hover {
-		color: darken (white,7%);
+		color: darken(white,7%);
 		background: darken($brand-green,7%);
 	}
 }
@@ -239,7 +239,7 @@ img.pull-right, .pull-right > img {
 	color: white;
 	
 	&:hover {
-		color: darken (white,7%);
+		color: darken(white,7%);
 		background: darken($brand-black,10%);
 	}
 }
@@ -251,6 +251,7 @@ img.pull-right, .pull-right > img {
 	
 	&:hover {
 		color: darken (white,7%);
+		color: darken(white,7%);
 		background: darken($brand-grey,10%);
 	}
 }
@@ -266,9 +267,21 @@ img.pull-right, .pull-right > img {
 	}
 }
 
+.square {
+	border-radius: 0;
+}
+
+.rounded {
+	border-radius: 5px;
+}
+
 /* Pull/Blockquote for interior pages */
 .pullquote, blockquote {
 	font-family: $font-heading;
 	font-weight: 300;
+}
+.opacity-0.opacity-0 {
+	opacity: 0;
+	pointer-events: none;
 	font-style: italic;
 }

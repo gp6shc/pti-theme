@@ -189,13 +189,27 @@ $(document).ready(function(){
 /* ----------------------------------------------------------- */
 	/*  Sticky Sidebar Navigation using Affix
 /* ----------------------------------------------------------- */	
-		$('#sidebar').affix({
-			offset: {
-		    top: 150
-		  }
-		});	
-		
+$('#sidebar').affix({
+	offset: {
+	    top: 150
+	}
+});	
 
+/* ----------------------------------------------------------- */
+	/*  Search Expand
+/* ----------------------------------------------------------- */	
+$('#js-search-icon').click(function() {
+	if ( $(this).hasClass('fa-search') ) {
+		setTimeout( function() {
+			$('#js-search-input').focus();
+		}, 200);
+	}else{
+		$('#js-search-input').blur();
+	}
+
+	$(this).toggleClass('search-slide fa-search fa-times');
+	$('#js-search-form, #js-quote-btn').toggleClass('opacity-0');	
+});
 
 /* ----------------------------------------------------------- */
 /*  Back to top

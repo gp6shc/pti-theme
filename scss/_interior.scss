@@ -19,6 +19,10 @@
 	
 }
 
+.left-15 {
+	margin-left: 15px;
+}
+
 .page-title {
 	color: white;
 	padding: 30px 60px;
@@ -48,24 +52,19 @@
 
 
 /* Sidebar */
+.sidebar {
+	padding: 15px;
+}
 #sidebar-wrapper {
 	position: relative;
 	padding-top: 100px;
     background: $brand-white;
     overflow: hidden; 
-    margin-bottom: -99999px;
-    padding-bottom: 99999px; /* cover height to footer */
-}
-.sidebar {
-	
-	.title {
-		margin-left: 15px;
-	}
-	
+    margin-bottom: -99999px; /* always cover height to footer */
+    padding-bottom: 99999px; 
 }
 .sidebar-nav {
 	width: 100%;
-	margin-left: 15px;
     padding: 0;
     list-style: none;
     
@@ -82,6 +81,12 @@
 		   text-decoration: none;
 		   color: darken($brand-black,7%);
 		   background: $primary-blue;
+	    }
+	    
+	    &:before {
+	    	content: '*'; //add font-awesome charset code
+	    	color: $primary-blue;
+	    	padding-right: 5px;
 	    }
 	    
 	    a:active, a:focus {

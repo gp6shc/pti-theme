@@ -193,6 +193,15 @@
 ================================================== */
 .emergency {
 	background: $brand-white;
+	
+	h5 {
+		color: darken($primary-blue,7%);
+		font-style: italic;
+	}
+	
+	img {
+		margin: 20px 0;
+	}
 
 }
 

@@ -1,0 +1,98 @@
+/* Interior Page Styles
+================================================== */
+.interior-page {
+	margin-top: 115px; /* needs work */
+	
+	.row {
+		margin: 0;
+	}
+	
+}
+
+#page-intro {
+	background: $secondary-blue;
+	
+	p {
+		color: white;
+		padding: 10px 60px;
+	}
+	
+}
+
+.left-15 {
+	margin-left: 15px;
+}
+
+.page-title {
+	color: white;
+	padding: 30px 60px;
+}
+
+#page-content-wrapper {
+	position: relative;
+    width: 100%;
+    padding: 20px;
+}
+
+.indention {
+	background: white;
+	height: 30px;	
+}
+.left {
+	border-top-right-radius: 40px;
+}
+.right {
+	border-top-left-radius: 40px;
+}
+#page-body {
+	padding: 60px;
+	background: white;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+	padding: 15px;
+}
+#sidebar-wrapper {
+	position: relative;
+	padding-top: 100px;
+    background: $brand-white;
+    overflow: hidden; 
+    margin-bottom: -99999px; /* always cover height to footer */
+    padding-bottom: 99999px; 
+}
+.sidebar-nav {
+	width: 100%;
+    padding: 0;
+    list-style: none;
+    
+    li {
+		line-height: 40px;  
+    }
+    
+    li a {
+	    display: block;
+	    text-decoration: none;
+	    color: $brand-black;
+	    
+	    &:hover {
+		   text-decoration: none;
+		   color: darken($brand-black,7%);
+		   background: $primary-blue;
+	    }
+	    
+	    &:before {
+	    	content: '*'; //add font-awesome charset code
+	    	color: $primary-blue;
+	    	padding-right: 5px;
+	    }
+	    
+	    a:active, a:focus {
+		    text-decoration: none;
+	    }
+	    
+    }
+    
+}

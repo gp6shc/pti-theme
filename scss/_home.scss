@@ -114,8 +114,12 @@
 .emergency {
 	background: $brand-white;
 	
+	h5 {
+		color: $primary-blue;
+	}
+	
 	img {
-		width: auto!important;
+		margin: 20px 0;
 	}
 
 }

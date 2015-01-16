@@ -6532,7 +6532,7 @@ h6 {
 
 /* Content */
 section {
-  padding: 60px 0;
+  padding: 25px 0;
   position: relative; }
 
 .full-width {
@@ -6912,8 +6912,10 @@ ul.navbar-nav > li > a i {
 ================================================== */
 .emergency {
   background: #EAEBEC; }
+  .emergency h5 {
+    color: #005CBA; }
   .emergency img {
-    width: auto !important; }
+    margin: 20px 0; }
 
 /* Section 9: .academy
 ================================================== */

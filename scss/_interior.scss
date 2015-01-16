@@ -1,7 +1,6 @@
 /* Interior Page Styles
 ================================================== */
 .interior-page {
-	margin-top: 115px; /* needs work */
 	
 	.row {
 		margin: 0;
@@ -10,6 +9,7 @@
 }
 
 #page-intro {
+	margin-top: -20px;
 	background: $secondary-blue;
 	
 	p {
@@ -25,7 +25,9 @@
 
 .page-title {
 	color: white;
-	padding: 30px 60px;
+	font-weight: 100;
+	padding: 0px 60px;
+	padding-top: 70px;
 }
 
 #page-content-wrapper {

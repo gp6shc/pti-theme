@@ -210,3 +210,8 @@ img.pull-right, .pull-right > img {
 .rounded {
 	border-radius: 5px;
 }
+
+.opacity-0.opacity-0 {
+	opacity: 0;
+	pointer-events: none;
+}

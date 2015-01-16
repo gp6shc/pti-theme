@@ -6738,6 +6738,10 @@ img.pull-right, .pull-right > img {
 .rounded {
   border-radius: 5px; }
 
+.opacity-0.opacity-0 {
+  opacity: 0;
+  pointer-events: none; }
+
 /* Header 
 ================================================== */
 header {
@@ -6915,33 +6919,49 @@ ul.call-us {
       padding: 20px; }
 
 /* Get a Quote */
-.m-left-60 {
-  margin-left: 60px; }
+.get-quote {
+  margin: 8px 0 0 60px; }
+  .get-quote button {
+    opacity: 1;
+    transition: opacity 0.5s 0.1s; }
 
 /* button styling located in _global.scss */
 /* Search */
-.search {
-  padding: 5px 20px;
+.search i {
   color: white;
+  margin-top: 6px;
+  padding: 5px 10px 5px 20px;
   cursor: pointer;
-  position: relative; }
-  .search form {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 260px; }
-  .search .search-field {
-    -webkit-appearance: none;
-    border: none;
-    background-color: #626569;
-    padding: 2.5px 5px 5px 5px;
-    text-indent: 5px;
-    transition: background 0.3s; }
-    .search .search-field:focus {
-      background-color: white;
-      outline: 0 none; }
-  .search .search-submit {
-    -webkit-appearance: none; }
+  transition: transform 0.5s;
+  position: relative;
+  z-index: 10; }
+.search form {
+  position: absolute;
+  top: 6px;
+  right: 0;
+  width: 208px;
+  margin-top: 2px;
+  opacity: 1;
+  transition: opacity 0.3s; }
+.search .search-field {
+  -webkit-appearance: none;
+  border: none;
+  background-color: #626569;
+  padding: 2.5px 5px 5px 5px;
+  border: 2px solid #626569;
+  text-indent: 5px;
+  transition: all 0.3s; }
+  .search .search-field:focus {
+    background-color: white;
+    outline: 0 none;
+    border-color: #00AA71; }
+.search .search-submit {
+  -webkit-appearance: none;
+  margin-left: -10px;
+  border: 2px solid #00AA71; }
+
+.search-slide {
+  transform: translateX(-208px); }
 
 /* Homepage Styles
 ================================================== */

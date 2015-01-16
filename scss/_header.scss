@@ -269,8 +269,13 @@ ul.call-us{
 }
 
 /* Get a Quote */
-.m-left-60{
-	margin-left: 60px;
+.get-quote {
+	margin: 8px 0 0 60px;
+	
+	button {
+		opacity: 1;
+		transition: opacity 0.5s 0.1s;
+	}
 }
 /* button styling located in _global.scss */
 	
@@ -278,16 +283,25 @@ ul.call-us{
 
 /* Search */
 .search {
-	padding: 5px 20px;
-	color: white;
-	cursor: pointer;
-	position: relative;
+	
+	i {
+		color: white;
+		margin-top: 6px;
+		padding: 5px 10px 5px 20px;
+		cursor: pointer;
+		transition: transform 0.5s;
+		position: relative;
+		z-index: 10;
+	}
 
 	form {
 		position: absolute;
-		top: 0;
+		top: 6px;
 		right: 0;
-		width: 260px;
+		width: 208px;
+		margin-top: 2px;
+		opacity: 1;
+		transition: opacity 0.3s;
 	}
 	
 	.search-field {
@@ -295,20 +309,26 @@ ul.call-us{
 		border: none;
 		background-color: $brand-grey;
 		padding: 2.5px 5px 5px 5px;
+		border: 2px solid $brand-grey;
 		text-indent: 5px;
-		transition: background 0.3s;
+		transition: all 0.3s;
 		
 		&:focus {
 			background-color: white;
 			outline: 0 none;
+			border-color: $brand-green;
 		}
 	}
 
 	.search-submit {
 		-webkit-appearance: none;
-		
+		margin-left: -10px;
+		border: 2px solid $brand-green;
 	}
 }
 
+.search-slide {
+	transform: translateX(-208px);
+}
 
 

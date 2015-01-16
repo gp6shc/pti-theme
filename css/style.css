@@ -6478,6 +6478,10 @@ h4 {
   font-weight: 700; }
 
 h5 {
+  font-size: 16px;
+  line-height: 26px; }
+
+h6 {
   font-size: 14px;
   line-height: 24px; }
 
@@ -7013,12 +7017,11 @@ footer {
     color: white; }
 
 .footer-title {
-  font-size: 20px;
-  margin-top: -2px;
-  margin-bottom: 20px; }
+  margin-top: -4px;
+  margin-bottom: 20px;
+  font-weight: 700; }
 
 .footer-social a {
-  background: #050505;
   width: 42px;
   height: 44px;
   line-height: 42px;
@@ -7051,8 +7054,11 @@ footer {
 .border-left {
   border-left: 2px solid #323132; }
 
-.footer-social, .footer-address, .footer-ph {
+.footer-social {
   padding-top: 60px; }
+
+.footer-address, .footer-ph {
+  padding-top: 95px; }
 
 .footer-address, .footer-ph {
   padding-left: 0; }

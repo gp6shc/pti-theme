@@ -83,6 +83,10 @@ h4{
     font-weight: 700;
 }
 h5{
+    font-size: 16px;
+    line-height: 26px;
+}
+h6{
     font-size: 14px;
     line-height: 24px;
 }
@@ -139,7 +143,7 @@ h5{
 
 /* Content */
 section{
-	padding: 60px 0;
+	padding: 25px 0;
 	position: relative;
 	z-index: 1;
 }
@@ -150,16 +154,28 @@ section{
 .read-more {
 	color: $brand-green;
 }
-.center {
+.text-center {
 	text-align: center;
+}
+.center {
+	display: block;
+	margin: 0 auto;
 }
 .no-padding{
 	padding: 0;
 }
+.pad-20 {
+	padding: 20px;
+}
+.pad-40 {
+	padding: 40px;
+}
+.pad-60 {
+	padding: 60px;
+}
 .top-gap {
 	position: relative;
 	margin-top: 130px;
-	padding: 20px 0;
 }
 .gap-80 {
 	clear: both;

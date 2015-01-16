@@ -27,16 +27,15 @@ footer {
 }
 
 .footer-title {
-	font-size: 20px;
-	margin-top: -2px;
+	margin-top: -4px; //even with border-left top
 	margin-bottom: 20px;
+	font-weight: 700;
 }
 
 .footer-social {
 }
 
 .footer-social a {
-	background: #050505;
 	width: 42px;
 	height: 44px;
 	line-height: 42px;
@@ -87,8 +86,11 @@ footer {
 	border-left: 2px solid $brand-black;
 }
 
-.footer-social, .footer-address, .footer-ph {
+.footer-social {
 	padding-top: 60px;
+}
+.footer-address, .footer-ph {
+	padding-top: 95px;
 }
 
 .footer-address, .footer-ph {

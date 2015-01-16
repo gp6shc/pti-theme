@@ -165,18 +165,17 @@
 							</div>
 						</li>
 						<!-- Get a Quote, visible on lg,md -->
-						<li class="visible-lg visible-md">
-							<button class="btn btn-default rounded push-down m-left-60" type="button">Get a Quote</button>
+						<li class="visible-lg visible-md get-quote">
+							<button class="btn btn-default rounded" id="js-quote-btn" type="button">Get a Quote</button>
 						</li>
 						<!-- Search -->
-						<li class="visible-lg visible-md visible-sm search push-down">
-							<i class="fa fa-search fa-2x"></i>
-							<form role="search" method="get" class="search-form" action="/">
-								<input type="search" class="search-field" placeholder="Search for..." value="" name="search" title="Search" />
-								<input type="submit" class="search-submit btn btn-default"/>
+						<li class="visible-lg visible-md visible-sm search" id="js-search">
+							<i class="fa fa-search fa-2x" id="js-search-icon"></i>
+							<form role="search" method="get" class="opacity-0" id="js-search-form" action="/">
+								<input type="search" class="search-field rounded" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+								<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
 							</form>
 						</li>
-						
 					</ul><!--/ Navbar-nav end -->
 				</nav><!--/ Navigation end -->
 			</div><!--/ Container end -->

@@ -94,8 +94,6 @@ $(document).ready(function() {
 		
 		// only executed on home page:
 		if ($('.home').length) {
-			// hides/shows video
-			toggleVideo();			
 			// turns customer section blue when hit by line
 			toggleCustomerColor();
 		}
@@ -109,22 +107,6 @@ $(document).ready(function() {
 	};
 	// Add the event listener
 	$(window).scroll( jq_throttle(250, updateLayout));
-	
-	function toggleVideo() {
-		var sY =  scrollY();
-		var video = document.getElementsByTagName('video')[0];
-		if (sY >= 436)	{
-			$('video').addClass("opacity-0");
-			if (!video.paused) {
-				video.pause();
-			}
-		}else{
-			$('video').removeClass("opacity-0");
-			if (video.paused) {
-				video.play();
-			}
-		}
-	}
 	
 	function scrollY() {
 		return window.pageYOffset || document.documentElement.scrollTop;

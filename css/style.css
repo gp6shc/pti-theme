@@ -6719,8 +6719,8 @@ section {
   padding: 60px; }
 
 .top-gap {
-  position: relative;
-  margin-top: 130px; }
+  padding: 0;
+  margin-top: 121px; }
 
 .gap-80 {
   clear: both;
@@ -6871,14 +6871,6 @@ ul.call-us {
     padding-bottom: 20px;
     transition: padding 0.6s; }
 
-.home .pti {
-  background-color: rgba(0, 0, 0, 0);
-  transition: background-color 0.3s; }
-  .home .pti:hover {
-    background-color: rgba(0, 0, 0, 0.5); }
-.home .header-fixed .pti {
-  background-color: rgba(0, 92, 186, 0.9); }
-
 .navbar-header {
   z-index: 9999; }
 
@@ -6920,11 +6912,6 @@ ul.call-us {
   line-height: 46px;
   font-family: "museo-sans", sans-serif, serif; }
 
-.home .navbar-nav > li.active > a, .home .navbar-nav > li > a:hover {
-  color: #0780E2; }
-.home .header-fixed .navbar-nav > li.active > a, .home .header-fixed .navbar-nav > li > a:hover {
-  color: #323132; }
-
 .navbar-nav > li:last-child a {
   padding-right: 0; }
 
@@ -6955,11 +6942,6 @@ ul.call-us {
     margin-top: 20px;
     background-color: rgba(0, 92, 186, 0.9);
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
-
-.home .dropdown-menu > ul {
-  background-color: rgba(0, 0, 0, 0.5); }
-.home .header-fixed .dropdown-menu > ul {
-  background-color: rgba(0, 92, 186, 0.9); }
 
 .dropdown-menu > ul > li > a {
   display: block;
@@ -7051,10 +7033,33 @@ ul.call-us {
   width: 100%;
   height: 100%;
   top: 0;
-  background-image: linear-gradient(to bottom, #005CBA, #005CBA 60%, #EAEBEC 60%, #EAEBEC 100%); }
+  background-image: linear-gradient(to bottom, #0070e3, #0070e3 60%, #EAEBEC 60%, #EAEBEC 100%); }
 
-/* Section 1: 
+/* Section 1: .image-cycle
 ================================================== */
+.image-cycle {
+  background-color: white; }
+  .image-cycle .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity; }
+  .image-cycle .carousel-inner .active {
+    opacity: 1; }
+  .image-cycle .carousel-inner .active.left, .image-cycle .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1; }
+  .image-cycle .carousel-inner .next.left, .image-cycle .carousel-inner .prev.right {
+    opacity: 1; }
+  .image-cycle .carousel-control, .image-cycle .carousel-indicators {
+    display: none; }
+  .image-cycle .carousel-caption {
+    margin-bottom: 50px; }
+    .image-cycle .carousel-caption h1 {
+      color: #002f5e;
+      text-shadow: none;
+      font-weight: 100;
+      font-size: 72px; }
+
 /* Section 2: .quote
 ================================================== */
 .quote {
@@ -7161,10 +7166,10 @@ ul.call-us {
     color: white;
     text-transform: uppercase; }
     .customers h4 span {
-      color: #0780E2; }
+      color: #1a95f8; }
 
 .blue-bg {
-  background-color: #005CBA;
+  background-color: #0070e3;
   color: white; }
 
 /* Section 8: .ceo
@@ -7186,6 +7191,9 @@ ul.call-us {
 		max-width: 100%;
 		padding: 0;
 	}*/ }
+  .carousel-2 .indention {
+    background-color: #EAEBEC;
+    margin-top: -25px; }
 
 /* Section 10: .emergency
 ================================================== */

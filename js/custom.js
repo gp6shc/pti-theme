@@ -165,8 +165,8 @@ $(document).ready(function() {
 /* ----------------------------------------------------------- */	
 
 $(document).ready(function(){
-	$('#transition-timer-carousel, #transition-timer-carousel-two').carousel({
-		interval: false
+	$('#transition-timer-carousel-opaque, #transition-timer-carousel, #transition-timer-carousel-two').carousel({
+		interval: 4000
 	});
 });
 	

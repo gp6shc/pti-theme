@@ -89,22 +89,6 @@ ul.call-us{
 	}
 }
 
-.home {
-	.pti {
-		background-color: rgba(black, 0);
-		transition: background-color 0.3s;
-		
-		&:hover {
-			background-color: rgba(black, 0.5);
-			
-		}
-	}
-		
-	.header-fixed .pti {
-		background-color: rgba($primary-blue, 0.9);
-	}
-}
-
 .navbar-header{
 	z-index: 9999;
 }
@@ -161,20 +145,6 @@ ul.call-us{
 	font-family: $font-heading;
 }
 
-.home {
-	.navbar-nav > li.active > a,
-	.navbar-nav > li > a:hover {
-		color: $secondary-blue;
-	}
-	
-	.header-fixed {
-		
-		.navbar-nav > li.active > a,
-		.navbar-nav > li > a:hover {
-			color: $brand-black;
-		}
-	}
-}
 .navbar-nav > li:last-child a{
 	padding-right: 0;
 }
@@ -212,16 +182,6 @@ ul.call-us{
 		margin-top: 20px;
 		background-color: rgba($primary-blue, 0.9);
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
-	}
-}
-
-.home {
-	.dropdown-menu > ul {
-		background-color: rgba(black, 0.5);
-	}
-	
-	.header-fixed .dropdown-menu > ul {
-		background-color: rgba($primary-blue, 0.9);	
 	}
 }
 

@@ -10,45 +10,58 @@
 		height: 100%;
 		top: 0;
 		background-image: linear-gradient(to bottom,
-										$primary-blue,
-										$primary-blue 60%,
+										lighten($primary-blue, 8%),
+										lighten($primary-blue, 8%) 60%,
 										$brand-white 60%,
 										$brand-white 100% );
 	}
 }
 
-/* Section 1: .video
+/* Section 1: .image-cycle
 ================================================== */
-.video {
-	margin: 0;
-	padding: 0;
-	background: $brand-black; //added to see that responsive tweaks are needed
-	height: 100vh; // will cause issues on iOS 7 Safari... :(
-}
-.video-wrapper {	
-	position: absolute;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	color: black;
+.image-cycle {
+	background-color: white;
 	
-	video {
-		position: fixed;
-	    top: 0;
-	    bottom: 0;
-		left: 0;
-		width: 100%;
-	    opacity: 1;
-	    z-index: -1000;
-	    transition: opacity 0.2s;
+	.carousel-inner {
+	    
+	    .item {
+			opacity: 0;
+			transition-property: opacity;
+	    }
+	
+	    .active {
+			opacity: 1;
+	    }
+	
+	    .active.left,
+	    .active.right {
+			left: 0;
+			opacity: 0;
+			z-index: 1;
+	    }
+	
+	    .next.left,
+	    .prev.right {
+			opacity: 1;
+	    }
 	}
-
+	
+	.carousel-control, .carousel-indicators {
+		display: none;
+	}
+	
+	.carousel-caption {
+		margin-bottom: 50px;
+		
+		h1 {
+			color: darken($primary-blue, 18%);
+			text-shadow: none;
+			font-weight: 100;
+			font-size: 72px;
+		}
+	}
 }
 
-.opacity-0.opacity-0 {
-	opacity: 0;
-}
 
 /* Section 2: .quote
 ================================================== */
@@ -211,14 +224,14 @@
 		text-transform: uppercase;
 		
 		span {
-			color: $secondary-blue;
+			color: lighten($secondary-blue, 8%);
 		}
 	}
 	
 }
 	
 .blue-bg {
-	background-color: $primary-blue;
+	background-color: lighten($primary-blue, 8%);
 	color: white;
 }
 
@@ -249,6 +262,11 @@
 		max-width: 100%;
 		padding: 0;
 	}*/
+	
+	.indention {
+		background-color: $brand-white;
+		margin-top: -25px;
+	}
 
 }
 

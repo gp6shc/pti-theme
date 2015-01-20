@@ -83,6 +83,40 @@
 	}
 }
 
+/* Section 2b: .get-a-quote
+================================================== */
+.get-a-quote {
+	
+	.grey-bg {
+		background-color: $brand-white;
+		border-color: $brand-white;
+	}
+		
+	input {
+		font-size: 20px;
+		padding: 19px 10px;
+		border: 2px solid white;
+		box-shadow: none;
+		border-radius: 5px !important;
+		transition: all 0.3s;
+		
+		&:focus {
+			outline: 0 none;
+			background-color: white;
+			border-color: $brand-green;
+		}
+	}
+	
+	button {
+		padding: 7px 15px;
+		margin-left: -10px;
+		font-size: 20px;
+		font-weight: 400;
+		position: relative;
+		z-index: 2;
+	}
+}
+
 /* Section 3: .about
 ================================================== */
 .about {
@@ -144,7 +178,7 @@
 			border-bottom-left-radius: 25px;
 		}
 		
-		div {
+		> div {
 			width: 80%;
 		}
 	}

@@ -7003,7 +7003,6 @@ ul.call-us {
 .search .search-field {
   -webkit-appearance: none;
   width: 165px;
-  border: none;
   padding: 3px 5px;
   text-indent: 5px;
   background-color: #83868b;
@@ -7071,6 +7070,30 @@ ul.call-us {
     color: #0780E2;
     font-weight: 300; }
 
+/* Section 2b: .get-a-quote
+================================================== */
+.get-a-quote .grey-bg {
+  background-color: #EAEBEC;
+  border-color: #EAEBEC; }
+.get-a-quote input {
+  font-size: 20px;
+  padding: 19px 10px;
+  border: 2px solid white;
+  box-shadow: none;
+  border-radius: 5px !important;
+  transition: all 0.3s; }
+  .get-a-quote input:focus {
+    outline: 0 none;
+    background-color: white;
+    border-color: #00AA71; }
+.get-a-quote button {
+  padding: 7px 15px;
+  margin-left: -10px;
+  font-size: 20px;
+  font-weight: 400;
+  position: relative;
+  z-index: 2; }
+
 /* Section 3: .about
 ================================================== */
 .about {
@@ -7116,7 +7139,7 @@ ul.call-us {
       margin-left: 0.3%;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 25px; }
-    .two-panels > div div {
+    .two-panels > div > div {
       width: 80%; }
   .two-panels .push-right {
     float: right; }

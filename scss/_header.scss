@@ -149,6 +149,10 @@ ul.call-us{
 	
 }
 
+.navbar-nav {
+	float: right;
+}
+
 .navbar-nav > li > a{
 	font-weight: 700;
 	color: white;
@@ -286,19 +290,23 @@ ul.call-us{
 	
 	i {
 		color: white;
-		margin-top: 6px;
+		margin-top: 2px;
 		padding: 5px 10px 5px 20px;
 		cursor: pointer;
 		transition: transform 0.5s;
 		position: relative;
 		z-index: 10;
 	}
+	
+	.fa-times {
+		padding: 5px 15px 5px 20px;
+	}
 
 	form {
 		position: absolute;
-		top: 6px;
+		top: 3px;
 		right: 0;
-		width: 208px;
+		width: 216px;
 		margin-top: 2px;
 		opacity: 1;
 		transition: opacity 0.3s;
@@ -306,11 +314,12 @@ ul.call-us{
 	
 	.search-field {
 		-webkit-appearance: none;
+		width: 165px;
 		border: none;
-		background-color: $brand-grey;
-		padding: 2.5px 5px 5px 5px;
-		border: 2px solid $brand-grey;
+		padding: 3px 5px;
 		text-indent: 5px;
+		background-color: lighten($brand-grey, 13%);
+		border: 2px solid lighten($brand-grey, 13%);
 		transition: all 0.3s;
 		
 		&:focus {
@@ -322,6 +331,8 @@ ul.call-us{
 
 	.search-submit {
 		-webkit-appearance: none;
+		padding: 6px 15px 5px 15px;
+		margin-top: -2px;
 		margin-left: -10px;
 		border: 2px solid $brand-green;
 	}

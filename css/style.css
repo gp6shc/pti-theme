@@ -6805,12 +6805,12 @@ img.pull-right, .pull-right > img {
 /* Pull/Blockquote for interior pages */
 .pullquote, blockquote {
   font-family: "museo-sans", sans-serif, serif;
-  font-weight: 300; }
+  font-weight: 300;
+  font-style: italic; }
 
 .opacity-0.opacity-0 {
   opacity: 0;
-  pointer-events: none;
-  font-style: italic; }
+  pointer-events: none; }
 
 /* Header 
 ================================================== */
@@ -6910,6 +6910,9 @@ ul.call-us {
   .navbar-toggle .icon-bar {
     background: white; }
 
+.navbar-nav {
+  float: right; }
+
 .navbar-nav > li > a {
   font-weight: 700;
   color: white;
@@ -6999,27 +7002,30 @@ ul.call-us {
 /* Search */
 .search i {
   color: white;
-  margin-top: 6px;
+  margin-top: 2px;
   padding: 5px 10px 5px 20px;
   cursor: pointer;
   transition: transform 0.5s;
   position: relative;
   z-index: 10; }
+.search .fa-times {
+  padding: 5px 15px 5px 20px; }
 .search form {
   position: absolute;
-  top: 6px;
+  top: 3px;
   right: 0;
-  width: 208px;
+  width: 216px;
   margin-top: 2px;
   opacity: 1;
   transition: opacity 0.3s; }
 .search .search-field {
   -webkit-appearance: none;
+  width: 165px;
   border: none;
-  background-color: #626569;
-  padding: 2.5px 5px 5px 5px;
-  border: 2px solid #626569;
+  padding: 3px 5px;
   text-indent: 5px;
+  background-color: #83868b;
+  border: 2px solid #83868b;
   transition: all 0.3s; }
   .search .search-field:focus {
     background-color: white;
@@ -7027,6 +7033,8 @@ ul.call-us {
     border-color: #00AA71; }
 .search .search-submit {
   -webkit-appearance: none;
+  padding: 6px 15px 5px 15px;
+  margin-top: -2px;
   margin-left: -10px;
   border: 2px solid #00AA71; }
 

@@ -279,9 +279,9 @@ img.pull-right, .pull-right > img {
 .pullquote, blockquote {
 	font-family: $font-heading;
 	font-weight: 300;
+	font-style: italic;
 }
 .opacity-0.opacity-0 {
 	opacity: 0;
 	pointer-events: none;
-	font-style: italic;
 }

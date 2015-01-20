@@ -92,11 +92,13 @@ $(document).ready(function() {
 		// hides/shows the top most bar of info
 		toggleTopBar();
 		
-		// hides/shows video
-		toggleVideo();
-		
-		// turns customer section blue when hit by line
-		toggleCustomerColor();
+		// only executed on home page:
+		if ($('.home').length) {
+			// hides/shows video
+			toggleVideo();			
+			// turns customer section blue when hit by line
+			toggleCustomerColor();
+		}
 		
 		// check when at the bottom
 		if ( isAtBottom() ) {

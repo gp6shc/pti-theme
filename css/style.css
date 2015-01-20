@@ -7051,7 +7051,7 @@ ul.call-us {
   width: 100%;
   height: 100%;
   top: 0;
-  background-image: linear-gradient(to bottom, #005CBA, #005CBA 50%, #EAEBEC 50%, #EAEBEC 100%); }
+  background-image: linear-gradient(to bottom, #005CBA, #005CBA 60%, #EAEBEC 60%, #EAEBEC 100%); }
 
 /* Section 1: .video
 ================================================== */
@@ -7100,8 +7100,18 @@ ul.call-us {
 /* Section 3b: .branch
 ================================================== */
 .branch {
-  height: 200px;
-  background: transparent; }
+  height: 137px;
+  background: transparent;
+  font-size: 0; }
+  .branch svg {
+    display: inline-block;
+    margin: auto; }
+  .branch::before, .branch::after {
+    content: "";
+    display: inline-block;
+    width: calc( (100% - 740px)/2);
+    height: 137px;
+    background-color: white; }
 
 /* Section 4: .two-panel
 ================================================== */

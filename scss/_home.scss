@@ -11,8 +11,8 @@
 		top: 0;
 		background-image: linear-gradient(to bottom,
 										$primary-blue,
-										$primary-blue 50%,
-										$brand-white 50%,
+										$primary-blue 60%,
+										$brand-white 60%,
 										$brand-white 100% );
 	}
 }
@@ -79,8 +79,22 @@
 /* Section 3b: .branch
 ================================================== */
 .branch {
-	height: 200px;
+	height: 137px;
 	background: transparent;
+	font-size: 0; // remove space between inline-block elements
+	
+	svg {
+		display: inline-block;
+		margin: auto;
+	}
+	
+	&::before, &::after {
+		content: "";
+		display: inline-block;
+		width: calc( (100% - 740px)/2);
+		height: 137px;
+		background-color: white;		
+	}
 }
 
 /* Section 4: .two-panel

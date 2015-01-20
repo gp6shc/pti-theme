@@ -143,7 +143,7 @@ $(document).ready(function() {
 	
 	function toggleCustomerColor() {
 		var customerPosition = $("#customers").offset().top - $(window).scrollTop();
-		if ( customerPosition <= (window.innerHeight / 2) ) {
+		if ( customerPosition <= ( (window.innerHeight * 3) / 5) ) { // when the element enters the 60% mark if 100% is the bottom
 			$("#customers").addClass("blue-bg");	
 		}else{
 			$("#customers").removeClass("blue-bg");	

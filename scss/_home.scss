@@ -55,12 +55,12 @@
 .quote {
 	background: $brand-white;
 	
-	h3 {
+	h1 {
 		color: $brand-black;
-		font-weight: 300;
+		font-weight: 100;
 	}
 	
-	h5 {
+	h3 {
 		color: $secondary-blue;
 		font-weight: 300;
 	}
@@ -74,6 +74,11 @@
 ================================================== */
 .about {
 	background: white;
+	
+	h2 {
+		color: $secondary-blue;
+		font-weight: 100;
+	}
 }
 
 /* Section 3b: .branch
@@ -89,6 +94,15 @@
 	background: transparent;
 	margin-bottom: -25px;
 	z-index: 5;
+	
+	h2 {
+		color: $secondary-blue;
+		font-weight: 100;
+	}
+	
+	p {
+		color: $brand-black;
+	}
 	
 	> div {
 		background: white;
@@ -149,6 +163,11 @@
 .two-panels-2 {
 	background: transparent;
 	
+	h2 {
+		color: $secondary-blue;
+		font-weight: 100;
+	}
+	
 	> div {
 		border-top-right-radius: 25px;
 		
@@ -164,6 +183,24 @@
 	background-color: $brand-white;
 	color: $brand-grey;
 	transition: all 0.3s;
+	
+	h1 {
+		font-weight: 100;
+	}
+	
+	p {
+		padding-bottom: 20px;
+	}
+	
+	h4 {
+		color: white;
+		text-transform: uppercase;
+		
+		span {
+			color: $secondary-blue;
+		}
+	}
+	
 }
 	
 .blue-bg {
@@ -175,6 +212,18 @@
 ================================================== */
 .ceo {
 	background: $brand-white;
+	
+	h2 {
+		color: darken($primary-blue,7%);
+	}
+	
+	h5 {
+		color: $secondary-blue;
+	}
+	
+	p {
+		color: $brand-black;
+	}
 }
 
 /* Section 9: .carousel-2 (2nd carousel)

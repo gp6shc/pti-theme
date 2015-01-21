@@ -110,5 +110,26 @@ section.team {
 	.row.two {
 		padding-top: 20px;
 	}
+	
+	img {
+	    -webkit-filter: grayscale(100%);
+	    -webkit-transition: .5s ease-in-out;
+	    -moz-filter: grayscale(100%); 
+	    -moz-transition: .5s ease-in-out;
+	    -o-filter: grayscale(100%); 
+	    -o-transition: .5s ease-in-out;
+	  
+	    &:hover {
+		    -webkit-filter: grayscale(0%);
+		    -webkit-transition: .5s ease-in-out;
+		    -moz-filter: grayscale(0%);
+		    -moz-transition: .5s ease-in-out;
+		    -o-filter: grayscale(0%);
+	        -o-transition: .5s ease-in-out;  
+	    }
+	  
+	}
+	
+		
 }
 

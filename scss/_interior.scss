@@ -9,9 +9,14 @@
 		margin: 0;
 	}
 	
+	.push-in {
+		padding: 60px;
+		padding-top: 0;
+		text-align: center;
+	}
+	
 	p {
 		color: white;
-		padding: 10px 60px;
 	}
 	
 }
@@ -21,8 +26,8 @@
 }
 
 .page-title {
+	padding-top: 30px;
 	color: white;
-	padding: 30px 60px;
 }
 
 .indention {
@@ -37,7 +42,6 @@
 .right {
 	border-top-left-radius: 40px;
 }
-
 
 
 /* Interior Page Left Sidebar */
@@ -107,7 +111,7 @@
 ================================================== */
 section.team {
 	
-	.row.two {
+	.row{
 		padding-top: 20px;
 	}
 	
@@ -128,6 +132,13 @@ section.team {
 	        -o-transition: .5s ease-in-out;  
 	    }
 	  
+	}
+	
+	h3 {
+		
+		span {
+			color: $brand-black;
+		}
 	}
 	
 		

@@ -7106,16 +7106,19 @@ ul.call-us {
   padding-bottom: 0; }
   .interior-page-top .row {
     margin: 0; }
+  .interior-page-top .push-in {
+    padding: 60px;
+    padding-top: 0;
+    text-align: center; }
   .interior-page-top p {
-    color: white;
-    padding: 10px 60px; }
+    color: white; }
 
 .interior-page-bottom {
   margin: 0; }
 
 .page-title {
-  color: white;
-  padding: 30px 60px; }
+  padding-top: 30px;
+  color: white; }
 
 .indention {
   background: white;
@@ -7179,7 +7182,7 @@ ul.call-us {
 
 /* Executive Team Page Styles
 ================================================== */
-section.team .row.two {
+section.team .row {
   padding-top: 20px; }
 section.team img {
   -webkit-filter: grayscale(100%);
@@ -7195,6 +7198,8 @@ section.team img {
     -moz-transition: .5s ease-in-out;
     -o-filter: grayscale(0%);
     -o-transition: .5s ease-in-out; }
+section.team h3 span {
+  color: #323132; }
 
 /* Footer Styles
 ================================================== */

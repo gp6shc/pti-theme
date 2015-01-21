@@ -9,7 +9,6 @@ header {
 }
 
 .header-fixed {
-	opacity: 0.95;
 	box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
   	
   	.ts-mainnav .container{
@@ -17,17 +16,6 @@ header {
 		padding-bottom: 10px;
 	}
 
-}
-
-.header-fixed .navbar-brand .logo{
-	width: 170px !important;
-  	height: 40px !important;
-  	background-size: contain !important;
-  	background-repeat: no-repeat;
-}
-
-.header-fixed .dropdown-menu{
-	top: 50% !important;
 }
 
 /* Top-bar
@@ -99,7 +87,6 @@ ul.call-us{
 		padding-bottom: 20px;
 		transition: padding .6s;
 	}
-	
 }
 
 .navbar-header{
@@ -146,7 +133,11 @@ ul.call-us{
 	
 }
 
-ul.navbar-nav > li > a{
+.navbar-nav {
+	float: right;
+}
+
+.navbar-nav > li > a{
 	font-weight: 700;
 	color: white;
 	padding: 0 15px;
@@ -154,16 +145,16 @@ ul.navbar-nav > li > a{
 	font-family: $font-heading;
 }
 
-ul.navbar-nav > li:last-child a{
+.navbar-nav > li:last-child a{
 	padding-right: 0;
 }
 
-ul.navbar-nav > li.active > a,
-ul.navbar-nav > li > a:hover{
-	color: $brand-black;
+.navbar-nav > li.active > a,
+.navbar-nav > li > a:hover{
+	color: darken(white,20%);
 }
 
-ul.navbar-nav > li > a i{
+.navbar-nav > li > a i{
 	font-weight: 700;
 }
 
@@ -189,7 +180,7 @@ ul.navbar-nav > li > a i{
 		margin-right: auto;
 		margin-bottom: 0;
 		margin-top: 20px;
-		background-color: $primary-blue;
+		background-color: rgba($primary-blue, 0.9);
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
 	}
 }
@@ -242,8 +233,13 @@ ul.navbar-nav > li > a i{
 }
 
 /* Get a Quote */
-.m-left-60{
-	margin-left: 60px;
+.get-quote {
+	margin: 8px 0 0 60px;
+	
+	button {
+		opacity: 1;
+		transition: opacity 0.5s 0.1s;
+	}
 }
 /* button styling located in _global.scss */
 	
@@ -251,6 +247,57 @@ ul.navbar-nav > li > a i{
 
 /* Search */
 .search {
-	padding: 5px 20px;
-	color: white;
+	
+	i {
+		color: white;
+		margin-top: 2px;
+		padding: 5px 10px 5px 20px;
+		cursor: pointer;
+		transition: transform 0.5s;
+		position: relative;
+		z-index: 10;
+	}
+	
+	.fa-times {
+		padding: 5px 15px 5px 20px;
+	}
+
+	form {
+		position: absolute;
+		top: 3px;
+		right: 0;
+		width: 216px;
+		margin-top: 2px;
+		opacity: 1;
+		transition: opacity 0.3s;
+	}
+	
+	.search-field {
+		-webkit-appearance: none;
+		width: 165px;
+		padding: 3px 5px;
+		text-indent: 5px;
+		background-color: lighten($brand-grey, 13%);
+		border: 2px solid lighten($brand-grey, 13%);
+		transition: all 0.3s;
+		
+		&:focus {
+			background-color: white;
+			outline: 0 none;
+			border-color: $brand-green;
+		}
+	}
+
+	.search-submit {
+		-webkit-appearance: none;
+		padding: 8px 17px 7px 17px;
+		margin-top: -2px;
+		margin-left: -10px;
+	}
 }
+
+.search-slide {
+	transform: translateX(-208px);
+}
+
+

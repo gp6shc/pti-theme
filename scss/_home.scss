@@ -1,46 +1,79 @@
 /* Homepage Styles
 ================================================== */
-/* Section 1: .video
+/* Only when on the Home page
 ================================================== */
-.video {
-	margin-top: 95px;
-	background: $brand-black; //added to see that responsive tweaks are needed
-	height: 500px;
-}
-.video-wrapper {	
-	position: absolute;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 0;
-	color: black;
-	
-	video {
+.home {
+	&::before{
+		content: '';
 		position: fixed;
-	    top: 0;
-	    left: 0;
-	    bottom: 0;
-	    right: 0;
-	    width: 100%;
-	    height: auto;
-	    min-width: 100%;
-	    min-height: 100%;
-	    z-index: -1000;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-image: linear-gradient(to bottom,
+										$secondary-blue,
+										$secondary-blue 60%,
+										$brand-white 60%,
+										$brand-white 100% );
 	}
-
 }
+
+/* Section 1: .image-cycle
+================================================== */
+.image-cycle {
+	background-color: white;
+	
+	.carousel-inner {
+	    
+	    .item {
+			opacity: 0;
+			transition-property: opacity;
+	    }
+	
+	    .active {
+			opacity: 1;
+	    }
+	
+	    .active.left,
+	    .active.right {
+			left: 0;
+			opacity: 0;
+			z-index: 1;
+	    }
+	
+	    .next.left,
+	    .prev.right {
+			opacity: 1;
+	    }
+	}
+	
+	.carousel-control, .carousel-indicators {
+		display: none;
+	}
+	
+	.carousel-caption {
+		margin-bottom: 50px;
+		
+		h1 {
+			color: darken($primary-blue, 18%);
+			text-shadow: none;
+			font-weight: 100;
+			font-size: 72px;
+		}
+	}
+}
+
 
 /* Section 2: .quote
 ================================================== */
 .quote {
 	background: $brand-white;
 	
-	h3 {
+	h1 {
 		color: $brand-black;
-		font-weight: 300;
+		font-weight: 100;
 	}
 	
-	h5 {
+	h3 {
 		color: $secondary-blue;
 		font-weight: 300;
 	}
@@ -50,35 +83,223 @@
 	}
 }
 
+/* Section 2b: .get-a-quote
+================================================== */
+.get-a-quote {
+	
+	.grey-bg {
+		background-color: $brand-white;
+		border-color: $brand-white;
+	}
+		
+	input {
+		font-size: 20px;
+		padding: 19px 10px;
+		border: 2px solid white;
+		box-shadow: none;
+		border-radius: 5px !important;
+		transition: all 0.3s;
+		
+		&:focus {
+			outline: 0 none;
+			background-color: white;
+			border-color: $brand-green;
+		}
+	}
+	
+	button {
+		padding: 7px 15px;
+		margin-left: -10px;
+		font-size: 20px;
+		font-weight: 400;
+		position: relative;
+		z-index: 2;
+	}
+}
+
 /* Section 3: .about
 ================================================== */
 .about {
 	background: white;
 	
-	img {
-		width: auto!important;
+	h2 {
+		color: $secondary-blue;
+		font-weight: 100;
 	}
 }
 
-/* Section 4: .carousel-1 (1st carousel)
+/* Section 3b: .branch
+================================================== */
+.branch {
+	height: 137px;
+	background: transparent;
+	font-size: 0; // remove space between inline-block elements
+	
+	svg {
+		display: inline-block;
+		margin: auto;
+	}
+	
+	&::before, &::after {
+		content: "";
+		display: inline-block;
+		width: calc( (100% - 740px)/2);
+		height: 137px;
+		background-color: white;		
+	}
+}
+
+/* Section 4: .two-panel
+================================================== */
+.two-panels {
+	background: transparent;
+	margin-bottom: -25px;
+	z-index: 5;
+	
+	h2 {
+		color: $secondary-blue;
+		font-weight: 100;
+	}
+	
+	p {
+		color: $brand-black;
+	}
+	
+	> div {
+		background: white;
+		width: 49.85%;
+		height: 400px;
+		padding: 80px;
+		border-bottom-right-radius: 25px;
+		
+		+ div {
+			margin-left: 0.3%;
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 25px;
+		}
+		
+		> div {
+			width: 80%;
+		}
+	}
+	
+	.push-right {
+		float: right;
+	}
+	.push-left {
+		float: left;
+	}
+}
+
+
+/* Section 5: .carousel-1 (1st carousel)
 ================================================== */
 .carousel-1 {
-	background: #444;
+	background: $brand-white;
+	
+	.carousel-inner {
+		margin: -25px 0;
+	}
+
 }
 
-/* Section 5: .customers
+.carousel-control {
+	
+	i {
+		display: inline-block;
+		text-shadow: none;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}		
+	
+	&.left, &.right {
+		background: none;
+
+	}
+}
+
+/* Section 6: .two-panels-2
+================================================== */
+.two-panels-2 {
+	background: transparent;
+	
+	h2 {
+		color: $secondary-blue;
+		font-weight: 100;
+	}
+	
+	> div {
+		border-top-right-radius: 25px;
+		
+		+ div {
+			border-top-right-radius: 0;
+			border-top-left-radius: 25px;
+		}
+	}
+}
+/* Section 7: .customers
 ================================================== */
 .customers {
-	background: #555;
+	background-color: $brand-white;
+	color: $brand-grey;
+	transition: all 0.3s;
+	
+	h1 {
+		font-weight: 100;
+	}
+	
+	p {
+		padding-bottom: 20px;
+	}
+	
+	h4 {
+		color: white;
+		text-transform: uppercase;
+		
+		span {
+			color: lighten($secondary-blue, 8%);
+		}
+	}
+	
+}
+	
+.blue-bg {
+	background-color: $secondary-blue;
+	color: white;
 }
 
-/* Section 6: .ceo
+/* Section 8: .ceo
 ================================================== */
 .ceo {
 	background: $brand-white;
+	
+	h2 {
+		color: darken($primary-blue,7%);
+	}
+	
+	h5 {
+		color: $secondary-blue;
+	}
+	
+	p {
+		color: $brand-black;
+	}
+	
+	&::before {
+		content: "";
+		height: 20px;
+		width: 20px;
+		border-radius: 10px;
+		position: absolute;
+		top: -10px;
+		left: calc(50% - 10px);
+		background-color: white;
+		border: 3px solid $secondary-blue;
+	}
 }
 
-/* Section 7: .carousel-2 (2nd carousel)
+/* Section 9: .carousel-2 (2nd carousel)
 ================================================== */
 .carousel-2 {
 	background: $brand-white;
@@ -87,40 +308,31 @@
 		max-width: 100%;
 		padding: 0;
 	}*/
-
-}
-
-.carousel-control {
-	background: transparent!important;
 	
-	i {
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		z-index: 5;
+	.indention {
+		background-color: $brand-white;
+		margin-top: -25px;
 	}
-		
+
 }
 
-.carousel-control.left {
-	left: 10%;
-}
-.carousel-control.right {
-	right: 10%;
-}
-
-/* Section 8: .emergency
+/* Section 10: .emergency
 ================================================== */
 .emergency {
 	background: $brand-white;
 	
+	h5 {
+		color: darken($primary-blue,7%);
+		font-style: italic;
+	}
+	
 	img {
-		width: auto!important;
+		margin: 20px 0;
 	}
 
 }
 
-/* Section 9: .academy
+/* Section 11: .academy
 ================================================== */
 .academy {
 	background: white;

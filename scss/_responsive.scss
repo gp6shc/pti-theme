@@ -100,16 +100,16 @@ $screen-xs: 480px;
 		border: none;
 	}
 	
+	#sidebar-wrapper {
+		padding: 10px 0px;
+		margin-bottom: 0;
+	}
+
+	
 
 }
 
 /* 480 and above */
 @media (min-width: $screen-xs) {
 		
-}
-
-/* Images and Media */
-img {
-	width: 100%!important;
-	height: auto!important;
 }

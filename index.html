@@ -4,6 +4,10 @@
 
 	<meta charset="utf-8">
 	<title>People's Trust Insurance</title>
+	<!-- Adobe Typekit Font Load
+	================================================== -->
+	<script src="//use.typekit.net/duo1dxn.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
 	<meta name="keywords" content="">
 	<meta name="description" content="">	
 	<meta name="author" content="">
@@ -29,7 +33,7 @@
 
 </head>
 	
-<body>
+<body class="home"> <!-- only set this class on the home page -->
 
 	<div class="body-inner">
 	<!-- Header start -->
@@ -81,8 +85,8 @@
 				        <span class="icon-bar"></span>
 				    </button>
 				    <div class="navbar-brand">
-					    <a href="index.html" title="People's Trust Insurance">
-					    	<div class="logo"><img rel="logo" src="images/placeholder-logo.png"></div>
+					    <a href="/" title="People's Trust Insurance">
+					    	<div class="logo"><img rel="logo" src="images/PTI-Logo.svg"></div>
 					    </a> 
 				    </div>                   
 				</div><!--/ Logo end -->
@@ -165,34 +169,66 @@
 							</div>
 						</li>
 						<!-- Get a Quote, visible on lg,md -->
-						<li class="visible-lg visible-md">
-							<button class="btn btn-default rounded push-down m-left-60" type="button">Get a Quote</button>
+						<li class="visible-lg visible-md get-quote">
+							<button class="btn btn-default rounded" id="js-quote-btn" type="button">Get a Quote</button>
 						</li>
 						<!-- Search -->
-						<li class="visible-lg visible-md visible-sm search push-down">
-							<i class="fa fa-search fa-2x"></i>
+						<li class="visible-lg visible-md visible-sm search" id="js-search">
+							<i class="fa fa-search fa-2x" id="js-search-icon"></i>
+							<form role="search" method="get" class="opacity-0" id="js-search-form" action="/">
+								<input type="search" class="search-field rounded" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+								<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
+							</form>
 						</li>
-						
 					</ul><!--/ Navbar-nav end -->
 				</nav><!--/ Navigation end -->
 			</div><!--/ Container end -->
 		</div> <!-- Navbar end -->
 	</header><!--/ Header end -->
 	
-	<!-- SECTION 1: VIDEO, SIMPLY A BETTER WAY -->
-	<section id="video" class="video content top-gap">
-		<div class="container">
-	    	<div class="row">
-	        	<div class="col-md-12">
-	        	    <div class="video-wrapper">
-						<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/sp-poster.jpg" autoplay loop>
-						  <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/developer-loop-1920x1080.webm" type="video/webm">
-						  <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/developer-loop-1920x1080.mp4" type="video/mp4">
-						</video>
-					</div><!--/ .video-wrapper -->
-	        	</div><!--/ .col -->
-	        </div><!--/ .row -->
-	    </div><!--/ .container -->
+	<!-- SECTION 1: IMAGE CYCLE, SIMPLY A BETTER WAY -->
+	<section class="image-cycle top-gap">
+	    <div class="row">
+	    	<div class="col-md-12">
+	    	     <!-- carousel -->
+		        <div id="transition-timer-carousel-opaque" class="carousel slide transition-timer-carousel" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
+						<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
+					</ol>
+					
+					<!-- Welcome Text -->	
+					<div class="carousel-caption">
+						<h1>Simply a Better Way</h1>
+					</div>
+					
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<!-- Slide 1 -->
+						<div class="item active">
+		                    <img src="http://placehold.it/1600x536/e0e0e0" />
+		                </div>
+		                <!-- Slide 2 -->
+		                <div class="item">
+		                    <img src="http://placehold.it/1600x536/717171" />
+						</div>
+		                <!-- Slide 3 -->
+		                <div class="item">
+		                    <img src="http://placehold.it/1600x536/424242" />
+						</div>
+		            </div><!--/ .carousel-inner end -->
+		
+					<!-- Controls -->
+					<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
+						<i class="fa fa-arrow-circle-left fa-2x l"></i>
+					</a>
+					<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
+						<i class="fa fa-arrow-circle-right fa-2x r"></i>
+					</a>
+	    	</div><!--/ .col -->
+	    </div><!--/ .row -->
 	</section>
 	
 	<!-- SECTION 2: QUOTE -->
@@ -200,19 +236,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Join our family of more <br />than 135,000 policyholders</h3>
-					<h5>Let us show you how.</h5>
-						<form class="form-inline">
+					<h1>Join our family of more <br />than 135,000 policyholders.</h1>
+					<h3>Let us show you how.</h3>
+						<form class="form-inline get-a-quote">
 							<div class="form-group">
 						    	<label class="sr-only">Your Zip Code</label>
 						    	<div class="input-group">
-						    	  <input type="number" class="form-control" id="exampleInputAmount" placeholder="Amount">
+						    		<input type="text" class="form-control" id="exampleInputAmount" placeholder="Your Zip Code" pattern="(\d{5}([\-]\d{4})?)">
 						    	</div>
 						    </div>
 						  <button type="submit" class="btn btn-default rounded">Get a Quote</button>
 						</form>
 				</div><!--/ .col -->
-		    	
 			</div><!--/ .row -->
 		</div><!--/ .container -->
 	</section>
@@ -223,27 +258,57 @@
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
 					<img class="about circle" src="http://placehold.it/150x150">
-					<h3 class="title">Better Prepared</p>
+					<h2 class="title">Better Prepared</h2>
 					<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 					<p><a class="read-more" href="#">Learn More <i class="fa fa-arrow-circle-right"> </i></a></p>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<img class="about circle" src="http://placehold.it/150x150">
-					<h3 class="title">Simplified Recovery</p>
+					<h2 class="title">Simplified Recovery</h2>
 					<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 					<p><a class="read-more" href="#">Learn More <i class="fa fa-arrow-circle-right"> </i></a></p>
 				</div>
 				<div class="col-md-4 col-sm-4">
 					<img class="about circle" src="http://placehold.it/150x150">
-					<h3 class="title">Greater Value</p>
+					<h2 class="title">Greater Value</h2>
 					<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 					<p><a class="read-more" href="#">Learn More <i class="fa fa-arrow-circle-right"> </i></a></p>
 				</div>
 			</div><!--/ Row end -->
 		</div><!--/ Container end -->
 	</section>
+	<!-- SECTION 3b: Branches -->
 	
-	<!-- SECTION 4: CAROUSEL-1 -->
+	<section class="row branch no-padding">
+		<svg width="740px" height="137px" viewBox="0 0 740 137" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+		    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+		    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+		        <path d="M727.850841,19.7874937 C726.377359,61.5023962 691.966977,95 649.9,95 L409.9,95 L409.9,99 L649.9,99 C694.160515,99 730.366591,63.7138822 731.85256,19.8073125 C736.426247,18.8926998 739.9,14.8323225 739.9,10 C739.9,4.5 735.4,0 729.9,0 C724.4,0 719.9,4.5 719.9,10 C719.9,14.7982438 723.32493,18.8353919 727.850841,19.7874937 L727.850841,19.7874937 Z M371.9,19.797705 L371.9,116.889971 C378.192921,103.037373 391.600303,95 409.9,95 L409.9,99 C386.1,99 371.9,113.2 371.9,137 L371.9,136.999978 L371.9,147 L367.9,147 L367.9,137 C367.9,113.2 353.7,99 329.9,99 L329.9,95 C348.199697,95 361.607079,103.037373 367.9,116.889971 L367.9,19.797705 C363.349754,18.86459 359.9,14.815601 359.9,10 C359.9,4.5 364.4,0 369.9,0 C375.4,0 379.9,4.5 379.9,10 C379.9,14.815601 376.450246,18.86459 371.9,19.797705 L371.9,19.797705 Z M7.94743986,19.8073125 C9.43340949,63.7138822 45.6394848,99 89.9,99 L329.9,99 L329.9,95 L89.9,95 C47.833023,95 13.4226412,61.5023962 11.9491595,19.7874937 C16.4750696,18.8353919 19.9,14.7982438 19.9,10 C19.9,4.5 15.4,0 9.9,0 C4.4,0 -0.1,4.5 -0.1,10 C-0.1,14.8323225 3.37375313,18.8926998 7.94743986,19.8073125 L7.94743986,19.8073125 Z M-10,-10 L-10,147 L750,147 L750,-10 L-10,-10 Z M729.9,3.3 C726.2,3.3 723.2,6.3 723.2,10 C723.2,13.7 726.2,16.7 729.9,16.7 C733.6,16.7 736.6,13.7 736.6,10 C736.6,6.3 733.6,3.3 729.9,3.3 Z M370,3.3 C366.3,3.3 363.3,6.3 363.3,10 C363.3,13.7 366.3,16.7 370,16.7 C373.7,16.7 376.7,13.7 376.7,10 C376.7,6.3 373.7,3.3 370,3.3 Z M10.1,3.3 C6.4,3.3 3.4,6.3 3.4,10 C3.4,13.7 6.4,16.7 10.1,16.7 C13.8,16.7 16.8,13.7 16.8,10 C16.8,6.3 13.8,3.3 10.1,3.3 Z" id="Rectangle-3" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+		    </g>
+		</svg>
+	</section>
+
+	<!-- SECTION 4: Dual Box: RRTR & VIPGold -->	
+	<section class="row content no-padding two-panels">
+		<div class="col-md-6">
+			<div class="push-right text-center">
+				<img class="about" src="http://placehold.it/200x100">
+				<h2 class="title">24/7 Emergency Repairs</h2>
+				<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<p><a class="read-more" href="#">Rapid Response Team <i class="fa fa-arrow-circle-right"> </i></a></p>
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="push-left text-center">
+				<img class="about" src="http://placehold.it/200x100">
+				<h2 class="title">Stress-Free Claims</h2>
+				<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				<p><a class="read-more" href="#">VIPGold <i class="fa fa-arrow-circle-right"> </i></a></p>
+			</div>
+		</div>
+	</section>
+	
+	<!-- SECTION 5: CAROUSEL-1 -->
 	<section id="carousel-1" class="carousel-1 no-padding">
 		<!-- set container to full-width -->
 		<div class="container full-width">
@@ -255,7 +320,6 @@
 						<ol class="carousel-indicators">
 							<li data-target="#transition-timer-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#transition-timer-carousel" data-slide-to="1"></li>
-							<li data-target="#transition-timer-carousel" data-slide-to="2"></li>
 						</ol>
 			
 						<!-- Wrapper for slides -->
@@ -289,26 +353,71 @@
 		</div><!--/ container end -->
 	</section>
 	
-	<!-- SECTION 5: CUSTOMERS WORDS -->
-	<section id="customers" class="customers content">
+	<!-- SECTION 6: Dual Boxes: Quote & Award -->	
+	<section class="row content no-padding two-panels two-panels-2">
+		<div class="col-md-6">
+			<div class="push-right text-center">
+				<h2 class="title">Save Now</h2>
+				<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<p><a class="read-more" href="#">Get your price quote now.</a></p>
+				<form class="form-inline get-a-quote">
+					<div class="form-group">
+						<label class="sr-only">Your Zip Code</label>
+							<div class="input-group">
+								<input type="text" class="form-control grey-bg" id="exampleInputAmount" placeholder="Your Zip Code" pattern="(\d{5}([\-]\d{4})?)">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-default rounded">Go</button>
+				</form>
+			</div>	
+		</div>
+		<div class="col-md-6">
+			<div class="push-left text-center">
+				<h2 class="title">Award-Winning</h2>
+				<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+				<img class="about circle" src="http://placehold.it/150x150">
+			</div>
+		</div>
+	</section>
+	
+	<!-- SECTION 7: CUSTOMERS WORDS -->
+	<section id="customers" class="content text-center customers">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h1>customers words</h1>
+					<h1>In Our Customers' Words</h1>
+					<p>Let our customers tell you in their words what People's Trust<br />
+						has done for them, and what we can do for you.
+					</p>
+					
+					<div class="col-md-4 col-sm-4">
+						<img class="img-responsive" src="http://placehold.it/300x150">
+						<h4 class="name">Customer Name <br /> <span>Policyholder</span></h4>
+
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<img class="img-responsive" src="http://placehold.it/300x150">
+						<h4 class="name">Customer Name <br /> <span>Policyholder</span></h4>
+
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<img class="img-responsive" src="http://placehold.it/300x150">
+						<h4 class="name">Customer Name <br /> <span>Policyholder</span></h4>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<!-- SECTION 6: CEO -->
+	<!-- SECTION 8: CEO -->
 	<section id="ceo" class="ceo content">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
-					<p>this div will be empty, ceo img to be added in css to position better</p>
+					<img class="ceo-img" src="http://placehold.it/270x250&text=CEO"/>
 				</div>
 				<div class="col-md-8 col-sm-8">
-					<h3>Why we created a better way</h3>
+					<h2>Why We Created A Better Way</h2>
 					<h5><strong>George Schaeffer</strong> Chairman and CEO</h5>
 					<p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
 					<p><a class="read-more" href="#">Read More <i class="fa fa-arrow-circle-right"> </i></a></p>
@@ -317,11 +426,15 @@
 		</div>
 	</section>
 	
-	<!-- SECTION 7: CAROUSEL-2 -->
+	<!-- SECTION 9: CAROUSEL-2 -->
 	<section id="carousel-2" class="carousel-2 no-padding">
 		<!-- set container to full-width -->
 		<div class="container full-width">
 			<div class="row">
+	    		<div class="row">
+	    		   <div class="indention left col-md-6 col-sm-6 hidden-xs no-padding"></div>
+				   <div class="indention right col-md-6 col-sm-6 hidden-xs no-padding"></div>
+				</div><!-- /.row -->
 				<div class="col-md-12 col-sm-12">
 					 <!-- carousel -->
 			        <div id="transition-timer-carousel-two" class="carousel slide transition-timer-carousel" data-ride="carousel">
@@ -329,7 +442,6 @@
 						<ol class="carousel-indicators">
 							<li data-target="#transition-timer-carousel-two" data-slide-to="0" class="active"></li>
 							<li data-target="#transition-timer-carousel-two" data-slide-to="1"></li>
-							<li data-target="#transition-timer-carousel-two" data-slide-to="2"></li>
 						</ol>
 			
 						<!-- Wrapper for slides -->
@@ -366,10 +478,19 @@
 						</a>
 				</div><!--/ col end -->
 			</div><!--/ Row end -->
+			<!-- arrow indention at bottom -->
+	    	<div class="row">
+	    		<div class="indention left col-md-6 col-sm-6 hidden-xs no-padding">
+			    	<!-- empty div -->
+				</div>
+				<div class="indention right col-md-6 col-sm-6 hidden-xs no-padding">
+					 <!-- empty div -->
+				</div>
+			</div><!-- /.row -->
 		</div><!--/ container end -->
 	</section>
 	
-	<!-- SECTION 8: EMERGENCY -->
+	<!-- SECTION 10: EMERGENCY -->
 	<section id="emergency" class="emergency content text-center">
 		<div class="container">
 			<div class="row">
@@ -394,23 +515,23 @@
 		</div><!--/ Container end -->
 	</section>
 	
-	<!-- SECTION 9: HOMEOWNER'S ACADEMY -->
+	<!-- SECTION 11: HOMEOWNER'S ACADEMY -->
 	<section id="academy" class="academy content text-center">
 		<div class="container">
 			<div class="row">
 				<h3 class="page-header">Homeowner's Academy</h3>
 				<div class="col-md-4 col-sm-4">
-					<img class="news" src="http://placehold.it/350x200">
+					<img class="news" src="http://placehold.it/300x150">
 					<h5 class="news-title">This is a News Title</h5>
 					<p><a class="read-more" href="#">Read More <i class="fa fa-arrow-circle-right"> </i></a></p>
 				</div>
 				<div class="col-md-4 col-sm-4">
-					<img class="news" src="http://placehold.it/350x200">
+					<img class="news" src="http://placehold.it/300x150">
 					<h5 class="news-title">This is a News Title</h5>
 					<p><a class="read-more" href="#">Read More <i class="fa fa-arrow-circle-right"> </i></a></p>
 				</div>
 				<div class="col-md-4 col-sm-4">
-					<img class="news" src="http://placehold.it/350x200">
+					<img class="news" src="http://placehold.it/300x150">
 					<h5 class="news-title">This is a News Title</h5>
 					<p><a class="read-more" href="#">Read More <i class="fa fa-arrow-circle-right"> </i></a></p>
 				</div>
@@ -482,14 +603,14 @@
 						<!-- NESTED COLUMNS -->
 						<div class="col-md-7 col-sm-6 footer-address">
 							<address>
-								<p>People's Trust Insurance</p>
-								<p>18 People's Trust Way</p>
-								<p>Deerfield Beach, FL 33441-6270</p>
+								<p>People's Trust Insurance<br />
+								18 People's Trust Way<br />
+								Deerfield Beach, FL 33441-6270</p>
 							</address>
 						</div>
 						<div class="col-md-5 col-sm-6 footer-ph">
-							<p>Give Us a Call</p>
-							<p><a href="tel:1-888-524-6003"><strong>1-888-524-6003</strong></a></p>
+							<p>Give Us a Call<br />
+							<a href="tel:1-888-524-6003"><strong>1-888-524-6003</strong></a></p>
 						</div>
 					</div><!--/ end footer-right -->
 				</div><!--/ end col -->
@@ -502,8 +623,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 col-sm-6">
-					<p>&copy; Copyright 2015</p>
-					<p>People's Trust Insurance Company</p>
+					<p>&copy; Copyright 2015<br />
+					People's Trust Insurance Company</p>
 				</div>
 				<div class="col-md-8 col-sm-6">
 					<div class="row">
@@ -543,7 +664,7 @@
 	================================================== -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="js/min/custom.min.js"></script>
 	
   </div><!-- Body inner end -->
 </body>

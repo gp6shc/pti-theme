@@ -1,16 +1,13 @@
-/* Interior Page Styles
+/* Global Interior Page Styles
 ================================================== */
-.interior-page {
-	margin-top: 115px; /* needs work */
+.interior-page-top {
+	margin-top: 115px; 
+	background: $secondary-blue;
+	padding-bottom: 0;
 	
 	.row {
 		margin: 0;
 	}
-	
-}
-
-#page-intro {
-	background: $secondary-blue;
 	
 	p {
 		color: white;
@@ -19,8 +16,8 @@
 	
 }
 
-.left-15 {
-	margin-left: 15px;
+.interior-page-bottom {
+	margin: 0; 	
 }
 
 .page-title {
@@ -28,30 +25,22 @@
 	padding: 30px 60px;
 }
 
-#page-content-wrapper {
-	position: relative;
-    width: 100%;
-    padding: 20px;
-}
-
 .indention {
 	background: white;
 	height: 30px;	
 }
+
 .left {
 	border-top-right-radius: 40px;
 }
+
 .right {
 	border-top-left-radius: 40px;
 }
-#page-body {
-	padding: 60px;
-	background: white;
-}
 
 
 
-/* Sidebar */
+/* Interior Page Left Sidebar */
 .sidebar {
 	padding: 15px;
 }
@@ -96,3 +85,30 @@
     }
     
 }
+
+/* Specific Interior Page Styles
+================================================== */
+/* About Page Styles
+================================================== */
+#page-body {
+	padding: 60px;
+	background: white;
+}
+#page-content-wrapper {
+	position: relative;
+    width: 100%;
+    padding: 20px;
+}
+.left-15 {
+	margin-left: 15px;
+}
+
+/* Executive Team Page Styles
+================================================== */
+section.team {
+	
+	.row.two {
+		padding-top: 20px;
+	}
+}
+

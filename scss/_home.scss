@@ -170,12 +170,12 @@
 		width: 49.85%;
 		height: 400px;
 		padding: 80px;
-		border-bottom-right-radius: 25px;
+		border-radius: 0 0 40px 0 / 0 0 25px 0;
 		
 		+ div {
 			margin-left: 0.3%;
 			border-bottom-right-radius: 0;
-			border-bottom-left-radius: 25px;
+			border-radius: 0 0 0 40px / 0 0 0 25px;
 		}
 		
 		> div {
@@ -219,6 +219,12 @@
 	}
 }
 
+.carousel-indicators {
+	
+	li {
+		transition: background-color 0.3s;
+	}
+}
 /* Section 6: .two-panels-2
 ================================================== */
 .two-panels-2 {
@@ -230,11 +236,10 @@
 	}
 	
 	> div {
-		border-top-right-radius: 25px;
+		border-radius: 0 40px 40px 0 / 0 25px 25px 0;
 		
 		+ div {
-			border-top-right-radius: 0;
-			border-top-left-radius: 25px;
+			border-radius: 40px 0 0 40px / 25px 0 0 25px;
 		}
 	}
 }

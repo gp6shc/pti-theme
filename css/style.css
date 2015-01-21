@@ -7133,11 +7133,11 @@ ul.call-us {
     width: 49.85%;
     height: 400px;
     padding: 80px;
-    border-bottom-right-radius: 25px; }
+    border-radius: 0 0 40px 0/0 0 25px 0; }
     .two-panels > div + div {
       margin-left: 0.3%;
       border-bottom-right-radius: 0;
-      border-bottom-left-radius: 25px; }
+      border-radius: 0 0 0 40px/0 0 0 25px; }
     .two-panels > div > div {
       width: 80%; }
   .two-panels .push-right {
@@ -7161,6 +7161,9 @@ ul.call-us {
 .carousel-control.left, .carousel-control.right {
   background: none; }
 
+.carousel-indicators li {
+  transition: background-color 0.3s; }
+
 /* Section 6: .two-panels-2
 ================================================== */
 .two-panels-2 {
@@ -7169,10 +7172,9 @@ ul.call-us {
     color: #0780E2;
     font-weight: 100; }
   .two-panels-2 > div {
-    border-top-right-radius: 25px; }
+    border-radius: 0 40px 40px 0/0 25px 25px 0; }
     .two-panels-2 > div + div {
-      border-top-right-radius: 0;
-      border-top-left-radius: 25px; }
+      border-radius: 40px 0 0 40px/25px 0 0 25px; }
 
 /* Section 7: .customers
 ================================================== */
@@ -7273,12 +7275,10 @@ ul.call-us {
 .indention {
   background: white;
   height: 30px; }
-
-.left {
-  border-top-right-radius: 40px; }
-
-.right {
-  border-top-left-radius: 40px; }
+  .indention.left {
+    border-radius: 0 45px 0 0/0 30px 0 0; }
+  .indention.right {
+    border-radius: 45px 0 0 0/30px 0 0 0; }
 
 #page-body {
   padding: 60px;

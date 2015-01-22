@@ -39,7 +39,7 @@ a:focus{
 	outline: 0;
 }
 img {
-	width: auto;
+	max-width: 100%;
 }
 
 /* Typography
@@ -205,6 +205,10 @@ img.pull-right, .pull-right > img {
 	background: #f2f2f2;
 	margin: 5px 15px 5px 0;
 	border: 1px solid #e7e7e7;
+}
+
+input {
+	-webkit-appearance: none;
 }
 
 

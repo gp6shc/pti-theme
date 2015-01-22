@@ -7156,6 +7156,10 @@ ul.call-us {
   background-color: #0780E2;
   color: white; }
 
+/* modal popup for yt video embeds */
+.modal {
+  top: 15%; }
+
 /* Section 8: .ceo
 ================================================== */
 .ceo {

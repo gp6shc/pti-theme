@@ -24,6 +24,10 @@ $youtube: #cc181e;
 $font-body: Georgia,Helvetica,Arial; //400regular,400italic
 $font-heading: "museo-sans",sans-serif,serif; //100,100italic,300,300italic,500,500italic,700
 
+//text colors
+$text-blue-light: #7eedff;
+$text-blue-dark: darken($primary-blue, 18%);
+
 /* imports
 -------------------------------------------------------------- */
 // Vendors

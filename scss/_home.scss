@@ -69,6 +69,7 @@
 ================================================== */
 .quote {
 	background: $brand-white;
+	padding-bottom: 0;
 	
 	h1 {
 		color: $brand-black;
@@ -82,6 +83,9 @@
 	
 	form {
 		
+	}
+	.indention {
+		height: 40px;
 	}
 }
 
@@ -118,7 +122,9 @@
 		position: relative;
 		z-index: 2;
 	}
+	
 }
+
 
 /* Section 3: .about
 ================================================== */
@@ -128,6 +134,7 @@
 	h2 {
 		color: $secondary-blue;
 		font-weight: 100;
+		font-size: 44px;
 	}
 }
 

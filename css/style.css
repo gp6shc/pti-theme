@@ -6465,12 +6465,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "museo-sans", sans-serif, serif; }
 
 h1 {
-  font-size: 36px;
-  line-height: 48px; }
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 400; }
 
 h2 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 38px;
+  line-height: 46px;
   font-weight: 700; }
 
 h3 {
@@ -6546,8 +6547,11 @@ section {
   max-width: 100% !important;
   padding: 0; }
 
-.read-more {
-  color: #00AA71; }
+.read-more, .read-more a {
+  color: #00AA71;
+  font-weight: 700; }
+  .read-more:hover, .read-more a:hover {
+    color: #008659; }
 
 .text-center {
   text-align: center; }
@@ -6567,6 +6571,9 @@ section {
 
 .pad-60 {
   padding: 60px; }
+
+.pad-top-60 {
+  padding-top: 60px; }
 
 .top-gap {
   padding: 0;
@@ -6920,13 +6927,16 @@ ul.call-us {
 /* Section 2: .quote
 ================================================== */
 .quote {
-  background: #EAEBEC; }
+  background: #EAEBEC;
+  padding-bottom: 0; }
   .quote h1 {
     color: #323132;
     font-weight: 100; }
   .quote h3 {
     color: #0780E2;
     font-weight: 300; }
+  .quote .indention {
+    height: 40px; }
 
 /* Section 2b: .get-a-quote
 ================================================== */
@@ -6959,7 +6969,8 @@ ul.call-us {
   background: white; }
   .about h2 {
     color: #0780E2;
-    font-weight: 100; }
+    font-weight: 100;
+    font-size: 44px; }
 
 /* Section 3b: .branch
 ================================================== */

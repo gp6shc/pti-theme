@@ -6802,18 +6802,23 @@ ul.call-us {
     margin-right: auto;
     margin-bottom: 0;
     margin-top: 20px;
-    background-color: rgba(0, 92, 186, 0.9);
+    color: white;
+    background-color: #0780E2;
     box-shadow: 0 2px 0.09px rgba(0, 0, 0, 0.15); }
+  .dropdown-menu i {
+    color: white;
+    margin-top: -10px;
+    margin-left: 25px; }
+  .dropdown-menu div:first-child {
+    padding: 15px 0; }
 
-.dropdown-menu > ul > li > a {
+.dropdown-menu li a, .dropdown-menu li a:visited {
   display: block;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 700;
   line-height: normal;
   text-decoration: none;
-  padding: 15px;
-  color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  color: white; }
 
 .dropdown-menu > ul > li:last-child > a {
   border-bottom: 0; }

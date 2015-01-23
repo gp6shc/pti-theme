@@ -180,28 +180,36 @@ ul.call-us{
 		margin-right: auto;
 		margin-bottom: 0;
 		margin-top: 20px;
-		background-color: rgba($primary-blue, 0.9);
+		color: white;
+		background-color: $secondary-blue;
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
+	}
+	
+	i {
+		color: white;
+		margin-top: -10px;
+		margin-left: 25px;
+	}
+	
+    div:first-child {
+    	padding: 15px 0;
 	}
 }
 
-.dropdown-menu > ul > li > a{
+.dropdown-menu li a, .dropdown-menu li a:visited {
 	display: block;
-	font-size: 14px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: 700;
 	line-height: normal;
 	text-decoration: none;
-	padding: 15px;
-	color: white;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	color: white;	
 	
 }
 
-.dropdown-menu > ul > li.active > a{
-
+.dropdown-menu > ul > li.active > a {
 }
 
-.dropdown-menu > ul > li:last-child > a{
+.dropdown-menu > ul > li:last-child > a {
 	border-bottom: 0;
 	
 	&:hover, &:focus {

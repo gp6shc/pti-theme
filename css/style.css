@@ -7379,7 +7379,16 @@ footer {
 /* 768 and above: nav collapse */
 @media (min-width: 768px) {
   .container {
-    max-width: 1060px; } }
+    max-width: 1060px; }
+
+  .demotech {
+    margin-top: -10px; }
+
+  .enterprise {
+    margin-top: -17px; }
+
+  .faia {
+    margin-left: 10px; } }
 /* Below 768: nav collapse */
 @media (max-width: 768px) {
   .navbar-brand {

@@ -7457,7 +7457,10 @@ footer {
   .form-inline .form-group {
     display: inline-block;
     margin-bottom: 0;
-    vertical-align: middle; } }
+    vertical-align: middle; }
+
+  .no-padding {
+    padding: 20px; } }
 /* 605 and below */
 @media (max-width: 605px) {
   .two-panels {

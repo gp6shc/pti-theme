@@ -7421,8 +7421,12 @@ footer {
     padding-top: 0;
     padding-bottom: 0; }
 
+  nav.navbar-collapse.in {
+    background: #0780E2; }
+
   .navbar-nav {
-    margin: 7.5px 0; }
+    margin: 7.5px 0;
+    float: none; }
     .navbar-nav li > a {
       padding: 0 10px; }
 

@@ -17,6 +17,47 @@ $screen-xs: 480px;
 		float: right;
 	}
 	
+	.two-panels > div {
+		padding: 40px;
+		
+		input.form-control {
+			width: 160px;
+		}
+	}
+}
+
+/* Below 850 */
+@media (max-width: 850px) {
+	.branch {
+		display: none;
+	}
+	
+	.two-panels {
+		border-top: 4px solid $secondary-blue;
+		
+		> div {
+			width: 50%;		
+			
+			> div {
+				width: 100%;
+			}
+			
+			+ div {
+				margin: 0;
+			}
+		}
+		.push-right {
+			float: none;
+		}
+	}
+	
+	.home::before{
+		display: none;	
+	}
+	
+	.two-panels-2 {
+		border: none;
+	}
 }
 
 /* 768 and above: nav collapse */
@@ -104,9 +145,35 @@ $screen-xs: 480px;
 		padding: 10px 0px;
 		margin-bottom: 0;
 	}
-
+	
+	.form-inline .form-group {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
 	
 
+}
+
+/* 605 and below */
+@media (max-width: 605px) {
+	.two-panels {
+		display: block;	
+
+		> div {
+			width: 100%;
+			border-bottom-left-radius: 0;		
+			border-bottom-right-radius: 0;		
+			
+			+ div {
+				border-radius: 0 0 40px 40px / 0 0 25px 25px;
+			}
+		}
+	}
+	
+	.two-panels-2 > div{
+		border-radius: 40px 40px 0 0 / 25px 25px 0 0;	
+	}	
 }
 
 /* 480 and above */

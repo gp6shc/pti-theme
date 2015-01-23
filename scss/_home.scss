@@ -3,6 +3,8 @@
 /* Only when on the Home page
 ================================================== */
 .home {
+	background-color: $brand-white;
+	
 	&::before{
 		content: '';
 		position: fixed;
@@ -54,7 +56,7 @@
 		margin-bottom: 50px;
 		
 		h1 {
-			color: darken($primary-blue, 18%);
+			color: $text-blue-dark;
 			text-shadow: none;
 			font-weight: 100;
 			font-size: 72px;
@@ -103,6 +105,7 @@
 		&:focus {
 			outline: 0 none;
 			background-color: white;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba($brand-green, 0.6);
 			border-color: $brand-green;
 		}
 	}
@@ -152,8 +155,10 @@
 /* Section 4: .two-panel
 ================================================== */
 .two-panels {
+	display: flex;
 	background: transparent;
-	margin-bottom: -25px;
+	width: 100%;
+	margin: 0;
 	z-index: 5;
 	
 	h2 {
@@ -166,28 +171,31 @@
 	}
 	
 	> div {
+		
 		background: white;
-		width: 49.85%;
-		height: 400px;
+		width: calc(50% - 2px);
 		padding: 80px;
-		border-bottom-right-radius: 25px;
+		border-radius: 0 0 40px 0 / 0 0 25px 0;
 		
 		+ div {
-			margin-left: 0.3%;
+			margin-left: 4px;
 			border-bottom-right-radius: 0;
-			border-bottom-left-radius: 25px;
+			border-radius: 0 0 0 40px / 0 0 0 25px;
 		}
 		
 		> div {
 			width: 80%;
 		}
-	}
-	
+	}	
 	.push-right {
 		float: right;
 	}
 	.push-left {
 		float: left;
+	}
+	
+	form {
+		margin-top: 35px;
 	}
 }
 
@@ -219,10 +227,17 @@
 	}
 }
 
+.carousel-indicators {
+	
+	li {
+		transition: background-color 0.3s;
+	}
+}
 /* Section 6: .two-panels-2
 ================================================== */
 .two-panels-2 {
 	background: transparent;
+	margin-bottom: -25px;
 	
 	h2 {
 		color: $secondary-blue;
@@ -230,11 +245,10 @@
 	}
 	
 	> div {
-		border-top-right-radius: 25px;
+		border-radius: 0 40px 40px 0 / 0 25px 25px 0;
 		
 		+ div {
-			border-top-right-radius: 0;
-			border-top-left-radius: 25px;
+			border-radius: 40px 0 0 40px / 25px 0 0 25px;
 		}
 	}
 }
@@ -258,16 +272,60 @@
 		text-transform: uppercase;
 		
 		span {
-			color: lighten($secondary-blue, 8%);
+			color: $text-blue-light;
 		}
 	}
 	
+	blockquote {
+		width: 80%;
+		border: none;
+		margin: 15px auto;
+		font-size: 24px;
+		line-height: 1.27;
+	}
 }
 	
 .blue-bg {
 	background-color: $secondary-blue;
 	color: white;
 }
+/* modal popup for yt video embeds */
+.modal {
+	top: 15%;
+}
+
+/* overlay */
+.thumb-box {
+	display: inline-block !important;
+	position: relative !important;
+	overflow: hidden;
+	
+	a:hover .overlay {
+    	display: inline;
+		text-align: center;
+		vertical-align: middle;
+	    position: absolute;
+		background-color: rgba(0, 92, 186, 0.6);
+		color: white;
+		width: 100%;
+		height: 100%;
+	}
+  
+    .overlay {
+		display: none;
+	  
+	    i {
+		    position: relative;
+		    top: 50%;
+		    -webkit-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		    transform: translateY(-50%);
+		}
+		
+	}
+	
+}
+
 
 /* Section 8: .ceo
 ================================================== */
@@ -311,7 +369,12 @@
 	
 	.indention {
 		background-color: $brand-white;
-		margin-top: -25px;
+		margin-top: -29px;	
+	}
+	
+	.gray {
+		background-color: #ccc;
+		
 	}
 
 }

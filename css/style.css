@@ -7124,7 +7124,9 @@ ul.call-us {
   }*/ }
   .carousel-2 .indention {
     background-color: #EAEBEC;
-    margin-top: -25px; }
+    margin-top: -29px; }
+  .carousel-2 .gray {
+    background-color: #ccc; }
 
 /* Section 10: .emergency
 ================================================== */

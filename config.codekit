@@ -11,6 +11,147 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/images\/Brandy.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.55902e+06,
+		"inputAbbreviatedPath": "\/images\/Brandy.jpg",
+		"outputAbbreviatedPath": "\/images\/Brandy.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/Bryan.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.66821e+06,
+		"inputAbbreviatedPath": "\/images\/Bryan.jpg",
+		"outputAbbreviatedPath": "\/images\/Bryan.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/Connie.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.64192e+06,
+		"inputAbbreviatedPath": "\/images\/Connie.jpg",
+		"outputAbbreviatedPath": "\/images\/Connie.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ico_card.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3238,
+		"inputAbbreviatedPath": "\/images\/ico_card.png",
+		"outputAbbreviatedPath": "\/images\/ico_card.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ico_money.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3147,
+		"inputAbbreviatedPath": "\/images\/ico_money.png",
+		"outputAbbreviatedPath": "\/images\/ico_money.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ico_phone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8568,
+		"inputAbbreviatedPath": "\/images\/ico_phone.png",
+		"outputAbbreviatedPath": "\/images\/ico_phone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ico_seal.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 10274,
+		"inputAbbreviatedPath": "\/images\/ico_seal.png",
+		"outputAbbreviatedPath": "\/images\/ico_seal.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ico_tools.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7924,
+		"inputAbbreviatedPath": "\/images\/ico_tools.png",
+		"outputAbbreviatedPath": "\/images\/ico_tools.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/ico_truck.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7754,
+		"inputAbbreviatedPath": "\/images\/ico_truck.png",
+		"outputAbbreviatedPath": "\/images\/ico_truck.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/pti-logo-color.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18458,
+		"inputAbbreviatedPath": "\/images\/pti-logo-color.png",
+		"outputAbbreviatedPath": "\/images\/pti-logo-color.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/Ruben.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.32378e+06,
+		"inputAbbreviatedPath": "\/images\/Ruben.jpg",
+		"outputAbbreviatedPath": "\/images\/Ruben.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/Sabrina.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.62866e+06,
+		"inputAbbreviatedPath": "\/images\/Sabrina.jpg",
+		"outputAbbreviatedPath": "\/images\/Sabrina.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -20,15 +161,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/bootstrap.min.js": {
+	"\/js\/bootstrap.js": {
 		"fileType": 64,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/bootstrap.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/bootstrap.min-min.js",
+		"inputAbbreviatedPath": "\/js\/bootstrap.js",
+		"outputAbbreviatedPath": "\/js\/min\/bootstrap.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
+		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/custom.js": {
@@ -38,19 +179,30 @@
 		"inputAbbreviatedPath": "\/js\/custom.js",
 		"outputAbbreviatedPath": "\/js\/min\/custom.min.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/jquery.js": {
 		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/jquery.js",
-		"outputAbbreviatedPath": "\/js\/min\/jquery-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 2,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/min\/bootstrap.min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/min\/bootstrap.min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/bootstrap.min.min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
 	"\/js\/min\/custom.min.js": {
@@ -58,7 +210,7 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/custom.min.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/custom.min-min.js",
+		"outputAbbreviatedPath": "\/js\/min\/min\/custom.min.min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -405,7 +557,7 @@
 	"jadeCompileDebug": 1,
 	"jadeOutputStyle": 0,
 	"javascriptAutoOutputPathEnabled": 1,
-	"javascriptAutoOutputPathFilenamePattern": "*-min.js",
+	"javascriptAutoOutputPathFilenamePattern": "*.min.js",
 	"javascriptAutoOutputPathRelativePath": "\/min",
 	"javascriptAutoOutputPathReplace1": "",
 	"javascriptAutoOutputPathReplace2": "",
@@ -913,7 +1065,7 @@
 			"flagValue": -1
 			},
 		"eval": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"evaluate": {
@@ -969,7 +1121,7 @@
 			"flagValue": -1
 			},
 		"screw-ie8": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"semicolons": {
@@ -981,7 +1133,7 @@
 			"flagValue": -1
 			},
 		"sort": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"space-colon": {
@@ -989,7 +1141,7 @@
 			"flagValue": -1
 			},
 		"toplevel": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"unsafe": {

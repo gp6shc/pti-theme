@@ -167,13 +167,13 @@ $(document).ready(function() {
 $(document).ready(function(){
 	$('#transition-timer-carousel, #transition-timer-carousel-two').carousel({
 		interval: 4000,
-		pause: "",
+		pause: "false",
 		keyboard: false
 	});
 	
 	$('#transition-timer-carousel-opaque').carousel({
 		interval: 5000,
-		pause: "",
+		pause: "false",
 		keyboard: false
 		
 	});

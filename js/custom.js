@@ -87,15 +87,18 @@ var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
 /*  Scroll Events
 /* ----------------------------------------------------------- */
 $(document).ready(function() {
+	var isHomePage = $('.home').length; // if is, === 1 (true); if isn't, === 0 (false)
+	
 	// Use this function to monitor all layout changes that should update on scroll
 	var updateLayout = function() {
 		// hides/shows the top most bar of info
 		toggleTopBar();
 		
 		// only executed on home page:
-		if ($('.home').length) {
+		if (isHomePage) {
 			// turns customer section blue when hit by line
-			toggleCustomerColor();
+			toggleClassAtSixty($("#customers"), "blue-bg");
+			toggleClassAtSixty($("#carousel-1"), "blue-tint");
 		}
 		
 		// check when at the bottom
@@ -123,15 +126,14 @@ $(document).ready(function() {
 		}
 	}
 	
-	function toggleCustomerColor() {
-		var customerPosition = $("#customers").offset().top - $(window).scrollTop();
-		if ( customerPosition <= ( (window.innerHeight * 3) / 5) ) { // when the element enters the 60% mark if 100% is the bottom
-			$("#customers").addClass("blue-bg");	
+	function toggleClassAtSixty(elem, classToBeToggled) {
+		var elementPosition = elem.offset().top - $(window).scrollTop();
+		if ( elementPosition <= ( (window.innerHeight * 3) / 5) ) { // when the element enters the 60% mark if 100% is the bottom
+			elem.addClass(classToBeToggled);	
 		}else{
-			$("#customers").removeClass("blue-bg");	
+			elem.removeClass(classToBeToggled);	
 		}
-	}
-	
+	}	
 	
 	// Checks if at the bottom of the page
 	function isAtBottom() {

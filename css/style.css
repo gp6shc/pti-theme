@@ -7128,10 +7128,6 @@ ul.call-us {
         border-radius: 0 0 40px 0/0 0 25px 0; }
       .carousel-2 .top-indent .indention.right {
         border-radius: 0 0 0 40px/0 0 0 25px; }
-  .carousel-2 .img-overlay {
-    background-color: black; }
-    .carousel-2 .img-overlay img {
-      opacity: 0.8; }
   .carousel-2 .carousel-caption {
     width: 50%;
     top: 0;
@@ -7140,9 +7136,26 @@ ul.call-us {
     right: 0;
     margin: auto;
     padding: 30px;
+    text-shadow: none;
     background-color: rgba(7, 128, 226, 0.8);
     border-radius: 0 0 40px 40px/0 0 25px 25px;
     z-index: 0; }
+
+.img-overlay {
+  background-color: black;
+  -webkit-transition: background-color 0.3s;
+          transition: background-color 0.3s; }
+  .img-overlay img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.3s;
+            transition: opacity 0.3s; }
+
+.carousel-1 .img-overlay img {
+  opacity: 1; }
+.carousel-1.blue-tint .img-overlay {
+  background-color: #0780E2; }
+  .carousel-1.blue-tint .img-overlay img {
+    opacity: 0.6; }
 
 /* Section 10: .emergency
 ================================================== */

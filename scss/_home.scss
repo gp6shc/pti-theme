@@ -522,8 +522,6 @@
 		}
 	}
 	
-	img {
-		filter: brightness(50%);
 	
 	.carousel-caption {
 		width: 50%;
@@ -533,10 +531,39 @@
 		right: 0;
 		margin: auto;
 		padding: 30px;
+		text-shadow: none;
 		background-color: rgba($secondary-blue, 0.8);
 		border-radius: 0 0 40px 40px / 0 0 25px 25px;
 		z-index: 0;
 	}
+}
+
+.img-overlay {
+	background-color: black;
+	transition: background-color 0.3s;
+	
+	img {
+		opacity: 0.7;
+		transition: opacity 0.3s;
+	}	
+}
+
+.carousel-1 {
+	
+	.img-overlay img {
+		opacity: 1;
+	}
+	
+	&.blue-tint {
+		.img-overlay {
+			background-color: $secondary-blue;
+			
+			img {
+				opacity: 0.6;
+			}
+		}
+	}
+	
 }
 
 /* Section 10: .emergency

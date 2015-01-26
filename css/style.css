@@ -6952,6 +6952,7 @@ ul.call-us {
   .branch::before, .branch::after {
     content: "";
     display: inline-block;
+    width: -webkit-calc( (100% - 740px)/2);
     width: calc( (100% - 740px)/2);
     height: 137px;
     background-color: white; }
@@ -6974,6 +6975,7 @@ ul.call-us {
     color: #323132; }
   .two-panels > div {
     background: white;
+    width: -webkit-calc(50% - 2px);
     width: calc(50% - 2px);
     padding: 80px;
     border-radius: 0 0 40px 0/0 0 25px 0; }
@@ -7099,6 +7101,7 @@ ul.call-us {
     border-radius: 10px;
     position: absolute;
     top: -10px;
+    left: -webkit-calc(50% - 10px);
     left: calc(50% - 10px);
     background-color: white;
     border: 3px solid #0780E2; }
@@ -7125,9 +7128,21 @@ ul.call-us {
         border-radius: 0 0 40px 0/0 0 25px 0; }
       .carousel-2 .top-indent .indention.right {
         border-radius: 0 0 0 40px/0 0 0 25px; }
-  .carousel-2 img {
-    -webkit-filter: brightness(50%);
-            filter: brightness(50%); }
+  .carousel-2 .img-overlay {
+    background-color: black; }
+    .carousel-2 .img-overlay img {
+      opacity: 0.8; }
+  .carousel-2 .carousel-caption {
+    width: 50%;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(7, 128, 226, 0.8);
+    border-radius: 0 0 40px 40px/0 0 25px 25px;
+    z-index: 0; }
 
 /* Section 10: .emergency
 ================================================== */

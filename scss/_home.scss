@@ -23,21 +23,32 @@
 ================================================== */
 .image-cycle {
 	background-color: white;
+	height: 600px;
 	
 	.carousel-inner {
+		position: relative;
 	    
 	    .item {
+			height: 600px;
 			opacity: 0;
-			transition-property: opacity;
+			transition: opacity 1.3s;
+	    }
+	    
+	    img {
+		    position: absolute;
+		    top: -20%;
+		    transform: scale(1);
+		    animation: small-scale 6.7s linear;
 	    }
 	
 	    .active {
-			opacity: 1;
+			opacity: 1;			
 	    }
 	
 	    .active.left,
 	    .active.right {
 			left: 0;
+			border-radius: 0;
 			opacity: 0;
 			z-index: 1;
 	    }
@@ -46,22 +57,125 @@
 	    .prev.right {
 			opacity: 1;
 	    }
+	    
+	    .main {
+		
+			img {
+				display: block;
+				position: static;
+				margin: 10% auto 0 auto;	
+				animation: scale-fade-in 4.7s;
+			}
+		}
 	}
 	
 	.carousel-control, .carousel-indicators {
 		display: none;
 	}
 	
-	.carousel-caption {
-		margin-bottom: 50px;
+	.caption {
+		margin: 50px 0;
+		text-align: center;
+		animation: scale-fade-in-delay 4.7s;
 		
 		h1 {
 			color: $text-blue-dark;
 			text-shadow: none;
 			font-weight: 100;
 			font-size: 72px;
+			line-height: 1;
 		}
 	}
+}
+
+.quotable {
+	position: absolute;
+	top: 30%;
+	left: 7%;
+	width: 32%;
+	text-align: center;
+	opacity: 1;
+	animation: slide-right 6.7s ease-out;
+	
+	p {
+		font-size: 40px;
+		line-height: 1.2;
+		color: $text-blue-dark;
+		padding: 0 15px;
+	}
+	
+	h4 {
+		font-size: 40px;
+		color: darken($brand-grey, 7%);
+		font-style: italic;
+		font-weight: 400;
+		line-height: 0.9;
+		
+		span {
+			font-size: 30px;
+		}
+	}
+}
+
+.item-right {
+	
+	.quotable {
+		left: auto;
+		right: 8%;
+		animation: slide-left 6.7s ease-out;
+	}
+}
+
+.brandy img {
+	transform-origin: right;
+}
+.bryan img {
+	transform-origin: bottom right;
+}
+.connie img {
+	transform-origin: bottom left;
+}
+.ruben {
+	.quotable {
+		animation: slide-left 6.7s ease-out;
+	}
+	img {
+		top: -30% !important;
+		transform-origin: top right;
+	}
+}
+.sabrina img {
+	transform-origin: bottom right;
+}
+
+@keyframes scale-fade-in {
+	from {transform: scale(0.5); opacity: 0}
+	to   {transform: scale(1); opacity: 1}
+}
+
+@keyframes scale-fade-in-delay {
+	0% 	 {transform: scale(0.5); opacity: 0}
+	25%  {opacity: 0}
+	100% {transform: scale(1); opacity: 1}
+}
+
+@keyframes slide-right {
+	0%	 {transform: translateX(-40px)}
+	75%	 {opacity: 1}
+	85%  {opacity: 0}
+	100% {transform: translateX(0); opacity: 0}
+}
+
+@keyframes slide-left {
+	0%	 {transform: translateX(40px)}
+	75%	 {opacity: 1}
+	85%  {opacity: 0}
+	100% {transform: translateX(0); opacity: 0}
+}
+
+@keyframes small-scale {
+	from {transform: scale(1)}
+	to   {transform: scale(1.126)}
 }
 
 

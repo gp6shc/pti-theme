@@ -424,6 +424,9 @@
 .modal {
 	top: 15%;
 }
+.modal-backdrop {
+	z-index: -1;
+}
 
 /* overlay */
 .thumb-box {

@@ -172,7 +172,7 @@ $(document).ready(function(){
 	});
 	
 	$('#transition-timer-carousel-opaque').carousel({
-		interval: 5000,
+		interval: 5400,
 		pause: "false",
 		keyboard: false
 		

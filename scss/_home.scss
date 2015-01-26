@@ -31,14 +31,14 @@
 	    .item {
 			height: 600px;
 			opacity: 0;
-			transition: opacity 1s;
+			transition: opacity 1.3s;
 	    }
 	    
 	    img {
 		    position: absolute;
 		    top: -20%;
 		    transform: scale(1);
-		    animation: small-scale 6s linear;
+		    animation: small-scale 6.7s linear;
 	    }
 	
 	    .active {
@@ -64,7 +64,7 @@
 				display: block;
 				position: static;
 				margin: 10% auto 0 auto;	
-				animation: scale-fade-in 2s;
+				animation: scale-fade-in 4.7s;
 			}
 		}
 	}
@@ -76,7 +76,7 @@
 	.caption {
 		margin: 50px 0;
 		text-align: center;
-		animation: scale-fade-in-slow 2.5s;
+		animation: scale-fade-in-delay 4.7s;
 		
 		h1 {
 			color: $text-blue-dark;
@@ -94,7 +94,8 @@
 	left: 7%;
 	width: 32%;
 	text-align: center;
-	animation: slide-right 3.3s ease-out;
+	opacity: 1;
+	animation: slide-right 6.7s ease-out;
 	
 	p {
 		font-size: 40px;
@@ -121,7 +122,7 @@
 	.quotable {
 		left: auto;
 		right: 8%;
-		animation: slide-left 3.3s ease-out;
+		animation: slide-left 6.7s ease-out;
 	}
 }
 
@@ -136,9 +137,10 @@
 }
 .ruben {
 	.quotable {
-		animation: slide-left 3.3s ease-out;
+		animation: slide-left 6.7s ease-out;
 	}
 	img {
+		top: -30% !important;
 		transform-origin: top right;
 	}
 }
@@ -151,24 +153,29 @@
 	to   {transform: scale(1); opacity: 1}
 }
 
-@keyframes scale-fade-in-slow {
-	0%, 35% {transform: scale(0.5); opacity: 0}
-	100%	{transform: scale(1); opacity: 1}
+@keyframes scale-fade-in-delay {
+	0% 	 {transform: scale(0.5); opacity: 0}
+	25%  {opacity: 0}
+	100% {transform: scale(1); opacity: 1}
 }
 
 @keyframes slide-right {
-	from {transform: translateX(-40px)}
-	to   {transform: translateX(0)}
+	0%	 {transform: translateX(-40px)}
+	75%	 {opacity: 1}
+	85%  {opacity: 0}
+	100% {transform: translateX(0); opacity: 0}
 }
 
 @keyframes slide-left {
-	from {transform: translateX(40px)}
-	to   {transform: translateX(0)}
+	0%	 {transform: translateX(40px)}
+	75%	 {opacity: 1}
+	85%  {opacity: 0}
+	100% {transform: translateX(0); opacity: 0}
 }
 
 @keyframes small-scale {
 	from {transform: scale(1)}
-	to   {transform: scale(1.1)}
+	to   {transform: scale(1.126)}
 }
 
 

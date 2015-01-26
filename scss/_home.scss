@@ -503,11 +503,28 @@
 		margin-top: -29px;	
 	}
 	
-	.gray {
-		background-color: #ccc;
+	.top-indent {
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		right: 0;
 		
+		.indention {
+			margin: 0;
+			
+			&.left {
+				border-radius: 0 0 40px 0 / 0 0 25px 0;
+			}
+			&.right {
+				border-radius: 0 0 0 40px / 0 0 0 25px;
+				
+			}
+		}
 	}
-
+	
+	img {
+		filter: brightness(50%);
+	}
 }
 
 /* Section 10: .emergency

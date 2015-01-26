@@ -7114,8 +7114,20 @@ ul.call-us {
   .carousel-2 .indention {
     background-color: #EAEBEC;
     margin-top: -29px; }
-  .carousel-2 .gray {
-    background-color: #ccc; }
+  .carousel-2 .top-indent {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0; }
+    .carousel-2 .top-indent .indention {
+      margin: 0; }
+      .carousel-2 .top-indent .indention.left {
+        border-radius: 0 0 40px 0/0 0 25px 0; }
+      .carousel-2 .top-indent .indention.right {
+        border-radius: 0 0 0 40px/0 0 0 25px; }
+  .carousel-2 img {
+    -webkit-filter: brightness(50%);
+            filter: brightness(50%); }
 
 /* Section 10: .emergency
 ================================================== */

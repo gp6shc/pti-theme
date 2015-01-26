@@ -7281,6 +7281,8 @@ ul.call-us {
 ================================================== */
 .emergency {
   background: #EAEBEC; }
+  .emergency .container {
+    margin-top: -30px; }
   .emergency h2 {
     color: #005CBA; }
   .emergency h5 {
@@ -7295,6 +7297,7 @@ ul.call-us {
   background: white; }
   .academy h2 {
     color: #005CBA;
+    margin-top: 0;
     padding-bottom: 20px; }
   .academy .news-title {
     color: #005CBA; }

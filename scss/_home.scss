@@ -535,6 +535,10 @@
 .emergency {
 	background: $brand-white;
 	
+	.container {
+		margin-top: -30px; // to counter .indention extra padding
+	}
+	
 	h2 {
 		color: $primary-blue;
 	}
@@ -557,6 +561,7 @@
 	
 	h2 {
 		color: $primary-blue;
+		margin-top: 0;
 		padding-bottom: 20px;
 	}
 	

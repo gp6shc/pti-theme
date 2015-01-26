@@ -6613,10 +6613,10 @@ input {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 5px 15px;
+  padding: 8px 18px;
   vertical-align: middle;
   font-family: "museo-sans", sans-serif, serif;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   border: 0;
   text-shadow: none;
@@ -6680,6 +6680,8 @@ header {
   width: 100%;
   z-index: 9999999;
   transition: all 0.4s ease-in-out; }
+  header a {
+    color: white; }
 
 .header-fixed {
   box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2); }
@@ -6690,15 +6692,18 @@ header {
 /* Top-bar
 ================================================== */
 #top-bar {
-  padding: 0;
+  height: 50px;
   background: #323132;
   color: white;
   font-family: "museo-sans", sans-serif, serif; }
   #top-bar .container {
     max-width: 1200px; }
+  #top-bar .btn {
+    padding: 15px;
+    line-height: 22px; }
 
 .push-down {
-  margin-top: 5px; }
+  margin-top: 12px; }
 
 .text-sizing {
   display: inline-block; }
@@ -6712,10 +6717,11 @@ header {
 ul.call-us {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: white;
+  text-transform: uppercase; }
   ul.call-us li {
-    float: left;
-    font-weight: 700; }
+    float: left; }
 
 .sign-in {
   float: none; }
@@ -6763,10 +6769,10 @@ ul.call-us {
     background: white; }
 
 .navbar-nav {
-  float: right; }
+  /* float: right; */ }
 
 .navbar-nav > li > a {
-  font-weight: 700;
+  font-weight: 400;
   color: white;
   padding: 0 15px;
   line-height: 46px;
@@ -6778,9 +6784,6 @@ ul.call-us {
 .navbar-nav > li.active > a,
 .navbar-nav > li > a:hover {
   color: #cccccc; }
-
-.navbar-nav > li > a i {
-  font-weight: 700; }
 
 .nav .open > a, .nav .open > a:hover,
 .nav .open > a:focus {
@@ -6842,7 +6845,7 @@ ul.call-us {
 
 /* Get a Quote */
 .get-quote {
-  margin: 8px 0 0 60px; }
+  margin: 6px 0 0 80px; }
   .get-quote button {
     opacity: 1;
     transition: opacity 0.5s 0.1s; }

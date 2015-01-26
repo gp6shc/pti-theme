@@ -6437,7 +6437,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: #323132; }
+  color: #0780E2; }
 
 a:focus {
   outline: 0; }
@@ -6822,6 +6822,8 @@ ul.call-us {
   line-height: normal;
   text-decoration: none;
   color: white; }
+  .dropdown-menu li a:hover, .dropdown-menu li a:visited:hover {
+    color: #cccccc; }
 
 .dropdown-menu > ul > li:last-child > a {
   border-bottom: 0; }

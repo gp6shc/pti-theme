@@ -202,6 +202,7 @@ ul.call-us{
     div:first-child {
     	padding: 15px 0;
 	}
+
 }
 
 .dropdown-menu li a, .dropdown-menu li a:visited {
@@ -210,7 +211,11 @@ ul.call-us{
 	font-weight: 700;
 	line-height: normal;
 	text-decoration: none;
-	color: white;	
+	color: white;
+	
+	&:hover {
+		color: darken(white,20%);
+	}	
 	
 }
 

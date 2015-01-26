@@ -66,6 +66,18 @@ $screen-xs: 480px;
 	.container {
 		max-width: 1060px; //override bootstrap default
 	}
+	.bbb {
+	
+	}
+	.demotech {
+		margin-top: -10px;
+	}
+	.enterprise {
+		margin-top: -17px;
+	}
+	.faia {
+		margin-left: 10px;
+	}
 	
 }
 
@@ -89,8 +101,13 @@ $screen-xs: 480px;
 		padding-bottom: 0;
 	}
 	
+	nav.navbar-collapse.in {
+		background: $secondary-blue;
+	}
+	
 	.navbar-nav {
 		margin: 7.5px 0;
+		float: none;
 			
 		li > a {
 			padding: 0 10px;
@@ -150,6 +167,10 @@ $screen-xs: 480px;
 		display: inline-block;
 		margin-bottom: 0;
 		vertical-align: middle;
+	}
+	
+	.no-padding {
+		padding: 20px; //add padding back on small screens
 	}
 	
 

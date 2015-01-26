@@ -165,9 +165,17 @@ $(document).ready(function() {
 /* ----------------------------------------------------------- */	
 
 $(document).ready(function(){
-	$('#transition-timer-carousel-opaque, #transition-timer-carousel, #transition-timer-carousel-two').carousel({
+	$('#transition-timer-carousel, #transition-timer-carousel-two').carousel({
 		interval: 4000,
-		pause: ""
+		pause: "false",
+		keyboard: false
+	});
+	
+	$('#transition-timer-carousel-opaque').carousel({
+		interval: 5400,
+		pause: "false",
+		keyboard: false
+		
 	});
 });
 	
@@ -201,11 +209,11 @@ $('#js-search-icon').click(function() {
 /* ----------------------------------------------------------- */
 $('#myModal').on('show.bs.modal', function () {
    $('.container').addClass('blur');
-})
+});
 
 $('#myModal').on('hide.bs.modal', function () {
    $('.container').removeClass('blur');
-})
+});
 
 /* ----------------------------------------------------------- */
 /*  Back to top

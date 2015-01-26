@@ -6,6 +6,11 @@ header {
     width: 100%;
 	z-index: 9999999; 
 	transition: all 0.4s ease-in-out;
+	
+	a {
+		color: white;
+	}
+	
 }
 
 .header-fixed {
@@ -21,19 +26,24 @@ header {
 /* Top-bar
 ================================================== */
 #top-bar {
-	padding: 0;
+	height: 50px;
 	background: $brand-black;
 	color: white;
 	font-family: $font-heading;
 	
 	.container {
-		max-width: 1200px; //remove default container width, per design
+		max-width: 1200px; 
+	}
+	
+	.btn {
+		padding: 15px;
+		line-height: 22px;
 	}
 	
 }
 
 .push-down {
-	margin-top: 5px;
+	margin-top: 12px;
 }
 
 .text-sizing{
@@ -57,11 +67,13 @@ ul.call-us{
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	color: white;
+	text-transform: uppercase;
 	
 	li {
 		float: left;
-		font-weight: 700;	
 	}
+	
 }
 
 .sign-in{
@@ -134,11 +146,11 @@ ul.call-us{
 }
 
 .navbar-nav {
-	float: right;
+	/* float: right; */
 }
 
 .navbar-nav > li > a{
-	font-weight: 700;
+	font-weight: 400;
 	color: white;
 	padding: 0 15px;
 	line-height: 46px;
@@ -152,10 +164,6 @@ ul.call-us{
 .navbar-nav > li.active > a,
 .navbar-nav > li > a:hover{
 	color: darken(white,20%);
-}
-
-.navbar-nav > li > a i{
-	font-weight: 700;
 }
 
 .nav .open>a, .nav .open>a:hover, 
@@ -180,28 +188,41 @@ ul.call-us{
 		margin-right: auto;
 		margin-bottom: 0;
 		margin-top: 20px;
-		background-color: rgba($primary-blue, 0.9);
+		color: white;
+		background-color: $secondary-blue;
 		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
 	}
+	
+	i {
+		color: white;
+		margin-top: -10px;
+		margin-left: 25px;
+	}
+	
+    div:first-child {
+    	padding: 15px 0;
+	}
+
 }
 
-.dropdown-menu > ul > li > a{
+.dropdown-menu li a, .dropdown-menu li a:visited {
 	display: block;
-	font-size: 14px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: 700;
 	line-height: normal;
 	text-decoration: none;
-	padding: 15px;
 	color: white;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	
+	&:hover {
+		color: darken(white,20%);
+	}	
 	
 }
 
-.dropdown-menu > ul > li.active > a{
-
+.dropdown-menu > ul > li.active > a {
 }
 
-.dropdown-menu > ul > li:last-child > a{
+.dropdown-menu > ul > li:last-child > a {
 	border-bottom: 0;
 	
 	&:hover, &:focus {
@@ -234,7 +255,7 @@ ul.call-us{
 
 /* Get a Quote */
 .get-quote {
-	margin: 8px 0 0 60px;
+	margin: 6px 0 0 80px;
 	
 	button {
 		opacity: 1;

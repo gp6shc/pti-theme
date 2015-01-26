@@ -6673,7 +6673,8 @@ input {
   pointer-events: none; }
 
 form .input-group .form-control:last-child {
-  border: 2px solid #00AA71; }
+  border: 2px solid #00AA71;
+  background: white; }
 
 /* Header 
 ================================================== */
@@ -7302,7 +7303,8 @@ footer {
     margin: 0;
     padding: 0; }
   footer li a {
-    color: white; }
+    color: white;
+    font-size: 14px; }
 
 .footer-title {
   margin-top: -4px;
@@ -7376,7 +7378,7 @@ footer {
   #top a i {
     background: #0780E2;
     color: white;
-    padding: 5px 15px; }
+    padding: 20px 30px; }
 
 /* Responsive Styles
 ================================================== */

@@ -517,6 +517,13 @@
 			
 			&.left {
 				border-radius: 0 0 40px 0 / 0 0 25px 0;
+				
+				img {
+					position: absolute;
+					bottom: 0;
+					width: 323px;
+					left: calc(66.66667% - 323px);
+				}
 			}
 			&.right {
 				border-radius: 0 0 0 40px / 0 0 0 25px;

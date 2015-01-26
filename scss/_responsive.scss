@@ -78,7 +78,14 @@ $screen-xs: 480px;
 	.faia {
 		margin-left: 10px;
 	}
-	
+	.ceo .col-md-4.col-sm-4 {
+		width: 323px;
+		height: 300px;
+		
+		img {
+			display: none;
+		}		
+	}	
 }
 
 /* Below 768: nav collapse */

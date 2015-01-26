@@ -298,3 +298,11 @@ input {
 	opacity: 0;
 	pointer-events: none;
 }
+
+form {
+
+	.input-group .form-control:last-child {
+		border: 2px solid $brand-green;
+	}	
+	
+}

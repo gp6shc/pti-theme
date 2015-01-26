@@ -7295,7 +7295,7 @@ footer {
   background: #005CBA;
   z-index: 99; }
   footer .container {
-    border-bottom: 2px solid #323132;
+    border-bottom: 2px solid #002f5e;
     padding-bottom: 20px; }
   footer ul {
     list-style: none;
@@ -7340,7 +7340,7 @@ footer {
     background: #ac1419; }
 
 .border-left {
-  border-left: 2px solid #323132; }
+  border-left: 2px solid #002f5e; }
 
 .footer-social {
   padding-top: 60px; }

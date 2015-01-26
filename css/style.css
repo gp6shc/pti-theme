@@ -6992,8 +6992,8 @@ ul.call-us {
       -webkit-transform: scale(1);
           -ms-transform: scale(1);
               transform: scale(1);
-      -webkit-animation: small-scale 5.5s linear;
-              animation: small-scale 5.5s linear; }
+      -webkit-animation: small-scale 6s linear;
+              animation: small-scale 6s linear; }
     .image-cycle .carousel-inner .active {
       opacity: 1; }
     .image-cycle .carousel-inner .active.left, .image-cycle .carousel-inner .active.right {
@@ -7125,8 +7125,8 @@ ul.call-us {
 
 @-webkit-keyframes slide-right {
   from {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px); }
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px); }
 
   to {
     -webkit-transform: translateX(0);
@@ -7134,8 +7134,8 @@ ul.call-us {
 
 @keyframes slide-right {
   from {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px); }
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px); }
 
   to {
     -webkit-transform: translateX(0);
@@ -7143,8 +7143,8 @@ ul.call-us {
 
 @-webkit-keyframes slide-left {
   from {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px); }
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px); }
 
   to {
     -webkit-transform: translateX(0);
@@ -7152,8 +7152,8 @@ ul.call-us {
 
 @keyframes slide-left {
   from {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px); }
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px); }
 
   to {
     -webkit-transform: translateX(0);
@@ -7165,8 +7165,8 @@ ul.call-us {
             transform: scale(1); }
 
   to {
-    -webkit-transform: scale(1.087);
-            transform: scale(1.087); } }
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
 
 @keyframes small-scale {
   from {
@@ -7174,8 +7174,8 @@ ul.call-us {
             transform: scale(1); }
 
   to {
-    -webkit-transform: scale(1.087);
-            transform: scale(1.087); } }
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
 
 /* Section 2: .quote
 ================================================== */

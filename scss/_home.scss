@@ -38,7 +38,7 @@
 		    position: absolute;
 		    top: -20%;
 		    transform: scale(1);
-		    animation: small-scale 5.5s linear;
+		    animation: small-scale 6s linear;
 	    }
 	
 	    .active {
@@ -157,18 +157,18 @@
 }
 
 @keyframes slide-right {
-	from {transform: translateX(-50px)}
+	from {transform: translateX(-40px)}
 	to   {transform: translateX(0)}
 }
 
 @keyframes slide-left {
-	from {transform: translateX(50px)}
+	from {transform: translateX(40px)}
 	to   {transform: translateX(0)}
 }
 
 @keyframes small-scale {
 	from {transform: scale(1)}
-	to   {transform: scale(1.087)}
+	to   {transform: scale(1.1)}
 }
 
 

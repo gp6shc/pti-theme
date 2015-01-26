@@ -6472,7 +6472,7 @@ h1 {
 h2 {
   font-size: 38px;
   line-height: 46px;
-  font-weight: 700; }
+  font-weight: 100; }
 
 h3 {
   font-size: 24px;
@@ -6944,7 +6944,10 @@ ul.call-us {
     font-weight: 100; }
   .quote h3 {
     color: #0780E2;
-    font-weight: 300; }
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 36px;
+    padding-bottom: 10px; }
   .quote .indention {
     height: 40px; }
 
@@ -6978,7 +6981,7 @@ ul.call-us {
 .about {
   background: white; }
   .about h2 {
-    color: #0780E2;
+    color: #005CBA;
     font-weight: 100;
     font-size: 44px; }
 
@@ -7007,7 +7010,7 @@ ul.call-us {
   margin: 0;
   z-index: 5; }
   .two-panels h2 {
-    color: #0780E2;
+    color: #005CBA;
     font-weight: 100; }
   .two-panels p {
     color: #323132; }
@@ -7054,8 +7057,11 @@ ul.call-us {
   background: transparent;
   margin-bottom: -25px; }
   .two-panels-2 h2 {
-    color: #0780E2;
+    color: #005CBA;
     font-weight: 100; }
+  .two-panels-2 h5 {
+    color: #005CBA;
+    font-weight: 300; }
   .two-panels-2 > div {
     border-radius: 0 40px 40px 0 / 0 25px 25px 0; }
     .two-panels-2 > div + div {
@@ -7119,9 +7125,9 @@ ul.call-us {
 .ceo {
   background: #EAEBEC; }
   .ceo h2 {
-    color: #004a96; }
+    color: #002f5e; }
   .ceo h5 {
-    color: #0780E2; }
+    color: #005CBA; }
   .ceo p {
     color: #323132; }
   .ceo::before {
@@ -7153,8 +7159,10 @@ ul.call-us {
 ================================================== */
 .emergency {
   background: #EAEBEC; }
+  .emergency h2 {
+    color: #005CBA; }
   .emergency h5 {
-    color: #004a96;
+    color: #002f5e;
     font-style: italic; }
   .emergency img {
     margin: 20px 0; }
@@ -7163,8 +7171,11 @@ ul.call-us {
 ================================================== */
 .academy {
   background: white; }
+  .academy h2 {
+    color: #005CBA;
+    padding-bottom: 20px; }
   .academy .news-title {
-    color: #0780E2; }
+    color: #005CBA; }
 
 /* Global Interior Page Styles
 ================================================== */

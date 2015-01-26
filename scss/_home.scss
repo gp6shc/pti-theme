@@ -79,6 +79,9 @@
 	h3 {
 		color: $secondary-blue;
 		font-weight: 300;
+		font-size: 28px;
+		line-height: 36px;
+		padding-bottom: 10px;
 	}
 	
 	form {
@@ -134,7 +137,7 @@
 	background: white;
 	
 	h2 {
-		color: $secondary-blue;
+		color: $primary-blue;
 		font-weight: 100;
 		font-size: 44px;
 	}
@@ -171,7 +174,7 @@
 	z-index: 5;
 	
 	h2 {
-		color: $secondary-blue;
+		color: $primary-blue;
 		font-weight: 100;
 	}
 	
@@ -249,8 +252,13 @@
 	margin-bottom: -25px;
 	
 	h2 {
-		color: $secondary-blue;
+		color: $primary-blue;
 		font-weight: 100;
+	}
+	
+	h5 {
+		color: $primary-blue;
+		font-weight: 300;
 	}
 	
 	> div {
@@ -342,11 +350,11 @@
 	background: $brand-white;
 	
 	h2 {
-		color: darken($primary-blue,7%);
+		color: $text-blue-dark;
 	}
 	
 	h5 {
-		color: $secondary-blue;
+		color: $primary-blue;
 	}
 	
 	p {
@@ -393,8 +401,12 @@
 .emergency {
 	background: $brand-white;
 	
+	h2 {
+		color: $primary-blue;
+	}
+	
 	h5 {
-		color: darken($primary-blue,7%);
+		color: $text-blue-dark;
 		font-style: italic;
 	}
 	
@@ -409,16 +421,14 @@
 .academy {
 	background: white;
 	
-	.page-title {
-		
-	}
-	
-	.news {
-		
+	h2 {
+		color: $primary-blue;
+		padding-bottom: 20px;
 	}
 	
 	.news-title {
-		color: $secondary-blue;
+		color: $primary-blue;
 	}
+	
 	
 }

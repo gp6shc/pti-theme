@@ -93,11 +93,25 @@ ul.call-us{
 	position: relative;
 	z-index: 1;
 	background: $primary-blue;
+	transition: background 0.6s;
 	
 	.container {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		transition: padding .6s;
+	}
+}
+
+.header-fixed {
+	.pti {
+		background: rgba($primary-blue, 0.9);
+		 
+		.container {
+			padding: 8px 15px 5px 15px;
+		}
+	}
+	.navbar-brand img {
+		transform: scale(0.83);
 	}
 }
 
@@ -116,7 +130,7 @@ ul.call-us{
 .navbar-brand img{
 	float: right;
 	padding: 0 15px;
-
+	transition: transform 0.6s;
 }
 
 .navbar{
@@ -153,7 +167,7 @@ ul.call-us{
 	font-weight: 400;
 	color: white;
 	padding: 0 15px;
-	line-height: 46px;
+	line-height: 50px;
 	font-family: $font-heading;
 }
 
@@ -235,6 +249,7 @@ ul.call-us{
 	position: static;
 	
 	.dropdown-menu {
+		top: 70px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
@@ -242,15 +257,18 @@ ul.call-us{
 		padding:20px !important;
 		z-index: 1000;
 		border-radius: 0;
-		top: auto;
+		transition: top 0.6s;
 		
 		ul {
-			margin-top: 4px;
+			margin-top: 0;
 			padding: 20px;
 		}
 		
 	}
 	
+}
+.header-fixed .nav>li.megamenu .dropdown-menu {
+	top: 43px;	
 }
 
 /* Get a Quote */

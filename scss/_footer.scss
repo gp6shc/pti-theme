@@ -118,8 +118,8 @@ footer {
 
 #top {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
+	bottom: 20px;
+	right: 20px;
     opacity: 0;
     transition: opacity .5s ease-in-out .3s;
     
@@ -130,7 +130,8 @@ footer {
     a i {
 	    background: $secondary-blue;
 	    color: white;
-	    padding: 10px 20px;
+	    line-height: .7;
+	    padding: 10px 13px;
 	    
     }
     

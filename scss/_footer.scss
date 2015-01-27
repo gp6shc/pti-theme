@@ -110,29 +110,28 @@ footer {
 ================================================== */
 .copyright {
 	position: relative;
-	padding: 60px 0 0 0; //remove bottom padding
+	padding: 30px 0 45px 0; //remove bottom padding
 	color: white;
 	background: $primary-blue;
 	z-index: 9;
 }
 
 #top {
-    text-align: center;
-    background: transparent;
-    color: white;
-    padding-top: 20px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
     opacity: 0;
-    transition: all .5s ease-in-out;
+    transition: opacity .5s ease-in-out .3s;
     
     &.active {
         opacity: 1;
-        transition: all .5s ease-in-out;
     }
         
     a i {
 	    background: $secondary-blue;
 	    color: white;
-	    padding: 20px 30px;
+	    padding: 10px 20px;
+	    
     }
     
 }

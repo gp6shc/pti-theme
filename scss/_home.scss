@@ -42,12 +42,15 @@
 	    }
 	
 	    .active {
+		    left:0;
+			transform: none;
 			opacity: 1;			
 	    }
 	
 	    .active.left,
 	    .active.right {
 			left: 0;
+			transform: none;
 			border-radius: 0;
 			opacity: 0;
 			z-index: 1;
@@ -56,6 +59,7 @@
 	    .next.left,
 	    .prev.right {
 			opacity: 1;
+			transform: none;
 	    }
 	    
 	    .main {

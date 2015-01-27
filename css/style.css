@@ -4134,8 +4134,8 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 .carousel-inner > .item {
   position: relative;
   display: none;
-  -webkit-transition: .6s ease-in-out left;
-  transition: .6s ease-in-out left; }
+  -webkit-transition: .6s ease-in-out -webkit-transform;
+  transition: .6s ease-in-out transform; }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   display: block;
@@ -4147,7 +4147,9 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   display: block; }
 
 .carousel-inner > .active {
-  left: 0; }
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 .carousel-inner > .next, .carousel-inner > .prev {
   position: absolute;
@@ -4155,19 +4157,29 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   width: 100%; }
 
 .carousel-inner > .next {
-  left: 100%; }
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%); }
 
 .carousel-inner > .prev {
-  left: -100%; }
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%); }
 
 .carousel-inner > .next.left, .carousel-inner > .prev.right {
-  left: 0; }
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 .carousel-inner > .active.left {
-  left: -100%; }
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%); }
 
 .carousel-inner > .active.right {
-  left: 100%; }
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%); }
 
 .carousel-control {
   position: absolute;
@@ -6680,14 +6692,24 @@ ul.call-us {
       -webkit-animation: small-scale 6.7s linear;
               animation: small-scale 6.7s linear; }
     .image-cycle .carousel-inner .active {
+      left: 0;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
       opacity: 1; }
     .image-cycle .carousel-inner .active.left, .image-cycle .carousel-inner .active.right {
       left: 0;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none;
       border-radius: 0;
       opacity: 0;
       z-index: 1; }
     .image-cycle .carousel-inner .next.left, .image-cycle .carousel-inner .prev.right {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transform: none;
+          -ms-transform: none;
+              transform: none; }
     .image-cycle .carousel-inner .main img {
       display: block;
       position: static;

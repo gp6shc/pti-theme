@@ -6435,7 +6435,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999999;
+  z-index: 3;
   -webkit-transition: all 0.4s ease-in-out;
           transition: all 0.4s ease-in-out; }
   header a {
@@ -6447,11 +6447,13 @@ header {
   height: 50px;
   background: #323132;
   color: white;
-  font-family: "museo-sans", sans-serif, serif; }
+  font-family: "museo-sans", sans-serif, serif;
+  position: relative;
+  z-index: 1001; }
   #top-bar .container {
     max-width: 1200px; }
   #top-bar .btn {
-    padding: 15px;
+    padding: 14px;
     line-height: 22px; }
 
 .push-down {
@@ -6482,16 +6484,13 @@ ul.call-us {
 ================================================== */
 .pti {
   position: relative;
-  z-index: 1;
   background: #005CBA;
   -webkit-transition: background 0.6s;
           transition: background 0.6s; }
-  .pti .container {
+  .pti > .container {
     padding-top: 0;
-    padding-bottom: 0; }
-
-.navbar-header {
-  z-index: 9999; }
+    padding-bottom: 0;
+    background-color: #005CBA; }
 
 .navbar-brand {
   padding: 0 15px; }
@@ -6530,6 +6529,7 @@ ul.call-us {
   float: right; }
 
 .navbar-nav > li > a {
+  background-color: #005CBA;
   font-weight: 400;
   color: white;
   padding: 20px 27px 20px 10px;
@@ -6543,7 +6543,7 @@ ul.call-us {
   padding-right: 0; }
 
 .navbar-nav > li.active > a, .navbar-nav > li > a:hover {
-  background-color: transparent;
+  background-color: #036ece;
   color: #cccccc;
   -webkit-transition: background 0.6s;
           transition: background 0.6s; }
@@ -6575,12 +6575,18 @@ ul.call-us {
 
 /* Dropdown menu */
 .dropdown-menu {
+  display: block;
+  box-shadow: none;
   border: 0;
   border-radius: 0px;
   width: 100%;
-  box-shadow: none;
   background: none;
-  min-width: 180px; }
+  min-width: 180px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.6s;
+          transition: all 0.6s; }
   .dropdown-menu > ul {
     list-style: none;
     padding: 0 15px;
@@ -6589,14 +6595,20 @@ ul.call-us {
     margin-bottom: 0;
     margin-top: 20px;
     color: white;
-    background-color: #0780E2;
-    box-shadow: 0 2px .09px rgba(0, 0, 0, 0.15); }
+    background-color: #0780E2; }
   .dropdown-menu i {
     color: white;
     margin-top: -10px;
     margin-left: 25px; }
   .dropdown-menu div:first-child {
     padding: 15px 0; }
+
+.open > .dropdown-menu {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
+  .open > .dropdown-menu ul {
+    box-shadow: 0 3px .1px rgba(0, 0, 0, 0.15); }
 
 .dropdown-menu li a, .dropdown-menu li a:visited {
   display: block;
@@ -6622,10 +6634,8 @@ ul.call-us {
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
-    z-index: 1000;
-    border-radius: 0;
-    -webkit-transition: top 0.6s;
-            transition: top 0.6s; }
+    z-index: -1;
+    border-radius: 0; }
     .nav > li.megamenu .dropdown-menu ul {
       margin-top: 0;
       padding: 20px; }
@@ -6635,8 +6645,8 @@ ul.call-us {
   .header-fixed .ts-mainnav .container {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .header-fixed .pti {
-    background: rgba(0, 92, 186, 0.9); }
+  .header-fixed .navbar {
+    background: #005CBA; }
   .header-fixed .navbar-brand .logo {
     margin: 2px; }
   .header-fixed .navbar-brand img {
@@ -7047,7 +7057,7 @@ ul.call-us {
   background: transparent;
   width: 100%;
   margin: 0;
-  z-index: 5; }
+  z-index: 2; }
   .two-panels h2 {
     color: #005CBA;
     font-weight: 100; }

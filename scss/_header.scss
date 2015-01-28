@@ -4,7 +4,7 @@ header {
 	position: fixed;
 	top: 0;
     width: 100%;
-	z-index: 9999999; 
+	z-index: 3; 
 	transition: all 0.4s ease-in-out;
 	
 	a {
@@ -20,13 +20,15 @@ header {
 	background: $brand-black;
 	color: white;
 	font-family: $font-heading;
+	position: relative;
+	z-index: 1001;
 	
 	.container {
 		max-width: 1200px; 
 	}
 	
 	.btn {
-		padding: 15px;
+		padding: 14px;
 		line-height: 22px;
 	}
 	
@@ -79,20 +81,16 @@ ul.call-us{
 
 /* Navbar: main navigation below top-bar
 ================================================== */
-.pti{
+.pti {
 	position: relative;
-	z-index: 1;
 	background: $primary-blue;
 	transition: background 0.6s;
 	
-	.container {
+	> .container {
 		padding-top: 0;
 		padding-bottom: 0;
+		background-color: $primary-blue;
 	}
-}
-
-.navbar-header{
-	z-index: 9999;
 }
 
 .navbar-brand{
@@ -142,6 +140,7 @@ ul.call-us{
 }
 
 .navbar-nav > li > a {
+	background-color: $primary-blue;
 	font-weight: 400;
 	color: white;
 	padding: 20px 27px 20px 10px;
@@ -157,7 +156,7 @@ ul.call-us{
 
 .navbar-nav > li.active > a,
 .navbar-nav > li > a:hover{
-	background-color: transparent;
+	background-color: mix($primary-blue, $secondary-blue, 50%);
 	color: darken(white,20%);
 	transition: background 0.6s;
 }
@@ -193,13 +192,16 @@ ul.call-us{
 }
 
 /* Dropdown menu */
-.dropdown-menu{
+.dropdown-menu {
+	display: block;
+	box-shadow: none;
 	border: 0;
 	border-radius: 0px;
 	width: 100%;
-	box-shadow: none;
 	background: none;
 	min-width: 180px;
+	transform: translateY(-100%);
+	transition: all 0.6s;
 	
 	> ul {
 		list-style: none;
@@ -210,7 +212,6 @@ ul.call-us{
 		margin-top: 20px;
 		color: white;
 		background-color: $secondary-blue;
-		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
 	}
 	
 	i {
@@ -222,7 +223,14 @@ ul.call-us{
     div:first-child {
     	padding: 15px 0;
 	}
+}
 
+.open > .dropdown-menu {
+	transform: translateY(0);
+	
+	ul {
+		box-shadow: 0 3px .1px rgba(0,0,0,0.15);
+	}
 }
 
 .dropdown-menu li a, .dropdown-menu li a:visited {
@@ -261,9 +269,8 @@ ul.call-us{
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0 20px;
-		z-index: 1000;
+		z-index: -1;
 		border-radius: 0;
-		transition: top 0.6s;
 		
 		ul {
 			margin-top: 0;
@@ -281,8 +288,8 @@ ul.call-us{
 		padding-bottom: 10px;
 	}
 	
-	.pti {
-		background: rgba($primary-blue, 0.9);
+	.navbar {
+		background: $primary-blue;
 	}
 	
 	.navbar-brand {

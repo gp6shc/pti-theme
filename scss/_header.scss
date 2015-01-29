@@ -22,6 +22,7 @@ header {
 	font-family: $font-heading;
 	position: relative;
 	z-index: 1001;
+	transform: translate3d(0,0,0);
 	
 	.container {
 		max-width: 1200px; 

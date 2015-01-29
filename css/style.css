@@ -6449,7 +6449,9 @@ header {
   color: white;
   font-family: "museo-sans", sans-serif, serif;
   position: relative;
-  z-index: 1001; }
+  z-index: 1001;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
   #top-bar .container {
     max-width: 1200px; }
   #top-bar .btn {

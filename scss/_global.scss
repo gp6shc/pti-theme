@@ -19,6 +19,9 @@ body{
 	max-width: 1600px;
 	min-width: 320px;
 }
+body.modal-open {
+	margin: 0;
+}
 
 .body-inner{
 	position: relative;

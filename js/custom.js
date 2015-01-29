@@ -208,12 +208,15 @@ $('#js-search-icon').click(function() {
 /* ----------------------------------------------------------- */
 	/*  Blur container bg on modal open, unblur on close
 /* ----------------------------------------------------------- */
-$('#myModal').on('show.bs.modal', function () {
-   $('.container').addClass('blur');
+$('#customer-video').on('shown.bs.modal', function (event) {
+	var button = $(event.relatedTarget); // Button that triggered the modal
+	var videoSource = button.data('video-source') + "?rel=0&showinfo=0&enablejsapi=1&autoplay=1&autohide=1";
+
+	$('#bs-iframe').attr("src", videoSource);	
 });
 
-$('#myModal').on('hide.bs.modal', function () {
-   $('.container').removeClass('blur');
+$('#customer-video').on('hide.bs.modal', function () {
+	$('#bs-iframe').attr("src", "");	
 });
 
 /* ----------------------------------------------------------- */

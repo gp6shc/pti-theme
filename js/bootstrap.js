@@ -3,6 +3,7 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ //jshint asi:true
 
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
@@ -322,7 +323,7 @@ if (typeof jQuery === 'undefined') {
 
   Carousel.VERSION  = '3.3.2'
 
-  Carousel.TRANSITION_DURATION = 1600
+  Carousel.TRANSITION_DURATION = 1300
 
   Carousel.DEFAULTS = {
     interval: 5000,

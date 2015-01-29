@@ -4,23 +4,13 @@ header {
 	position: fixed;
 	top: 0;
     width: 100%;
-	z-index: 9999999; 
+	z-index: 3; 
 	transition: all 0.4s ease-in-out;
 	
 	a {
 		color: white;
 	}
 	
-}
-
-.header-fixed {
-	box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
-  	
-  	.ts-mainnav .container{
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-
 }
 
 /* Top-bar
@@ -30,13 +20,16 @@ header {
 	background: $brand-black;
 	color: white;
 	font-family: $font-heading;
+	position: relative;
+	z-index: 1001;
+	transform: translate3d(0,0,0);
 	
 	.container {
 		max-width: 1200px; 
 	}
 	
 	.btn {
-		padding: 15px;
+		padding: 14px;
 		line-height: 22px;
 	}
 	
@@ -89,20 +82,16 @@ ul.call-us{
 
 /* Navbar: main navigation below top-bar
 ================================================== */
-.pti{
+.pti {
 	position: relative;
-	z-index: 1;
 	background: $primary-blue;
+	transition: background 0.6s;
 	
-	.container {
-		padding-top: 20px;
-		padding-bottom: 20px;
-		transition: padding .6s;
+	> .container {
+		padding-top: 0;
+		padding-bottom: 0;
+		background-color: $primary-blue;
 	}
-}
-
-.navbar-header{
-	z-index: 9999;
 }
 
 .navbar-brand{
@@ -111,12 +100,14 @@ ul.call-us{
 .navbar-brand .logo{
 	width: 215px;
 	height: 50px;
+	margin: 20px 0;
+	transition: margin 0.6s;
 }
 
 .navbar-brand img{
 	float: right;
 	padding: 0 15px;
-
+	transition: transform 0.6s;
 }
 
 .navbar{
@@ -146,15 +137,18 @@ ul.call-us{
 }
 
 .navbar-nav {
-	/* float: right; */
+	float: right;
 }
 
-.navbar-nav > li > a{
+.navbar-nav > li > a {
+	background-color: $primary-blue;
 	font-weight: 400;
 	color: white;
-	padding: 0 15px;
-	line-height: 46px;
+	padding: 20px 27px 20px 10px;
+	position: relative;
+	line-height: 50px;
 	font-family: $font-heading;
+	transition: all .6s;
 }
 
 .navbar-nav > li:last-child a{
@@ -163,23 +157,50 @@ ul.call-us{
 
 .navbar-nav > li.active > a,
 .navbar-nav > li > a:hover{
-	color: darken(white,20%);
+	background-color: mix($primary-blue, $secondary-blue, 50%);
 }
 
 .nav .open>a, .nav .open>a:hover, 
 .nav .open>a:focus{
-	background: transparent;
-	border:0;
+	background: $secondary-blue;
+	color: white;
+}
+
+.nav .dropdown > a > i {
+	color: white;
+	background-color: inherit;
+	border-radius: 20px;
+	width: 13px;
+	height: 13px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 13px;
+	position: absolute;
+	right: 10px;
+	top: 38px;
+	transition: top 0.6s;
+}
+
+.nav .open > a i {
+	color: $primary-blue;
+	background-color: white;
+	
+	&:before {
+		content: '\00d7';
+	}
 }
 
 /* Dropdown menu */
-.dropdown-menu{
+.dropdown-menu {
+	display: block;
+	box-shadow: none;
 	border: 0;
 	border-radius: 0px;
 	width: 100%;
-	box-shadow: none;
 	background: none;
 	min-width: 180px;
+	transform: translateY(-100%);
+	transition: all 0.6s;
 	
 	> ul {
 		list-style: none;
@@ -190,7 +211,6 @@ ul.call-us{
 		margin-top: 20px;
 		color: white;
 		background-color: $secondary-blue;
-		box-shadow: 0 2px .09px rgba(0,0,0,0.15);
 	}
 	
 	i {
@@ -202,21 +222,35 @@ ul.call-us{
     div:first-child {
     	padding: 15px 0;
 	}
-
 }
 
-.dropdown-menu li a, .dropdown-menu li a:visited {
+.open > .dropdown-menu {
+	transform: translateY(0);
+	
+	ul {
+		box-shadow: 0 3px .1px rgba(0,0,0,0.15);
+	}
+}
+
+.dropdown-menu a, .dropdown-menu a:visited {
 	display: block;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: normal;
-	text-decoration: none;
-	color: white;
+	padding: 20px 0 7px 0;
 	
+	+ a {
+		padding: 7px 0 20px 0;
+	}
+	
+	h3 {
+		font-size: 20px;
+		font-weight: 700;
+		margin: 0;
+	}
+	
+		
 	&:hover {
-		color: darken(white,20%);
+		color: white;
+		background-color: mix($primary-blue, $secondary-blue, 50%);
 	}	
-	
 }
 
 .dropdown-menu > ul > li.active > a {
@@ -235,27 +269,66 @@ ul.call-us{
 	position: static;
 	
 	.dropdown-menu {
+		top: 90px;
 		left: 0;
 		right: 0;
 		margin-left: auto;
 		margin-right: auto;
-		padding:20px !important;
-		z-index: 1000;
+		padding: 0 20px;
+		z-index: -1;
 		border-radius: 0;
-		top: auto;
 		
 		ul {
-			margin-top: 4px;
-			padding: 20px;
+			margin-top: 0;
 		}
 		
 	}
 	
 }
+.header-fixed {
+	box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
+	
+	.ts-mainnav .container{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.navbar {
+		background: $primary-blue;
+	}
+	
+	.navbar-brand {
+		.logo {
+			margin: 2px;
+		}
+		
+		img {
+			transform: scale(0.8);
+		}
+	}
+	
+	.nav>li.megamenu .dropdown-menu {
+		top: 54px;
+	}
+	
+	.navbar-nav > li > a {
+		padding: 2px 27px 2px 10px;
+	}
+	.nav .dropdown a i {
+		top: 20px;
+	}
+	.get-quote {
+		margin: 8px 0 0 80px;
+	}
+	.search {
+		margin-top: 2px;
+	}
+}
 
 /* Get a Quote */
 .get-quote {
-	margin: 6px 0 0 80px;
+	margin: 26px 0 0 80px;
+	transition: margin 0.6s;
 	
 	button {
 		opacity: 1;
@@ -268,6 +341,8 @@ ul.call-us{
 
 /* Search */
 .search {
+	margin-top: 20px;
+	transition: margin 0.6s;
 	
 	i {
 		color: white;

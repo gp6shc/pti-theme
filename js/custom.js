@@ -177,7 +177,6 @@ $(document).ready(function(){
 		interval: 5400,
 		pause: "false",
 		keyboard: false
-		
 	});
 });
 	

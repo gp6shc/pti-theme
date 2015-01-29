@@ -187,15 +187,7 @@ table {
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%;
   -webkit-tap-highlight-color: transparent; }
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333;
-  background-color: #fff; }
 
 input, button, select, textarea {
   font-family: inherit;
@@ -424,7 +416,7 @@ blockquote {
   border-left: 5px solid #eee; }
 
 blockquote p {
-  font-size: 17.5px;
+  font-size: 1.094rem;
   font-weight: 300;
   line-height: 1.25; }
 
@@ -478,7 +470,7 @@ pre {
   display: block;
   padding: 9.5px;
   margin: 0 0 10px;
-  font-size: 13px;
+  font-size: 0.813rem;
   line-height: 1.428571429;
   color: #333;
   word-break: break-all;
@@ -999,7 +991,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 20px;
-  font-size: 21px;
+  font-size: 1.313rem;
   line-height: inherit;
   color: #333;
   border: 0;
@@ -1054,7 +1046,7 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
   width: 100%;
   height: 34px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.428571429;
   color: #555;
   vertical-align: middle;
@@ -1119,7 +1111,7 @@ input[type="radio"][disabled], input[type="checkbox"][disabled], .radio[disabled
 .input-sm {
   height: 30px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -1133,7 +1125,7 @@ textarea.input-sm {
 .input-lg {
   height: 45px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.33;
   border-radius: 6px; }
 
@@ -1249,7 +1241,7 @@ textarea.input-lg {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -1405,13 +1397,13 @@ textarea.input-lg {
 
 .btn-lg {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 0.875rem;
   line-height: 1.33;
   border-radius: 6px; }
 
 .btn-sm, .btn-xs {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2094,7 +2086,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
   min-width: 160px;
   padding: 5px 0;
   margin: 2px 0 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   list-style: none;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -2153,7 +2145,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.428571429;
   color: #999; }
 
@@ -2268,19 +2260,19 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .btn-group-xs > .btn {
   padding: 5px 10px;
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 3px; }
 
 .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 3px; }
 
 .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.33;
   border-radius: 6px; }
 
@@ -2387,7 +2379,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn {
   height: 45px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.33;
   border-radius: 6px; }
 
@@ -2401,7 +2393,7 @@ textarea.input-group-lg > .form-control, textarea.input-group-lg > .input-group-
 .input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
   height: 30px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2425,7 +2417,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1;
   text-align: center;
@@ -2435,12 +2427,12 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .input-group-addon.input-sm {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 0.75rem;
   border-radius: 3px; }
 
 .input-group-addon.input-lg {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 1.125rem;
   border-radius: 6px; }
 
 .input-group-addon input[type="radio"], .input-group-addon input[type="checkbox"] {
@@ -2768,7 +2760,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 20px; }
 
 .navbar-brand:hover, .navbar-brand:focus {
@@ -3127,7 +3119,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .pagination-lg > li > a, .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px; }
+  font-size: 1.125rem; }
 
 .pagination-lg > li:first-child > a, .pagination-lg > li:first-child > span {
   border-bottom-left-radius: 6px;
@@ -3139,7 +3131,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .pagination-sm > li > a, .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 12px; }
+  font-size: 0.75rem; }
 
 .pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
   border-bottom-left-radius: 3px;
@@ -3254,7 +3246,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: bold;
   line-height: 1;
   color: #fff;
@@ -3286,7 +3278,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
-  font-size: 21px;
+  font-size: 1.313rem;
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
@@ -3310,7 +3302,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
     padding-right: 60px;
     padding-left: 60px; }
   .jumbotron h1 {
-    font-size: 63px; } }
+    font-size: 3.938rem; } }
 
 .thumbnail {
   display: inline-block;
@@ -3439,7 +3431,7 @@ a.thumbnail:hover, a.thumbnail:focus {
   float: left;
   width: 0;
   height: 100%;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #fff;
   text-align: center;
   background-color: #428bca;
@@ -3628,7 +3620,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px; }
+  font-size: 1rem; }
 
 .panel-title > a {
   color: inherit; }
@@ -3767,7 +3759,7 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 1.313rem;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -3912,7 +3904,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   position: absolute;
   z-index: 1030;
   display: block;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 1.4;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -4038,7 +4030,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 .popover-title {
   padding: 8px 14px;
   margin: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 18px;
   background-color: #f7f7f7;
@@ -4187,7 +4179,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   bottom: 0;
   left: 0;
   width: 15%;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
@@ -4288,7 +4280,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
     height: 30px;
     margin-top: -15px;
     margin-left: -15px;
-    font-size: 30px; }
+    font-size: 1.875rem; }
   .carousel-caption {
     right: 20%;
     left: 20%;
@@ -6163,6 +6155,7 @@ html {
   overflow-x: hidden !important;
   width: 100%;
   height: 100%;
+  font-size: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility; }
@@ -6206,61 +6199,56 @@ img {
 /* Body */
 body, p {
   font-family: "museo-sans", sans-serif, serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 1.6em; }
+  line-height: 1.4; }
 
 p.serif {
   font-family: Georgia, Helvetica, Arial; }
 
 p.large {
-  font-size: 20px; }
+  font-size: 1.25rem; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "museo-sans", sans-serif, serif; }
+  font-family: "museo-sans", sans-serif, serif;
+  line-height: 1.2; }
 
 h1 {
-  font-size: 44px;
-  line-height: 56px;
+  font-size: 2.75rem;
   font-weight: 400; }
 
 h2 {
-  font-size: 38px;
-  line-height: 46px;
+  font-size: 2.375rem;
   font-weight: 100; }
 
 h3 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
   font-weight: 400; }
 
 h4 {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
   font-weight: 700; }
 
 h5 {
-  font-size: 16px;
-  line-height: 26px; }
+  font-size: 1rem; }
 
 h6 {
-  font-size: 14px;
-  line-height: 24px; }
+  font-size: 0.875rem; }
 
 .page-header {
-  font-size: 44px;
+  font-size: 2.75rem;
   font-weight: 100;
   color: #0780E2;
   border: none; }
 
 .sub-head-lg {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 300;
   color: #0780E2; }
 
 .sub-head-sm {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #0780E2; }
 
@@ -6467,11 +6455,11 @@ header {
 .text-sizing {
   display: inline-block; }
   .text-sizing i.sm {
-    font-size: 14px; }
+    font-size: 0.875rem; }
   .text-sizing i.med {
-    font-size: 16px; }
+    font-size: 1rem; }
   .text-sizing i.lg {
-    font-size: 18px; }
+    font-size: 1.125rem; }
 
 ul.call-us {
   list-style: none;
@@ -6618,7 +6606,7 @@ ul.call-us {
   .dropdown-menu a + a, .dropdown-menu a:visited + a {
     padding: 7px 0 20px 0; }
   .dropdown-menu a h3, .dropdown-menu a:visited h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     margin: 0; }
   .dropdown-menu a:hover, .dropdown-menu a:visited:hover {

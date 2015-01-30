@@ -210,7 +210,7 @@ $('#js-search-icon').click(function() {
 /* ----------------------------------------------------------- */
 $('#customer-video').on('shown.bs.modal', function (event) {
 	var button = $(event.relatedTarget); // Button that triggered the modal
-	var videoSource = button.data('video-source') + "?rel=0&showinfo=0&enablejsapi=1&autoplay=1&autohide=1";
+	var videoSource = button.data('video-source') + "?rel=0&showinfo=0&autoplay=1&autohide=1";
 
 	$('#bs-iframe').attr("src", videoSource);	
 });
@@ -232,4 +232,26 @@ $('#top').click(function(e){
 });
 
 //close
+});
+
+/* ----------------------------------------------------------- */
+/*  Crude Font-Size adjust
+/* ----------------------------------------------------------- */
+
+$("#sm").on('click', function() {
+	var currentSize = $("html").css("font-size").slice(0,-2);
+	currentSize = (currentSize / 16) * 100;
+	currentSize = Math.floor(currentSize - 5);
+	$("html").css("font-size", currentSize + "%");
+});
+
+$("#med").on('click', function() {
+	$("html").css("font-size", "100%");
+});
+
+$("#lg").on('click', function() {
+	var currentSize = $("html").css("font-size").slice(0,-2);
+	currentSize = (currentSize / 16) * 100;
+	currentSize = Math.floor(currentSize + 5);
+	$("html").css("font-size", currentSize + "%");
 });

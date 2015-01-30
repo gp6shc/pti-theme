@@ -6454,12 +6454,14 @@ header {
 
 .text-sizing {
   display: inline-block; }
-  .text-sizing i.sm {
-    font-size: 0.875rem; }
-  .text-sizing i.med {
-    font-size: 1rem; }
-  .text-sizing i.lg {
-    font-size: 1.125rem; }
+  .text-sizing i {
+    cursor: pointer; }
+    .text-sizing i.sm {
+      font-size: 0.875rem; }
+    .text-sizing i.med {
+      font-size: 1rem; }
+    .text-sizing i.lg {
+      font-size: 1.125rem; }
 
 ul.call-us {
   list-style: none;
@@ -6687,7 +6689,7 @@ ul.call-us {
     position: absolute;
     top: 3px;
     right: 0;
-    width: 216px;
+    width: 218px;
     margin-top: 2px;
     opacity: 1;
     -webkit-transition: opacity 0.3s;
@@ -6695,7 +6697,7 @@ ul.call-us {
   .search .search-field {
     -webkit-appearance: none;
     width: 165px;
-    padding: 3px 5px;
+    padding: 5px;
     text-indent: 5px;
     background-color: #83868b;
     border: 2px solid #83868b;
@@ -6707,7 +6709,7 @@ ul.call-us {
       border-color: #00AA71; }
   .search .search-submit {
     -webkit-appearance: none;
-    padding: 8px 17px 7px 17px;
+    padding: 8px 18px;
     margin-top: -2px;
     margin-left: -10px; }
 
@@ -6735,7 +6737,8 @@ ul.call-us {
 ================================================== */
 .image-cycle {
   background-color: white;
-  height: 600px; }
+  height: 600px;
+  font-size: 1rem; }
   .image-cycle .carousel-inner {
     position: relative; }
     .image-cycle .carousel-inner .item {
@@ -6787,7 +6790,7 @@ ul.call-us {
       color: #002f5e;
       text-shadow: none;
       font-weight: 100;
-      font-size: 72px;
+      font-size: 4.5em;
       line-height: 1; }
 
 .quotable {
@@ -6800,18 +6803,18 @@ ul.call-us {
   -webkit-animation: slide-right 6.7s ease-out;
           animation: slide-right 6.7s ease-out; }
   .quotable p {
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 1.2;
     color: #002f5e;
     padding: 0 15px; }
   .quotable h4 {
-    font-size: 40px;
+    font-size: 2.5em;
     color: #515357;
     font-style: italic;
     font-weight: 400;
     line-height: 0.9; }
     .quotable h4 span {
-      font-size: 30px; }
+      font-size: 0.625em; }
 
 .item-right .quotable {
   left: auto;
@@ -6974,56 +6977,56 @@ ul.call-us {
 ================================================== */
 .quote {
   background: #EAEBEC;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  font-size: 1rem; }
   .quote h1 {
     color: #323132;
     font-weight: 100; }
   .quote h3 {
     color: #0780E2;
     font-weight: 300;
-    font-size: 28px;
+    font-size: 1.75em;
     line-height: 36px;
     padding-bottom: 10px; }
   .quote .indention {
     height: 40px; }
 
-/* Section 2b: .get-a-quote
-================================================== */
-.get-a-quote .grey-bg {
-  background-color: #EAEBEC;
-  border-color: #EAEBEC; }
-.get-a-quote input {
-  font-size: 20px;
-  padding: 19px 10px;
-  border: 2px solid white;
-  box-shadow: none;
-  border-radius: 5px !important;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s; }
-  .get-a-quote input:focus {
-    outline: 0 none;
-    background-color: white;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(0, 170, 113, 0.6);
-    border-color: #00AA71; }
-.get-a-quote button {
-  padding: 7px 15px;
-  margin-left: -10px;
-  font-size: 20px;
-  font-weight: 400;
-  position: relative;
-  z-index: 2; }
+.get-a-quote {
+  font-size: 1rem; }
+  .get-a-quote .grey-bg {
+    background-color: #EAEBEC;
+    border-color: #EAEBEC; }
+  .get-a-quote input {
+    font-size: 1.25em;
+    padding: 19px 10px;
+    border: 2px solid white;
+    box-shadow: none;
+    border-radius: 5px !important;
+    -webkit-transition: all 0.3s;
+            transition: all 0.3s; }
+    .get-a-quote input:focus {
+      outline: 0 none;
+      background-color: white;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(0, 170, 113, 0.6);
+      border-color: #00AA71; }
+  .get-a-quote button {
+    padding: 7px 15px;
+    margin-left: -10px;
+    font-size: 1.25em;
+    font-weight: 400;
+    position: relative;
+    z-index: 2; }
 
 /* Section 3: .about
 ================================================== */
 .about {
-  background: white; }
+  background: white;
+  font-size: 1rem; }
   .about h2 {
     color: #005CBA;
     font-weight: 100;
-    font-size: 44px; }
+    font-size: 2.75em; }
 
-/* Section 3b: .branch
-================================================== */
 .branch {
   height: 137px;
   background: transparent;
@@ -7047,6 +7050,7 @@ ul.call-us {
   display: -ms-flexbox;
   display: flex;
   background: transparent;
+  font-size: 1rem;
   width: 100%;
   margin: 0;
   z-index: 2; }
@@ -7077,9 +7081,16 @@ ul.call-us {
 /* Section 5: .carousel-1 (1st carousel)
 ================================================== */
 .carousel-1 {
-  background: #EAEBEC; }
+  background: #EAEBEC;
+  font-size: 1rem; }
   .carousel-1 .carousel-inner {
     margin: -25px 0; }
+  .carousel-1 .img-overlay img {
+    opacity: 1; }
+  .carousel-1.blue-tint .img-overlay {
+    background-color: #0780E2; }
+    .carousel-1.blue-tint .img-overlay img {
+      opacity: 0.6; }
 
 .carousel-control i {
   display: inline-block;
@@ -7100,7 +7111,8 @@ ul.call-us {
 ================================================== */
 .two-panels-2 {
   background: transparent;
-  margin-bottom: -25px; }
+  margin-bottom: -25px;
+  font-size: 1rem; }
   .two-panels-2 h2 {
     color: #005CBA;
     font-weight: 100; }
@@ -7117,6 +7129,7 @@ ul.call-us {
 .customers {
   background-color: #EAEBEC;
   color: #626569;
+  font-size: 1rem;
   -webkit-transition: all 0.3s;
           transition: all 0.3s; }
   .customers h1 {
@@ -7132,7 +7145,7 @@ ul.call-us {
     width: 80%;
     border: none;
     margin: 15px auto;
-    font-size: 24px;
+    font-size: 1.5em;
     line-height: 1.27; }
 
 .blue-bg {
@@ -7216,13 +7229,18 @@ ul.call-us {
 /* Section 8: .ceo
 ================================================== */
 .ceo {
-  background: #EAEBEC; }
+  background: #EAEBEC;
+  font-size: 1rem; }
   .ceo h2 {
-    color: #002f5e; }
+    margin-top: 1em;
+    color: #002f5e;
+    font-size: 2.5em; }
   .ceo h5 {
-    color: #005CBA; }
+    color: #005CBA;
+    font-size: 1.25em; }
   .ceo p {
-    color: #323132; }
+    color: #323132;
+    font-size: 1.125em; }
   .ceo::before {
     content: "";
     height: 20px;
@@ -7239,6 +7257,7 @@ ul.call-us {
 ================================================== */
 .carousel-2 {
   background: #EAEBEC;
+  font-size: 1rem;
   /*.full-width {
 		max-width: 100%;
 		padding: 0;
@@ -7285,31 +7304,28 @@ ul.call-us {
     -webkit-transition: opacity 0.3s;
             transition: opacity 0.3s; }
 
-.carousel-1 .img-overlay img {
-  opacity: 1; }
-.carousel-1.blue-tint .img-overlay {
-  background-color: #0780E2; }
-  .carousel-1.blue-tint .img-overlay img {
-    opacity: 0.6; }
-
 /* Section 10: .emergency
 ================================================== */
 .emergency {
-  background: #EAEBEC; }
+  background: #EAEBEC;
+  font-size: 1rem; }
   .emergency .container {
     margin-top: -30px; }
   .emergency h2 {
-    color: #005CBA; }
+    color: #005CBA;
+    font-size: 2.5em; }
   .emergency h5 {
     color: #002f5e;
-    font-style: italic; }
+    font-size: 1.125em;
+    font-weight: 300; }
   .emergency img {
     margin: 20px 0; }
 
 /* Section 11: .academy
 ================================================== */
 .academy {
-  background: white; }
+  background: white;
+  font-size: 1rem; }
   .academy h2 {
     color: #005CBA;
     margin-top: 0;
@@ -7429,6 +7445,7 @@ footer {
   position: relative;
   padding: 40px 0;
   color: white;
+  font-size: 1rem;
   background: #005CBA;
   z-index: 99; }
   footer .container {
@@ -7440,7 +7457,7 @@ footer {
     padding: 0; }
   footer li a {
     color: white;
-    font-size: 14px; }
+    font-size: 0.875em; }
 
 .footer-title {
   margin-top: -4px;

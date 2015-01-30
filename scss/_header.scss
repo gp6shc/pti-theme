@@ -42,18 +42,19 @@ header {
 .text-sizing{
 	display: inline-block;
 	
-	i.sm {
-		font-size: 0.875rem;
+	i {
+		cursor: pointer;
+		
+		&.sm {
+			font-size: 0.875rem;	
+		}
+		&.med {
+			font-size: 1rem;
+		}
+		&.lg {
+			font-size: 1.125rem;	
+		}
 	}
-	
-	i.med {
-		font-size: 1rem;
-	}
-	
-	i.lg {
-		font-size: 1.125rem;
-	}
-	
 }
 
 ul.call-us{
@@ -362,7 +363,7 @@ ul.call-us{
 		position: absolute;
 		top: 3px;
 		right: 0;
-		width: 216px;
+		width: 218px;
 		margin-top: 2px;
 		opacity: 1;
 		transition: opacity 0.3s;
@@ -371,7 +372,7 @@ ul.call-us{
 	.search-field {
 		-webkit-appearance: none;
 		width: 165px;
-		padding: 3px 5px;
+		padding: 5px;
 		text-indent: 5px;
 		background-color: lighten($brand-grey, 13%);
 		border: 2px solid lighten($brand-grey, 13%);
@@ -386,7 +387,7 @@ ul.call-us{
 
 	.search-submit {
 		-webkit-appearance: none;
-		padding: 8px 17px 7px 17px;
+		padding: 8px 18px;
 		margin-top: -2px;
 		margin-left: -10px;
 	}

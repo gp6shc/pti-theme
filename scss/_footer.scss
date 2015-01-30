@@ -6,6 +6,7 @@ footer {
 	position: relative;
 	padding: 40px 0;
 	color: white;
+	font-size: 1rem;
 	background: $primary-blue;
 	z-index: 99;
 	
@@ -22,7 +23,7 @@ footer {
 	
 	li a {
 		color: white;
-		font-size: 14px;
+		font-size: 0.875em;
 	}
 	
 }

@@ -85,12 +85,24 @@ $screen-xs: 480px;
 		img {
 			display: none;
 		}		
-	}	
+	}
+	.top-bar .sign-in .get-quote-2 {
+		display: none;
+	}
+		
 }
 
 /* Below 768: nav collapse */
 @media (max-width: $screen-sm) {
-
+	.top-bar {
+		.sign-in .agent {
+			display: none;
+		}
+		.text-sizing {
+			display: none;
+		}
+	}
+	
 	.navbar-brand {
 		padding: 6px 15px 0;
 		margin-bottom: -5px;
@@ -201,10 +213,22 @@ $screen-xs: 480px;
 	
 	.two-panels-2 > div{
 		border-radius: 40px 40px 0 0 / 25px 25px 0 0;	
-	}	
+	}
+	
+	.top-bar .call-us > span {
+		display: none;
+	}
 }
 
-/* 480 and above */
-@media (min-width: $screen-xs) {
-		
+/* 480 and below */
+@media (max-width: $screen-xs) {
+	.top-bar {
+		.sign-in .policy {
+			display: none;
+		}
+		.container {
+			justify-content: space-around;
+		}
+	}
+	
 }

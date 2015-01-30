@@ -6167,7 +6167,6 @@ body {
   color: #323132;
   background: white;
   position: relative;
-  max-width: 1600px;
   min-width: 320px; }
 
 body.modal-open {
@@ -6434,7 +6433,7 @@ header {
 
 /* Top-bar
 ================================================== */
-#top-bar {
+.top-bar {
   height: 50px;
   background: #323132;
   color: white;
@@ -6443,9 +6442,19 @@ header {
   z-index: 1001;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0); }
-  #top-bar .container {
-    max-width: 1200px; }
-  #top-bar .btn {
+  .top-bar .container {
+    max-width: 1100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .top-bar .container::before, .top-bar .container::after {
+      display: none; }
+  .top-bar .btn {
     padding: 14px;
     line-height: 22px; }
 
@@ -6453,7 +6462,8 @@ header {
   margin-top: 12px; }
 
 .text-sizing {
-  display: inline-block; }
+  display: inline-block;
+  line-height: 50px; }
   .text-sizing i {
     cursor: pointer; }
     .text-sizing i.sm {
@@ -6463,17 +6473,16 @@ header {
     .text-sizing i.lg {
       font-size: 1.125rem; }
 
-ul.call-us {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.call-us {
+  display: inline-block;
+  line-height: 50px;
   color: white;
   text-transform: uppercase; }
-  ul.call-us li {
-    float: left; }
 
-.sign-in {
-  float: none; }
+.sign-in button {
+  display: inline-block; }
+  .sign-in button + button {
+    margin-left: 10px; }
 
 /* Navbar: main navigation below top-bar
 ================================================== */
@@ -7578,10 +7587,16 @@ footer {
     width: 323px;
     height: 300px; }
     .ceo .col-md-4.col-sm-4 img {
-      display: none; } }
+      display: none; }
+  .top-bar .sign-in .get-quote-2 {
+    display: none; } }
 
 /* Below 768: nav collapse */
 @media (max-width: 768px) {
+  .top-bar .sign-in .agent {
+    display: none; }
+  .top-bar .text-sizing {
+    display: none; }
   .navbar-brand {
     padding: 6px 15px 0;
     margin-bottom: -5px; }
@@ -7645,7 +7660,16 @@ footer {
       .two-panels > div + div {
         border-radius: 0 0 40px 40px/0 0 25px 25px; }
   .two-panels-2 > div {
-    border-radius: 40px 40px 0 0/25px 25px 0 0; } }
+    border-radius: 40px 40px 0 0/25px 25px 0 0; }
+  .top-bar .call-us > span {
+    display: none; } }
 
-/* 480 and above */
+/* 480 and below */
+@media (max-width: 480px) {
+  .top-bar .sign-in .policy {
+    display: none; }
+  .top-bar .container {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
 /*# sourceMappingURL=style.css.map */

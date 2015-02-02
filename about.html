@@ -17,9 +17,7 @@
 	<!-- Favicons
 	================================================== -->
 	<link rel="icon" href="img/favicon/favicon-32x32.png" type="image/x-icon" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
-	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+	<link rel="apple-touch-icon" href="icon.png">
 	
 	<!-- Stylesheets
 	================================================== -->
@@ -34,6 +32,7 @@
 </head>
 	
 <body>
+
 	<div class="body-inner">
 	<!-- Header start -->
 	<header id="header" class="header" role="banner">
@@ -41,34 +40,21 @@
 		<!-- Top bar start -->
 		<div id="top-bar" class="top-bar">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-2 visible-lg visible-md">
-						<div class="text-sizing push-down">
-						    Text Size
-							<i class="sm"><a href="#">A</a></i>
-							<i class="med"><a href="#">A</a></i>
-							<i class="lg"><a href="#">A</a></i>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-3">
-						<ul class="call-us">
-							<li class="push-down">Give us a call: <strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong></li>
-						</ul>
-					</div>
-					<div class="col-md-2 col-md-sm-6 col-xs-12">
-						<div class="sign-in policy">
-							<!-- hidden on xs screens -->
-							<button class="hidden-xs btn btn-dark" type="button">Policyholder Sign In</button>
-						</div>
-					</div>
-					<div class="col-md-2 col-md-sm-6 col-xs-12">
-						<div class="sign-in agent">
-							<button class="visible-lg visible-md btn btn-dark square" type="button">Agent Sign In</button>
-							<!-- get a quote link added & replaces agent sign in on md/sm/xs screen -->
-							<button class="visible-sm visible-xs btn btn-dark square" type="button">Get a Quote</button>
-						</div>
-					</div>
-				</div><!-- Row end -->
+				<div class="text-sizing">
+				    Text Size
+					<i id="sm" class="sm" title="Reduce the text size">A</i>
+					<i id="med" class="med" title="Reset to the defualt text size">A</i>
+					<i id="lg" class="lg" title="Increasae the text size">A</i>
+				</div>
+				<div class="call-us">
+					<span>Give us a call: </span><strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong>
+				</div>
+				<div class="sign-in">
+					<button class="policy btn btn-dark" type="button">Policyholder Sign In</button>
+					<button class="agent btn btn-dark" type="button">Agent Sign In</button>
+					<!-- get a quote link added & replaces agent sign in on md/sm/xs screen -->
+					<button class="get-quote-2 btn btn-dark" type="button">Get a Quote</button>
+				</div>
 			</div><!-- Container end -->
 		</div><!-- Top bar end -->
 
@@ -98,66 +84,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="About Us">About Us <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-thumbs-o-up fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-bolt fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-link fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-medkit fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
 							</div>
 					</li>
 
@@ -166,66 +151,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Insurance">Insurance <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-thumbs-o-up fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-bolt fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-link fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-medkit fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-thumbs-o-up fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-bolt fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
 							</div>
 					</li>
 					<!-- Info Center -->
@@ -233,66 +217,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info Center">Info Center <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-thumbs-o-up fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-bolt fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-link fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-medkit fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-thumbs-o-up fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-bolt fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-link fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-medkit fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
 							</div>
 					</li>
 	                <!-- Policyholders -->
@@ -300,66 +283,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Policyholders">Policyholders <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-thumbs-o-up fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-bolt fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-link fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-medkit fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-thumbs-o-up fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-bolt fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
 							</div>
 					</li>
 						<!-- Get a Quote, visible on lg,md -->

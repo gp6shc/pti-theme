@@ -5,6 +5,11 @@ $screen-md: 992px;
 $screen-sm: 768px; //nav collapse breakpoint
 $screen-xs: 480px; 
 
+/* 1600 and above */
+@media (min-width: 1600px) {
+
+}
+
 /* 1200 and above */
 @media (min-width: $screen-lg) {
 

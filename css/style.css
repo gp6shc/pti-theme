@@ -393,12 +393,12 @@ dd {
     margin-left: 180px; }
   .dl-horizontal dd:before, .dl-horizontal dd:after {
     display: table;
-    content: " "; }
+    content: ""; }
   .dl-horizontal dd:after {
     clear: both; }
   .dl-horizontal dd:before, .dl-horizontal dd:after {
     display: table;
-    content: " "; }
+    content: ""; }
   .dl-horizontal dd:after {
     clear: both; } }
 
@@ -502,14 +502,14 @@ pre code {
 
 .container:before, .container:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .container:after {
   clear: both; }
 
 .container:before, .container:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .container:after {
   clear: both; }
@@ -520,14 +520,14 @@ pre code {
 
 .row:before, .row:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .row:after {
   clear: both; }
 
 .row:before, .row:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .row:after {
   clear: both; }
@@ -1221,14 +1221,14 @@ textarea.input-lg {
 
 .form-horizontal .form-group:before, .form-horizontal .form-group:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .form-horizontal .form-group:after {
   clear: both; }
 
 .form-horizontal .form-group:before, .form-horizontal .form-group:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .form-horizontal .form-group:after {
   clear: both; }
@@ -2208,14 +2208,14 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .btn-toolbar:before, .btn-toolbar:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .btn-toolbar:after {
   clear: both; }
 
 .btn-toolbar:before, .btn-toolbar:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .btn-toolbar:after {
   clear: both; }
@@ -2305,14 +2305,14 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .btn-group-vertical > .btn-group:after {
   clear: both; }
 
 .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .btn-group-vertical > .btn-group:after {
   clear: both; }
@@ -2472,14 +2472,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .nav:before, .nav:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .nav:after {
   clear: both; }
 
 .nav:before, .nav:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .nav:after {
   clear: both; }
@@ -2604,14 +2604,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .tabbable:before, .tabbable:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .tabbable:after {
   clear: both; }
 
 .tabbable:before, .tabbable:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .tabbable:after {
   clear: both; }
@@ -2644,14 +2644,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .navbar:before, .navbar:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .navbar:after {
   clear: both; }
 
 .navbar:before, .navbar:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .navbar:after {
   clear: both; }
@@ -2662,14 +2662,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .navbar-header:before, .navbar-header:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .navbar-header:after {
   clear: both; }
 
 .navbar-header:before, .navbar-header:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .navbar-header:after {
   clear: both; }
@@ -2689,14 +2689,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .navbar-collapse:before, .navbar-collapse:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .navbar-collapse:after {
   clear: both; }
 
 .navbar-collapse:before, .navbar-collapse:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .navbar-collapse:after {
   clear: both; }
@@ -3149,14 +3149,14 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .pager:before, .pager:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .pager:after {
   clear: both; }
 
 .pager:before, .pager:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .pager:after {
   clear: both; }
@@ -3577,14 +3577,14 @@ a.list-group-item:hover, a.list-group-item:focus {
 
 .panel-body:before, .panel-body:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .panel-body:after {
   clear: both; }
 
 .panel-body:before, .panel-body:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .panel-body:after {
   clear: both; }
@@ -3868,14 +3868,14 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 
 .modal-footer:before, .modal-footer:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .modal-footer:after {
   clear: both; }
 
 .modal-footer:before, .modal-footer:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .modal-footer:after {
   clear: both; }
@@ -4068,7 +4068,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   margin-left: -10px;
   border-top-color: #fff;
   border-bottom-width: 0;
-  content: " "; }
+  content: ""; }
 
 .popover.right .arrow {
   top: 50%;
@@ -4083,7 +4083,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   left: 1px;
   border-right-color: #fff;
   border-left-width: 0;
-  content: " "; }
+  content: ""; }
 
 .popover.bottom .arrow {
   top: -11px;
@@ -4098,7 +4098,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   margin-left: -10px;
   border-bottom-color: #fff;
   border-top-width: 0;
-  content: " "; }
+  content: ""; }
 
 .popover.left .arrow {
   top: 50%;
@@ -4113,7 +4113,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   bottom: -10px;
   border-left-color: #fff;
   border-right-width: 0;
-  content: " "; }
+  content: ""; }
 
 .carousel {
   position: relative; }
@@ -4290,7 +4290,7 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
 
 .clearfix:before, .clearfix:after {
   display: table;
-  content: " "; }
+  content: ""; }
 
 .clearfix:after {
   clear: both; }
@@ -7541,6 +7541,7 @@ footer {
 
 /* Responsive Styles
 ================================================== */
+/* 1600 and above */
 /* 1200 and above */
 /* Below 992 */
 @media (max-width: 992px) {

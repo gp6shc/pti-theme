@@ -7189,8 +7189,8 @@ header {
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.135, 0.52, 0.59, 1.245);
-          transition: transform 0.4s cubic-bezier(0.135, 0.52, 0.59, 1.245); }
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(.73, .73, .57, 1.2);
+          transition: transform 0.4s cubic-bezier(.73, .73, .57, 1.2); }
 
 .modal.in .modal-dialog {
   -webkit-transform: translate(0, 0);
@@ -7207,33 +7207,30 @@ header {
     -webkit-perspective: 1000px;
             perspective: 1000px; }
   .thumb-box .overlay {
-    display: inline;
-    text-align: center;
-    vertical-align: middle;
     position: absolute;
-    background-color: rgba(0, 92, 186, 0.6);
-    color: white;
-    opacity: 0;
+    top: -65px;
+    left: 0;
     width: 100%;
-    height: 100%;
-    -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-    -webkit-transform-origin: left;
-        -ms-transform-origin: left;
-            transform-origin: left;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background-color: rgba(0, 92, 186, 0.6);
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
     -webkit-transition: all 0.4s ease-in-out;
             transition: all 0.4s ease-in-out; }
-    .thumb-box .overlay i {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
+  .thumb-box i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: white; }
   .thumb-box a:hover .overlay {
-    opacity: 1;
-    -webkit-transform: rotate(0);
-        -ms-transform: rotate(0);
-            transform: rotate(0); }
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5); }
 
 /* Section 8: .ceo
 ================================================== */

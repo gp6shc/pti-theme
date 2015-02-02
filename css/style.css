@@ -515,8 +515,10 @@ pre code {
   clear: both; }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px; }
+  /* Why???
+	margin-right:-15px;
+	margin-left:-15px
+*/ }
 
 .row:before, .row:after {
   display: table;
@@ -7341,10 +7343,14 @@ header {
 
 /* Global Interior Page Styles
 ================================================== */
+.interior-page {
+  position: relative;
+  background: #EAEBEC; }
+
 .interior-page-top {
-  margin-top: 115px;
-  background: #0780E2;
+  padding-top: 140px;
   padding-bottom: 0;
+  background: #0780E2;
   /* .row {
 		margin: 0;
 	} */ }
@@ -7358,9 +7364,12 @@ header {
 .interior-page-bottom {
   margin: 0; }
 
-.page-title {
-  padding-top: 30px;
+.page-intro {
+  background-color: #0780E2;
+  padding: 140px 60px 60px 60px;
   color: white; }
+  .page-intro + .row {
+    background-color: #0780E2; }
 
 .indention {
   background: white;
@@ -7373,17 +7382,26 @@ header {
   border-radius: 40px 0 0 0/25px 0 0 0; }
 
 /* Interior Page Left Sidebar */
-.sidebar {
-  padding: 15px; }
+.sidebar-wrapper {
+  position: fixed;
+  -webkit-transform: translateY(140px);
+      -ms-transform: translateY(140px);
+          transform: translateY(140px);
+  -webkit-transition: -webkit-transform 0.6s 0.18s;
+          transition: transform 0.6s 0.18s; }
+  .sidebar-wrapper.affix {
+    -webkit-transform: translateY(54px);
+        -ms-transform: translateY(54px);
+            transform: translateY(54px); }
+  .sidebar-wrapper.affix-bottom {
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
 
-#sidebar-wrapper {
-  position: relative;
-  padding-top: 100px;
-  background: #EAEBEC;
-  overflow: hidden;
-  margin-bottom: -99999px;
-  /* always cover height to footer */
-  padding-bottom: 99999px; }
+.sidebar {
+  padding: 15px 0 15px 15px; }
 
 .sidebar-nav {
   width: 100%;

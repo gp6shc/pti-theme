@@ -88,7 +88,11 @@ var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
 /* ----------------------------------------------------------- */
 $(document).ready(function() {
 	var isHomePage = $('.home').length; // if is, === 1 (true); if isn't, === 0 (false)
-	
+	var isSidebarPage = $('#interior-sidebar').length;
+	var footerHeight = $('#footer').outerHeight(true) + $('#copyright').outerHeight(true);
+	var sidebarHeight = $('#interior-sidebar').outerHeight(true);
+	var bodyHeight = $('body').outerHeight(true);
+		
 	// Use this function to monitor all layout changes that should update on scroll
 	var updateLayout = function() {
 		// hides/shows the top most bar of info
@@ -99,6 +103,11 @@ $(document).ready(function() {
 			// turns customer section blue when hit by line
 			toggleClassAtSixty($("#customers"), "blue-bg");
 			toggleClassAtSixty($("#carousel-1"), "blue-tint");
+		}
+		
+		// only executed on pages with an affixed sidebar
+		if (isSidebarPage) {
+			affixSidebar();
 		}
 		
 		// check when at the bottom
@@ -123,6 +132,27 @@ $(document).ready(function() {
 		}else{
 			$('.top-bar').slideDown(300);
 			$("#header").removeClass("header-fixed");
+		}
+	}
+	
+	function affixSidebar() {
+		var sY = scrollY();
+		if ( sY >= 70 ) {
+			$("#interior-sidebar").addClass("affix");
+			console.log("affixed");
+		}else{
+			$("#interior-sidebar").removeClass("affix");
+			console.log("un-affixed");
+		}
+		
+		if ( (bodyHeight - (sY + sidebarHeight + 54)) <= footerHeight) {
+			$("#interior-sidebar").removeClass("affix");
+			$("#interior-sidebar").addClass("affix-bottom");	
+			console.log("affixed-bottom");
+		}else if (sY >= 70) {
+			$("#interior-sidebar").removeClass("affix-bottom");	
+			$("#interior-sidebar").addClass("affix");
+			console.log("un-affixed-bottom");
 		}
 	}
 	
@@ -183,11 +213,14 @@ $(document).ready(function(){
 /* ----------------------------------------------------------- */
 	/*  Sticky Sidebar Navigation using Affix
 /* ----------------------------------------------------------- */	
-$('#sidebar').affix({
-	offset: {
-	    top: 150
-	}
-});	
+/*
+$('#interior-sidebar').affix({
+  offset: {
+    top: 70,
+    bottom: 631
+  }
+});
+*/
 
 /* ----------------------------------------------------------- */
 	/*  Search Expand

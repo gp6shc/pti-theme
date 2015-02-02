@@ -1,9 +1,14 @@
 /* Global Interior Page Styles
 ================================================== */
+.interior-page {
+	position: relative;
+	background: $brand-white;
+}
+
 .interior-page-top {
-	margin-top: 115px; 
-	background: $secondary-blue;
+	padding-top: 140px; 
 	padding-bottom: 0;
+	background: $secondary-blue;
 	
 	/* .row {
 		margin: 0;
@@ -22,12 +27,16 @@
 }
 
 .interior-page-bottom {
-	margin: 0; 	
+	margin: 0;
 }
-
-.page-title {
-	padding-top: 30px;
+.page-intro {
+	background-color: $secondary-blue;
+	padding: 140px 60px 60px 60px;
 	color: white;
+	
+	+ .row {
+		background-color: $secondary-blue;
+	}
 }
 
 .indention {
@@ -45,17 +54,29 @@
 
 
 /* Interior Page Left Sidebar */
+.sidebar-wrapper {
+	position: fixed;
+	transform: translateY(140px);
+	transition: transform 0.6s 0.18s;
+	
+	&.affix-top {
+	
+	}
+	&.affix {
+		transform: translateY(54px);
+	}
+	&.affix-bottom {
+		position: absolute;
+		bottom: 0;
+		transform: none;
+	}
+}
+
 .sidebar {
-	padding: 15px;
+	padding: 15px 0 15px 15px;
+	
 }
-#sidebar-wrapper {
-	position: relative;
-	padding-top: 100px;
-    background: $brand-white;
-    overflow: hidden; 
-    margin-bottom: -99999px; /* always cover height to footer */
-    padding-bottom: 99999px; 
-}
+
 .sidebar-nav {
 	width: 100%;
     padding: 0;
@@ -87,7 +108,6 @@
 	    }
 	    
     }
-    
 }
 
 /* Specific Interior Page Styles

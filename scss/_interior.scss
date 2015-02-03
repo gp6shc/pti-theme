@@ -54,10 +54,15 @@
 
 
 /* Interior Page Left Sidebar */
+.header-fixed + .interior-page > .sidebar-wrapper {
+	transform: translateY(54px);
+}
+
 .sidebar-wrapper {
 	position: fixed;
+	z-index: 1;
 	transform: translateY(140px);
-	transition: transform 0.6s 0.18s;
+	transition: all 0.6s;
 	
 	&.affix-top {
 	
@@ -65,10 +70,20 @@
 	&.affix {
 		transform: translateY(54px);
 	}
-	&.affix-bottom {
+	&.affix-bottom.affix-bottom {
 		position: absolute;
-		bottom: 0;
-		transform: none;
+		bottom: 54px;
+	}
+	&.no-affix {
+		position: fixed;
+		padding-top: 140px;
+		transform: none !important;
+		max-height: 100vh;
+		overflow-y: scroll;
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 }
 
@@ -76,6 +91,7 @@
 	padding: 15px 0 15px 15px;
 	
 }
+
 
 .sidebar-nav {
 	width: 100%;

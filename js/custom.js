@@ -219,14 +219,19 @@ $(document).ready(function(){
 /* ----------------------------------------------------------- */
 	/*  Sticky Sidebar Navigation using Affix
 /* ----------------------------------------------------------- */	
-/*
-$('#interior-sidebar').affix({
-  offset: {
-    top: 70,
-    bottom: 631
-  }
+$('#js-open-sidebar').on('click', function() {
+	$(this).toggleClass("flip180");
+	$('body, html').toggleClass("no-scroll");
+	$('.main-content').toggleClass("open");
+	
+	if ( $('.main-content').hasClass('open') ) {
+		$('.main-content').on('click', function() {
+			$(this).removeClass("flip180");
+			$('body, html').removeClass("no-scroll");
+			$('.main-content').removeClass("open");
+		});
+	}
 });
-*/
 
 /* ----------------------------------------------------------- */
 	/*  Search Expand

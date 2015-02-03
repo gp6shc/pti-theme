@@ -194,10 +194,53 @@ $screen-xs: 480px;
 	}
 	
 	.no-padding {
-		padding: 20px; //add padding back on small screens
+		//padding: 20px; //add padding back on small screens
 	}
 	
-
+	// interior sidebar collapse
+	
+	.main-content {
+		width: 96%;
+		transition: all 0.6s;
+		
+		&.open {
+			transform: translateX(340px);
+			filter: blur(3px);
+			box-shadow: -3px 0px 30px 1px rgba(black, 0.2);
+			cursor: pointer;
+		}
+	}
+	
+	.sidebar-wrapper {
+		width: 320px;
+		max-height: 100vh;
+		overflow-y: scroll;
+		margin-left: 4%;
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		
+	}
+	
+	#js-open-sidebar {
+		display: inline-block;
+		position: fixed;
+		top: 165px; 
+		left: 1.3%;
+		cursor: pointer;
+		color: lighten($brand-black, 30%);
+		transition: all 0.6s;
+		
+		&.flip180 {
+			transform: rotateZ(180deg);
+			color: $brand-black;
+		}
+	}
+	
+	.header-fixed + .interior-page > #js-open-sidebar {
+		top: 80px;
+	}
 }
 
 /* 605 and below */

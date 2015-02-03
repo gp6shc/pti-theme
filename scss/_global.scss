@@ -22,6 +22,11 @@ body{
 body.modal-open {
 	margin: 0;
 }
+body, html {
+	&.no-scroll {
+		overflow: hidden !important;
+	}
+}
 
 .body-inner{
 	position: relative;

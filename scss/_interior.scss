@@ -3,7 +3,12 @@
 .interior-page {
 	position: relative;
 	background: $brand-white;
+	
 }
+
+#js-open-sidebar {
+	display: none;
+}	
 
 .interior-page-top {
 	padding-top: 140px; 
@@ -29,6 +34,11 @@
 .interior-page-bottom {
 	margin: 0;
 }
+
+.main-content {
+	z-index: 2;
+}
+
 .page-intro {
 	background-color: $secondary-blue;
 	padding: 140px 60px 60px 60px;

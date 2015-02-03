@@ -51,7 +51,9 @@
 
 .indention {
 	background: white;
-	height: 30px;	
+	height: 30px;
+	width: 50%;
+	float: left;
 }
 
 .left {
@@ -85,11 +87,9 @@
 		bottom: 54px;
 	}
 	&.no-affix {
-		position: fixed;
+		position: relative;
 		padding-top: 140px;
 		transform: none !important;
-		max-height: 100vh;
-		overflow-y: scroll;
 		
 		&::-webkit-scrollbar {
 			display: none;
@@ -98,8 +98,15 @@
 }
 
 .sidebar {
-	padding: 15px 0 15px 15px;
-	
+	padding: 15px 10% 15px 25%;
+
+	h3 {
+		color: $primary-blue;
+		margin-top: 6px;
+	}
+	hr {
+	    border-top: 2px solid darken($brand-white, 20%);
+    }
 }
 
 
@@ -109,31 +116,72 @@
     list-style: none;
     
     li {
-		line-height: 40px;  
+		line-height: 30px;
+		margin-right: -40%;
+		margin-left: -10px;
     }
     
     li a {
 	    display: block;
 	    text-decoration: none;
 	    color: $brand-black;
+	    transition: none;
+		
+		&.active {
+	    	background-image: linear-gradient(to right, $primary-blue, $secondary-blue 80%);
+	    	color: white;
 	    
-	    &:hover {
-		   text-decoration: none;
-		   color: darken($brand-black,7%);
-		   background: $primary-blue;
+			&::before {
+				color: white;
+			}
+		}
+			
+	    &:hover{
+			text-decoration: none;
+			color: white;
+			background-color: darken($brand-white, 20%);
+		   
+			&::before {
+				color: white;
+			}
 	    }
 	    
-	    &:before {
-	    	content: '*'; //add font-awesome charset code
+	    &::before {
+	    	content: '\f04b';
+	    	font-family: FontAwesome;
 	    	color: $primary-blue;
-	    	padding-right: 5px;
+	    	padding: 10px;
+	    	font-size: 10px;
+	    	vertical-align: bottom;
+			
 	    }
 	    
 	    a:active, a:focus {
 		    text-decoration: none;
-	    }
-	    
+	    }    
     }
+}
+
+.reviews {
+	
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+	}
+	h3 {
+		color: $primary-blue;
+	}
+	
+	h5 {
+		color: $primary-blue;
+		text-transform: uppercase;
+	}
+	
+	h6 {
+		text-transform: uppercase;
+		
+	}
 }
 
 /* Specific Interior Page Styles

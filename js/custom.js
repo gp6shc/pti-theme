@@ -87,14 +87,20 @@ var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
 /*  Scroll Events
 /* ----------------------------------------------------------- */
 $(document).ready(function() {
-	var isHomePage 		= $('.home').length; // if is, === 1 (true); if isn't, === 0 (false)
-	var bodyHeight 		= $('body').outerHeight(true);
-	var footerHeight 	= $('#footer').outerHeight(true) + $('#copyright').outerHeight(true);
-	var interiorHeight 	= $('.interior-page').outerHeight(true);
-	var interiorSidebar	= $('#interior-sidebar');
-	var sidebarHeight 	= interiorSidebar.outerHeight(true);
-	var isSidebarPage 	= interiorSidebar.length;
-	var shouldAffix		= sidebarIsNotTaller();
+	var isHomePage, bodyHeight, footerHeight, interiorHeight, interiorSidebar, sidebarHeight, isSidebarPage, shouldAffix, viewportW;
+	
+	function updateHeights() {
+		isHomePage 		= $('.home').length; // if is, === 1 (true); if isn't, === 0 (false)
+		bodyHeight 		= $('body').outerHeight(true);
+		footerHeight 	= $('#footer').outerHeight(true) + $('#copyright').outerHeight(true);
+		interiorHeight 	= $('.interior-page').outerHeight(true);
+		interiorSidebar	= $('#interior-sidebar');
+		sidebarHeight 	= interiorSidebar.outerHeight(true);
+		isSidebarPage 	= interiorSidebar.length;
+		shouldAffix		= sidebarIsNotTaller();
+		viewportW		= $('body').outerWidth();
+	}
+	$(window).resize( jq_throttle(500, updateHeights));
 		
 	// Use this function to monitor all layout changes that should update on scroll
 	var updateLayout = function() {
@@ -109,7 +115,7 @@ $(document).ready(function() {
 		}
 		
 		// only executed on pages with an affixed sidebar
-		if (isSidebarPage && shouldAffix ) {
+		if (isSidebarPage && shouldAffix && (viewportW > 768) ) {
 			affixSidebar();
 		}
 		
@@ -121,7 +127,7 @@ $(document).ready(function() {
 		}
 	};
 	// Add the event listener
-	$(window).scroll( jq_throttle(200, updateLayout));
+	$(window).scroll( jq_throttle(150, updateLayout));
 	
 	function scrollY() {
 		return window.pageYOffset || document.documentElement.scrollTop;
@@ -143,17 +149,14 @@ $(document).ready(function() {
 		if ( sY <= 0 ) {
 			interiorSidebar.removeClass("affix-bottom");
 		}
-		
 		if ( (bodyHeight - (sY + sidebarHeight + 54)) <= footerHeight) {
 			interiorSidebar.addClass("affix-bottom");
 		}else if (sY >= 70) {
 			interiorSidebar.removeClass("affix-bottom");
-			console.log("un-affixed-bottom");
 		}
 	}
 	
 	function sidebarIsNotTaller() {
-		console.log("executed");
 		if (interiorHeight <= (sidebarHeight + 25) ) { // if the sidebar (+ fudge) is longer than the page content
 			interiorSidebar.addClass("no-affix");
 			return false;
@@ -193,6 +196,7 @@ $(document).ready(function() {
 	
 	// makes sure the layout is right after page load, not just after scrolling
 	updateLayout();
+	updateHeights();
 			
 });
 	
@@ -217,7 +221,7 @@ $(document).ready(function(){
 });
 	
 /* ----------------------------------------------------------- */
-	/*  Sticky Sidebar Navigation using Affix
+	/*  Open Sidebar when under 768px
 /* ----------------------------------------------------------- */	
 $('#js-open-sidebar').on('click', function() {
 	$(this).toggleClass("flip180");

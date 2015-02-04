@@ -287,8 +287,22 @@ $(document).ready(function() {
 		offCanvas: {
 			position: "right"
         }
-	});
+	})
+	.on( "opened.mm", function() { //revoke touch scrolling when menu is open
+		document.ontouchmove = function(e){ e.preventDefault(); };
+		
+    })
+	.on( "closed.mm", function() { //reset when closed
+		document.ontouchmove = function(){ return true; };
+    });
+    
+    $('#mmenu-hamburger').on('touchstart click', function(e) {
+	    e.preventDefault();
+	    $("#mobile-nav").trigger("open.mm");
+    });
 });
+
+
 
 /* ----------------------------------------------------------- */
 /*  Crude Font-Size adjust

@@ -6,7 +6,7 @@ jQuery(function($) {
 "use strict";
 
 /* ----------------------------------------------------------- */
-/*  Debouncer
+/*  Debouncer/Throttler
 /* ----------------------------------------------------------- */
 var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
     // After wrapper has stopped being called, this timeout ensures that
@@ -310,4 +310,7 @@ $("#lg").on('click', function() {
 	currentSize = (currentSize / 16) * 100;
 	currentSize = Math.floor(currentSize + 5);
 	$("html").css("font-size", currentSize + "%");
+});
+
+//close
 });

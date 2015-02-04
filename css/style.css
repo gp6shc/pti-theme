@@ -515,8 +515,10 @@ pre code {
   clear: both; }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px; }
+  /* Why???
+	margin-right:-15px;
+	margin-left:-15px
+*/ }
 
 .row:before, .row:after {
   display: table;
@@ -7341,10 +7343,17 @@ header {
 
 /* Global Interior Page Styles
 ================================================== */
+.interior-page {
+  position: relative;
+  background: #EAEBEC; }
+
+#js-open-sidebar {
+  display: none; }
+
 .interior-page-top {
-  margin-top: 115px;
-  background: #0780E2;
+  padding-top: 140px;
   padding-bottom: 0;
+  background: #0780E2;
   /* .row {
 		margin: 0;
 	} */ }
@@ -7358,13 +7367,21 @@ header {
 .interior-page-bottom {
   margin: 0; }
 
-.page-title {
-  padding-top: 30px;
+.main-content {
+  z-index: 2; }
+
+.page-intro {
+  background-color: #0780E2;
+  padding: 140px 60px 60px 60px;
   color: white; }
+  .page-intro + .row {
+    background-color: #0780E2; }
 
 .indention {
   background: white;
-  height: 30px; }
+  height: 30px;
+  width: 50%;
+  float: left; }
 
 .left {
   border-radius: 0 40px 0 0/0 25px 0 0; }
@@ -7373,38 +7390,90 @@ header {
   border-radius: 40px 0 0 0/25px 0 0 0; }
 
 /* Interior Page Left Sidebar */
-.sidebar {
-  padding: 15px; }
+.header-fixed + .interior-page > .sidebar-wrapper {
+  -webkit-transform: translateY(54px);
+      -ms-transform: translateY(54px);
+          transform: translateY(54px); }
 
-#sidebar-wrapper {
-  position: relative;
-  padding-top: 100px;
-  background: #EAEBEC;
-  overflow: hidden;
-  margin-bottom: -99999px;
-  /* always cover height to footer */
-  padding-bottom: 99999px; }
+.sidebar-wrapper {
+  position: fixed;
+  z-index: 1;
+  -webkit-transform: translateY(140px);
+      -ms-transform: translateY(140px);
+          transform: translateY(140px);
+  -webkit-transition: all 0.6s;
+          transition: all 0.6s; }
+  .sidebar-wrapper.affix {
+    -webkit-transform: translateY(54px);
+        -ms-transform: translateY(54px);
+            transform: translateY(54px); }
+  .sidebar-wrapper.affix-bottom.affix-bottom {
+    position: absolute;
+    bottom: 54px; }
+  .sidebar-wrapper.no-affix {
+    position: relative;
+    padding-top: 140px;
+    -webkit-transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important; }
+    .sidebar-wrapper.no-affix::-webkit-scrollbar {
+      display: none; }
+
+.sidebar {
+  padding: 15px 10% 15px 25%; }
+  .sidebar h3 {
+    color: #005CBA;
+    margin-top: 6px; }
+  .sidebar hr {
+    border-top: 2px solid #b4b8bc; }
 
 .sidebar-nav {
   width: 100%;
   padding: 0;
   list-style: none; }
   .sidebar-nav li {
-    line-height: 40px; }
+    line-height: 30px;
+    margin-right: -40%;
+    margin-left: -10px; }
   .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #323132; }
+    color: #323132;
+    -webkit-transition: none;
+            transition: none; }
+    .sidebar-nav li a.active {
+      background-image: -webkit-linear-gradient(left, #005CBA, #0780E2 80%);
+      background-image: linear-gradient(to right, #005CBA, #0780E2 80%);
+      color: white; }
+      .sidebar-nav li a.active::before {
+        color: white; }
     .sidebar-nav li a:hover {
       text-decoration: none;
-      color: #201f20;
-      background: #005CBA; }
-    .sidebar-nav li a:before {
-      content: '*';
+      color: white;
+      background-color: #b4b8bc; }
+      .sidebar-nav li a:hover::before {
+        color: white; }
+    .sidebar-nav li a::before {
+      content: '\f04b';
+      font-family: FontAwesome;
       color: #005CBA;
-      padding-right: 5px; }
+      padding: 10px;
+      font-size: 10px;
+      vertical-align: bottom; }
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
+
+.reviews img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em; }
+.reviews h3 {
+  color: #005CBA; }
+.reviews h5 {
+  color: #005CBA;
+  text-transform: uppercase; }
+.reviews h6 {
+  text-transform: uppercase; }
 
 /* Specific Interior Page Styles
 ================================================== */
@@ -7543,6 +7612,11 @@ footer {
 ================================================== */
 /* 1600 and above */
 /* 1200 and above */
+/* Below 1024 */
+@media (max-width: 1024px) {
+  .sidebar {
+    padding: 15px 10%; } }
+
 /* Below 992 */
 @media (max-width: 992px) {
   .sign-in {
@@ -7644,8 +7718,54 @@ footer {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
-  .no-padding {
-    padding: 20px; } }
+  .main-content {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+    -webkit-transition: all 0.6s;
+            transition: all 0.6s; }
+    .main-content.open {
+      -webkit-transform: translateX(340px);
+          -ms-transform: translateX(340px);
+              transform: translateX(340px);
+      -webkit-filter: blur(3px);
+              filter: blur(3px);
+      box-shadow: -3px 0px 30px 1px rgba(0, 0, 0, 0.2);
+      cursor: pointer; }
+  .sidebar-wrapper {
+    width: 370px;
+    max-height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    margin-left: 30px;
+    padding-top: 140px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
+    .sidebar-wrapper::-webkit-scrollbar {
+      display: none; }
+  .header-fixed + .interior-page > .sidebar-wrapper {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    padding-top: 50px; }
+  .sidebar {
+    padding: 15px 20% 15px 5%; }
+  #js-open-sidebar {
+    display: inline-block;
+    position: fixed;
+    top: 165px;
+    left: 10px;
+    cursor: pointer;
+    color: #7f7d7f;
+    -webkit-transition: all 0.6s;
+            transition: all 0.6s; }
+    #js-open-sidebar.flip180 {
+      -webkit-transform: rotateZ(180deg);
+              transform: rotateZ(180deg);
+      color: #323132; }
+  .header-fixed + .interior-page > #js-open-sidebar {
+    top: 80px; } }
 
 /* 605 and below */
 @media (max-width: 605px) {

@@ -1,9 +1,19 @@
 /* Global Interior Page Styles
 ================================================== */
+.interior-page {
+	position: relative;
+	background: $brand-white;
+	
+}
+
+#js-open-sidebar {
+	display: none;
+}	
+
 .interior-page-top {
-	margin-top: 115px; 
-	background: $secondary-blue;
+	padding-top: 140px; 
 	padding-bottom: 0;
+	background: $secondary-blue;
 	
 	/* .row {
 		margin: 0;
@@ -22,17 +32,28 @@
 }
 
 .interior-page-bottom {
-	margin: 0; 	
+	margin: 0;
 }
 
-.page-title {
-	padding-top: 30px;
+.main-content {
+	z-index: 2;
+}
+
+.page-intro {
+	background-color: $secondary-blue;
+	padding: 140px 60px 60px 60px;
 	color: white;
+	
+	+ .row {
+		background-color: $secondary-blue;
+	}
 }
 
 .indention {
 	background: white;
-	height: 30px;	
+	height: 30px;
+	width: 50%;
+	float: left;
 }
 
 .left {
@@ -45,49 +66,122 @@
 
 
 /* Interior Page Left Sidebar */
+.header-fixed + .interior-page > .sidebar-wrapper {
+	transform: translateY(54px);
+}
+
+.sidebar-wrapper {
+	position: fixed;
+	z-index: 1;
+	transform: translateY(140px);
+	transition: all 0.6s;
+	
+	&.affix-top {
+	
+	}
+	&.affix {
+		transform: translateY(54px);
+	}
+	&.affix-bottom.affix-bottom {
+		position: absolute;
+		bottom: 54px;
+	}
+	&.no-affix {
+		position: relative;
+		padding-top: 140px;
+		transform: none !important;
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
 .sidebar {
-	padding: 15px;
+	padding: 15px 10% 15px 25%;
+
+	h3 {
+		color: $primary-blue;
+		margin-top: 6px;
+	}
+	hr {
+	    border-top: 2px solid darken($brand-white, 20%);
+    }
 }
-#sidebar-wrapper {
-	position: relative;
-	padding-top: 100px;
-    background: $brand-white;
-    overflow: hidden; 
-    margin-bottom: -99999px; /* always cover height to footer */
-    padding-bottom: 99999px; 
-}
+
+
 .sidebar-nav {
 	width: 100%;
     padding: 0;
     list-style: none;
     
     li {
-		line-height: 40px;  
+		line-height: 30px;
+		margin-right: -40%;
+		margin-left: -10px;
     }
     
     li a {
 	    display: block;
 	    text-decoration: none;
 	    color: $brand-black;
+	    transition: none;
+		
+		&.active {
+	    	background-image: linear-gradient(to right, $primary-blue, $secondary-blue 80%);
+	    	color: white;
 	    
-	    &:hover {
-		   text-decoration: none;
-		   color: darken($brand-black,7%);
-		   background: $primary-blue;
+			&::before {
+				color: white;
+			}
+		}
+			
+	    &:hover{
+			text-decoration: none;
+			color: white;
+			background-color: darken($brand-white, 20%);
+		   
+			&::before {
+				color: white;
+			}
 	    }
 	    
-	    &:before {
-	    	content: '*'; //add font-awesome charset code
+	    &::before {
+	    	content: '\f04b';
+	    	font-family: FontAwesome;
 	    	color: $primary-blue;
-	    	padding-right: 5px;
+	    	padding: 10px;
+	    	font-size: 10px;
+	    	vertical-align: bottom;
+			
 	    }
 	    
 	    a:active, a:focus {
 		    text-decoration: none;
-	    }
-	    
+	    }    
     }
-    
+}
+
+.reviews {
+	
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+	}
+	h3 {
+		color: $primary-blue;
+	}
+	
+	h5 {
+		color: $primary-blue;
+		text-transform: uppercase;
+	}
+	
+	h6 {
+		text-transform: uppercase;
+		
+	}
 }
 
 /* Specific Interior Page Styles

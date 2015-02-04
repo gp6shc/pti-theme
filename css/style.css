@@ -7857,6 +7857,8 @@ html.mm-opened .mm-page {
 .mm-menu .mm-list > li > a.mm-subclose {
   background: #323132;
   color: #EAEBEC; }
+  .mm-menu .mm-list > li > a.mm-subclose:hover {
+    background-color: #323132; }
 
 .mm-menu .mm-list > li > a.mm-subopen:after, .mm-menu .mm-list > li > a.mm-subclose:before {
   border-color: #EAEBEC; }
@@ -7865,7 +7867,7 @@ html.mm-opened .mm-page {
   border-color: rgba(0, 0, 0, 0.15); }
 
 .mm-menu .mm-list > li.mm-selected > a:not(.mm-subopen), .mm-menu .mm-list > li.mm-selected > span, .mm-menu .mm-list > li > a:hover {
-  background: rgba(0, 0, 0, 0.1); }
+  background: rgba(0, 0, 0, 0.2); }
 
 .mm-menu .mm-list > li.mm-label {
   background: rgba(255, 255, 255, 0.05); }
@@ -7881,8 +7883,8 @@ html.mm-opened .mm-page {
   position: relative; }
 
 .mm-slideout {
-  -webkit-transition: -webkit-transform 0.4s ease;
-          transition: transform 0.4s ease; }
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
 
 html.mm-opened {
   overflow: hidden;
@@ -7955,7 +7957,9 @@ html.mm-opening .mm-slideout {
 html.mm-right.mm-opening .mm-slideout {
   -webkit-transform: translate(-80%, 0);
       -ms-transform: translate(-80%, 0);
-          transform: translate(-80%, 0); }
+          transform: translate(-80%, 0);
+  -webkit-filter: blur(3px);
+          filter: blur(3px); }
 
 @media all and (max-width: 175px) {
   html.mm-right.mm-opening .mm-slideout {

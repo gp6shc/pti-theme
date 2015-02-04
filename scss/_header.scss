@@ -206,7 +206,7 @@
 	
 	> ul {
 		list-style: none;
-		padding: 0 15px;
+		padding: 0;
 		margin-left: auto;
 		margin-right: auto;
 		margin-bottom: 0;
@@ -344,20 +344,19 @@
 /* Search */
 .search {
 	margin-top: 20px;
+	width: 43px;
 	transition: margin 0.6s;
 	
 	i {
 		color: white;
-		margin-top: 2px;
-		padding: 5px 10px 5px 20px;
+		font-size: 1.5em;
+		margin-top: 5px;
+		padding: 7px 10px 5px 10px;
+		background-image: linear-gradient(to right, transparent, $primary-blue 90%);
 		cursor: pointer;
 		transition: transform 0.5s;
 		position: relative;
-		z-index: 10;
-	}
-	
-	.fa-times {
-		padding: 5px 15px 5px 20px;
+		z-index: 1;
 	}
 
 	form {
@@ -367,6 +366,7 @@
 		width: 218px;
 		margin-top: 2px;
 		opacity: 1;
+		z-index: 2;
 		transition: opacity 0.3s;
 	}
 	
@@ -395,7 +395,7 @@
 }
 
 .search-slide {
-	transform: translateX(-208px);
+	transform: translateX(-212px);
 }
 
 .mobile-nav-wrapper {

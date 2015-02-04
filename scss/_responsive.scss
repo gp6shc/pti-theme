@@ -17,9 +17,32 @@ $screen-xs: 480px;
 
 /* Below 1024 */
 @media (max-width: 1024px) {
+	.btn {
+		//padding: 7px 12px;
+	}
+	
 	.sidebar {
 		padding: 15px 10%;
 	}
+	.get-quote {
+		margin: 26px 0 0 5px;
+	}
+	.search {
+		.search-field {
+			width: 114px;
+			text-indent: 3px;	
+		}
+		.search-submit {
+			padding: 8px 12px;
+		}
+		form {
+			width: 155px;
+		}
+	}
+	.search-slide {
+		transform: translateX(-147px);
+	}
+	
 }
 
 /* Below 992 */
@@ -40,6 +63,14 @@ $screen-xs: 480px;
 
 /* Below 850 */
 @media (max-width: 850px) {
+	.navbar-nav > li > a {
+		padding: 20px 22px 20px 5px;
+	}
+	
+	.nav .dropdown > a > i {
+		right: 5px;	
+	}
+	
 	.branch {
 		display: none;
 	}
@@ -207,6 +238,19 @@ $screen-xs: 480px;
 	
 	.header-fixed + .interior-page > #js-open-sidebar {
 		top: 80px;
+	}
+	
+	.navbar-toggle {
+		margin: auto;
+		padding: 38px 25px 37px 25px;
+		transition: padding 0.6s;
+		
+		&:focus {
+			outline: none;
+		}
+	}
+	.header-fixed .navbar-toggle {
+		padding: 20px 35px 19px 35px; 
 	}
 }
 

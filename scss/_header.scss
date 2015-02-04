@@ -1,6 +1,6 @@
 /* Header 
 ================================================== */
-header {
+.header {
 	position: fixed;
 	top: 0;
     width: 100%;
@@ -398,4 +398,7 @@ header {
 	transform: translateX(-208px);
 }
 
+.mobile-nav-wrapper {
+	display: none; //hides mobile nav incase js fails
+}
 

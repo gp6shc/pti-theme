@@ -128,7 +128,7 @@
 	    transition: none;
 		
 		&.active {
-	    	background-image: linear-gradient(to right, $primary-blue, $secondary-blue 80%);
+	    	background-image: linear-gradient(to right, mix($primary-blue, $secondary-blue, 50%), $secondary-blue 80%);
 	    	color: white;
 	    
 			&::before {

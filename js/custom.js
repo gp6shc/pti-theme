@@ -6,7 +6,7 @@ jQuery(function($) {
 "use strict";
 
 /* ----------------------------------------------------------- */
-/*  Debouncer
+/*  Debouncer/Throttler
 /* ----------------------------------------------------------- */
 var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
     // After wrapper has stopped being called, this timeout ensures that
@@ -279,8 +279,30 @@ $('#top').click(function(e){
 	}, 700);
 });
 
-//close
+/* ----------------------------------------------------------- */
+/*  Mobile Menu
+/* ----------------------------------------------------------- */
+$(document).ready(function() {
+	$("#mobile-nav").mmenu({
+		offCanvas: {
+			position: "right"
+        }
+	})
+	.on( "opened.mm", function() { //revoke touch scrolling when menu is open
+		document.ontouchmove = function(e){ e.preventDefault(); };
+		
+    })
+	.on( "closed.mm", function() { //reset when closed
+		document.ontouchmove = function(){ return true; };
+    });
+    
+    $('#mmenu-hamburger').on('touchstart click', function(e) {
+	    e.preventDefault();
+	    $("#mobile-nav").trigger("open.mm");
+    });
 });
+
+
 
 /* ----------------------------------------------------------- */
 /*  Crude Font-Size adjust
@@ -302,4 +324,7 @@ $("#lg").on('click', function() {
 	currentSize = (currentSize / 16) * 100;
 	currentSize = Math.floor(currentSize + 5);
 	$("html").css("font-size", currentSize + "%");
+});
+
+//close
 });

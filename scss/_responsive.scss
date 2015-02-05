@@ -121,13 +121,8 @@ $screen-xs: 480px;
 	.faia {
 		margin-left: 10px;
 	}
-	.ceo .col-md-4.col-sm-4 {
-		width: 323px;
-		height: 300px;
-		
-		img {
-			display: none;
-		}		
+	.ceo img {
+		display: none;		
 	}
 	.top-bar .sign-in .get-quote-2 {
 		display: none;
@@ -146,13 +141,8 @@ $screen-xs: 480px;
 	}
 	
 	.navbar-brand {
-		padding: 6px 15px 0;
+		padding: 2px 0 0 0;
 		margin-bottom: -5px;
-	}
-	
-	.navbar-brand .logo {
-		width: 175px;
-		height: 50px;
 	}
 
 	.pti .container {

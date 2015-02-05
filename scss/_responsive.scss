@@ -61,6 +61,16 @@ $screen-xs: 480px;
 	}
 }
 
+/* Below 933 */
+@media (max-width: 933px) {
+	.footer-right .row > div:nth-child(3) {
+		border: none;
+	}
+	.footer-address {
+		margin-top: 30px;
+	}
+}
+
 /* Below 850 */
 @media (max-width: 850px) {
 	.navbar-nav > li > a {
@@ -157,6 +167,9 @@ $screen-xs: 480px;
 	.border-left {
 		border: none;
 	}
+	.footer-insurance-choices {
+		border: none !important;
+	}
 	
 	#sidebar-wrapper {
 		padding: 10px 0px;
@@ -242,6 +255,22 @@ $screen-xs: 480px;
 	.header-fixed .navbar-toggle {
 		padding: 20px 35px 19px 35px; 
 	}
+	
+	.footer-ph, .footer-address {
+		padding: 0;
+		margin-top: 20px;
+		text-align: center;
+	}
+	
+	.footer-ph {
+		font-size: 1.75em;
+	}
+	.footer-social {
+		margin-top: 30px;
+	}
+	.footer-right {
+		margin-top: 30px;
+	}
 }
 
 /* 605 and below */
@@ -266,6 +295,14 @@ $screen-xs: 480px;
 	
 	.top-bar .call-us > span {
 		display: none;
+	}
+	.copyright .row {
+		margin: 0 0 40px 0;
+	}
+	#top {
+		left: calc(50% - 28.5px);
+		bottom: 0;
+		opacity: 1;
 	}
 }
 

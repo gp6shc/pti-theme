@@ -92,8 +92,30 @@ footer {
 }
 
 .footer-social {
-	padding-top: 60px;
+	margin-top: 60px;
 }
+.footer-right {
+	> .row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		
+		> div {
+			flex: 1 1 150px;
+			padding: 0 15px;
+			margin-bottom: 15px;
+			
+			+ div {
+				border-left: 2px solid darken($primary-blue, 7%);
+			}
+		}
+		&:before, &:after {
+			display: none;
+		}
+	}
+}
+
 .footer-address, .footer-ph {
 	margin-top: 95px;
 	padding-right: 0;
@@ -107,6 +129,8 @@ address {
 	
 	a {
 		color: white;
+		font-weight: 700;
+		display: block;
 	}
 
 }
@@ -119,12 +143,28 @@ address {
 	color: white;
 	background: $primary-blue;
 	z-index: 9;
+	
+	.row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 45px;
+		
+		div, a {
+			margin: 0 15px 15px 15px;
+		}
+		
+		&:before, &:after {
+			display: none;
+		}
+	}
 }
 
 #top {
 	position: absolute;
-	bottom: 20px;
-	right: 20px;
+	bottom: 15px;
+	right: 15px;
     opacity: 0;
     transition: opacity .5s ease-in-out .3s;
     

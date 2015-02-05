@@ -96,20 +96,27 @@
 	}
 }
 
-.navbar-brand{
-	padding: 0 15px;
+.navbar-brand {
+	padding: 0;
 }
 .navbar-brand .logo{
-	width: 215px;
-	height: 50px;
 	margin: 20px 0;
 	transition: margin 0.6s;
 }
 
-.navbar-brand img{
-	float: right;
-	padding: 0 15px;
-	transition: transform 0.6s;
+.container > .navbar-header {
+	margin: 0;
+}
+
+.navbar-brand {
+	a {
+		display: block;
+	}
+	
+	.logo {
+		transform: scale(1);
+		transition: transform 0.6s;
+	}
 }
 
 .navbar{
@@ -302,9 +309,6 @@
 	.navbar-brand {
 		.logo {
 			margin: 2px;
-		}
-		
-		img {
 			transform: scale(0.8);
 		}
 	}

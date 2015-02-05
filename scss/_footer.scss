@@ -47,6 +47,10 @@ footer {
 	
 }
 
+.footer-social {
+	margin-top: 60px;
+}
+
 .footer-social a {
 	width: 42px;
 	height: 44px;
@@ -87,13 +91,16 @@ footer {
 	}
 }
 
+.social-2 {
+	text-align: center;
+	margin: 20px 0;
+}
+
 .border-left {
 	border-left: 2px solid darken($primary-blue, 7%);
 }
 
-.footer-social {
-	margin-top: 60px;
-}
+
 .footer-right {
 	> .row {
 		display: flex;
@@ -132,7 +139,6 @@ address {
 		font-weight: 700;
 		display: block;
 	}
-
 }
 
 /* Copyright Section, .copyright, below footer

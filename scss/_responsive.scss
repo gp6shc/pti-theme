@@ -265,11 +265,12 @@ $screen-xs: 480px;
 	.footer-ph {
 		font-size: 1.75em;
 	}
-	.footer-social {
-		margin-top: 30px;
-	}
 	.footer-right {
 		margin-top: 30px;
+	}
+	.footer-left > p {
+		padding-bottom: 20px;
+		border-bottom: 2px solid darken($primary-blue, 7%);
 	}
 }
 

@@ -7564,6 +7564,9 @@ footer {
   font-weight: 700;
   font-size: 1.3em; }
 
+.footer-social {
+  margin-top: 60px; }
+
 .footer-social a {
   width: 42px;
   height: 44px;
@@ -7590,11 +7593,12 @@ footer {
     .footer-social a.yt:hover {
       background: #ac1419; }
 
+.social-2 {
+  text-align: center;
+  margin: 20px 0; }
+
 .border-left {
   border-left: 2px solid #004a96; }
-
-.footer-social {
-  margin-top: 60px; }
 
 .footer-right > .row {
   display: -webkit-box;
@@ -8207,10 +8211,11 @@ html.mm-right.mm-opening .mm-slideout {
     text-align: center; }
   .footer-ph {
     font-size: 1.75em; }
-  .footer-social {
-    margin-top: 30px; }
   .footer-right {
-    margin-top: 30px; } }
+    margin-top: 30px; }
+  .footer-left > p {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #004a96; } }
 
 /* 605 and below */
 @media (max-width: 605px) {

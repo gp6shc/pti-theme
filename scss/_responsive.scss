@@ -115,7 +115,6 @@ $screen-xs: 480px;
 
 /* 768 and above: nav collapse */
 @media (min-width: $screen-sm) {
-
 	.container {
 		max-width: 1060px; //override bootstrap default
 	}
@@ -137,6 +136,12 @@ $screen-xs: 480px;
 	.top-bar .sign-in .get-quote-2 {
 		display: none;
 	}
+	.mobile-search {
+		display: none;
+	}
+	.navbar > .container .navbar-brand {
+		margin-left: 0;
+	}
 }
 
 /* Below 768: nav collapse */
@@ -149,12 +154,28 @@ $screen-xs: 480px;
 			display: none;
 		}
 	}
-	
+	.navbar-header {
+		display: flex;
+		justify-content: space-between;
+		
+		&::before, &::after {
+			display: none;
+		}
+	}
+	.mobile-search {
+		
+		i {
+			color: white;
+			font-size: 1.5em;
+			padding: 38px 25px 37px 15px;
+			transition: padding 0.6s;
+		}
+	}
 	.navbar-brand {
 		padding: 2px 0 0 0;
 		margin-bottom: -5px;
 	}
-
+	
 	.pti .container {
 		padding-top: 0;
 		padding-bottom: 0;
@@ -244,16 +265,21 @@ $screen-xs: 480px;
 	}
 	
 	.navbar-toggle {
-		margin: auto;
-		padding: 38px 25px 37px 25px;
+		margin: 0;
+		padding: 38px 15px 37px 25px;
 		transition: padding 0.6s;
 		
 		&:focus {
 			outline: none;
 		}
 	}
-	.header-fixed .navbar-toggle {
-		padding: 20px 35px 19px 35px; 
+	.header-fixed {
+		.navbar-toggle {
+			padding: 20px 15px 19px 35px;
+		}
+		.mobile-search i {
+			padding: 20px 35px 19px 15px;
+		}
 	}
 	
 	.footer-ph, .footer-address {

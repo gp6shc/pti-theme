@@ -17,6 +17,12 @@ $screen-xs: 480px;
 
 /* Below 1024 */
 @media (max-width: 1024px) {
+	.image-cycle {
+		height: 0;
+		padding-bottom: 50%;
+		font-size: 0.9em;
+	}
+	
 	.btn {
 		//padding: 7px 12px;
 	}
@@ -63,6 +69,14 @@ $screen-xs: 480px;
 
 /* Below 933 */
 @media (max-width: 933px) {
+	.image-cycle {
+		font-size: 0.8em;	
+	}
+	.quotable {
+		top: 10%;
+		left: 5%;	
+	}
+	
 	.footer-right .row > div:nth-child(3) {
 		border: none;
 	}
@@ -80,7 +94,9 @@ $screen-xs: 480px;
 	.nav .dropdown > a > i {
 		right: 5px;	
 	}
-	
+	.image-cycle {
+		font-size: 0.7em;
+	}
 	.branch {
 		display: none;
 	}
@@ -183,6 +199,35 @@ $screen-xs: 480px;
 	
 	nav.navbar-collapse {
 		display: none; //in favor of mobile nav
+	}
+	.image-cycle {
+		height: auto;
+		padding: 0;
+	}
+	.image-cycle .carousel-inner .main img {
+		margin: 0 auto;
+		padding-top: 15%;
+	}
+	.image-cycle .carousel-inner .item {
+		height: 0;
+		padding-bottom: calc(50% + 176px);
+	}
+	.image-cycle .carousel-inner img {
+		top: -10%;
+	}
+	.ruben img {
+		top: -20% !important;
+	}
+	.quotable.quotable.quotable {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		animation: none;
+		transition: opacity 0.6s;
+		width: 100%;
+		background: white;
+		top: auto;
+		padding: 1.8em;
 	}
 		
 	.border-left {
@@ -379,6 +424,12 @@ $screen-xs: 480px;
 		bottom: 0;
 		opacity: 1;
 	}
+	.image-cycle {
+		font-size: 0.6em;
+	}
+	.image-cycle .carousel-inner .main img {
+		width: 73%;
+	}
 }
 
 /* 480 and below */
@@ -390,6 +441,9 @@ $screen-xs: 480px;
 		.container {
 			justify-content: space-around;
 		}
+	}
+	.image-cycle {
+		font-size: 0.5em;
 	}
 	
 }

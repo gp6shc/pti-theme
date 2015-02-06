@@ -87,7 +87,7 @@
 			color: $text-blue-dark;
 			text-shadow: none;
 			font-weight: 100;
-			font-size: 4.5em;
+			font-size: 4em;
 			line-height: 1;
 		}
 	}
@@ -95,9 +95,9 @@
 
 .quotable {
 	position: absolute;
-	top: 30%;
+	top: 15%;
 	left: 7%;
-	width: 32%;
+	width: 35%;
 	text-align: center;
 	opacity: 1;
 	animation: slide-right 6.7s ease-out;
@@ -199,7 +199,7 @@
 	h3 {
 		color: $secondary-blue;
 		font-weight: 300;
-		font-size: 1.750em;
+		font-size: 2em;
 		line-height: 36px;
 		padding-bottom: 10px;
 	}
@@ -211,7 +211,22 @@
 	.indention {
 		height: 40px;
 	}
-	
+
+	.phone-number {
+		height: 4.5em;
+		background: url("../images/highlight.svg") no-repeat center;
+		
+		a {
+			font-size: 2.8em;
+			font-weight: 700;
+			line-height: 1.6em;
+			color: lighten($brand-black, 15%);
+			
+			&:hover {
+				color: $secondary-blue;
+			}
+		}
+	}
 }
 
 .get-a-quote {
@@ -247,6 +262,7 @@
 		z-index: 2;
 	}
 }
+
 
 
 /* Section 3: .about

@@ -17,9 +17,7 @@
 	<!-- Favicons
 	================================================== -->
 	<link rel="icon" href="img/favicon/favicon-32x32.png" type="image/x-icon" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/favicon-144x144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/favicon-72x72.png">
-	<link rel="apple-touch-icon-precomposed" href="img/favicon/favicon-54x54.png">
+	<link rel="apple-touch-icon" href="icon.png">
 	
 	<!-- Stylesheets
 	================================================== -->
@@ -33,7 +31,7 @@
 
 </head>
 	
-<body>
+<body class="home"> <!-- only set this class on the home page -->
 	<div class="body-inner">
 	<!-- Header start -->
 	<header id="header" class="header" role="banner">
@@ -41,34 +39,21 @@
 		<!-- Top bar start -->
 		<div id="top-bar" class="top-bar">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-2 visible-lg visible-md">
-						<div class="text-sizing push-down">
-						    Text Size
-							<i class="sm"><a href="#">A</a></i>
-							<i class="med"><a href="#">A</a></i>
-							<i class="lg"><a href="#">A</a></i>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-3">
-						<ul class="call-us">
-							<li class="push-down">Give us a call: <strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong></li>
-						</ul>
-					</div>
-					<div class="col-md-2 col-md-sm-6 col-xs-12">
-						<div class="sign-in policy">
-							<!-- hidden on xs screens -->
-							<button class="hidden-xs btn btn-dark" type="button">Policyholder Sign In</button>
-						</div>
-					</div>
-					<div class="col-md-2 col-md-sm-6 col-xs-12">
-						<div class="sign-in agent">
-							<button class="visible-lg visible-md btn btn-dark square" type="button">Agent Sign In</button>
-							<!-- get a quote link added & replaces agent sign in on md/sm/xs screen -->
-							<button class="visible-sm visible-xs btn btn-dark square" type="button">Get a Quote</button>
-						</div>
-					</div>
-				</div><!-- Row end -->
+				<div class="text-sizing">
+				    Text Size
+					<i id="sm" class="sm" title="Reduce the text size">A</i>
+					<i id="med" class="med" title="Reset to the defualt text size">A</i>
+					<i id="lg" class="lg" title="Increasae the text size">A</i>
+				</div>
+				<div class="call-us">
+					<span>Give us a call: </span><strong><a href="tel:1.888.364.8557">1.888.364.8557</a></strong>
+				</div>
+				<div class="sign-in">
+					<button class="policy btn btn-dark" type="button">Policyholder Sign In</button>
+					<button class="agent btn btn-dark" type="button">Agent Sign In</button>
+					<!-- get a quote link added & replaces agent sign in on md/sm/xs screen -->
+					<button class="get-quote-2 btn btn-dark" type="button">Get a Quote</button>
+				</div>
 			</div><!-- Container end -->
 		</div><!-- Top bar end -->
 
@@ -77,19 +62,23 @@
 			<div class="container">
 				<!-- Logo start -->
 				<div class="navbar-header">
-				    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				    </button>
+				    <div class="mobile-search">
+					    <i class="fa fa-search"></i>
+				    </div>
 				    <div class="navbar-brand">
 					    <a href="/" title="People's Trust Insurance">
 					    	<div class="logo"><img rel="logo" src="images/PTI-Logo.svg"></div>
 					    </a> 
 				    </div>                   
+				    <button id="mmenu-hamburger" class="navbar-toggle">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				    </button>
 				</div><!--/ Logo end -->
-
+				
+				<!-- Desktop Navigaztion -->
 				<nav class="collapse navbar-collapse" role="navigation">
 					<ul class="nav navbar-nav">
 						
@@ -98,66 +87,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="About Us">About Us <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-thumbs-o-up fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-bolt fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-link fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-medkit fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
 							</div>
 					</li>
 
@@ -166,66 +154,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Insurance">Insurance <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-thumbs-o-up fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-bolt fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-link fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-medkit fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-thumbs-o-up fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-bolt fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
 							</div>
 					</li>
 					<!-- Info Center -->
@@ -233,66 +220,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Info Center">Info Center <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-thumbs-o-up fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-bolt fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-link fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-medkit fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-thumbs-o-up fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-bolt fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-link fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-medkit fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
 							</div>
 					</li>
 	                <!-- Policyholders -->
@@ -300,66 +286,65 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" title="Policyholders">Policyholders <i class="fa fa-angle-down"></i></a>
 							<div class="dropdown-menu container row">
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-thumbs-o-up fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-2 hidden-xs">
-											<i class="fa fa-bolt fa-2x"></i>
-										</div>
-										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simply a Better Way</a></li>
-											<li><p>We have a history of offering the highest quality products</p></li>
-										</div>
-									</div>
-								</ul>
-								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-link fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Simplified Recovery</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-medkit fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Financially Strong</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
 								<ul class="col-sm-4" role="menu">
-									<div class="row">
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-thumbs-o-up fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+									<a href="#" class="row">
+										<div class="col-md-2 hidden-xs">
+											<i class="fa fa-bolt fa-2x"></i>
+										</div>
+										<div class="col-md-10 col-sm-12">
+											<h3>Simply a Better Way</h3>
+											<li><p>We have a history of offering the highest quality products</p></li>
+										</div>
+									</a>
+								</ul>
+								<ul class="col-sm-4" role="menu">
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-users fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">Executive Team</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
-									<div class="row">
+									</a>
+									<a href="#" class="row">
 										<div class="col-md-2 hidden-xs">
 											<i class="fa fa-building-o fa-2x"></i>
 										</div>
 										<div class="col-md-10 col-sm-12">
-											<li><a href="#">In Our Community</a></li>
+											<h3>Simply a Better Way</h3>
 											<li><p>We have a history of offering the highest quality products</p></li>
 										</div>
-									</div>
+									</a>
 								</ul>
-					
 							</div>
 					</li>
 						<!-- Get a Quote, visible on lg,md -->
@@ -375,111 +360,149 @@
 							</form>
 						</li>
 					</ul><!--/ Navbar-nav end -->
-				</nav><!--/ Navigation end -->
+				</nav><!--/ Desktop Navigaztion -->
 			</div><!--/ Container end -->
-		</div> <!-- Navbar end -->
+		</div> <!--/ Navbar end -->	
 	</header><!--/ Header end -->
+
+	<!-- Mobile Navigation -->
+	<header class="mobile-nav-wrapper">	
+		<nav id="mobile-nav">
+			<ul>
+				<li>
+					<a href="about.html">About Us</a>
+					<ul>
+						<li><a href="#"><i class="fa fa-link"></i>Sub 1</a></li>
+						<li><a href="#"><i class="fa fa-medkit"></i>Sub 2</a></li>
+						<li><a href="#"><i class="fa fa-thumbs-o-up"></i>Sub 3</a></li>
+						<li><a href="#"><i class="fa fa-bolt"></i>Sub 4</a></li>
+						<li><a href="#"><i class="fa fa-users"></i>Sub 5</a></li>
+						<li><a href="#"><i class="fa fa-building-o"></i>Sub 6</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Insurance</a>
+					<ul>
+						<li><a href="#"><i class="fa fa-link"></i>Sub 1</a></li>
+						<li><a href="#"><i class="fa fa-medkit"></i>Sub 2</a></li>
+						<li><a href="#"><i class="fa fa-thumbs-o-up"></i>Sub 3</a></li>
+						<li><a href="#"><i class="fa fa-bolt"></i>Sub 4</a></li>
+						<li><a href="#"><i class="fa fa-users"></i>Sub 5</a></li>
+						<li><a href="#"><i class="fa fa-building-o"></i>Sub 6</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Info Center</a>
+					<ul>
+						<li><a href="#"><i class="fa fa-link"></i>Sub 1</a></li>
+						<li><a href="#"><i class="fa fa-medkit"></i>Sub 2</a></li>
+						<li><a href="#"><i class="fa fa-thumbs-o-up"></i>Sub 3</a></li>
+						<li><a href="#"><i class="fa fa-bolt"></i>Sub 4</a></li>
+						<li><a href="#"><i class="fa fa-users"></i>Sub 5</a></li>
+						<li><a href="#"><i class="fa fa-building-o"></i>Sub 6</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Policyholders</a>
+					<ul>
+						<li><a href="#"><i class="fa fa-link"></i>Sub 1</a></li>
+						<li><a href="#"><i class="fa fa-medkit"></i>Sub 2</a></li>
+						<li><a href="#"><i class="fa fa-thumbs-o-up"></i>Sub 3</a></li>
+						<li><a href="#"><i class="fa fa-bolt"></i>Sub 4</a></li>
+						<li><a href="#"><i class="fa fa-users"></i>Sub 5</a></li>
+						<li><a href="#"><i class="fa fa-building-o"></i>Sub 6</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!--/ Mobile Navigation -->
 	
 	<!-- Page Content: Before sidebar to set responsive stacking order, using .pull-right -->
-	<div class="interior-page">
-    	<div class="row">
-    		<div class="col-md-9 col-sm-9 pull-right no-padding">
-    		
-    			<!-- Page-Intro -->
-    			<div id="page-intro">
-	    			<h1 class="page-title">About Us</h1>
-	    			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-	    			
-	    			<!-- Nested Columns to make arrow indention at bottom of .page-intro -->
-	    			<div class="row">
-		    			<div class="indention left col-md-6 col-sm-6 hidden-xs no-padding">
-			    			<!-- empty div -->
-				    	</div>
-				    	<div class="indention right col-md-6 col-sm-6 hidden-xs no-padding">
-					    	<!-- empty div -->
-				    	</div>
-				    </div><!-- /.row -->
-	    		</div><!-- /#page-intro -->
-	    		
-	    		
-	    		<!-- Page-Body -->
-		    	<div id="page-body">
-					<div class="row">
-						<div class="col-md-9 col-sm-9 no-padding">
-							<p><img class="img-responsive" src="http://placehold.it/700x350"></p>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<hr>
-							<p><blockquote class="green">jfksdjfkdsl</blockquote></p>
-							<hr>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-							<hr>
-						</div>
-						<div class="page-body text-center col-md-3 col-sm-3">
-							<h4 class="">Our CEO</h4>
-							<p><img class="circle center" src="http://placehold.it/150x150"></p>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-							<hr>
-							<h4 class="">Recognition</h4>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-						</div><!-- /.col -->
-					</div><!-- /.row -->	
-				</div><!-- /#page-body -->	
-				
-				
-	    	</div><!-- /.col (.interior-page) -->
+	<div class="interior-page row">
+    	<div class="col-md-9 col-sm-9 pull-right no-padding main-content">
+    	
+    		<!-- Page-Intro -->
+    		<div class="page-intro">
+	    		<h1 class="page-title">About Us</h1>
+	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>	
+	    	</div><!-- /#page-intro -->
+			
+			<!-- Nested Columns to make arrow indention at bottom of .page-intro -->
+			<div class="row">
+				<div class="indention left no-padding">
+				   <!-- empty div -->
+				</div>
+				<div class="indention right no-padding">
+				   <!-- empty div -->
+				</div>
+			</div><!-- /.row -->
 	    	
 	    	
-	    	
-	    	
-		   
-    		<!-- Sidebar -->
-    		<div class="row">
-        	<div class="col-md-3 col-sm-3 no-padding">
-        		<div class="sidebar" id="sidebar-wrapper">
-        			<div class="row">
-	        			<div class="col-md-2 hidden-sm hidden-xs">
-	        			<!-- empty div -->
-	        			</div>
-	        			<div class="col-md-10 col-sm-12">
-	        				<h4 class="title">Our Story</h4>
-	        				<!-- Sidebar Nav -->
-		        			<ul class="sidebar-nav">
-		        				<li>
-		        					<a href="#">About Us</a>
-		        				</li>
-		        				<li>
-		        					<a href="#">What Sets Us Apart</a>
-		        				</li>
-		        				<li>
-		        					<a href="#">Customer Reviews</a>
-		        				</li>
-		        				<li>
-		        					<a href="#">In Our Community</a>
-		        				</li>
-		        				<li>
-		        					<a href="#">Executive Team</a>
-		        				</li>
-		        			</ul><!-- /.sidebar-nav -->
-		        			
-		        			<hr>
-		        			
-		        			<div class="reviews">
-		        				<h4 class="title">Customer Reviews</h4>
-		        				<div class="customer-video">
-			        				<img class="img-responsive" src="http://placehold.it/100x75">
-		        				</div>
-		        				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
-		        				<h5 class="name">Custom Name</h5>
-		        				<h6 class="policyholder">Policyholer</h6>
-		        				<button class="btn btn-blue rounded" type="button">More Reviews</button>
-		        			</div><!--/.reviews -->
-	        			</div><!-- /nested .col -->
-        			</div><!-- /.row -->
-        		</div><!-- /#sidebar-wrapper -->
-        		
-        		
-        	</div><!-- /.col -->
-        </div><!-- /.row -->
+	    	<!-- Page-Body -->
+			<div id="page-body">
+				<div class="row">
+					<div class="col-md-9 col-sm-9">
+						<p><img class="img-responsive" src="http://placehold.it/700x350"></p>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<hr>
+						<p><blockquote class="green">jfksdjfkdsl</blockquote></p>
+						<hr>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+						<hr>
+					</div>
+					<div class="page-body text-center col-md-3 col-sm-3">
+						<h4 class="">Our CEO</h4>
+						<p><img class="circle center" src="http://placehold.it/150x150"></p>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+						<hr>
+						<h4 class="">Recognition</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+					</div><!-- /.col -->
+				</div><!-- /.row -->	
+			</div><!-- /#page-body -->	
+	    </div><!-- /.col (.interior-page) -->
+
+    	<!-- Sidebar -->
+		<i class="fa fa-chevron-right" id="js-open-sidebar"></i>
+        <div class="col-md-3 col-sm-3 no-padding sidebar-wrapper" id="interior-sidebar">
+	        <div class="sidebar">
+        		<div class="row">
+	    			<h3 class="title">Our Story</h3>
+	    			<!-- Sidebar Nav -->
+		    		<ul class="sidebar-nav">
+		    			<li>
+		    				<a class="active" href="#">About Us</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">What Sets Us Apart</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">Customer Reviews</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">In Our Community</a>
+		    			</li>
+		    			<li>
+		    				<a href="#">Executive Team</a>
+		    			</li>
+		    		</ul><!-- /.sidebar-nav -->
+		    		
+		    		<hr>
+		    		
+		    		<div class="reviews">
+		    			<h3 class="title">Customer Reviews</h3>
+		    			<div class="customer-video">
+		        			<img class="img-responsive" src="http://placehold.it/220x100">
+		    			</div>
+		    			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type</p>
+		    			<h5 class="name">Customer Name</h5>
+		    			<h6 class="policyholder">Policyholer</h6>
+		    			<button class="btn btn-blue rounded" type="button">More Reviews</button>
+		    		</div><!--/.reviews -->
+        		</div><!-- /.row -->
+	        </div><!--/.sidebar -->
+        </div><!--/.sidebar-wrapper -->
+        	
     </div><!-- /.interior-page -->
     
 	<!-- FOOTER -->
@@ -491,7 +514,7 @@
 						<h3 class="footer-title">Our Story</h3>
 						<p>People's Trust Insurance has created a better way to deliver home insurance protection to Floridians. Built on preparedness and rapid response, our unique approach provides the greatest value and a simplified recovery experience for our policyholders.</p>
 						<!-- SOCIAL MEDIA LINKS -->
-						<div class="footer-social">
+						<div class="footer-social visible-lg visible-md visible-sm">
 							<a class="fb" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
 							<a class="gp" href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
 							<a class="tw" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
@@ -500,64 +523,64 @@
 					</div><!--/ end footer-left -->
 				</div>
 				
-				<div class="col-md-6 col-sm-6 border-left">
+				<div class="col-md-6 col-sm-6 border-left no-padding">
 					<div class="footer-right">
 						<!-- NESTED COLUMNS -->
 						<div class="row">
-							<div class="col-md-4 col-sm-4">
-								<div class="footer-policyholders">
-									<h5 class="footer-title">Policyholders</h5>
-										<ul class="footer" role="menu">
-								        	<li><a href="#">Sign In</a></li>
-								            <li><a href="#">Make a Payment</a></li>
-								            <li><a href="#">File a Claim</a></li>
-								            <li><a href="#">Update Information</a></li>
-								            <li><a href="#">Homeowner's Academy</a></li>
-							            </ul>
-								</div><!--/ end footer-policyholders -->
-							</div>
-							<div class="col-md-4 col-sm-4 border-left">
-								<div class="footer-insurance-choices">
-									<h5 class="footer-title">Insurance Choices</h5>
-										<ul class="footer" role="menu">
-							                <li><a href="#">Homeowner's Insurance</a></li>
-							                <li><a href="#">Basic Choice Option</a></li>
-							                <li><a href="#">Flood Insurance</a></li>
-							                <li><a href="#">Get a Quote</a></li>
-							            </ul>
-								</div><!--/ end footer-insurance-choices -->
-							</div>
-							<div class="col-md-4 col-sm-4 border-left">
-								<div class="footer-company-info">
-									<h5 class="footer-title">Company Info</h5>
-										<ul class="footer" role="menu">
-							                <li><a href="#">Contact Us</a></li>
-							                <li><a href="#">Privacy Policy</a></li>
-							                <li><a href="#">Media Center</a></li>
-							                <li><a href="#">Agency Sign In</a></li>
-							                <li><a href="#">Q&amp;A Library</a></li>
-							                <li><a href="#">In Our Community</a></li>
-							                <li><a href="#">Careers</a></li>
-							                <li><a href="#">Terms of Use</a></li>
-							            </ul>
-								</div><!--/ end footer-company-info -->
-							</div><!--/ end col -->
+							<div class="footer-policyholders">
+								<h5 class="footer-title">Policyholders</h5>
+									<ul class="footer" role="menu">
+							        	<li><a href="#">Sign In</a></li>
+							            <li><a href="#">Make a Payment</a></li>
+							            <li><a href="#">File a Claim</a></li>
+							            <li><a href="#">Update Information</a></li>
+							            <li><a href="#">Homeowner's Academy</a></li>
+							        </ul>
+							</div><!--/ end footer-policyholders -->
+							<div class="footer-insurance-choices">
+								<h5 class="footer-title">Insurance Choices</h5>
+									<ul class="footer" role="menu">
+							            <li><a href="#">Homeowner's Insurance</a></li>
+							            <li><a href="#">Basic Choice Option</a></li>
+							            <li><a href="#">Flood Insurance</a></li>
+							            <li><a href="#">Get a Quote</a></li>
+							        </ul>
+							</div><!--/ end footer-insurance-choices -->
+							<div class="footer-company-info">
+								<h5 class="footer-title">Company Info</h5>
+									<ul class="footer" role="menu">
+							            <li><a href="#">Contact Us</a></li>
+							            <li><a href="#">Privacy Policy</a></li>
+							            <li><a href="#">Media Center</a></li>
+							            <li><a href="#">Agency Sign In</a></li>
+							            <li><a href="#">Q&amp;A Library</a></li>
+							            <li><a href="#">In Our Community</a></li>
+							            <li><a href="#">Careers</a></li>
+							            <li><a href="#">Terms of Use</a></li>
+							        </ul>
+							</div><!--/ end footer-company-info -->
 						</div><!-- Row end -->
 						<!-- NESTED COLUMNS -->
 						<div class="col-md-7 col-sm-6 footer-address">
 							<address>
-								<p>People's Trust Insurance<br />
-								18 People's Trust Way<br />
-								Deerfield Beach, FL 33441-6270</p>
+								People's Trust Insurance<br/>
+								18 People's Trust Way<br/>
+								Deerfield Beach, FL 33441-6270
 							</address>
 						</div>
 						<div class="col-md-5 col-sm-6 footer-ph">
-							<p>Give Us a Call<br />
-							<a href="tel:1-888-524-6003"><strong>1-888-524-6003</strong></a></p>
+							<p>Give Us a Call
+							<a href="tel:1-888-524-6003">1-888-524-6003</a></p>
 						</div>
 					</div><!--/ end footer-right -->
 				</div><!--/ end col -->
 			</div><!-- Row end -->
+			<div class="footer-social social-2 hidden-lg hidden-md hidden-sm">
+				<a class="fb" href="#" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+				<a class="gp" href="#" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a>
+				<a class="tw" href="#" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+				<a class="yt" href="#" target="_blank"><i class="fa fa-youtube fa-2x"></i></a>
+			</div>
 		</div><!-- Container end -->
 	</footer>
 	
@@ -565,34 +588,22 @@
 	<section id="copyright" class="copyright">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 col-sm-6">
+				<div>
 					<p>&copy; Copyright 2015<br />
 					People's Trust Insurance Company</p>
 				</div>
-				<div class="col-md-8 col-sm-6">
-					<div class="row">
-						<div class="col-md-3 col-sm-3">
-							<a href="#">
-								<img class="bbb" src="images/BBB.png" />
-							</a>
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<a href="#">
-								<img class="demotech" src="images/Demotech.png" />
-							</a>
-						</div>
-						<div class="col-md-2 col-sm-3">
-							<a href="#">
-								<img class="enterprise" src="images/Enterprise.png" />
-							</a>
-						</div>
-						<div class="col-md-4 col-sm-3">
-							<a href="#">
-								<img class="faia" src="images/FAIA.png" />
-							</a>
-						</div>
-					</div><!--/ Row end -->
-				</div><!--/ col end -->
+				<a href="#">
+					<img class="bbb" src="images/BBB.png" />
+				</a>
+				<a href="#">
+					<img class="demotech" src="images/Demotech.png" />
+				</a>
+				<a href="#">
+					<img class="enterprise" src="images/Enterprise.png" />
+				</a>
+				<a href="#">
+					<img class="faia" src="images/FAIA.png" />
+				</a>
 			</div><!--/ Row end -->
 			
 			<!-- BACK TO TOP -->
@@ -611,6 +622,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/min/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/min/custom.min.js"></script>
+	<script type="text/javascript" src="js/min/jquery.mmenu.min.js"></script>
 	
   </div><!-- Body inner end -->
 </body>

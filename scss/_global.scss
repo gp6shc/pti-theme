@@ -2,8 +2,10 @@
 ================================================== */
 html{
 	overflow-x: hidden !important;
-	width: 100%;
 	height: 100%;
+	width: 100%;
+	min-width: 320px;
+	font-size: 100%; // 1rem = 16px 
 	position: relative;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -16,8 +18,10 @@ body{
 	color: $brand-black;
 	background: white;
 	position: relative;
-	max-width: 1600px;
-	min-width: 320px;
+	
+}
+body.modal-open {
+	margin: 0;
 }
 
 .body-inner{
@@ -45,65 +49,64 @@ img {
 /* Typography
 ================================================== */
 /* Body */
-body, p {
+body {
 	font-family: $font-heading;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300; 
-	line-height: 1.6em;
+	line-height: 1.4;
 }
+p {
+	font-size: 1em;	
+}
+
 p.serif {
 	font-family: $font-body;
 }
 p.large {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 	
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading;
+    line-height: 1.2;
 }
 h1{
-    font-size: 44px;
-    line-height: 56px;
+    font-size: 2.75rem;
     font-weight: 400;
 }
 h2{
-    font-size: 38px;
-    line-height: 46px;
+    font-size: 2.375rem;
     font-weight: 100;
 }
 h3{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
 h4{
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 h5{
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
 }
 h6{
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
 }
 .page-header {
-	font-size: 44px;
+	font-size: 2.750rem;
 	font-weight: 100;
 	color: $secondary-blue;
 	border: none;
 }
 .sub-head-lg {
-	font-size: 30px;
+	font-size: 1.875rem;
 	font-weight: 300;
 	color: $secondary-blue;
 }
 .sub-head-sm {
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-weight: 500;
 	color: $secondary-blue;
 }

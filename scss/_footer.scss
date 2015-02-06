@@ -6,11 +6,12 @@ footer {
 	position: relative;
 	padding: 40px 0;
 	color: white;
+	font-size: 1rem;
 	background: $primary-blue;
 	z-index: 99;
 	
 	.container {
-		border-bottom: 2px solid $text-blue-dark;
+		border-bottom: 2px solid darken($primary-blue, 7%);
 		padding-bottom: 20px;
 	}
 	
@@ -21,8 +22,19 @@ footer {
 	}
 	
 	li a {
+		display: block;
 		color: white;
-		font-size: 14px;
+		font-size: 1em;
+		border-radius: 3px;
+		margin: 0 -6px;
+		padding: 3px 6px;
+		line-height: 1.1;
+		margin-bottom: 0.2em;
+		
+		&:hover {
+			color: white;
+			background-color: $secondary-blue;
+		}
 	}
 	
 }
@@ -31,9 +43,12 @@ footer {
 	margin-top: -4px; //even with border-left top
 	margin-bottom: 20px;
 	font-weight: 700;
+	font-size: 1.3em;
+	
 }
 
 .footer-social {
+	margin-top: 60px;
 }
 
 .footer-social a {
@@ -46,64 +61,84 @@ footer {
 	display: inline-block;
 	padding: 8px;
 	
-}
+	&.fb {
+		background: $facebook;
 	
-.footer-social a.fb {
-	background: $facebook;
-	
-	&:hover {
-		background: darken($facebook,7%);
+		&:hover {
+			background: darken($facebook,7%);
+		}
 	}
-	
-}
-
-.footer-social a.gp {
-	background: $gplus;
-	
-	&:hover {
-		background: darken($gplus,7%);
+	&.gp {
+		background: $gplus;
+		
+		&:hover {
+			background: darken($gplus,7%);
+		}
 	}
-	
-}
-
-.footer-social a.tw {
-	background: $twitter;
-	
-	&:hover {
-		background: darken($twitter,7%);
+	&.tw {
+		background: $twitter;
+		
+		&:hover {
+			background: darken($twitter,7%);
+		}
 	}
-}
-
-.footer-social a.yt {
+	&.yt {
 	background: $youtube;
-	
-	&:hover {
-		background: darken($youtube,7%);
+		
+		&:hover {
+			background: darken($youtube,7%);
+		}
 	}
-	
+}
+
+.social-2 {
+	text-align: center;
+	margin: 20px 0;
 }
 
 .border-left {
-	border-left: 2px solid $text-blue-dark;
+	border-left: 2px solid darken($primary-blue, 7%);
 }
 
-.footer-social {
-	padding-top: 60px;
-}
-.footer-address, .footer-ph {
-	padding-top: 95px;
+
+.footer-right {
+	> .row {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		
+		> div {
+			flex: 1 1 150px;
+			padding: 0 15px;
+			margin-bottom: 15px;
+			
+			+ div {
+				border-left: 2px solid darken($primary-blue, 7%);
+			}
+		}
+		&:before, &:after {
+			display: none;
+		}
+	}
 }
 
 .footer-address, .footer-ph {
-	padding-left: 0;
+	margin-top: 95px;
+	padding-right: 0;
+}
+
+address {
+	margin: 0;
 }
 
 .footer-ph {
 	
 	a {
 		color: white;
+		font-weight: 700;
+		display: block;
 	}
-
 }
 
 /* Copyright Section, .copyright, below footer
@@ -114,12 +149,28 @@ footer {
 	color: white;
 	background: $primary-blue;
 	z-index: 9;
+	
+	.row {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 45px;
+		
+		div, a {
+			margin: 0 15px 15px 15px;
+		}
+		
+		&:before, &:after {
+			display: none;
+		}
+	}
 }
 
 #top {
 	position: absolute;
-	bottom: 20px;
-	right: 20px;
+	bottom: 15px;
+	right: 15px;
     opacity: 0;
     transition: opacity .5s ease-in-out .3s;
     

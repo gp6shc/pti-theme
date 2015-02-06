@@ -6,7 +6,7 @@ jQuery(function($) {
 "use strict";
 
 /* ----------------------------------------------------------- */
-/*  Debouncer
+/*  Debouncer/Throttler
 /* ----------------------------------------------------------- */
 var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
     // After wrapper has stopped being called, this timeout ensures that
@@ -87,8 +87,21 @@ var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
 /*  Scroll Events
 /* ----------------------------------------------------------- */
 $(document).ready(function() {
-	var isHomePage = $('.home').length; // if is, === 1 (true); if isn't, === 0 (false)
+	var isHomePage, bodyHeight, footerHeight, interiorHeight, interiorSidebar, sidebarHeight, isSidebarPage, shouldAffix, viewportW;
 	
+	function updateHeights() {
+		isHomePage 		= $('.home').length; // if is, === 1 (true); if isn't, === 0 (false)
+		bodyHeight 		= $('body').outerHeight(true);
+		footerHeight 	= $('#footer').outerHeight(true) + $('#copyright').outerHeight(true);
+		interiorHeight 	= $('.interior-page').outerHeight(true);
+		interiorSidebar	= $('#interior-sidebar');
+		sidebarHeight 	= interiorSidebar.outerHeight(true);
+		isSidebarPage 	= interiorSidebar.length;
+		shouldAffix		= sidebarIsNotTaller();
+		viewportW		= $('body').outerWidth();
+	}
+	$(window).resize( jq_throttle(500, updateHeights));
+		
 	// Use this function to monitor all layout changes that should update on scroll
 	var updateLayout = function() {
 		// hides/shows the top most bar of info
@@ -101,6 +114,11 @@ $(document).ready(function() {
 			toggleClassAtSixty($("#carousel-1"), "blue-tint");
 		}
 		
+		// only executed on pages with an affixed sidebar
+		if (isSidebarPage && shouldAffix && (viewportW > 768) ) {
+			affixSidebar();
+		}
+		
 		// check when at the bottom
 		if ( isAtBottom() ) {
 			$('#top').addClass('active');
@@ -109,7 +127,7 @@ $(document).ready(function() {
 		}
 	};
 	// Add the event listener
-	$(window).scroll( jq_throttle(250, updateLayout));
+	$(window).scroll( jq_throttle(150, updateLayout));
 	
 	function scrollY() {
 		return window.pageYOffset || document.documentElement.scrollTop;
@@ -123,6 +141,27 @@ $(document).ready(function() {
 		}else{
 			$('.top-bar').slideDown(300);
 			$("#header").removeClass("header-fixed");
+		}
+	}
+	
+	function affixSidebar() {
+		var sY = scrollY();
+		if ( sY <= 0 ) {
+			interiorSidebar.removeClass("affix-bottom");
+		}
+		if ( (bodyHeight - (sY + sidebarHeight + 54)) <= footerHeight) {
+			interiorSidebar.addClass("affix-bottom");
+		}else if (sY >= 70) {
+			interiorSidebar.removeClass("affix-bottom");
+		}
+	}
+	
+	function sidebarIsNotTaller() {
+		if (interiorHeight <= (sidebarHeight + 25) ) { // if the sidebar (+ fudge) is longer than the page content
+			interiorSidebar.addClass("no-affix");
+			return false;
+		}else{
+			return true;
 		}
 	}
 	
@@ -157,6 +196,7 @@ $(document).ready(function() {
 	
 	// makes sure the layout is right after page load, not just after scrolling
 	updateLayout();
+	updateHeights();
 			
 });
 	
@@ -181,13 +221,21 @@ $(document).ready(function(){
 });
 	
 /* ----------------------------------------------------------- */
-	/*  Sticky Sidebar Navigation using Affix
+	/*  Open Sidebar when under 768px
 /* ----------------------------------------------------------- */	
-$('#sidebar').affix({
-	offset: {
-	    top: 150
+$('#js-open-sidebar').on('click', function() {
+	$(this).toggleClass("flip180");
+	$('body, html').toggleClass("no-scroll");
+	$('.main-content').toggleClass("open");
+	
+	if ( $('.main-content').hasClass('open') ) {
+		$('.main-content').on('click', function() {
+			$(this).removeClass("flip180");
+			$('body, html').removeClass("no-scroll");
+			$('.main-content').removeClass("open");
+		});
 	}
-});	
+});
 
 /* ----------------------------------------------------------- */
 	/*  Search Expand
@@ -208,12 +256,15 @@ $('#js-search-icon').click(function() {
 /* ----------------------------------------------------------- */
 	/*  Blur container bg on modal open, unblur on close
 /* ----------------------------------------------------------- */
-$('#myModal').on('show.bs.modal', function () {
-   $('.container').addClass('blur');
+$('#customer-video').on('shown.bs.modal', function (event) {
+	var button = $(event.relatedTarget); // Button that triggered the modal
+	var videoSource = button.data('video-source') + "?rel=0&showinfo=0&autoplay=1&autohide=1";
+
+	$('#bs-iframe').attr("src", videoSource);	
 });
 
-$('#myModal').on('hide.bs.modal', function () {
-   $('.container').removeClass('blur');
+$('#customer-video').on('hide.bs.modal', function () {
+	$('#bs-iframe').attr("src", "");	
 });
 
 /* ----------------------------------------------------------- */
@@ -226,6 +277,53 @@ $('#top').click(function(e){
 	$('body,html').animate({
 	  'scrollTop': 0
 	}, 700);
+});
+
+/* ----------------------------------------------------------- */
+/*  Mobile Menu
+/* ----------------------------------------------------------- */
+$(document).ready(function() {
+	$("#mobile-nav").mmenu({
+		offCanvas: {
+			position: "right"
+        }
+	})
+	.on( "opened.mm", function() { //revoke touch scrolling when menu is open
+		document.ontouchmove = function(e){ e.preventDefault(); };
+		
+    })
+	.on( "closed.mm", function() { //reset when closed
+		document.ontouchmove = function(){ return true; };
+    });
+    
+    $('#mmenu-hamburger').on('touchstart click', function(e) {
+	    e.preventDefault();
+	    $("#mobile-nav").trigger("open.mm");
+    });
+});
+
+
+
+/* ----------------------------------------------------------- */
+/*  Crude Font-Size adjust
+/* ----------------------------------------------------------- */
+
+$("#sm").on('click', function() {
+	var currentSize = $("html").css("font-size").slice(0,-2);
+	currentSize = (currentSize / 16) * 100;
+	currentSize = Math.floor(currentSize - 5);
+	$("html").css("font-size", currentSize + "%");
+});
+
+$("#med").on('click', function() {
+	$("html").css("font-size", "100%");
+});
+
+$("#lg").on('click', function() {
+	var currentSize = $("html").css("font-size").slice(0,-2);
+	currentSize = (currentSize / 16) * 100;
+	currentSize = Math.floor(currentSize + 5);
+	$("html").css("font-size", currentSize + "%");
 });
 
 //close

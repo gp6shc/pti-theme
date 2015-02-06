@@ -184,6 +184,7 @@ $screen-xs: 480px;
 			color: white;
 			font-size: 1.5em;
 			padding: 38px 25px 37px 15px;
+			cursor: pointer;
 			transition: padding 0.6s;
 		}
 	}
@@ -318,6 +319,44 @@ $screen-xs: 480px;
 			outline: none;
 		}
 	}
+	.mobile-search-form {
+		position: absolute;
+		background: rgba(white, 0.75);
+		transform: translateX(-100%);
+		margin-left: -15px;
+		padding: 5px;	
+		border-bottom-right-radius: 3px;
+		transition: all 0.6s;
+		
+		.search-field {
+			-webkit-appearance: none;
+			width: 165px;
+			padding: 5px;
+			text-indent: 5px;
+			background-color: lighten($brand-grey, 13%);
+			border: 2px solid lighten($brand-grey, 13%);
+			transition: all 0.3s;
+			
+			&:focus {
+				background-color: white;
+				outline: 0 none;
+				border-color: $brand-green;
+			}
+		}
+		
+		.search-submit {
+			-webkit-appearance: none;
+			padding: 8px 18px;
+			margin-top: -2px;
+			margin-left: -10px;
+		}
+		
+		&.opened {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
 	.header-fixed {
 		.navbar-toggle {
 			padding: 20px 15px 19px 35px;

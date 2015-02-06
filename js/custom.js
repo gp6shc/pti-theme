@@ -253,6 +253,19 @@ $('#js-search-icon').click(function() {
 	$('#js-search-form, #js-quote-btn').toggleClass('opacity-0');	
 });
 
+$('#js-mobile-search-icon').click(function() {
+	if ( $(this).hasClass('fa-search') ) {
+		setTimeout( function() {
+			$('#js-search-input').focus();
+		}, 600);
+	}else{
+		$('#js-search-input').blur();
+	}
+
+	$(this).toggleClass('fa-search fa-times');
+	$('#js-mobile-search-form').toggleClass('opacity-0 opened');	
+});
+
 /* ----------------------------------------------------------- */
 	/*  Blur container bg on modal open, unblur on close
 /* ----------------------------------------------------------- */

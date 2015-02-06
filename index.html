@@ -63,7 +63,11 @@
 				<!-- Logo start -->
 				<div class="navbar-header">
 				    <div class="mobile-search">
-					    <i class="fa fa-search"></i>
+					    <i class="fa fa-search" id="js-mobile-search-icon"></i>
+						<form role="search" method="get" class="opacity-0 mobile-search-form" id="js-mobile-search-form" action="/">
+							<input type="search" class="search-field rounded" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+							<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
+						</form>
 				    </div>
 				    <div class="navbar-brand">
 					    <a href="/" title="People's Trust Insurance">

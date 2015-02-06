@@ -31,7 +31,7 @@
 
 </head>
 	
-<body>
+<body class="home"> <!-- only set this class on the home page -->
 	<div class="body-inner">
 	<!-- Header start -->
 	<header id="header" class="header" role="banner">
@@ -62,17 +62,24 @@
 			<div class="container">
 				<!-- Logo start -->
 				<div class="navbar-header">
+				    <div class="mobile-search">
+					    <i class="fa fa-search" id="js-mobile-search-icon"></i>
+						<form role="search" method="get" class="opacity-0 mobile-search-form" id="js-mobile-search-form" action="/">
+							<input type="search" class="search-field rounded" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+							<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
+						</form>
+				    </div>
+				    <div class="navbar-brand">
+					    <a href="/" title="People's Trust Insurance">
+					    	<div class="logo"><img rel="logo" src="images/PTI-Logo.svg"></div>
+					    </a> 
+				    </div>                   
 				    <button id="mmenu-hamburger" class="navbar-toggle">
 				        <span class="sr-only">Toggle navigation</span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				    </button>
-				    <div class="navbar-brand">
-					    <a href="/" title="People's Trust Insurance">
-					    	<div class="logo"><img rel="logo" src="images/PTI-Logo.svg"></div>
-					    </a> 
-				    </div>                   
 				</div><!--/ Logo end -->
 				
 				<!-- Desktop Navigaztion -->
@@ -361,8 +368,8 @@
 			</div><!--/ Container end -->
 		</div> <!--/ Navbar end -->	
 	</header><!--/ Header end -->
-	
-		<!-- Mobile Navigation -->
+
+	<!-- Mobile Navigation -->
 	<header class="mobile-nav-wrapper">	
 		<nav id="mobile-nav">
 			<ul>

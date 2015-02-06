@@ -6211,7 +6211,7 @@ p.serif {
   font-family: Georgia, Helvetica, Arial; }
 
 p.large {
-  font-size: 1.25rem; }
+  font-size: 1.25em; }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
@@ -6219,40 +6219,40 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 h1 {
-  font-size: 2.75rem;
+  font-size: 2.75em;
   font-weight: 400; }
 
 h2 {
-  font-size: 2.375rem;
+  font-size: 2.375em;
   font-weight: 100; }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 400; }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: 1.125em;
   font-weight: 700; }
 
 h5 {
-  font-size: 1rem; }
+  font-size: 1em; }
 
 h6 {
-  font-size: 0.875rem; }
+  font-size: 0.875em; }
 
 .page-header {
-  font-size: 2.75rem;
+  font-size: 2.75em;
   font-weight: 100;
   color: #0780E2;
   border: none; }
 
 .sub-head-lg {
-  font-size: 1.875rem;
+  font-size: 1.875em;
   font-weight: 300;
   color: #0780E2; }
 
 .sub-head-sm {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 500;
   color: #0780E2; }
 
@@ -8228,6 +8228,41 @@ html.mm-right.mm-opening .mm-slideout {
     padding: 20px 15px 19px 35px; }
   .header-fixed .mobile-search i {
     padding: 20px 35px 19px 15px; }
+  .two-panels > div {
+    border-radius: 0; }
+    .two-panels > div + div {
+      border-radius: 0; }
+  .carousel-1 .carousel-inner {
+    margin: 0; }
+  .carousel-1.blue-tint .img-overlay {
+    background-color: transparent; }
+    .carousel-1.blue-tint .img-overlay img {
+      opacity: 1; }
+  .carousel-control {
+    opacity: 0; }
+  .carousel-caption {
+    position: relative;
+    left: auto;
+    right: auto;
+    padding: 0 15px 48px 15px;
+    margin-bottom: -18px;
+    background: #0780E2; }
+    .carousel-caption h1 {
+      color: white;
+      font-weight: 100;
+      text-shadow: none;
+      font-size: 2em;
+      margin-top: 0;
+      padding-top: 0.5em; }
+  .carousel-2 .carousel-caption {
+    width: 100%;
+    border-radius: 0;
+    left: auto;
+    right: auto;
+    padding: 0 0 48px 0;
+    background: #0780E2; }
+  .carousel-indicators {
+    bottom: 0; }
   .footer-ph, .footer-address {
     padding: 0;
     margin-top: 20px;
@@ -8245,13 +8280,7 @@ html.mm-right.mm-opening .mm-slideout {
   .two-panels {
     display: block; }
     .two-panels > div {
-      width: 100%;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0; }
-      .two-panels > div + div {
-        border-radius: 0 0 40px 40px/0 0 25px 25px; }
-  .two-panels-2 > div {
-    border-radius: 40px 40px 0 0/25px 25px 0 0; }
+      width: 100%; }
   .top-bar .call-us > span {
     display: none; }
   .copyright .row {

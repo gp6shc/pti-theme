@@ -281,6 +281,64 @@ $screen-xs: 480px;
 			padding: 20px 35px 19px 15px;
 		}
 	}
+	.two-panels > div {
+		border-radius: 0;
+		
+		+ div {
+			border-radius: 0;		
+		}	
+	}
+	.carousel-1 {
+	
+		.carousel-inner {
+			margin: 0;
+		}
+
+		&.blue-tint {
+			.img-overlay {
+				background-color: transparent;
+				
+				img {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.carousel-control {
+		opacity: 0;
+	}
+	.carousel-caption {
+		position: relative;
+		left: auto;
+		right: auto;
+		padding: 0 15px 48px 15px;
+		margin-bottom: -18px;
+		background: $secondary-blue;
+		
+		h1 {
+			color: white;
+			font-weight: 100;
+			text-shadow: none;
+			font-size: 2em;
+			margin-top: 0;
+			padding-top: 0.5em;
+		}		
+	}
+	.carousel-2 .carousel-caption {
+		width: 100%;
+		border-radius: 0;
+		left: auto;
+		right: auto;
+		padding: 0 0 48px 0;
+		background: $secondary-blue;
+		
+		h1 {
+			
+		}
+	}
+	.carousel-indicators {
+		bottom: 0;
+	}
 	
 	.footer-ph, .footer-address {
 		padding: 0;
@@ -307,19 +365,9 @@ $screen-xs: 480px;
 
 		> div {
 			width: 100%;
-			border-bottom-left-radius: 0;		
-			border-bottom-right-radius: 0;		
-			
-			+ div {
-				border-radius: 0 0 40px 40px / 0 0 25px 25px;
-			}
 		}
 	}
-	
-	.two-panels-2 > div{
-		border-radius: 40px 40px 0 0 / 25px 25px 0 0;	
-	}
-	
+		
 	.top-bar .call-us > span {
 		display: none;
 	}

@@ -6292,8 +6292,7 @@ section {
   z-index: 1; }
 
 .full-width {
-  max-width: 100% !important;
-  padding: 0; }
+  width: 100%; }
 
 .read-more, .read-more a {
   color: #00AA71;
@@ -6377,7 +6376,7 @@ input {
   color: white; }
   .btn.btn-default:hover, .btn.btn-primary:hover, .btn.btn-green:hover {
     color: #ededed;
-    background: #008659; }
+    background: #009060; }
 
 /* Dark Grey Btn */
 .btn.btn-dark {
@@ -6414,7 +6413,12 @@ input {
 .pullquote, blockquote {
   font-family: "museo-sans", sans-serif, serif;
   font-weight: 300;
-  font-style: italic; }
+  font-style: italic;
+  font-size: 1.125em;
+  border: none;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee; }
 
 .opacity-0.opacity-0 {
   opacity: 0;
@@ -6716,9 +6720,11 @@ form .input-group .form-control:last-child {
             transition: opacity 0.3s; }
   .search .search-field {
     -webkit-appearance: none;
-    width: 165px;
+    width: 160px;
     padding: 5px;
     text-indent: 5px;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
     background-color: #83868b;
     border: 2px solid #83868b;
     -webkit-transition: all 0.3s;
@@ -6729,9 +6735,12 @@ form .input-group .form-control:last-child {
       border-color: #00AA71; }
   .search .search-submit {
     -webkit-appearance: none;
-    padding: 8px 18px;
+    padding: 4px 13px;
     margin-top: -2px;
-    margin-left: -10px; }
+    margin-left: -5px;
+    font-size: 1.25em;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px; }
 
 .search-slide {
   -webkit-transform: translateX(-212px);
@@ -7029,26 +7038,33 @@ form .input-group .form-control:last-child {
   .get-a-quote .grey-bg {
     background-color: #EAEBEC;
     border-color: #EAEBEC; }
-  .get-a-quote input {
+  .get-a-quote input.form-control {
     font-size: 1.25em;
+    width: 170px;
+    text-align: center;
     padding: 19px 10px;
     border: 2px solid white;
     box-shadow: none;
-    border-radius: 5px !important;
+    border-top-left-radius: 9px !important;
+    border-bottom-left-radius: 9px !important;
     -webkit-transition: all 0.3s;
             transition: all 0.3s; }
-    .get-a-quote input:focus {
+    .get-a-quote input.form-control:focus {
       outline: 0 none;
       background-color: white;
       box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(0, 170, 113, 0.6);
       border-color: #00AA71; }
   .get-a-quote button {
     padding: 7px 15px;
-    margin-left: -10px;
+    margin-left: -5px;
     font-size: 1.25em;
     font-weight: 400;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
     position: relative;
     z-index: 2; }
+    .get-a-quote button:hover {
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(0, 170, 113, 0.6); }
 
 /* Section 3: .about
 ================================================== */
@@ -7397,10 +7413,14 @@ form .input-group .form-control:last-child {
 
 .page-intro {
   background-color: #0780E2;
-  padding: 140px 60px 60px 60px;
+  padding: 140px 75px 75px 75px;
   color: white; }
+  .page-intro h1 {
+    font-weight: 100; }
   .page-intro + .row {
     background-color: #0780E2; }
+  .page-intro p {
+    font-size: 1.125em; }
 
 .indention {
   background: white;
@@ -7414,8 +7434,33 @@ form .input-group .form-control:last-child {
 .right {
   border-radius: 40px 0 0 0/25px 0 0 0; }
 
+.interior-right-sidebar {
+  border-left: 1px solid #eee; }
+  .interior-right-sidebar h3 {
+    font-weight: 100;
+    color: #0780E2; }
+  .interior-right-sidebar ul {
+    padding: 0; }
+  .interior-right-sidebar li {
+    list-style: none; }
+    .interior-right-sidebar li::before {
+      content: '\25B8';
+      color: #005CBA;
+      padding: 0 2px 0 0;
+      font-size: 16px;
+      vertical-align: top; }
+
+.quote-prompt {
+  padding-top: 25px;
+  border-top: 1px solid #eee; }
+  .quote-prompt h3 {
+    color: #0780E2;
+    font-size: 1.75em;
+    font-weight: 100;
+    margin-bottom: 15px; }
+
 /* Interior Page Left Sidebar */
-.header-fixed + .interior-page > .sidebar-wrapper {
+.header-fixed ~ .interior-page > .sidebar-wrapper {
   -webkit-transform: translateY(54px);
       -ms-transform: translateY(54px);
           transform: translateY(54px); }
@@ -7479,12 +7524,11 @@ form .input-group .form-control:last-child {
       .sidebar-nav li a:hover::before {
         color: white; }
     .sidebar-nav li a::before {
-      content: '\f04b';
-      font-family: FontAwesome;
+      content: '\25B8';
       color: #005CBA;
-      padding: 10px;
-      font-size: 10px;
-      vertical-align: bottom; }
+      padding: 0 4px 0 8px;
+      font-size: 16px;
+      vertical-align: top; }
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
 
@@ -8245,7 +8289,7 @@ html.mm-right.mm-opening .mm-slideout {
             transform: none; }
     .sidebar-wrapper::-webkit-scrollbar {
       display: none; }
-  .header-fixed + .interior-page > .sidebar-wrapper {
+  .header-fixed ~ .interior-page > .sidebar-wrapper {
     -webkit-transform: none;
         -ms-transform: none;
             transform: none;
@@ -8265,7 +8309,7 @@ html.mm-right.mm-opening .mm-slideout {
       -webkit-transform: rotateZ(180deg);
               transform: rotateZ(180deg);
       color: #323132; }
-  .header-fixed + .interior-page > #js-open-sidebar {
+  .header-fixed ~ .interior-page > #js-open-sidebar {
     top: 80px; }
   .navbar-toggle {
     margin: 0;
@@ -8290,6 +8334,8 @@ html.mm-right.mm-opening .mm-slideout {
       width: 165px;
       padding: 5px;
       text-indent: 5px;
+      border-top-left-radius: 9px !important;
+      border-bottom-left-radius: 9px !important;
       background-color: #83868b;
       border: 2px solid #83868b;
       -webkit-transition: all 0.3s;
@@ -8300,6 +8346,8 @@ html.mm-right.mm-opening .mm-slideout {
         border-color: #00AA71; }
     .mobile-search-form .search-submit {
       -webkit-appearance: none;
+      border-top-right-radius: 9px;
+      border-bottom-right-radius: 9px;
       padding: 8px 18px;
       margin-top: -2px;
       margin-left: -10px; }

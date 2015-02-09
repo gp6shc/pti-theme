@@ -243,9 +243,12 @@ $('#js-open-sidebar').on('click', function() {
 $('#js-search-icon').click(function() {
 	if ( $(this).hasClass('fa-search') ) {
 		setTimeout( function() {
-			$('#js-search-input').focus();
+			var ffg = document.getElementById('js-search-input');
+			ffg.focus();
+			console.log("is search");
 		}, 200);
 	}else{
+		console.log("is not search");
 		$('#js-search-input').blur();
 	}
 
@@ -256,10 +259,10 @@ $('#js-search-icon').click(function() {
 $('#js-mobile-search-icon').click(function() {
 	if ( $(this).hasClass('fa-search') ) {
 		setTimeout( function() {
-			$('#js-search-input').focus();
+			$('#js-mobile-search-input').focus();
 		}, 600);
 	}else{
-		$('#js-search-input').blur();
+		$('#js-mobile-search-input').blur();
 	}
 
 	$(this).toggleClass('fa-search fa-times');

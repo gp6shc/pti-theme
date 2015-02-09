@@ -376,9 +376,11 @@
 	
 	.search-field {
 		-webkit-appearance: none;
-		width: 165px;
+		width: 160px;
 		padding: 5px;
 		text-indent: 5px;
+		border-top-left-radius: 9px;
+		border-bottom-left-radius: 9px;
 		background-color: lighten($brand-grey, 13%);
 		border: 2px solid lighten($brand-grey, 13%);
 		transition: all 0.3s;
@@ -392,9 +394,12 @@
 
 	.search-submit {
 		-webkit-appearance: none;
-		padding: 8px 18px;
+		padding: 4px 13px;
 		margin-top: -2px;
-		margin-left: -10px;
+		margin-left: -5px;
+		font-size: 1.25em;
+		border-top-right-radius: 9px;
+		border-bottom-right-radius: 9px;
 	}
 }
 

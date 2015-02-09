@@ -282,7 +282,7 @@ $screen-xs: 480px;
 		}	
 	}
 	
-	.header-fixed + .interior-page > .sidebar-wrapper {
+	.header-fixed ~ .interior-page > .sidebar-wrapper {
 		transform: none;
 		padding-top: 50px;
 	}
@@ -306,7 +306,7 @@ $screen-xs: 480px;
 		}
 	}
 	
-	.header-fixed + .interior-page > #js-open-sidebar {
+	.header-fixed ~ .interior-page > #js-open-sidebar {
 		top: 80px;
 	}
 	
@@ -333,6 +333,8 @@ $screen-xs: 480px;
 			width: 165px;
 			padding: 5px;
 			text-indent: 5px;
+			border-top-left-radius: 9px !important;
+			border-bottom-left-radius: 9px !important;
 			background-color: lighten($brand-grey, 13%);
 			border: 2px solid lighten($brand-grey, 13%);
 			transition: all 0.3s;
@@ -346,6 +348,8 @@ $screen-xs: 480px;
 		
 		.search-submit {
 			-webkit-appearance: none;
+			border-top-right-radius: 9px;
+			border-bottom-right-radius: 9px;
 			padding: 8px 18px;
 			margin-top: -2px;
 			margin-left: -10px;

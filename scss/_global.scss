@@ -151,9 +151,8 @@ section{
 	position: relative;
 	z-index: 1;
 }
-.full-width { //use as a container class to remove max-width & padding
-	max-width: 100%!important;
-	padding: 0;
+.full-width {
+	width: 100%;
 }
 .read-more, .read-more a {
 	color: $brand-green;
@@ -245,7 +244,7 @@ input {
 	
 	&:hover {
 		color: darken(white,7%);
-		background: darken($brand-green,7%);
+		background: darken($brand-green,5%);
 	}
 }
 
@@ -296,6 +295,11 @@ input {
 	font-family: $font-heading;
 	font-weight: 300;
 	font-style: italic;
+	font-size: 1.125em;
+	border: none;
+	padding: 10px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 .opacity-0.opacity-0 {
 	opacity: 0;

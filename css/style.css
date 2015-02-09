@@ -6292,7 +6292,8 @@ section {
   z-index: 1; }
 
 .full-width {
-  width: 100%; }
+  max-width: 100% !important;
+  padding: 0; }
 
 .read-more, .read-more a {
   color: #00AA71;
@@ -7029,7 +7030,7 @@ form .input-group .form-control:last-child {
       font-size: 2.8em;
       font-weight: 700;
       line-height: 1.6em;
-      color: #595759; }
+      color: #666b71; }
       .quote .phone-number a:hover {
         color: #0780E2; }
 
@@ -7689,10 +7690,22 @@ footer {
 address {
   margin: 0; }
 
-.footer-ph a {
+.address {
+  display: inline-block;
   color: white;
-  font-weight: 700;
-  display: block; }
+  padding: 5px;
+  margin: 0 -5px;
+  border-radius: 3px; }
+  .address:hover {
+    color: white;
+    background-color: #0780E2; }
+
+.footer-ph {
+  padding-top: 5px; }
+  .footer-ph a {
+    color: white;
+    font-weight: 700;
+    display: block; }
 
 /* Copyright Section, .copyright, below footer
 ================================================== */
@@ -8146,7 +8159,11 @@ html.mm-right.mm-opening .mm-slideout {
   .footer-right .row > div:nth-child(3) {
     border: none; }
   .footer-address {
-    margin-top: 30px; } }
+    margin-top: 56px; }
+  .page-intro {
+    padding: 140px 45px 45px 45px; }
+  #page-body {
+    padding: 30px; } }
 
 /* Below 850 */
 @media (max-width: 850px) {
@@ -8263,9 +8280,15 @@ html.mm-right.mm-opening .mm-slideout {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle; }
+  .interior-right-sidebar {
+    border-left: none;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px; }
   .main-content {
     width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
+    -webkit-overflow-scrolling: touch;
     -webkit-transition: all 0.6s;
             transition: all 0.6s; }
     .main-content.open {
@@ -8276,17 +8299,28 @@ html.mm-right.mm-opening .mm-slideout {
               filter: blur(3px);
       box-shadow: -3px 0px 30px 1px rgba(0, 0, 0, 0.2);
       cursor: pointer; }
+      .main-content.open ~ .sidebar-wrapper {
+        -webkit-overflow-scrolling: touch;
+        opacity: 1;
+        -webkit-transition: opacity 0.3s;
+                transition: opacity 0.3s; }
+      .main-content.open ~ #js-open-sidebar {
+        -webkit-transform: translateY(165px) rotateZ(180deg);
+                transform: translateY(165px) rotateZ(180deg);
+        color: #323132; }
   .sidebar-wrapper {
     width: 370px;
     max-height: 100%;
     overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     margin-left: 30px;
     padding-top: 140px;
     -webkit-transform: none;
         -ms-transform: none;
-            transform: none; }
+            transform: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0.6s;
+            transition: opacity 0.3s 0.6s; }
     .sidebar-wrapper::-webkit-scrollbar {
       display: none; }
   .header-fixed ~ .interior-page > .sidebar-wrapper {
@@ -8299,18 +8333,24 @@ html.mm-right.mm-opening .mm-slideout {
   #js-open-sidebar {
     display: inline-block;
     position: fixed;
-    top: 165px;
-    left: 10px;
+    width: 30px;
+    text-align: center;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateY(165px);
+        -ms-transform: translateY(165px);
+            transform: translateY(165px);
     cursor: pointer;
     color: #7f7d7f;
     -webkit-transition: all 0.6s;
             transition: all 0.6s; }
-    #js-open-sidebar.flip180 {
-      -webkit-transform: rotateZ(180deg);
-              transform: rotateZ(180deg);
-      color: #323132; }
-  .header-fixed ~ .interior-page > #js-open-sidebar {
-    top: 80px; }
+  .header-fixed ~ .interior-page #js-open-sidebar {
+    -webkit-transform: translateY(80px);
+        -ms-transform: translateY(80px);
+            transform: translateY(80px); }
+  .header-fixed ~ .interior-page .main-content.open ~ #js-open-sidebar {
+    -webkit-transform: translateY(80px) rotateZ(180deg);
+            transform: translateY(80px) rotateZ(180deg); }
   .navbar-toggle {
     margin: 0;
     padding: 38px 15px 37px 25px;

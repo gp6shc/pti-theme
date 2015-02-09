@@ -152,7 +152,8 @@ section{
 	z-index: 1;
 }
 .full-width {
-	width: 100%;
+	max-width: 100% !important;
+	padding: 0;
 }
 .read-more, .read-more a {
 	color: $brand-green;

@@ -224,14 +224,11 @@ $(document).ready(function(){
 	/*  Open Sidebar when under 768px
 /* ----------------------------------------------------------- */	
 $('#js-open-sidebar').on('click', function() {
-	$(this).toggleClass("flip180");
 	$('body, html').toggleClass("no-scroll");
 	$('.main-content').toggleClass("open");
 	
 	if ( $('.main-content').hasClass('open') ) {
 		$('.main-content').on('click', function() {
-			$(this).removeClass("flip180");
-			$('body, html').removeClass("no-scroll");
 			$('.main-content').removeClass("open");
 		});
 	}
@@ -243,12 +240,9 @@ $('#js-open-sidebar').on('click', function() {
 $('#js-search-icon').click(function() {
 	if ( $(this).hasClass('fa-search') ) {
 		setTimeout( function() {
-			var ffg = document.getElementById('js-search-input');
-			ffg.focus();
-			console.log("is search");
+			$('#js-search-input').focus();
 		}, 200);
 	}else{
-		console.log("is not search");
 		$('#js-search-input').blur();
 	}
 
@@ -270,7 +264,7 @@ $('#js-mobile-search-icon').click(function() {
 });
 
 /* ----------------------------------------------------------- */
-	/*  Blur container bg on modal open, unblur on close
+	/*  set video source on open, remove on close
 /* ----------------------------------------------------------- */
 $('#customer-video').on('shown.bs.modal', function (event) {
 	var button = $(event.relatedTarget); // Button that triggered the modal

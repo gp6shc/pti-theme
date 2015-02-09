@@ -220,7 +220,7 @@
 			font-size: 2.8em;
 			font-weight: 700;
 			line-height: 1.6em;
-			color: lighten($brand-black, 15%);
+			color: darken($brand-white, 50%);
 			
 			&:hover {
 				color: $secondary-blue;

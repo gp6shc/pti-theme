@@ -81,7 +81,13 @@ $screen-xs: 480px;
 		border: none;
 	}
 	.footer-address {
-		margin-top: 30px;
+		margin-top: 56px;
+	}
+	.page-intro {
+		padding: 140px 45px 45px 45px;
+	}
+	#page-body {
+		padding: 30px;
 	}
 }
 
@@ -252,11 +258,18 @@ $screen-xs: 480px;
 	.no-padding {
 		//padding: 20px; //add padding back on small screens
 	}
+	.interior-right-sidebar {
+		border-left: none;
+		border-top: 1px solid #eee;
+		margin-top: 15px;
+		padding-top: 15px;	
+	}
 	
 	// interior sidebar collapse
 	
 	.main-content {
 		width: calc(100% - 30px);
+		-webkit-overflow-scrolling: touch;
 		transition: all 0.6s;
 		
 		&.open {
@@ -264,6 +277,17 @@ $screen-xs: 480px;
 			filter: blur(3px);
 			box-shadow: -3px 0px 30px 1px rgba(black, 0.2);
 			cursor: pointer;
+			
+			~ .sidebar-wrapper {
+				-webkit-overflow-scrolling: touch; // enable smooth, elastic scrolling on iOS
+				opacity: 1;
+				transition: opacity 0.3s;
+			}
+			
+			~  #js-open-sidebar {
+				transform: translateY(165px) rotateZ(180deg);
+				color: $brand-black;
+			}
 		}
 	}
 	
@@ -271,11 +295,12 @@ $screen-xs: 480px;
 		width: 370px;
 		max-height: 100%;
 		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch; // enable smooth, elastic scrolling on iOS
 		overflow-x: hidden;
 		margin-left: 30px;
 		padding-top: 140px;
 		transform: none;
+		opacity: 0;
+		transition: opacity 0.3s 0.6s;
 		
 		&::-webkit-scrollbar {
 			display: none;
@@ -294,20 +319,23 @@ $screen-xs: 480px;
 	#js-open-sidebar {
 		display: inline-block;
 		position: fixed;
-		top: 165px; 
-		left: 10px;
+		width: 30px;
+		text-align: center;
+		left: 0;
+		top: 0;
+		transform: translateY(165px); 
 		cursor: pointer;
 		color: lighten($brand-black, 30%);
 		transition: all 0.6s;
 		
-		&.flip180 {
-			transform: rotateZ(180deg);
-			color: $brand-black;
-		}
 	}
 	
-	.header-fixed ~ .interior-page > #js-open-sidebar {
-		top: 80px;
+	.header-fixed ~ .interior-page #js-open-sidebar {
+		transform: translateY(80px);
+	}
+	
+	.header-fixed ~ .interior-page .main-content.open ~ #js-open-sidebar {
+		transform: translateY(80px) rotateZ(180deg);	
 	}
 	
 	.navbar-toggle {

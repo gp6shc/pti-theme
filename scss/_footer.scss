@@ -132,8 +132,22 @@ address {
 	margin: 0;
 }
 
-.footer-ph {
+.address {
+	display: inline-block;
+	color: white;
+	padding: 5px;
+	margin: 0 -5px;
+	border-radius: 3px;
 	
+	&:hover {
+		color: white;
+		background-color: $secondary-blue;
+	}
+}
+
+.footer-ph {
+	padding-top: 5px;
+		
 	a {
 		color: white;
 		font-weight: 700;

@@ -63,7 +63,7 @@ p.serif {
 	font-family: $font-body;
 }
 p.large {
-	font-size: 1.25rem;
+	font-size: 1.25em;
 }
 	
 
@@ -73,40 +73,40 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
 }
 h1{
-    font-size: 2.75rem;
+    font-size: 2.75em;
     font-weight: 400;
 }
 h2{
-    font-size: 2.375rem;
+    font-size: 2.375em;
     font-weight: 100;
 }
 h3{
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 400;
 }
 h4{
-    font-size: 1.125rem;
+    font-size: 1.125em;
     font-weight: 700;
 }
 h5{
-    font-size: 1rem;
+    font-size: 1em;
 }
 h6{
-    font-size: 0.875rem;
+    font-size: 0.875em;
 }
 .page-header {
-	font-size: 2.750rem;
+	font-size: 2.750em;
 	font-weight: 100;
 	color: $secondary-blue;
 	border: none;
 }
 .sub-head-lg {
-	font-size: 1.875rem;
+	font-size: 1.875em;
 	font-weight: 300;
 	color: $secondary-blue;
 }
 .sub-head-sm {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	font-weight: 500;
 	color: $secondary-blue;
 }
@@ -151,8 +151,8 @@ section{
 	position: relative;
 	z-index: 1;
 }
-.full-width { //use as a container class to remove max-width & padding
-	max-width: 100%!important;
+.full-width {
+	max-width: 100% !important;
 	padding: 0;
 }
 .read-more, .read-more a {
@@ -187,7 +187,7 @@ section{
 }
 .top-gap {
 	padding: 0;
-	margin-top: 121px;
+	margin-top: 140px;
 }
 .gap-80 {
 	clear: both;
@@ -245,7 +245,7 @@ input {
 	
 	&:hover {
 		color: darken(white,7%);
-		background: darken($brand-green,7%);
+		background: darken($brand-green,5%);
 	}
 }
 
@@ -296,6 +296,11 @@ input {
 	font-family: $font-heading;
 	font-weight: 300;
 	font-style: italic;
+	font-size: 1.125em;
+	border: none;
+	padding: 10px 0;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 .opacity-0.opacity-0 {
 	opacity: 0;

@@ -31,7 +31,7 @@
 
 </head>
 	
-<body class="home"> <!-- only set this class on the home page -->
+<body>
 	<div class="body-inner">
 	<!-- Header start -->
 	<header id="header" class="header" role="banner">
@@ -63,7 +63,11 @@
 				<!-- Logo start -->
 				<div class="navbar-header">
 				    <div class="mobile-search">
-					    <i class="fa fa-search"></i>
+					    <i class="fa fa-search" id="js-mobile-search-icon"></i>
+						<form role="search" method="get" class="opacity-0 mobile-search-form" id="js-mobile-search-form" action="/">
+							<input type="search" class="search-field" id="js-mobile-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+							<input type="submit" class="search-submit btn btn-default" value="Go"/>
+						</form>
 				    </div>
 				    <div class="navbar-brand">
 					    <a href="/" title="People's Trust Insurance">
@@ -355,8 +359,8 @@
 						<li class="visible-lg visible-md visible-sm search" id="js-search">
 							<i class="fa fa-search fa-2x" id="js-search-icon"></i>
 							<form role="search" method="get" class="opacity-0" id="js-search-form" action="/">
-								<input type="search" class="search-field rounded" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
-								<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
+								<input type="search" class="search-field" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+								<input type="submit" class="search-submit btn btn-default" value="Go"/>
 							</form>
 						</li>
 					</ul><!--/ Navbar-nav end -->
@@ -424,6 +428,7 @@
     		<!-- Page-Intro -->
     		<div class="page-intro">
 	    		<h1 class="page-title">About Us</h1>
+	    		<p> <img class="img-responsive full-width" src="http://placehold.it/900x150"/></p>
 	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>	
 	    	</div><!-- /#page-intro -->
 			
@@ -441,24 +446,38 @@
 	    	<!-- Page-Body -->
 			<div id="page-body">
 				<div class="row">
-					<div class="col-md-9 col-sm-9">
-						<p><img class="img-responsive" src="http://placehold.it/700x350"></p>
+					<div class="page-body col-md-9 col-sm-9">
+						<p><img class="img-responsive" src="http://placehold.it/700x350"/></p>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-						<hr>
-						<p><blockquote class="green">jfksdjfkdsl</blockquote></p>
-						<hr>
+						<blockquote class="green">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin quis lacus sit amet pretium. Donec id tortor sed justo cursus hendrerit non sed ex.”</blockquote>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-						<hr>
 					</div>
-					<div class="page-body text-center col-md-3 col-sm-3">
-						<h4 class="">Our CEO</h4>
-						<p><img class="circle center" src="http://placehold.it/150x150"></p>
+					<div class="interior-right-sidebar col-md-3 col-sm-3">
+						<h3 class="text-center">Our CEO</h3>
+						<p><img class="circle center" src="http://placehold.it/150x150"/></p>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 						<hr>
-						<h4 class="">Recognition</h4>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+						<h3>Recognition</h3>
+						<ul>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Lorem ipsum dolor sit amet</li>
+						</ul>
 					</div><!-- /.col -->
-				</div><!-- /.row -->	
+				</div><!-- /.row -->
+				<div class="text-center quote-prompt">
+					<h3>Join our family of more than<br/>135,000 Florida policyholders.</h3>
+					<form class="form-inline get-a-quote">
+						<div class="form-group">
+							<label class="sr-only">Your Zip Code</label>
+							<div class="input-group">
+								<input type="text" class="form-control grey-bg" placeholder="Your Zip Code" pattern="(\d{5}([\-]\d{4})?)" maxlength="10">
+							</div>
+						</div>
+						<button type="submit" class="btn btn-default">Go</button>
+					</form>
+				</div>	
 			</div><!-- /#page-body -->	
 	    </div><!-- /.col (.interior-page) -->
 
@@ -562,11 +581,13 @@
 						</div><!-- Row end -->
 						<!-- NESTED COLUMNS -->
 						<div class="col-md-7 col-sm-6 footer-address">
-							<address>
-								People's Trust Insurance<br/>
-								18 People's Trust Way<br/>
-								Deerfield Beach, FL 33441-6270
-							</address>
+							<a class="address" href="https://www.google.com/maps/place/People's+Trust+Insurance+Company/@26.2971767,-80.1209159,17z/data=!4m2!3m1!1s0x88d91e345cff5aaf:0x6d92172c45e7cf1c" target="_blank">
+								<address>
+									People's Trust Insurance<br/>
+									18 People's Trust Way<br/>
+									Deerfield Beach, FL 33441-6270
+								</address>
+							</a>
 						</div>
 						<div class="col-md-5 col-sm-6 footer-ph">
 							<p>Give Us a Call

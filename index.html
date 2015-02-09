@@ -63,7 +63,11 @@
 				<!-- Logo start -->
 				<div class="navbar-header">
 				    <div class="mobile-search">
-					    <i class="fa fa-search"></i>
+					    <i class="fa fa-search" id="js-mobile-search-icon"></i>
+						<form role="search" method="get" class="opacity-0 mobile-search-form" id="js-mobile-search-form" action="/">
+							<input type="search" class="search-field rounded" id="js-mobile-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+							<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
+						</form>
 				    </div>
 				    <div class="navbar-brand">
 					    <a href="/" title="People's Trust Insurance">
@@ -355,8 +359,8 @@
 						<li class="visible-lg visible-md visible-sm search" id="js-search">
 							<i class="fa fa-search fa-2x" id="js-search-icon"></i>
 							<form role="search" method="get" class="opacity-0" id="js-search-form" action="/">
-								<input type="search" class="search-field rounded" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
-								<input type="submit" class="search-submit btn btn-default rounded" value="Go"/>
+								<input type="search" class="search-field" id="js-search-input" placeholder="Search for..." value="" name="search" title="Search" />
+								<input type="submit" class="search-submit btn btn-default" value="Go"/>
 							</form>
 						</li>
 					</ul><!--/ Navbar-nav end -->
@@ -438,7 +442,7 @@
 						<div class="item main active">
 							<img src="images/pti-logo-color.svg" />
 		                    <div class="caption">
-								<h1>Simply a Better Way</h1>
+								<h1>Simply a Better Way<br/>to Insure Your Home</h1>
 							</div>
 		                </div>
 		                <!-- Slide 2 -->
@@ -499,17 +503,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 no-padding">
-					<h1>Join our family of more <br />than 135,000 policyholders.</h1>
-					<h3>Let us show you how.</h3>
-						<form class="form-inline get-a-quote">
-							<div class="form-group">
-						    	<label class="sr-only">Your Zip Code</label>
-						    	<div class="input-group">
-						    		<input type="text" class="form-control" placeholder="Your Zip Code" pattern="(\d{5}([\-]\d{4})?)" maxlength="10">
-						    	</div>
-						    </div>
-						  <button type="submit" class="btn btn-default rounded">Get a Quote</button>
-						</form>
+					<h1>Join our family of more than<br/>135,000 Florida policyholders.</h1>
+					<h3>Let us show you how:</h3>
+					<div class="phone-number"><a href="tel:1.888.364.8557">1.888.364.8557</a></div>
 				</div><!--/ .col -->
 			</div><!--/ .row -->
 		</div><!--/ .container -->
@@ -560,7 +556,7 @@
 	</section>
 
 	<!-- SECTION 4: Dual Box: RRTR & VIPGold -->	
-	<section class="row content no-padding two-panels">
+	<section class="content no-padding two-panels">
 		<div class="col-md-6">
 			<div class="push-right text-center">
 				<img class="about" src="images/ico_truck.svg" onerror="this.src='images/ico_truck.png'; this.onerror=null;" width="260" height="130">
@@ -629,7 +625,7 @@
 	</section>
 	
 	<!-- SECTION 6: Dual Boxes: Quote & Award -->	
-	<section class="row content no-padding two-panels two-panels-2">
+	<section class="content no-padding two-panels two-panels-2">
 		<div class="col-md-6">
 			<div class="push-right text-center">
 				<h2 class="title">Save Now</h2>
@@ -638,11 +634,11 @@
 				<form class="form-inline get-a-quote">
 					<div class="form-group">
 						<label class="sr-only">Your Zip Code</label>
-							<div class="input-group">
-								<input type="text" class="form-control grey-bg" placeholder="Your Zip Code" pattern="(\d{5}([\-]\d{4})?)" maxlength="10">
-							</div>
+						<div class="input-group">
+							<input type="text" class="form-control grey-bg" placeholder="Your Zip Code" pattern="(\d{5}([\-]\d{4})?)" maxlength="10">
 						</div>
-						<button type="submit" class="btn btn-default rounded">Go</button>
+					</div>
+					<button type="submit" class="btn btn-default">Go</button>
 				</form>
 			</div>	
 		</div>
@@ -915,11 +911,13 @@
 						</div><!-- Row end -->
 						<!-- NESTED COLUMNS -->
 						<div class="col-md-7 col-sm-6 footer-address">
-							<address>
-								People's Trust Insurance<br/>
-								18 People's Trust Way<br/>
-								Deerfield Beach, FL 33441-6270
-							</address>
+							<a class="address" href="https://www.google.com/maps/place/People's+Trust+Insurance+Company/@26.2971767,-80.1209159,17z/data=!4m2!3m1!1s0x88d91e345cff5aaf:0x6d92172c45e7cf1c" target="_blank">
+								<address>
+									People's Trust Insurance<br/>
+									18 People's Trust Way<br/>
+									Deerfield Beach, FL 33441-6270
+								</address>
+							</a>
 						</div>
 						<div class="col-md-5 col-sm-6 footer-ph">
 							<p>Give Us a Call

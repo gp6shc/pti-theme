@@ -17,6 +17,12 @@ $screen-xs: 480px;
 
 /* Below 1024 */
 @media (max-width: 1024px) {
+	.image-cycle {
+		height: 0;
+		padding-bottom: 50%;
+		font-size: 0.9em;
+	}
+	
 	.btn {
 		//padding: 7px 12px;
 	}
@@ -63,11 +69,25 @@ $screen-xs: 480px;
 
 /* Below 933 */
 @media (max-width: 933px) {
+	.image-cycle {
+		font-size: 0.8em;	
+	}
+	.quotable {
+		top: 10%;
+		left: 5%;	
+	}
+	
 	.footer-right .row > div:nth-child(3) {
 		border: none;
 	}
 	.footer-address {
-		margin-top: 30px;
+		margin-top: 56px;
+	}
+	.page-intro {
+		padding: 140px 45px 45px 45px;
+	}
+	#page-body {
+		padding: 30px;
 	}
 }
 
@@ -80,7 +100,9 @@ $screen-xs: 480px;
 	.nav .dropdown > a > i {
 		right: 5px;	
 	}
-	
+	.image-cycle {
+		font-size: 0.7em;
+	}
 	.branch {
 		display: none;
 	}
@@ -168,6 +190,7 @@ $screen-xs: 480px;
 			color: white;
 			font-size: 1.5em;
 			padding: 38px 25px 37px 15px;
+			cursor: pointer;
 			transition: padding 0.6s;
 		}
 	}
@@ -183,6 +206,35 @@ $screen-xs: 480px;
 	
 	nav.navbar-collapse {
 		display: none; //in favor of mobile nav
+	}
+	.image-cycle {
+		height: auto;
+		padding: 0;
+	}
+	.image-cycle .carousel-inner .main img {
+		margin: 0 auto;
+		padding-top: 15%;
+	}
+	.image-cycle .carousel-inner .item {
+		height: 0;
+		padding-bottom: calc(50% + 176px);
+	}
+	.image-cycle .carousel-inner img {
+		top: -10%;
+	}
+	.ruben img {
+		top: -20% !important;
+	}
+	.quotable.quotable.quotable {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		animation: none;
+		transition: opacity 0.6s;
+		width: 100%;
+		background: white;
+		top: auto;
+		padding: 1.8em;
 	}
 		
 	.border-left {
@@ -206,11 +258,18 @@ $screen-xs: 480px;
 	.no-padding {
 		//padding: 20px; //add padding back on small screens
 	}
+	.interior-right-sidebar {
+		border-left: none;
+		border-top: 1px solid #eee;
+		margin-top: 15px;
+		padding-top: 15px;	
+	}
 	
 	// interior sidebar collapse
 	
 	.main-content {
 		width: calc(100% - 30px);
+		-webkit-overflow-scrolling: touch;
 		transition: all 0.6s;
 		
 		&.open {
@@ -218,6 +277,17 @@ $screen-xs: 480px;
 			filter: blur(3px);
 			box-shadow: -3px 0px 30px 1px rgba(black, 0.2);
 			cursor: pointer;
+			
+			~ .sidebar-wrapper {
+				-webkit-overflow-scrolling: touch; // enable smooth, elastic scrolling on iOS
+				opacity: 1;
+				transition: opacity 0.3s;
+			}
+			
+			~  #js-open-sidebar {
+				transform: translateY(165px) rotateZ(180deg);
+				color: $brand-black;
+			}
 		}
 	}
 	
@@ -225,18 +295,19 @@ $screen-xs: 480px;
 		width: 370px;
 		max-height: 100%;
 		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch; // enable smooth, elastic scrolling on iOS
 		overflow-x: hidden;
 		margin-left: 30px;
 		padding-top: 140px;
 		transform: none;
+		opacity: 0;
+		transition: opacity 0.3s 0.6s;
 		
 		&::-webkit-scrollbar {
 			display: none;
 		}	
 	}
 	
-	.header-fixed + .interior-page > .sidebar-wrapper {
+	.header-fixed ~ .interior-page > .sidebar-wrapper {
 		transform: none;
 		padding-top: 50px;
 	}
@@ -248,20 +319,23 @@ $screen-xs: 480px;
 	#js-open-sidebar {
 		display: inline-block;
 		position: fixed;
-		top: 165px; 
-		left: 10px;
+		width: 30px;
+		text-align: center;
+		left: 0;
+		top: 0;
+		transform: translateY(165px); 
 		cursor: pointer;
 		color: lighten($brand-black, 30%);
 		transition: all 0.6s;
 		
-		&.flip180 {
-			transform: rotateZ(180deg);
-			color: $brand-black;
-		}
 	}
 	
-	.header-fixed + .interior-page > #js-open-sidebar {
-		top: 80px;
+	.header-fixed ~ .interior-page #js-open-sidebar {
+		transform: translateY(80px);
+	}
+	
+	.header-fixed ~ .interior-page .main-content.open ~ #js-open-sidebar {
+		transform: translateY(80px) rotateZ(180deg);	
 	}
 	
 	.navbar-toggle {
@@ -273,6 +347,48 @@ $screen-xs: 480px;
 			outline: none;
 		}
 	}
+	.mobile-search-form {
+		position: absolute;
+		background: rgba(white, 0.75);
+		transform: translateX(-100%);
+		margin-left: -15px;
+		padding: 5px;	
+		border-bottom-right-radius: 3px;
+		transition: all 0.6s;
+		
+		.search-field {
+			-webkit-appearance: none;
+			width: 165px;
+			padding: 5px;
+			text-indent: 5px;
+			border-top-left-radius: 9px !important;
+			border-bottom-left-radius: 9px !important;
+			background-color: lighten($brand-grey, 13%);
+			border: 2px solid lighten($brand-grey, 13%);
+			transition: all 0.3s;
+			
+			&:focus {
+				background-color: white;
+				outline: 0 none;
+				border-color: $brand-green;
+			}
+		}
+		
+		.search-submit {
+			-webkit-appearance: none;
+			border-top-right-radius: 9px;
+			border-bottom-right-radius: 9px;
+			padding: 8px 18px;
+			margin-top: -2px;
+			margin-left: -10px;
+		}
+		
+		&.opened {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
 	.header-fixed {
 		.navbar-toggle {
 			padding: 20px 15px 19px 35px;
@@ -280,6 +396,64 @@ $screen-xs: 480px;
 		.mobile-search i {
 			padding: 20px 35px 19px 15px;
 		}
+	}
+	.two-panels > div {
+		border-radius: 0;
+		
+		+ div {
+			border-radius: 0;		
+		}	
+	}
+	.carousel-1 {
+	
+		.carousel-inner {
+			margin: 0;
+		}
+
+		&.blue-tint {
+			.img-overlay {
+				background-color: transparent;
+				
+				img {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.carousel-control {
+		opacity: 0;
+	}
+	.carousel-caption {
+		position: relative;
+		left: auto;
+		right: auto;
+		padding: 0 15px 48px 15px;
+		margin-bottom: -18px;
+		background: $secondary-blue;
+		
+		h1 {
+			color: white;
+			font-weight: 100;
+			text-shadow: none;
+			font-size: 2em;
+			margin-top: 0;
+			padding-top: 0.5em;
+		}		
+	}
+	.carousel-2 .carousel-caption {
+		width: 100%;
+		border-radius: 0;
+		left: auto;
+		right: auto;
+		padding: 0 0 48px 0;
+		background: $secondary-blue;
+		
+		h1 {
+			
+		}
+	}
+	.carousel-indicators {
+		bottom: 0;
 	}
 	
 	.footer-ph, .footer-address {
@@ -307,19 +481,9 @@ $screen-xs: 480px;
 
 		> div {
 			width: 100%;
-			border-bottom-left-radius: 0;		
-			border-bottom-right-radius: 0;		
-			
-			+ div {
-				border-radius: 0 0 40px 40px / 0 0 25px 25px;
-			}
 		}
 	}
-	
-	.two-panels-2 > div{
-		border-radius: 40px 40px 0 0 / 25px 25px 0 0;	
-	}
-	
+		
 	.top-bar .call-us > span {
 		display: none;
 	}
@@ -330,6 +494,12 @@ $screen-xs: 480px;
 		left: calc(50% - 28.5px);
 		bottom: 0;
 		opacity: 1;
+	}
+	.image-cycle {
+		font-size: 0.6em;
+	}
+	.image-cycle .carousel-inner .main img {
+		width: 73%;
 	}
 }
 
@@ -342,6 +512,9 @@ $screen-xs: 480px;
 		.container {
 			justify-content: space-around;
 		}
+	}
+	.image-cycle {
+		font-size: 0.5em;
 	}
 	
 }

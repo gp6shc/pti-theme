@@ -516,5 +516,14 @@ $screen-xs: 480px;
 	.image-cycle {
 		font-size: 0.5em;
 	}
-	
+	.col-xxs-12 {
+		width: 100%;
+		
+		img {
+			width: 100%;
+		}
+	}
+	.page-intro {
+		padding: 140px 15px 25px 15px;
+	}
 }

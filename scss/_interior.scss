@@ -11,7 +11,6 @@
 }	
 
 .interior-page-top {
-	padding-top: 140px; 
 	padding-bottom: 0;
 	background: $secondary-blue;
 	
@@ -41,7 +40,7 @@
 
 .page-intro {
 	background-color: $secondary-blue;
-	padding: 140px 75px 75px 75px;
+	padding: 140px 75px 30px 75px;
 	color: white;
 	
 	h1 {
@@ -244,36 +243,25 @@
 ================================================== */
 section.team {
 	
-	.row{
-		padding-top: 20px;
+	a {
+		display: block;
 	}
 	
 	img {
-	    -webkit-filter: grayscale(100%);
-	    -webkit-transition: .5s ease-in-out;
-	    -moz-filter: grayscale(100%); 
-	    -moz-transition: .5s ease-in-out;
-	    -o-filter: grayscale(100%); 
-	    -o-transition: .5s ease-in-out;
+	    filter: grayscale(100%);
+		transition: all .5s ease-in-out;
 	  
 	    &:hover {
-		    -webkit-filter: grayscale(0%);
-		    -webkit-transition: .5s ease-in-out;
-		    -moz-filter: grayscale(0%);
-		    -moz-transition: .5s ease-in-out;
-		    -o-filter: grayscale(0%);
-	        -o-transition: .5s ease-in-out;  
+		    filter: grayscale(0%);
 	    }
-	  
 	}
 	
 	h3 {
-		
-		span {
-			color: $brand-black;
-		}
+		margin-bottom: 0;
 	}
 	
-		
+	h4 {
+		color: $brand-black;
+	}
 }
 

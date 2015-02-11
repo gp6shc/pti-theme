@@ -201,7 +201,7 @@
 		font-weight: 300;
 		font-size: 2em;
 		line-height: 36px;
-		padding-bottom: 10px
+		padding-bottom: 10px;
 	}
 	
 	form {
@@ -213,9 +213,6 @@
 	}
 
 	.phone-number {
-		height: 4.5em;
-		margin-top: 0.6em;
-		background: url("../images/highlight.svg") no-repeat center;
 		
 		a {
 			font-size: 2.8em;
@@ -228,6 +225,11 @@
 			}
 		}
 	}
+}
+.phone-number {
+	height: 4.5em;
+	margin-top: 0.6em;
+	background: url("../images/highlight.svg") no-repeat center;
 }
 
 .get-a-quote {

@@ -7029,10 +7029,13 @@ form .input-group .form-control:last-child {
     font-size: 2em;
     line-height: 36px;
     padding-bottom: 10px; }
+  .quote form {
+    margin: 25px 0; }
   .quote .indention {
     height: 40px; }
   .quote .phone-number {
     height: 4.5em;
+    margin-top: 0.6em;
     background: url("../images/highlight.svg") no-repeat center; }
     .quote .phone-number a {
       font-size: 2.8em;

@@ -6429,6 +6429,14 @@ form .input-group .form-control:last-child {
   border: 2px solid #00AA71;
   background: white; }
 
+::-moz-selection {
+  background-color: #319EF7;
+  color: white; }
+
+::selection {
+  background-color: #319EF7;
+  color: white; }
+
 /* Header 
 ================================================== */
 .header {
@@ -7422,6 +7430,16 @@ form .input-group .form-control:last-child {
   .page-intro p {
     font-size: 1.125em; }
 
+.page-hero {
+  margin-top: 140px;
+  background-color: #EAEBEC; }
+  .page-hero + .row {
+    margin-top: -25px;
+    position: relative; }
+
+.constrain {
+  max-width: 1000px; }
+
 .indention {
   background: white;
   height: 30px;
@@ -7467,6 +7485,7 @@ form .input-group .form-control:last-child {
 
 .sidebar-wrapper {
   position: fixed;
+  max-width: 370px;
   z-index: 1;
   -webkit-transform: translateY(140px);
       -ms-transform: translateY(140px);
@@ -7532,16 +7551,16 @@ form .input-group .form-control:last-child {
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
 
-.reviews img {
+.extra img {
   width: 100%;
   height: auto;
   margin-bottom: 1em; }
-.reviews h3 {
+.extra h3 {
   color: #005CBA; }
-.reviews h5 {
+.extra h5 {
   color: #005CBA;
   text-transform: uppercase; }
-.reviews h6 {
+.extra h6 {
   text-transform: uppercase; }
 
 /* Specific Interior Page Styles
@@ -8112,6 +8131,14 @@ html.mm-right.mm-opening .mm-slideout {
 /* Responsive Styles
 ================================================== */
 /* 1600 and above */
+@media (min-width: 1600px) {
+  .constrain {
+    max-width: 1300px; }
+    .constrain > img {
+      width: 1300px; }
+  .carousel-1 img, .carousel-2 img {
+    width: 100%; } }
+
 /* 1200 and above */
 /* Below 1024 */
 @media (max-width: 1024px) {

@@ -7,7 +7,18 @@ $screen-xs: 480px;
 
 /* 1600 and above */
 @media (min-width: 1600px) {
-
+	.constrain {
+		max-width: 1300px;
+		
+		> img {
+			width: 1300px;
+		}
+	}
+	.carousel-1, .carousel-2{
+		img {
+			width: 100%;
+		}
+	}
 }
 
 /* 1200 and above */

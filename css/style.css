@@ -7737,7 +7737,7 @@ address {
     background-color: #0780E2; }
 
 .footer-ph {
-  padding: 5px 0 0 5px; }
+  padding: 5px 0 0 15px; }
   .footer-ph a {
     color: white;
     font-weight: 700;
@@ -7747,7 +7747,7 @@ address {
 ================================================== */
 .copyright {
   position: relative;
-  padding: 30px 0 45px 0;
+  padding: 0 0 45px 0;
   color: white;
   background: #005CBA;
   z-index: 9; }
@@ -8505,8 +8505,8 @@ html.mm-right.mm-opening .mm-slideout {
       width: 100%; }
   .top-bar .call-us > span {
     display: none; }
-  .copyright .row {
-    margin: 0 0 40px 0; }
+  .legal {
+    margin-bottom: 40px; }
   #top {
     left: -webkit-calc(50% - 29px);
     left: calc(50% - 29px);

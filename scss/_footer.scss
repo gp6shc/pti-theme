@@ -48,47 +48,58 @@ footer {
 }
 
 .footer-social {
-	margin-top: 60px;
+	padding-top: 25px;
+	clear: both;
+}
+
+@function makelongshadow($color) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 25 {
+    $val: #{$val}, #{$i}px #{$i}px #{$color};
+  }
+  @return $val;
 }
 
 .footer-social a {
-	width: 42px;
-	height: 44px;
-	line-height: 42px;
+	width: 44px;
+	height: 46px;
 	margin-right: 10px;
 	text-align: center;
 	color: white;
 	display: inline-block;
 	padding: 8px;
+	overflow: hidden;
 	
 	&.fb {
 		background: $facebook;
-	
-		&:hover {
-			background: darken($facebook,7%);
-		}
+		text-shadow: makelongshadow(darken($facebook, 10%));
+
 	}
 	&.gp {
 		background: $gplus;
-		
-		&:hover {
-			background: darken($gplus,7%);
-		}
+		text-shadow: makelongshadow(darken($gplus, 10%));
+
 	}
 	&.tw {
 		background: $twitter;
-		
-		&:hover {
-			background: darken($twitter,7%);
-		}
+		text-shadow: makelongshadow(darken($twitter, 10%));
+
 	}
 	&.yt {
-	background: $youtube;
-		
-		&:hover {
-			background: darken($youtube,7%);
-		}
+		background: $youtube;
+		text-shadow: makelongshadow(darken($youtube, 10%));
+
 	}
+	
+	&:hover {
+		animation: bounceY 0.18s ease-in-out;
+		box-shadow: 0px 0px 9px rgba(black, 0.4);
+	}
+}
+
+@keyframes bounceY {
+	0%, 100% { transform: translateY(0) }
+	50% 	 { transform: translateY(-4px) }
 }
 
 .social-2 {
@@ -100,12 +111,12 @@ footer {
 	border-left: 2px solid darken($primary-blue, 7%);
 }
 
-
 .footer-right {
+
 	> .row {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		flex-wrap: wrap;
 		
 		> div {
@@ -120,12 +131,13 @@ footer {
 		&:before, &:after {
 			display: none;
 		}
+		
 	}
 }
 
 .footer-address, .footer-ph {
-	margin-top: 95px;
-	padding-right: 0;
+	margin-top: 15px;
+	padding: 0;
 }
 
 address {
@@ -146,7 +158,7 @@ address {
 }
 
 .footer-ph {
-	padding-top: 5px;
+	padding: 5px 0 0 15px;
 		
 	a {
 		color: white;
@@ -159,17 +171,21 @@ address {
 ================================================== */
 .copyright {
 	position: relative;
-	padding: 30px 0 45px 0; //remove bottom padding
+	padding: 0 0 45px 0; //remove bottom padding
 	color: white;
 	background: $primary-blue;
 	z-index: 9;
+		
+	p {
+		font-size: 0.825em;
+	}
 	
 	.row {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		margin: 0 45px;
+		margin: 0 15px;
 		
 		div, a {
 			margin: 0 15px 15px 15px;
@@ -192,12 +208,24 @@ address {
         opacity: 1;
     }
         
-    a i {
+    a {
+	    display: block;
 	    background: $secondary-blue;
 	    color: white;
 	    line-height: .7;
 	    padding: 10px 13px;
+	    text-align: center;
 	    
+	    &:before {
+		    content: "\f106";
+		    font-family: FontAwesome;
+		    font-size: 3em;
+		    display: block;
+		    line-height: 0;
+			margin-bottom: 18px;
+			margin-top: 10px;
+		    
+	    }
     }
     
 }

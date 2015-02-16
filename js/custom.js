@@ -216,7 +216,8 @@ $(document).ready(function(){
 	$('#transition-timer-carousel-opaque').carousel({
 		interval: 5400,
 		pause: "false",
-		keyboard: false
+		keyboard: false,
+		wrap: false
 	});
 });
 	

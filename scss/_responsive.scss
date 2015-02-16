@@ -7,7 +7,18 @@ $screen-xs: 480px;
 
 /* 1600 and above */
 @media (min-width: 1600px) {
-
+	.constrain {
+		max-width: 1300px;
+		
+		> img {
+			width: 1300px;
+		}
+	}
+	.carousel-1, .carousel-2{
+		img {
+			width: 100%;
+		}
+	}
 }
 
 /* 1200 and above */
@@ -80,9 +91,6 @@ $screen-xs: 480px;
 	.footer-right .row > div:nth-child(3) {
 		border: none;
 	}
-	.footer-address {
-		margin-top: 56px;
-	}
 	.page-intro {
 		padding: 140px 45px 45px 45px;
 	}
@@ -140,18 +148,7 @@ $screen-xs: 480px;
 	.container {
 		max-width: 1060px; //override bootstrap default
 	}
-	.bbb {
-	
-	}
-	.demotech {
-		margin-top: -10px;
-	}
-	.enterprise {
-		margin-top: -17px;
-	}
-	.faia {
-		margin-left: 10px;
-	}
+
 	.ceo img {
 		display: none;		
 	}
@@ -468,9 +465,13 @@ $screen-xs: 480px;
 	.footer-right {
 		margin-top: 30px;
 	}
-	.footer-left > p {
-		padding-bottom: 20px;
+	.footer-left {
 		border-bottom: 2px solid darken($primary-blue, 7%);
+		
+		> p {
+			padding-bottom: 20px;
+			border-bottom: 2px solid darken($primary-blue, 7%);
+		}
 	}
 }
 
@@ -487,12 +488,13 @@ $screen-xs: 480px;
 	.top-bar .call-us > span {
 		display: none;
 	}
-	.copyright .row {
-		margin: 0 0 40px 0;
+	.legal {
+		margin-bottom: 40px;
 	}
 	#top {
-		left: calc(50% - 28.5px);
+		left: calc(50% - 29px);
 		bottom: 0;
+		right: auto;
 		opacity: 1;
 	}
 	.image-cycle {
@@ -516,5 +518,14 @@ $screen-xs: 480px;
 	.image-cycle {
 		font-size: 0.5em;
 	}
-	
+	.col-xxs-12 {
+		width: 100%;
+		
+		img {
+			width: 100%;
+		}
+	}
+	.page-intro {
+		padding: 140px 15px 25px 15px;
+	}
 }

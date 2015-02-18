@@ -6721,7 +6721,7 @@ form .input-group .form-control:last-child {
     position: absolute;
     top: 3px;
     right: 0;
-    width: 218px;
+    white-space: nowrap;
     margin-top: 2px;
     opacity: 1;
     z-index: 2;
@@ -6744,10 +6744,10 @@ form .input-group .form-control:last-child {
       border-color: #00AA71; }
   .search .search-submit {
     -webkit-appearance: none;
-    padding: 4px 13px;
+    padding: 5px 13px 6px;
     margin-top: -2px;
     margin-left: -5px;
-    font-size: 1.25em;
+    font-size: 1.1em;
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px; }
 
@@ -7434,16 +7434,6 @@ form .input-group .form-control:last-child {
   .page-intro p {
     font-size: 1.125em; }
 
-.page-hero {
-  margin-top: 140px;
-  background-color: #EAEBEC; }
-  .page-hero + .row {
-    margin-top: -25px;
-    position: relative; }
-
-.constrain {
-  max-width: 1000px; }
-
 .indention {
   background: white;
   height: 30px;
@@ -7489,7 +7479,6 @@ form .input-group .form-control:last-child {
 
 .sidebar-wrapper {
   position: fixed;
-  max-width: 370px;
   z-index: 1;
   -webkit-transform: translateY(140px);
       -ms-transform: translateY(140px);
@@ -7555,16 +7544,16 @@ form .input-group .form-control:last-child {
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
 
-.extra img {
+.reviews img {
   width: 100%;
   height: auto;
   margin-bottom: 1em; }
-.extra h3 {
+.reviews h3 {
   color: #005CBA; }
-.extra h5 {
+.reviews h5 {
   color: #005CBA;
   text-transform: uppercase; }
-.extra h6 {
+.reviews h6 {
   text-transform: uppercase; }
 
 /* Specific Interior Page Styles
@@ -8187,10 +8176,6 @@ html.mm-right.mm-opening .mm-slideout {
   .search .search-field {
     width: 114px;
     text-indent: 3px; }
-  .search .search-submit {
-    padding: 8px 12px; }
-  .search form {
-    width: 155px; }
   .search-slide {
     -webkit-transform: translateX(-147px);
         -ms-transform: translateX(-147px);

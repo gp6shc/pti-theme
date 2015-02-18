@@ -6833,6 +6833,10 @@ form .input-group .form-control:last-child {
       font-weight: 100;
       font-size: 4em;
       line-height: 1; }
+  .image-cycle .caption-delayed {
+    -webkit-animation: scale-fade-in-delay-2 6.3s;
+            animation: scale-fade-in-delay-2 6.3s;
+    margin: -2.3em 0 0 0; }
 
 .quotable {
   position: absolute;
@@ -6932,6 +6936,32 @@ form .input-group .form-control:last-child {
     opacity: 0; }
 
   25% {
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@-webkit-keyframes scale-fade-in-delay-2 {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; }
+  65% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes scale-fade-in-delay-2 {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; }
+
+  65% {
     opacity: 0; }
 
   100% {

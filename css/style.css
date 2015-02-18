@@ -7657,8 +7657,10 @@ footer {
   font-size: 1.3em; }
 
 .footer-social {
-  padding-top: 25px;
-  clear: both; }
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  margin: 7px 0; }
 
 .footer-social a {
   width: 44px;
@@ -7702,10 +7704,6 @@ footer {
   50% {
     -webkit-transform: translateY(-4px);
             transform: translateY(-4px); } }
-
-.social-2 {
-  text-align: center;
-  margin: 20px 0; }
 
 .border-left {
   border-left: 2px solid #004a96; }
@@ -7793,6 +7791,12 @@ address {
       margin: 0 15px 15px 15px; }
     .copyright .row:before, .copyright .row:after {
       display: none; }
+
+.demotech {
+  height: 65px; }
+
+.legal a {
+  color: white; }
 
 #top {
   position: absolute;

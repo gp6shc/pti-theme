@@ -212,7 +212,27 @@ $(document).ready(function(){
 		pause: "false",
 		keyboard: false
 	});
+	
 });
+
+function loadHeroCycle() {
+	$('#first-slide').addClass('active');
+	$('#transition-timer-carousel-opaque').carousel({
+		interval: 5400,
+		pause: "false",
+		keyboard: false,
+		wrap: false
+	});	
+}
+
+function checkIfTypekitReady() {
+	if ( $('html').hasClass('wf-active') ) {
+		loadHeroCycle();
+	}else{
+		setTimeout(checkIfTypekitReady, 20);
+	}
+}
+checkIfTypekitReady();
 	
 /* ----------------------------------------------------------- */
 	/*  Open Sidebar when under 768px

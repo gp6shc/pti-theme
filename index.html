@@ -1,43 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 	<meta charset="utf-8">
 	<title>People's Trust Insurance</title>
+	
 	<!-- Adobe Typekit Font Load
 	================================================== -->
 	<script src="//use.typekit.net/duo1dxn.js"></script>
-	<script type="text/javascript">
-		// Only for home page:
-		try {
-			Typekit.load({
-				active: function() {
-					$(document).ready(function(){
-						$('#first-slide').addClass('active');
-						
-						$('#transition-timer-carousel-opaque').carousel({
-							interval: 5400,
-							pause: "false",
-							keyboard: false,
-							wrap: false
-						});
-					});
-				},
-				inactive: function() {
-					$(document).ready(function(){
-						$('#first-slide').addClass('active');
-						
-						$('#transition-timer-carousel-opaque').carousel({
-							interval: 5400,
-							pause: "false",
-							keyboard: false,
-							wrap: false
-						});
-					});
-				}
-			})
-		} catch(e) {}
-	</script>
+	<script type="text/javascript"> try{Typekit.load();}catch(e){}</script>
+	
 	<meta name="keywords" content="">
 	<meta name="description" content="">	
 	<meta name="author" content="">
@@ -479,7 +450,7 @@
 		                <div class="item bryan">
 		                    <img src="images/Bryan.jpg" />
 		                    <div class="quotable">
-			                    <p>"It's emotional for people after a loss, they just want there lives back."</p>
+			                    <p>"It's emotional for people after a loss, they just want their lives back."</p>
 			                    <h4>Bryan<br/><span>Senior Claims Adjustor</span></h4>
 		                    </div>
 						</div>
@@ -510,7 +481,10 @@
 						<div class="item main">
 							<img src="images/pti-logo-color.svg" />
 		                    <div class="caption">
-								<h1>Simply a Better Way<br/>to Insure Your Florida Home</h1>
+								<h1>Simply a Better Way</h1>
+							</div>
+							<div class="caption caption-delayed">
+								<h1>to Insure Your Florida Home</h1>
 							</div>
 		                </div>
 		            </div><!--/ .carousel-inner end -->
@@ -1007,7 +981,7 @@
 
 	<!-- Scripts
 	================================================== -->
-	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/min/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/min/custom.min.js"></script>
 	<script type="text/javascript" src="js/min/jquery.mmenu.min.js"></script>

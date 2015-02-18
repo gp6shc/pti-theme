@@ -367,7 +367,7 @@
 		position: absolute;
 		top: 3px;
 		right: 0;
-		width: 218px;
+		white-space: nowrap;
 		margin-top: 2px;
 		opacity: 1;
 		z-index: 2;
@@ -394,10 +394,10 @@
 
 	.search-submit {
 		-webkit-appearance: none;
-		padding: 4px 13px;
+		padding: 5px 13px 6px;
 		margin-top: -2px;
 		margin-left: -5px;
-		font-size: 1.25em;
+		font-size: 1.1em;
 		border-top-right-radius: 9px;
 		border-bottom-right-radius: 9px;
 	}

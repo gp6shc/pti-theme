@@ -91,6 +91,10 @@
 			line-height: 1;
 		}
 	}
+	.caption-delayed {
+		animation: scale-fade-in-delay-2 6.3s;
+		margin: -2.3em 0 0 0;
+	}
 }
 
 .quotable {
@@ -161,6 +165,12 @@
 @keyframes scale-fade-in-delay {
 	0% 	 {transform: scale(0.5); opacity: 0}
 	25%  {opacity: 0}
+	100% {transform: scale(1); opacity: 1}
+}
+
+@keyframes scale-fade-in-delay-2 {
+	0% 	 {transform: scale(0.5); opacity: 0}
+	65%  {opacity: 0}
 	100% {transform: scale(1); opacity: 1}
 }
 

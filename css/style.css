@@ -6721,7 +6721,7 @@ form .input-group .form-control:last-child {
     position: absolute;
     top: 3px;
     right: 0;
-    width: 218px;
+    white-space: nowrap;
     margin-top: 2px;
     opacity: 1;
     z-index: 2;
@@ -6744,10 +6744,10 @@ form .input-group .form-control:last-child {
       border-color: #00AA71; }
   .search .search-submit {
     -webkit-appearance: none;
-    padding: 4px 13px;
+    padding: 5px 13px 6px;
     margin-top: -2px;
     margin-left: -5px;
-    font-size: 1.25em;
+    font-size: 1.1em;
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px; }
 
@@ -6833,6 +6833,10 @@ form .input-group .form-control:last-child {
       font-weight: 100;
       font-size: 4em;
       line-height: 1; }
+  .image-cycle .caption-delayed {
+    -webkit-animation: scale-fade-in-delay-2 6.3s;
+            animation: scale-fade-in-delay-2 6.3s;
+    margin: -2.3em 0 0 0; }
 
 .quotable {
   position: absolute;
@@ -6932,6 +6936,32 @@ form .input-group .form-control:last-child {
     opacity: 0; }
 
   25% {
+    opacity: 0; }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@-webkit-keyframes scale-fade-in-delay-2 {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; }
+  65% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; } }
+
+@keyframes scale-fade-in-delay-2 {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0; }
+
+  65% {
     opacity: 0; }
 
   100% {
@@ -7434,16 +7464,6 @@ form .input-group .form-control:last-child {
   .page-intro p {
     font-size: 1.125em; }
 
-.page-hero {
-  margin-top: 140px;
-  background-color: #EAEBEC; }
-  .page-hero + .row {
-    margin-top: -25px;
-    position: relative; }
-
-.constrain {
-  max-width: 1000px; }
-
 .indention {
   background: white;
   height: 30px;
@@ -7489,7 +7509,6 @@ form .input-group .form-control:last-child {
 
 .sidebar-wrapper {
   position: fixed;
-  max-width: 370px;
   z-index: 1;
   -webkit-transform: translateY(140px);
       -ms-transform: translateY(140px);
@@ -7555,16 +7574,16 @@ form .input-group .form-control:last-child {
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
 
-.extra img {
+.reviews img {
   width: 100%;
   height: auto;
   margin-bottom: 1em; }
-.extra h3 {
+.reviews h3 {
   color: #005CBA; }
-.extra h5 {
+.reviews h5 {
   color: #005CBA;
   text-transform: uppercase; }
-.extra h6 {
+.reviews h6 {
   text-transform: uppercase; }
 
 /* Specific Interior Page Styles
@@ -7638,8 +7657,10 @@ footer {
   font-size: 1.3em; }
 
 .footer-social {
-  padding-top: 25px;
-  clear: both; }
+  clear: both;
+  text-align: center;
+  padding-top: 20px;
+  margin: 7px 0; }
 
 .footer-social a {
   width: 44px;
@@ -7683,10 +7704,6 @@ footer {
   50% {
     -webkit-transform: translateY(-4px);
             transform: translateY(-4px); } }
-
-.social-2 {
-  text-align: center;
-  margin: 20px 0; }
 
 .border-left {
   border-left: 2px solid #004a96; }
@@ -7774,6 +7791,12 @@ address {
       margin: 0 15px 15px 15px; }
     .copyright .row:before, .copyright .row:after {
       display: none; }
+
+.demotech {
+  height: 65px; }
+
+.legal a {
+  color: white; }
 
 #top {
   position: absolute;
@@ -8187,10 +8210,6 @@ html.mm-right.mm-opening .mm-slideout {
   .search .search-field {
     width: 114px;
     text-indent: 3px; }
-  .search .search-submit {
-    padding: 8px 12px; }
-  .search form {
-    width: 155px; }
   .search-slide {
     -webkit-transform: translateX(-147px);
         -ms-transform: translateX(-147px);

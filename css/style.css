@@ -6710,8 +6710,6 @@ form .input-group .form-control:last-child {
     font-size: 1.5em;
     margin-top: 5px;
     padding: 7px 10px 5px 10px;
-    background-image: -webkit-linear-gradient(left, transparent, #005CBA 90%);
-    background-image: linear-gradient(to right, transparent, #005CBA 90%);
     cursor: pointer;
     -webkit-transition: -webkit-transform 0.5s;
             transition: transform 0.5s;

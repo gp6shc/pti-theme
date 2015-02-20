@@ -130,17 +130,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/images\/Demotech.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 8377,
-		"inputAbbreviatedPath": "\/images\/Demotech.png",
-		"outputAbbreviatedPath": "\/images\/Demotech.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/images\/Enterprise.png": {
 		"fileType": 32768,
 		"ignore": 0,

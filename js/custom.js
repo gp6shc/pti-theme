@@ -209,15 +209,15 @@ $(document).ready(function() {
 function loadHeroCycle() {
 	$('#first-slide').addClass('active');
 	$('#transition-timer-carousel-opaque').carousel({
+		wrap: false,
 		interval: 5400,
 		pause: "false",
-		keyboard: false,
-		wrap: false
+		keyboard: false
 	});	
 }
 
 function checkIfTypekitReady() {
-	if ( $('html').hasClass('wf-active') ) {
+	if ( $('html').hasClass('wf-active') || $('html').hasClass('wf-inactive') ) {
 		loadHeroCycle();
 	}else{
 		setTimeout(checkIfTypekitReady, 20);

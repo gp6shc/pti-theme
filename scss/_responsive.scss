@@ -159,10 +159,11 @@ $screen-xs: 480px;
 
 /* Below 768: nav collapse */
 @media (max-width: $screen-sm) {
+	
+	h1 {
+		font-size: 2.4em;
+	}
 	.top-bar {
-		.sign-in .agent {
-			display: none;
-		}
 		.text-sizing {
 			display: none;
 		}
@@ -227,7 +228,24 @@ $screen-xs: 480px;
 		top: auto;
 		padding: 1.8em;
 	}
-		
+	.image-cycle .caption-delayed {
+		margin-top: -3.2em;
+	}
+	.about:not(img) {
+		padding-bottom: 45px;
+	}
+	.quote {
+		font-size: 0.85rem;
+	}
+	.customers blockquote {
+		font-size: 1.25em;
+	}
+	.ceo {
+		font-size: 0.9rem;
+	}
+	.carousel-2 > div > div > div:nth-child(3) {
+		display: none;
+	}
 	.border-left {
 		border: none;
 	}
@@ -468,6 +486,14 @@ $screen-xs: 480px;
 		}
 	}
 }
+@media (max-width: 767px) {
+	.about, .emergency {
+		.row {
+			max-width: 460px;
+			margin: auto;
+		}
+	}	
+}
 
 /* 605 and below */
 @media (max-width: 605px) {
@@ -478,7 +504,6 @@ $screen-xs: 480px;
 			width: 100%;
 		}
 	}
-		
 	.top-bar .call-us > span {
 		display: none;
 	}
@@ -502,7 +527,10 @@ $screen-xs: 480px;
 /* 480 and below */
 @media (max-width: $screen-xs) {
 	.top-bar {
-		.sign-in .policy {
+		.call-us > span {
+			display: none;
+		}	
+		.sign-in .agent {
 			display: none;
 		}
 		.container {
@@ -511,6 +539,20 @@ $screen-xs: 480px;
 	}
 	.image-cycle {
 		font-size: 0.5em;
+		.caption {
+			padding: 0 25px;
+		}
+		.caption-delayed {
+			margin-top: -5em;	
+		}
+	}
+	.quote {
+		font-size: 0.7em;
+		
+		h3 {
+			margin: 0;
+			padding: 0;
+		}
 	}
 	.col-xxs-12 {
 		width: 100%;

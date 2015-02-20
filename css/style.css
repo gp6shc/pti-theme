@@ -7228,10 +7228,10 @@ form .input-group .form-control:last-child {
     font-weight: 100; }
   .customers p {
     padding-bottom: 20px; }
-  .customers h4 {
+  .customers h5 {
     color: white;
     text-transform: uppercase; }
-    .customers h4 span {
+    .customers h5 span {
       color: #7eedff; }
   .customers blockquote {
     width: 80%;
@@ -8278,8 +8278,8 @@ html.mm-right.mm-opening .mm-slideout {
 
 /* Below 768: nav collapse */
 @media (max-width: 768px) {
-  .top-bar .sign-in .agent {
-    display: none; }
+  h1 {
+    font-size: 2.4em; }
   .top-bar .text-sizing {
     display: none; }
   .navbar-header {
@@ -8336,6 +8336,18 @@ html.mm-right.mm-opening .mm-slideout {
     background: white;
     top: auto;
     padding: 1.8em; }
+  .image-cycle .caption-delayed {
+    margin-top: -3.2em; }
+  .about:not(img) {
+    padding-bottom: 45px; }
+  .quote {
+    font-size: 0.85rem; }
+  .customers blockquote {
+    font-size: 1.25em; }
+  .ceo {
+    font-size: 0.9rem; }
+  .carousel-2 > div > div > div:nth-child(3) {
+    display: none; }
   .border-left {
     border: none; }
   .footer-insurance-choices {
@@ -8516,6 +8528,11 @@ html.mm-right.mm-opening .mm-slideout {
       padding-bottom: 20px;
       border-bottom: 2px solid #004a96; } }
 
+@media (max-width: 767px) {
+  .about .row, .emergency .row {
+    max-width: 460px;
+    margin: auto; } }
+
 /* 605 and below */
 @media (max-width: 605px) {
   .two-panels {
@@ -8539,7 +8556,9 @@ html.mm-right.mm-opening .mm-slideout {
 
 /* 480 and below */
 @media (max-width: 480px) {
-  .top-bar .sign-in .policy {
+  .top-bar .call-us > span {
+    display: none; }
+  .top-bar .sign-in .agent {
     display: none; }
   .top-bar .container {
     -webkit-justify-content: space-around;
@@ -8547,6 +8566,15 @@ html.mm-right.mm-opening .mm-slideout {
             justify-content: space-around; }
   .image-cycle {
     font-size: 0.5em; }
+    .image-cycle .caption {
+      padding: 0 25px; }
+    .image-cycle .caption-delayed {
+      margin-top: -5em; }
+  .quote {
+    font-size: 0.7em; }
+    .quote h3 {
+      margin: 0;
+      padding: 0; }
   .col-xxs-12 {
     width: 100%; }
     .col-xxs-12 img {

@@ -312,6 +312,7 @@ form {
 	.input-group .form-control:last-child {
 		border: 2px solid $brand-green;
 		background: white;
+		box-sizing: content-box;
 	}	
 	
 }

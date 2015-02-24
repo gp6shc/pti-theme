@@ -1,0 +1,53 @@
+
+/* ---- isotope ---- */
+
+.isotope {
+  border: 1px solid #333;
+}
+
+/* clear fix */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .element-item ---- */
+
+.element-item {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  /*padding: 10px;*/
+  color: #262524;
+}
+
+.element-item.width2 { width: 310px; }
+.element-item.height2 { height: 310px; }
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.element-item .symbol {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 42px;
+  font-weight: bold;
+  color: white;
+}
+
+.rainbowed > *:nth-child(10n+0) { background: hsl(   0, 100%, 50%); }
+.rainbowed > *:nth-child(10n+1) { background: hsl(  36, 100%, 50%); }
+.rainbowed > *:nth-child(10n+2) { background: hsl(  72, 100%, 50%); }
+.rainbowed > *:nth-child(10n+3) { background: hsl( 108, 100%, 50%); }
+.rainbowed > *:nth-child(10n+4) { background: hsl( 144, 100%, 50%); }
+.rainbowed > *:nth-child(10n+5) { background: hsl( 180, 100%, 50%); }
+.rainbowed > *:nth-child(10n+6) { background: hsl( 216, 100%, 50%); }
+.rainbowed > *:nth-child(10n+7) { background: hsl( 252, 100%, 50%); }
+.rainbowed > *:nth-child(10n+8) { background: hsl( 288, 100%, 50%); }
+.rainbowed > *:nth-child(10n+9) { background: hsl( 324, 100%, 50%); }

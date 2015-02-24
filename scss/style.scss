@@ -39,6 +39,7 @@ $text-blue-dark: darken($primary-blue, 18%);
 @import "header"; //header + nav
 @import "home"; //homepage, broken out into sections
 @import "interior"; //interior pages
+@import "reviews"; //reviews page
 @import "footer";
 // Responsive
 @import "jquery.mmenu";

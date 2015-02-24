@@ -1,8 +1,8 @@
 
-/* ---- isotope ---- */
+/* isotope */
 
 .isotope {
-  border: 1px solid #333;
+  max-width: 100%;
 }
 
 /* clear fix */
@@ -12,20 +12,33 @@
   clear: both;
 }
 
-/* ---- .element-item ---- */
+.isotope,
+.isotope .isotope-item {
+	transition-duration: 0.7s;
+}
+ 
+.isotope {
+	 transition-property: height, width;
+}
+ 
+.isotope .isotope-item {
+	 transition-property: transform, opacity;
+}
+
+/*  .element-item */
 
 .element-item {
   position: relative;
   float: left;
-  width: 150px;
-  height: 150px;
+  width: 156px;
+  height: 156px;
   margin: 5px;
   /*padding: 10px;*/
   color: #262524;
 }
 
-.element-item.width2 { width: 310px; }
-.element-item.height2 { height: 310px; }
+.element-item.width2 { width: 322px; }
+.element-item.height2 { height: 322px; }
 
 .element-item > * {
   margin: 0;
@@ -36,7 +49,7 @@
   position: absolute;
   left: 10px;
   top: 0px;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
   color: white;
 }

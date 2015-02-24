@@ -7629,9 +7629,9 @@ section.team {
   section.team h4 {
     color: #323132; }
 
-/* ---- isotope ---- */
+/* isotope */
 .isotope {
-  border: 1px solid #333; }
+  max-width: 100%; }
 
 /* clear fix */
 .isotope:after {
@@ -7639,21 +7639,33 @@ section.team {
   display: block;
   clear: both; }
 
-/* ---- .element-item ---- */
+.isotope, .isotope .isotope-item {
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s; }
+
+.isotope {
+  -webkit-transition-property: height, width;
+          transition-property: height, width; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+          transition-property: transform, opacity; }
+
+/*  .element-item */
 .element-item {
   position: relative;
   float: left;
-  width: 150px;
-  height: 150px;
+  width: 156px;
+  height: 156px;
   margin: 5px;
   /*padding: 10px;*/
   color: #262524; }
 
 .element-item.width2 {
-  width: 310px; }
+  width: 322px; }
 
 .element-item.height2 {
-  height: 310px; }
+  height: 322px; }
 
 .element-item > * {
   margin: 0;
@@ -7663,7 +7675,7 @@ section.team {
   position: absolute;
   left: 10px;
   top: 0px;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: bold;
   color: white; }
 

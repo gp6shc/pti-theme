@@ -467,31 +467,31 @@
 
 
 
-<div class="review-item photo" data-filter="item photo">
+<div class="inline review-item photo" data-filter="item photo">
 	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="shinybox-isotope" title="Photo Title">
 		<img src="http://swipebox.brutaldesign.com/assets/nuke_thumb.jpg">
 	</a>
 </div>
   
-<div class="review-item message width2 height2" data-filter="item message">
-	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="shinybox-isotope" title="Nuke">
+<div class="inline review-item message width2 height2" data-filter="item message">
+	<a href="#message" class="shinybox-isotope" title="">
 		<p>message</p>
 	</a>
 </div>
   
-<div class="review-item social width2">
+<div class="inline review-item social width2">
 	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="shinybox-isotope" title="Nuke">
 		<p>tweet</p>
 	</a>
 </div>
   
-<div class="review-item photo">
+<div class="inline review-item photo">
 	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="shinybox-isotope" title="Nuke">
 		<img src="http://swipebox.brutaldesign.com/assets/nuke_thumb.jpg">
 	</a>
 </div>
   
-<div class="review-item photo">
+<div class="inline review-item photo">
 	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="shinybox-isotope" title="Nuke">
 		<img src="http://swipebox.brutaldesign.com/assets/nuke_thumb.jpg">
 	</a>
@@ -675,7 +675,7 @@
 	<script type="text/javascript" src="js/min/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/min/custom.min.js"></script>
 	<script type="text/javascript" src="js/min/jquery.mmenu.min.js"></script>
-	<script type="text/javascript" src="js/shinybox.js"></script>
+	<script type="text/javascript" src="js/colorbox.js"></script>
 	<script type="text/javascript" src="js/isotope.js"></script>
 	<!-- Reviews JS -->
 	<script type="text/javascript">
@@ -691,21 +691,15 @@
 	});
 	  
 	/* ShinyBox Gallery */
-	$(".shinybox").shinybox();
-	
-	/* + Vid Support */
-	$(".shinybox-video").shinybox();
-		var shinyboxInstance = $(".shinybox-isotope:not(.isotope-hidden .shinybox-isotope)").shinybox();
-		var $container = $('#grid');
-		var optionFilter = $('#filter'),
-			optionFilterLinks = optionFilter.find('a');
-			optionFilterLinks.attr('href', '#');
-	
-			onAnimationCompleted = function(){
-				shinyboxInstance.refresh();
-			}; 
-	
-	});
+	var $group = $('.inline').colorbox({inline:true, rel:'inline', href: function(){
+            return $(this).children();
+      }});
+      $('#open').on('click', function(e){
+            e.preventDefault();
+            $group.eq(0).click();
+      });
+      
+      });	
 	
 	</script>
 	

@@ -7629,6 +7629,21 @@ section.team {
   section.team h4 {
     color: #323132; }
 
+.filter-container ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right; }
+  .filter-container ul li {
+    display: inline; }
+  .filter-container ul li a {
+    padding: 10px;
+    color: #005CBA;
+    font-weight: 700; }
+    .filter-container ul li a:hover {
+      background: #005CBA;
+      color: white; }
+
 /* isotope */
 .isotope {
   max-width: 100%; }

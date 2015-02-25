@@ -1,4 +1,32 @@
 
+.filter-container {
+	
+	ul {
+		margin: 20px 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: right;
+		
+		li {
+			display: inline;
+		}
+		
+		li a {
+			padding: 10px;
+			
+			color: $primary-blue;
+			font-weight: 700;
+			
+			&:hover {
+				background: $primary-blue;
+				color: white;	
+			}
+			
+		}
+	}
+	
+}
+
 /* isotope */
 
 .isotope {

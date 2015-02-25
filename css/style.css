@@ -7660,6 +7660,8 @@ section.team {
   margin: 5px;
   /*padding: 10px;*/
   color: #262524; }
+  .review-item img {
+    height: 100%; }
 
 .review-item.width2 {
   width: 322px; }

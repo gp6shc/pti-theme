@@ -427,8 +427,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
-					<h1>Customer Reviews</h1>
-					<h1 class="page-title">In Our Customers' Words</h1>
+					<h1 class="text-center">Customer Reviews</h1>
+					<h1 class="page-title text-center">In Our Customers' Words</h1>
 
 
 
@@ -459,7 +459,7 @@
 
 
 	
-<div id="isotope" class="isotope">
+<div id="isotope" class="isotope centered">
 
 
 <div class="review-item photo">
@@ -537,6 +537,12 @@
 	</a>
 </div>
   
+<div class="review-item social width2">
+	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="" title="">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
+	</a>
+</div>
+
 <div class="review-item social width2">
 	<a href="http://swipebox.brutaldesign.com/assets/full/nuke.jpg" class="" title="">
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
@@ -679,18 +685,18 @@
 	
 	<!-- Reviews JS -->
 	<script type="text/javascript">
-	$(document).ready(function() {
+	$(window).load(function() {
 	  /* Isotope init */
 	   var $container = $('#isotope').isotope({
 	   
 	      //set options
 	      itemSelector: '.review-item',
 	      layoutMode: 'masonry',
-	      /*masonry: {
-	        columnWidth: 150
-	      }*/
-	      
-	 });
+	      masonry: {
+		      columnWidth: 332
+		      /*gutterWidth: 5*/
+		  } 
+	   });
 	 
 	 
 	 /* Filtering */  

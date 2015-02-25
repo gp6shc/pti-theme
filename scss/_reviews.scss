@@ -2,10 +2,10 @@
 .filter-container {
 	
 	ul {
-		margin: 20px 0;
+		margin: 30px 0;
 		padding: 0;
 		list-style-type: none;
-		text-align: right;
+		text-align: center;
 		
 		li {
 			display: inline;
@@ -34,7 +34,8 @@
 
 /* isotope */
 .isotope {
-  max-width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
 }
 
 /* clear fix */
@@ -43,6 +44,7 @@
   display: block;
   clear: both;
 }
+.centered { margin: 0 auto; }
 
 .isotope,
 .isotope .isotope-item {
@@ -73,7 +75,8 @@
   height: 156px;
   margin: 5px;
   /*padding: 10px;*/
-  color: #262524;
+  color: white;
+  opacity: 0.9;
   
   img {
 	  height: 100%;

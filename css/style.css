@@ -7631,10 +7631,10 @@ section.team {
 
 /* filters list */
 .filter-container ul {
-  margin: 20px 0;
+  margin: 30px 0;
   padding: 0;
   list-style-type: none;
-  text-align: right; }
+  text-align: center; }
   .filter-container ul li {
     display: inline; }
   .filter-container ul li a {
@@ -7650,13 +7650,17 @@ section.team {
 
 /* isotope */
 .isotope {
-  max-width: 100%; }
+  margin-bottom: 30px;
+  border: 1px solid #ccc; }
 
 /* clear fix */
 .isotope:after {
   content: '';
   display: block;
   clear: both; }
+
+.centered {
+  margin: 0 auto; }
 
 .isotope, .isotope .isotope-item {
   -webkit-transition-duration: 0.7s;
@@ -7686,7 +7690,8 @@ section.team {
   height: 156px;
   margin: 5px;
   /*padding: 10px;*/
-  color: #262524; }
+  color: white;
+  opacity: 0.9; }
   .review-item img {
     height: 100%; }
 

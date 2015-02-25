@@ -1,4 +1,4 @@
-
+/* filters list */
 .filter-container {
 	
 	ul {
@@ -21,14 +21,18 @@
 				background: $primary-blue;
 				color: white;	
 			}
-			
 		}
+		
+		.is-checked {
+			background: $primary-blue;;
+			color: white
+		}
+		
 	}
 	
 }
 
 /* isotope */
-
 .isotope {
   max-width: 100%;
 }
@@ -52,9 +56,16 @@
 .isotope .isotope-item {
 	 transition-property: transform, opacity;
 }
+/* These styles ensure that hidden items will not interfere with interactions. */
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
 
-/*  .element-item */
-
+/* .review-item */
 .review-item {
   position: relative;
   float: left;

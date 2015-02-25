@@ -7629,6 +7629,7 @@ section.team {
   section.team h4 {
     color: #323132; }
 
+/* filters list */
 .filter-container ul {
   margin: 20px 0;
   padding: 0;
@@ -7643,6 +7644,9 @@ section.team {
     .filter-container ul li a:hover {
       background: #005CBA;
       color: white; }
+  .filter-container ul .is-checked {
+    background: #005CBA;
+    color: white; }
 
 /* isotope */
 .isotope {
@@ -7666,7 +7670,15 @@ section.team {
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity; }
 
-/*  .element-item */
+/* These styles ensure that hidden items will not interfere with interactions. */
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/* .review-item */
 .review-item {
   position: relative;
   float: left;

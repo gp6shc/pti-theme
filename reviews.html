@@ -453,7 +453,7 @@
 		<li><a href="#" data-filter=".social"><i class="fa fa-laptop"></i> Social Media</a></li>
 		<li><a href="#" data-filter=".photo"><i class="fa fa-camera"></i> Photos</a></li>
 		<li><a href="#" data-filter=".message"><i class="fa fa-file-o"></i> Messages</a></li>
-		<li><a href="#" data-filter=".review-item"><i class="fa fa-th"></i> All</a></li>
+		<li><a href="#" data-filter=".review-item" class="is-checked"><i class="fa fa-th"></i> All</a></li>
 	</ul>
 </div>
 
@@ -695,7 +695,13 @@
 	 $(document).on('click', '#filters a', function() {
 	     var selector = $(this).attr('data-filter');
 		   $('#isotope').isotope({ filter: selector });
+		   return false;
      });
+     /* Remove / Add .is-checked when clicked */
+      $('.filter-container ul li a').on('click', function () {
+        $('.filter-container ul li a').removeClass('is-checked');
+          $(this).addClass('is-checked');
+	  });
 
 
 

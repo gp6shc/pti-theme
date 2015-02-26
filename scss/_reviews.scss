@@ -124,13 +124,33 @@
 	.review-item.height2 {
 		height: 156px;
 	}
+	.review-item p {
+		left: 5px!important;
+		top: 2px!important;
+	}
 	
 }	
+@media (max-width: 700px) {
+
+	.filter-container ul li a {
+		padding: 5px 8px;
+	}	
+	
+}
 
 @media (max-width: 480px) {
 
 	.review-item.width2{
 		width: 156px;
+	}
+	
+	.filter-container ul li {
+		line-height: 36px;
+		float: left;
+	}	
+	
+	.filter-container ul li a {
+		padding: 2px 12px;
 	}
 	
 }

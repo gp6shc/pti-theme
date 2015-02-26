@@ -7813,7 +7813,7 @@ section.team {
   height: auto; }
 
 #cboxContent {
-  margin: 25% auto;
+  margin: 35% auto;
   background: transparent;
   color: white; }
   #cboxContent p {
@@ -7830,7 +7830,9 @@ section.team {
 
 #cboxLoadedContent {
   background: transparent;
-  padding: 0 120px; }
+  padding: 0 120px;
+  overflow: hidden !important;
+  height: auto !important; }
 
 #cboxTitle {
   position: absolute;
@@ -7847,15 +7849,6 @@ section.team {
 #cboxLoadingGraphic {
   background: url("../images/loading.gif") no-repeat center center; }
 
-/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  width: auto;
-  background: none; }
-
 /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
 #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
   outline: 0; }
@@ -7868,7 +7861,7 @@ section.team {
 
 #cboxPrevious {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 5px;
   margin-top: -32px;
   padding: 20px;
@@ -7879,7 +7872,7 @@ section.team {
 
 #cboxNext {
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 5px;
   margin-top: -32px;
   padding: 20px;
@@ -7890,7 +7883,7 @@ section.team {
 
 #cboxClose {
   position: absolute;
-  top: 5px;
+  top: -80px;
   right: 5px;
   display: block;
   padding: 20px;

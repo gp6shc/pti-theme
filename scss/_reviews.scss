@@ -150,11 +150,11 @@
 
 #colorbox {
   outline: 0;
-  min-height: 100%;
+  height: auto;
 }
 
 #cboxContent {
-  margin-top: 20px;
+  margin: 25% auto;
   background: transparent;
   color: white;
   
@@ -177,6 +177,7 @@
 
 #cboxLoadedContent {
   background: transparent;
+  padding: 0 120px;
 }
 
 #cboxTitle {

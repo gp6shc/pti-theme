@@ -36,7 +36,6 @@
 
 /* isotope */
 .isotope {
-  max-width: 100%;
   transition-property: height, width;
 }
 
@@ -48,6 +47,7 @@
 }
 .centered { 
   margin: 30px auto; 
+  max-width: 100%;
 }
 
 .isotope .isotope-item {
@@ -116,6 +116,24 @@
 .isotope > .video:nth-child(3n-2) { background: $primary-blue; }
 .isotope > .video:nth-child(3n-1) { background: $brand-green; }
 .isotope > .video:nth-child(3n) { background: $brand-grey; }
+
+
+/* responsive tweaks, add to responsive.scss when done */
+@media (max-width: 850px) {
+
+	.review-item.height2 {
+		height: 156px;
+	}
+	
+}	
+
+@media (max-width: 480px) {
+
+	.review-item.width2{
+		width: 156px;
+	}
+	
+}
 
 
 

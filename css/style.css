@@ -7650,7 +7650,6 @@ section.team {
 
 /* isotope */
 .isotope {
-  max-width: 100%;
   -webkit-transition-property: height, width;
           transition-property: height, width; }
 
@@ -7661,7 +7660,8 @@ section.team {
   clear: both; }
 
 .centered {
-  margin: 30px auto; }
+  margin: 30px auto;
+  max-width: 100%; }
 
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
@@ -7734,6 +7734,15 @@ section.team {
 
 .isotope > .video:nth-child(3n) {
   background: #626569; }
+
+/* responsive tweaks, add to responsive.scss when done */
+@media (max-width: 850px) {
+  .review-item.height2 {
+    height: 156px; } }
+
+@media (max-width: 480px) {
+  .review-item.width2 {
+    width: 156px; } }
 
 /*
     Colorbox Core Style:

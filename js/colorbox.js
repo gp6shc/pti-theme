@@ -58,10 +58,10 @@
 		retinaSuffix: '@2x.$1',
 
 		// internationalization
-		current: "image {current} of {total}",
-		previous: "previous",
-		next: "next",
-		close: "close",
+		current: "Review: {current} of {total}",
+		previous: "",
+		next: "",
+		close: "",
 		xhrError: "This content failed to load.",
 		imgError: "This image failed to load.",
 
@@ -449,13 +449,13 @@
 			$content = $tag(div, "Content").append(
 				$title = $tag(div, "Title"),
 				$current = $tag(div, "Current"),
-				$prev = $('<button type="button"/>').attr({id:prefix+'Previous'}),
-				$next = $('<button type="button"/>').attr({id:prefix+'Next'}),
+				$prev = $('<i class="fa fa-chevron-left"></i>').attr({id:prefix+'Previous'}),
+				$next = $('<i class="fa fa-chevron-right"></i>').attr({id:prefix+'Next'}),
 				$slideshow = $tag('button', "Slideshow"),
 				$loadingOverlay
 			);
 
-			$close = $('<button type="button"/>').attr({id:prefix+'Close'});
+			$close = $('<i class="fa fa-times"></i>').attr({id:prefix+'Close'});
 
 			$wrap.append( // The 3x3 Grid that makes up Colorbox
 				$tag(div).append(

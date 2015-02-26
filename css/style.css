@@ -7650,7 +7650,9 @@ section.team {
 
 /* isotope */
 .isotope {
-  max-width: 100%; }
+  max-width: 100%;
+  -webkit-transition-property: height, width;
+          transition-property: height, width; }
 
 /* clear fix */
 .isotope:after {
@@ -7661,13 +7663,13 @@ section.team {
 .centered {
   margin: 30px auto; }
 
-.isotope, .isotope .isotope-item {
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s; }
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+          transition-property: transform, opacity; }
 
-.isotope {
-  -webkit-transition-property: height, width, opacity;
-          transition-property: height, width, opacity; }
+.isotope, .isotope .isotope-item {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
 
 /* These styles ensure that hidden items will not interfere with interactions. */
 .isotope-item {
@@ -7706,7 +7708,6 @@ section.team {
   top: 10px;
   color: white; }
 
-/* for testing purposes */
 .isotope > .message:nth-child(3n-2) {
   background: #005CBA; }
 
@@ -7865,53 +7866,43 @@ section.team {
   right: 90px;
   color: white; }
 
-#cboxPrevious:before {
+#cboxPrevious {
   position: absolute;
   top: 50%;
   left: 5px;
   margin-top: -32px;
-  font-family: FontAwesome;
-  content: "\f053";
-  color: white;
-  font-size: 36px;
+  padding: 20px;
+  font-size: 20px;
   background: transparent;
   border: 2px solid white;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 42px;
-  display: block;
-  height: 62px;
-  width: 62px;
-  text-align: center; }
+  border-radius: 50%; }
 
-#cboxNext:after {
+#cboxNext {
   position: absolute;
   top: 50%;
   right: 5px;
   margin-top: -32px;
-  font-family: FontAwesome;
-  content: "\f054";
-  color: white;
-  font-size: 36px;
+  padding: 20px;
+  font-size: 20px;
   background: transparent;
   border: 2px solid white;
-  padding: 0;
-  border-radius: 50%;
-  font-size: 42px;
-  display: block;
-  height: 62px;
-  width: 62px;
-  text-align: center; }
+  border-radius: 50%; }
 
 #cboxClose {
   position: absolute;
   top: 5px;
   right: 5px;
   display: block;
-  background: url("../images/controls.png") no-repeat top center;
-  width: 38px;
-  height: 19px;
-  text-indent: -9999px; }
+  padding: 20px;
+  font-size: 20px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%; }
+
+#cboxPrevious:hover, #cboxNext:hover, #cboxClose:hover {
+  border: 2px solid #005CBA;
+  color: #005CBA;
+  opacity: 0.8; }
 
 /* Footer Styles
 ================================================== */

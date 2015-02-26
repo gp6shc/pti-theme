@@ -32,9 +32,12 @@
 	
 }
 
+
+
 /* isotope */
 .isotope {
   max-width: 100%;
+  transition-property: height, width;
 }
 
 /* clear fix */
@@ -44,19 +47,18 @@
   clear: both;
 }
 .centered { 
-	margin: 30px auto; 
+  margin: 30px auto; 
+}
+
+.isotope .isotope-item {
+  transition-property: transform, opacity;
 }
 
 .isotope,
 .isotope .isotope-item {
-	transition-duration: 0.7s;
-
+   transition-duration: 0.5s;
 }
  
-.isotope {
-	 transition-property: height, width, opacity;
-
-}
  
 /* These styles ensure that hidden items will not interfere with interactions. */
 .isotope-item {
@@ -103,7 +105,6 @@
   color: white;
 }
 
-/* for testing purposes */
 .isotope > .message:nth-child(3n-2) { background: $primary-blue; }
 .isotope > .message:nth-child(3n-1) { background: $brand-green; }
 .isotope > .message:nth-child(3n) { background: $brand-grey; }
@@ -115,8 +116,6 @@
 .isotope > .video:nth-child(3n-2) { background: $primary-blue; }
 .isotope > .video:nth-child(3n-1) { background: $brand-green; }
 .isotope > .video:nth-child(3n) { background: $brand-grey; }
-
-
 
 
 
@@ -220,63 +219,49 @@
   color: white;
 }
 
-#cboxPrevious {
-	
-	&:before {
-	    position: absolute;
-	    top: 50%;
-	    left: 5px;
-	    margin-top: -32px;
-	    font-family: FontAwesome;
-	    content: "\f053";
-	    color: white;
-	    font-size: 36px;
-		background: transparent;
-		border: 2px solid white;
-		padding: 0;
-        border-radius: 50%;
-        font-size: 42px;
-        display: block;
-        height: 62px;
-        width: 62px;
-        text-align: center;
-	}
-	
+#cboxPrevious{
+	position: absolute; 
+	top: 50%; 
+	left: 5px; 
+	margin-top: -32px;
+	padding: 20px;
+	font-size: 20px;
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 50%;
 }
-	
-#cboxNext {
-	
-	&:after {
-	    position: absolute;
-	    top: 50%;
-	    right: 5px;
-	    margin-top: -32px;
-	    font-family: FontAwesome;
-	    content: "\f054";
-	    color: white;
-	    font-size: 36px;
-		background: transparent;
-		border: 2px solid white;
-		padding: 0;
-        border-radius: 50%;
-        font-size: 42px;
-        display: block;
-        height: 62px;
-        width: 62px;
-        text-align: center;
-	}
-	
+ 
+#cboxNext{
+	position: absolute; 
+	top: 50%; 
+	right: 5px; 
+	margin-top: -32px;
+	padding: 20px;
+	font-size: 20px;
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 50%;
 }
-
 
 #cboxClose {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  display: block;
-  background: url("../images/controls.png") no-repeat top center;
-  width: 38px;
-  height: 19px;
-  text-indent: -9999px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    padding: 20px;
+	font-size: 20px;
+	background: transparent;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+#cboxPrevious, #cboxNext, #cboxClose {
+
+	&:hover {
+		border: 2px solid $primary-blue;
+		color: $primary-blue;
+		opacity: 0.8;
+	}
+		
 }
 

@@ -508,13 +508,13 @@
 </div>
   
 <div class="review-item video width2 height2">
-	<a href="https://www.youtube.com/embed/6ShL-mwnE7w?rel=0&amp;showinfo=0" class="youtube">
+	<a href="http://www.youtube.com/embed/VOJyrQa_WR4&rel=0" class="youtube">
 		<p>video</p>
 	</a>
 </div>
   
 <div class="review-item social width2">
-	<a href="https://placeimg.com/640/480/animals/grayscale" class="" title="">
+	<a href="https://placeimg.com/640/480/nature/grayscale" class="" title="">
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
 	</a>
 </div>
@@ -526,31 +526,31 @@
 </div>
 
 <div class="review-item photo">
-	<a href="https://placeimg.com/640/480/animals/grayscale" class="" title="">
+	<a href="https://placeimg.com/640/480/nature/grayscale" class="" title="">
 		<img src="https://placeimg.com/640/480/animals/grayscale">
 	</a>
 </div>
   
 <div class="review-item photo">
-	<a href="https://placeimg.com/640/480/animals/grayscale" class="" title="">
+	<a href="https://placeimg.com/640/480/arch/grayscale" class="" title="">
 		<img src="https://placeimg.com/640/480/animals/grayscale">
 	</a>
 </div>
   
 <div class="review-item social width2">
-	<a href="https://placeimg.com/640/480/animals/grayscale" class="" title="">
+	<a href="https://placeimg.com/640/480/tech/grayscale" class="" title="">
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
 	</a>
 </div>
 
 <div class="review-item social width2">
-	<a href="https://placeimg.com/640/480/animals/grayscale" class="" title="">
+	<a href="https://placeimg.com/640/480/people/grayscale" class="" title="">
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
 	</a>
 </div>
 
 <div class="review-item social width2">
-	<a href="https://placeimg.com/640/480/animals/grayscale" class="" title="">
+	<a href="https://placeimg.com/640/480/arch/grayscale" class="" title="">
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat.</p>
 	</a>
 </div>
@@ -691,13 +691,14 @@
 	   
 	      //set options
 	      itemSelector: '.review-item',
+	      transformsEnabled: false,
 	      layoutMode: 'masonry',
 	      masonry: {
-		   /* columnWidth: 156 */
+		   /* columnWidth: 322, */
 		   /* gutterWidth: 5 */
 		  } 
 	   });
-	 
+	   
 	 
 	 /* Filtering */  
 	 $(document).on('click', '#filters a', function() {
@@ -714,6 +715,7 @@
 
 
 	/* ColorBox Gallery */
+	$(document).ready(function() {
 	var $group = $('.review-item').colorbox({inline:true, rel:'inline', href: function(){
             return $(this).children();
       }});
@@ -721,7 +723,13 @@
             e.preventDefault();
             $group.eq(0).click();
       });
-      
+
+      /* Assigning Colorbox event to item classes */
+	  $(".video").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+	  $(".message").colorbox({inline:true, width:"80%", height:"auto"});
+	  $(".social").colorbox({inline:true, width:"80%", height:"auto"});
+	  
+	}); 
       
     });	
 	

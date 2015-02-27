@@ -5,18 +5,14 @@
 .home {
 	background-color: $brand-white;
 	
-	&::before{
-		content: '';
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		background-image: linear-gradient(to bottom,
-										$secondary-blue,
-										$secondary-blue 60%,
-										$brand-white 60%,
-										$brand-white 100% );
-	}
+}
+
+.gradient-contain {
+	position: fixed;
+	top: 0;
+	height: 60%;
+	width: 100%;
+	background-color: $secondary-blue;
 }
 
 /* Section 1: .image-cycle
@@ -68,7 +64,8 @@
 			img {
 				display: block;
 				position: static;
-				margin: 10% auto 0 auto;	
+				margin: 0 auto;	
+				padding-top: 10%;
 				animation: scale-fade-in 4.7s;
 			}
 		}
@@ -84,9 +81,9 @@
 		animation: scale-fade-in-delay 4.7s;
 		
 		h1 {
-			color: $text-blue-dark;
+			color: $primary-blue;
 			text-shadow: none;
-			font-weight: 100;
+			font-weight: 700;
 			font-size: 4em;
 			line-height: 1;
 		}
@@ -254,7 +251,7 @@
 		font-size: 1.25em;
 		width: 170px;
 		text-align: center;
-		padding: 19px 10px;
+		padding: 2px 0;
 		border: 2px solid white;
 		box-shadow: none;
 		border-top-left-radius: 9px !important;
@@ -292,6 +289,7 @@
 .about {
 	background: white;
 	font-size: 1rem;
+	margin-bottom: -1px;
 	
 	h2 {
 		color: $primary-blue;
@@ -301,21 +299,41 @@
 }
 
 .branch {
-	height: 137px;
 	background: transparent;
+	height: 137px;
+	margin-top: -1px;
 	font-size: 0; // remove space between inline-block elements
 	
 	svg {
-		display: inline-block;
+		display: block;
 		margin: auto;
+		position: relative;
+		z-index: 1;
+	}
+	
+	.small-svg {
+		display: none;
 	}
 	
 	&::before, &::after {
 		content: "";
-		display: inline-block;
-		width: calc( (100% - 740px)/2);
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: 0;
+		width: 25%; //fallback
+		width: calc( (100% - 738px)/2);
 		height: 137px;
 		background-color: white;		
+	}
+	
+	&::before {
+		float: left;
+		left: 0;
+	}
+	&::after {
+		float: right;
+		right: 0;
 	}
 }
 
@@ -327,6 +345,7 @@
 	font-size: 1rem;
 	width: 100%;
 	margin: 0;
+	margin-top: -1px;
 	z-index: 2;
 	
 	h2 {
@@ -400,6 +419,7 @@
 		text-shadow: none;
 		position: absolute;
 		top: 50%;
+		left: 50%;
 		transform: translate(-50%,-50%);
 	}		
 	
@@ -550,6 +570,10 @@
 	a:hover .overlay {
     	transform: scale(1.5);
 	}
+	
+	img {
+		width: 100%;
+	}
 }
 
 
@@ -613,6 +637,7 @@
 		z-index: 1;
 		left: 0;
 		right: 0;
+		margin-top: -1px;
 		
 		.indention {
 			margin: 0;
@@ -633,7 +658,6 @@
 			}
 		}
 	}
-	
 	
 	.carousel-caption {
 		width: 50%;

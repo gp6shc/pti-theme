@@ -377,11 +377,10 @@
 	.search-field {
 		-webkit-appearance: none;
 		width: 160px;
-		padding: 5px;
-		text-indent: 5px;
+		border-radius: 0;
 		border-top-left-radius: 9px;
 		border-bottom-left-radius: 9px;
-		background-color: lighten($brand-grey, 13%);
+		background-color: darken($brand-white, 5%);
 		border: 2px solid lighten($brand-grey, 13%);
 		transition: all 0.3s;
 		
@@ -394,17 +393,15 @@
 
 	.search-submit {
 		-webkit-appearance: none;
-		padding: 5px 13px 6px;
-		margin-top: -2px;
+		padding: 7px 12px;
 		margin-left: -5px;
-		font-size: 1.1em;
 		border-top-right-radius: 9px;
 		border-bottom-right-radius: 9px;
 	}
 }
 
 .search-slide {
-	transform: translateX(-212px);
+	transform: translateX(-200px);
 }
 
 .mobile-nav-wrapper {

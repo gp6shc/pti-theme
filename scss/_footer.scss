@@ -113,11 +113,14 @@ footer {
 	> .row {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: top;
 		flex-wrap: wrap;
 		
 		> div {
-			flex: 1 1 150px;
+			flex: 0 1 auto;
+			width: 33%;
+			min-width: 160px;
+			max-width: 230px;
 			padding: 0 15px;
 			margin-bottom: 15px;
 			

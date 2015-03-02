@@ -7130,10 +7130,9 @@ form .input-group .form-control:last-child {
   background: transparent;
   height: 137px;
   margin-top: -1px;
-  font-size: 0; }
+  text-align: center; }
   .branch svg {
-    display: block;
-    margin: auto;
+    display: inline-block;
     position: relative;
     z-index: 1; }
   .branch .small-svg {

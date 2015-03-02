@@ -313,11 +313,10 @@
 	background: transparent;
 	height: 137px;
 	margin-top: -1px;
-	font-size: 0; // remove space between inline-block elements
+	text-align: center;
 	
 	svg {
-		display: block;
-		margin: auto;
+		display: inline-block;
 		position: relative;
 		z-index: 1;
 	}

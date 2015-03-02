@@ -10,9 +10,20 @@
 .gradient-contain {
 	position: fixed;
 	top: 0;
-	height: 60%;
+	height: 80%;
 	width: 100%;
 	background-color: $secondary-blue;
+	
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -25%;
+		display: block;
+		height: 50%;
+		width: 100%;
+		border-radius: 50%;
+		background-color: $brand-white;
+	}
 }
 
 /* Section 1: .image-cycle

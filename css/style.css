@@ -6766,9 +6766,18 @@ form .input-group .form-control:last-child {
 .gradient-contain {
   position: fixed;
   top: 0;
-  height: 60%;
+  height: 80%;
   width: 100%;
   background-color: #0780E2; }
+  .gradient-contain::after {
+    content: "";
+    position: absolute;
+    bottom: -25%;
+    display: block;
+    height: 50%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #EAEBEC; }
 
 /* Section 1: .image-cycle
 ================================================== */

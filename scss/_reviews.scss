@@ -32,11 +32,10 @@
 	
 }
 
-
-
 /* isotope */
 .isotope {
   transition-property: height, width;
+  
 }
 
 /* clear fix */
@@ -71,18 +70,49 @@
 
 /* .review-item */
 .review-item {
-  position: relative;
-  float: left;
-  width: 156px;
-  height: 156px;
-  margin: 5px;
-  padding: 0;
-  color: white;
-  opacity: 0.9;
-  
-  img {
-	  height: 100%;
-  }
+	position: relative;
+	float: left;
+	width: 156px;
+	height: 156px;
+	margin: 5px;
+	padding: 0;
+	overflow: hidden;
+	color: white;
+	opacity: 0.9;
+	
+	a {
+		display: block;
+		height: 100%;
+	}
+	
+	&::before {
+		position: absolute;
+		display: block;
+		pointer-events: none;
+		text-align: center;
+		font-family: FontAwesome;
+		font-size: 1.5em;
+		top: 0;
+		left: 0;
+		padding: 7px;
+		color: white;
+		z-index: 1;
+		line-height: 1;
+	}
+	
+	&.photo::before {
+		content: "\f030";
+	}
+	&.social::before {
+		content: "\f109";
+	}
+	&.message::before {
+		content: "\f016";
+	}
+	&.video::before {
+		content: "\f03d";
+		background-color: rgba($primary-blue, 0.8);
+	}
 }
 
 .review-item.width2 { 
@@ -93,16 +123,47 @@
 	
 }
 
-.review-item > * {
-  margin: 0;
-  padding: 0;
+.review-item:not(.photo) {
+	a {
+		padding: 25px 15px 20px 40px;
+	}
+	
+	h3 {
+		color: white;
+		font-weight: 700;
+		margin-top: 0;
+	}
+	
+	p {
+		color: white;
+	}
 }
 
-.review-item p {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  color: white;
+.review-item.photo {
+	
+	a {
+		position: relative;
+		width: 156px;
+		height: 156px;
+		overflow: hidden;
+	}
+	
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 100%;
+		width: auto;
+		max-width: none;
+		margin: 0;
+		transform: translate(-50%,-50%);
+		filter: grayscale(100%);
+		transition: all 0.4s;
+		
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
 }
 
 .isotope > .message:nth-child(3n-2) { background: $primary-blue; }

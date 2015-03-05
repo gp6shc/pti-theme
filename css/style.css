@@ -7620,6 +7620,15 @@ section.team {
   section.team h4 {
     color: #323132; }
 
+.reviews h1 {
+  color: #005CBA;
+  font-weight: 100;
+  margin-bottom: 0; }
+.reviews .page-title {
+  font-size: 3em;
+  font-weight: 700;
+  margin-top: 0; }
+
 /* filters list */
 .filter-container ul {
   margin: 30px 0;
@@ -7678,6 +7687,7 @@ section.team {
   height: 156px;
   margin: 5px;
   padding: 0;
+  font-family: Georgia, Helvetica, Arial;
   overflow: hidden;
   color: white;
   opacity: 0.9; }
@@ -7706,6 +7716,8 @@ section.team {
   .review-item.video::before {
     content: "\f03d";
     background-color: rgba(0, 92, 186, 0.8); }
+  .review-item .full-content {
+    display: none; }
 
 .review-item.width2 {
   width: 322px; }
@@ -7713,21 +7725,29 @@ section.team {
 .review-item.height2 {
   height: 322px; }
 
-.review-item:not(.photo) a {
+.review-item:not(.photo):not(.video) a {
   padding: 25px 15px 20px 40px; }
-.review-item:not(.photo) h3 {
+.review-item:not(.photo):not(.video) h3 {
   color: white;
   font-weight: 700;
   margin-top: 0; }
-.review-item:not(.photo) p {
-  color: white; }
+.review-item:not(.photo):not(.video) h5 {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.8px;
+  margin: 0 0 8px;
+  text-transform: lowercase; }
+.review-item:not(.photo):not(.video) p {
+  color: white;
+  margin: 0; }
 
-.review-item.photo a {
+.review-item.photo a, .review-item.video a {
   position: relative;
-  width: 156px;
-  height: 156px;
+  width: 100%;
+  height: 100%;
   overflow: hidden; }
-.review-item.photo img {
+.review-item.photo img, .review-item.video img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -7742,7 +7762,7 @@ section.team {
           filter: grayscale(100%);
   -webkit-transition: all 0.4s;
           transition: all 0.4s; }
-  .review-item.photo img:hover {
+  .review-item.photo img:hover, .review-item.video img:hover {
     -webkit-filter: grayscale(0);
             filter: grayscale(0); }
 
@@ -7802,8 +7822,7 @@ section.team {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9999;
-  overflow: hidden; }
+  z-index: 9999; }
 
 #cboxWrapper {
   max-width: none; }
@@ -7825,13 +7844,6 @@ section.team {
 
 #cboxTitle {
   margin: 0; }
-
-#cboxLoadingOverlay, #cboxLoadingGraphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
 
 #cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
   cursor: pointer; }
@@ -7862,17 +7874,83 @@ section.team {
     Change the following styles to modify the appearance of Colorbox.  They are
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px; }
+  #cboxLoadingGraphic::before, #cboxLoadingGraphic::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+            animation: bounce 2s infinite ease-in-out; }
+  #cboxLoadingGraphic::after {
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+#cboxLoadedContent {
+  width: 60% !important;
+  height: 100% !important;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center; }
+  #cboxLoadedContent::-webkit-scrollbar {
+    display: none; }
+
+.full-content {
+  padding: 7% 5%; }
+  .full-content img {
+    width: 100%;
+    margin-bottom: 30px; }
+  .full-content::-webkit-scrollbar {
+    display: none; }
+
 #cboxOverlay {
   background: #323132;
-  opacity: 0.9;
-  filter: alpha(opacity=90); }
+  filter: alpha(opacity=90);
+  opacity: 0.95;
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%); }
 
 #colorbox {
   outline: 0;
-  height: auto; }
+  height: auto;
+  top: 10% !important; }
 
 #cboxContent {
-  margin: 35% auto;
+  margin: auto;
   background: transparent;
   color: white; }
   #cboxContent p {
@@ -7887,12 +7965,6 @@ section.team {
   padding: 50px;
   border: 1px solid #ccc; }
 
-#cboxLoadedContent {
-  background: transparent;
-  padding: 0 120px;
-  overflow: hidden !important;
-  height: auto !important; }
-
 #cboxTitle {
   position: absolute;
   top: -20px;
@@ -7905,9 +7977,6 @@ section.team {
   right: 0px;
   color: white; }
 
-#cboxLoadingGraphic {
-  background: url("../images/loading.gif") no-repeat center center; }
-
 /* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
 #cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
   outline: 0; }
@@ -7919,42 +7988,100 @@ section.team {
   color: white; }
 
 #cboxPrevious {
-  position: absolute;
-  top: 60%;
-  left: 5px;
-  margin-top: -32px;
-  padding: 20px;
+  position: fixed;
+  top: 50%;
+  top: -webkit-calc(50% - 29px);
+  top: calc(50% - 29px);
+  left: 10%;
   font-size: 20px;
-  background: transparent;
   border: 2px solid white;
-  border-radius: 50%; }
+  border-radius: 50%;
+  line-height: 58px;
+  height: 58px;
+  width: 58px;
+  text-align: center; }
+  #cboxPrevious::before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    -webkit-transform: translate(-30%, -50%) rotate(-45deg);
+        -ms-transform: translate(-30%, -50%) rotate(-45deg);
+            transform: translate(-30%, -50%) rotate(-45deg); }
 
 #cboxNext {
-  position: absolute;
-  top: 60%;
-  right: 5px;
-  margin-top: -32px;
-  padding: 20px;
+  position: fixed;
+  top: 50%;
+  top: -webkit-calc(50% - 29px);
+  top: calc(50% - 29px);
+  right: 10%;
   font-size: 20px;
-  background: transparent;
   border: 2px solid white;
-  border-radius: 50%; }
+  border-radius: 50%;
+  line-height: 58px;
+  height: 58px;
+  width: 58px;
+  text-align: center; }
+  #cboxNext::before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    -webkit-transform: translate(-70%, -50%) rotate(45deg);
+        -ms-transform: translate(-70%, -50%) rotate(45deg);
+            transform: translate(-70%, -50%) rotate(45deg); }
 
 #cboxClose {
-  position: absolute;
-  top: -80px;
-  right: 5px;
+  position: fixed;
+  top: 7%;
+  right: 10%;
   display: block;
-  padding: 20px;
   font-size: 20px;
   background: transparent;
   border: 2px solid white;
-  border-radius: 50%; }
+  border-radius: 50%;
+  line-height: 55px;
+  height: 58px;
+  width: 58px;
+  text-align: center; }
+  #cboxClose::before {
+    content: "";
+    height: 24px;
+    width: 0;
+    border-right: 2px solid white;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg); }
+  #cboxClose::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 24px;
+    width: 0;
+    border-left: 2px solid white;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg); }
 
-#cboxPrevious:hover, #cboxNext:hover, #cboxClose:hover {
-  border: 2px solid #005CBA;
-  color: #005CBA;
-  opacity: 0.8; }
+#cboxPrevious, #cboxNext, #cboxClose {
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s; }
+  #cboxPrevious:before, #cboxNext:before, #cboxClose:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: all 0.2s;
+            transition: all 0.2s; }
+  #cboxPrevious:hover, #cboxNext:hover, #cboxClose:hover {
+    border-color: #0780E2;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); }
+    #cboxPrevious:hover::before, #cboxPrevious:hover::after, #cboxNext:hover::before, #cboxNext:hover::after, #cboxClose:hover::before, #cboxClose:hover::after {
+      border-color: #0780E2; }
 
 /* Footer Styles
 ================================================== */

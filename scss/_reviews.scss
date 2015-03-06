@@ -98,6 +98,7 @@
 	a {
 		display: block;
 		height: 100%;
+		cursor: pointer;
 	}
 	
 	&::before {
@@ -172,8 +173,8 @@
 	
 	a {
 		position: relative;
-		width: 100%;
-		height: 100%;
+		width: 156px;
+		height: 156px;
 		overflow: hidden;
 	}
 	
@@ -275,6 +276,7 @@
 	left: 0;
 	width: 40px;
 	height: 40px;
+	background: blue;
 
 	&::before, &::after {
 		width: 100%;
@@ -309,9 +311,7 @@
 	position: fixed;
 	top: 0;
 	left: 20%;
-	display: flex;
-	align-content: center;
-	
+
 	&::-webkit-scrollbar { 
     	display: none; 
     }
@@ -334,14 +334,14 @@
 #cboxOverlay {
 	background: $brand-black;
 	filter: alpha(opacity = 90);
-	opacity: 0.95;
-	filter: grayscale(80%)
+	opacity: 0.95 !important;
 }
 
 #colorbox {
-  outline: 0;
-  height: auto;
-  top: 10% !important;
+	outline: 0;
+	height: auto;
+	overflow: visible !important;
+  
 }
 
 #cboxContent {

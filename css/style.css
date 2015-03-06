@@ -7693,7 +7693,8 @@ section.team {
   opacity: 0.9; }
   .review-item a {
     display: block;
-    height: 100%; }
+    height: 100%;
+    cursor: pointer; }
   .review-item::before {
     position: absolute;
     display: block;
@@ -7744,8 +7745,8 @@ section.team {
 
 .review-item.photo a, .review-item.video a {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 156px;
+  height: 156px;
   overflow: hidden; }
 .review-item.photo img, .review-item.video img {
   position: absolute;
@@ -7879,7 +7880,8 @@ section.team {
   top: 0;
   left: 0;
   width: 40px;
-  height: 40px; }
+  height: 40px;
+  background: blue; }
   #cboxLoadingGraphic::before, #cboxLoadingGraphic::after {
     width: 100%;
     height: 100%;
@@ -7918,14 +7920,7 @@ section.team {
   box-sizing: border-box;
   position: fixed;
   top: 0;
-  left: 20%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; }
+  left: 20%; }
   #cboxLoadedContent::-webkit-scrollbar {
     display: none; }
 
@@ -7940,14 +7935,12 @@ section.team {
 #cboxOverlay {
   background: #323132;
   filter: alpha(opacity=90);
-  opacity: 0.95;
-  -webkit-filter: grayscale(80%);
-          filter: grayscale(80%); }
+  opacity: 0.95 !important; }
 
 #colorbox {
   outline: 0;
   height: auto;
-  top: 10% !important; }
+  overflow: visible !important; }
 
 #cboxContent {
   margin: auto;

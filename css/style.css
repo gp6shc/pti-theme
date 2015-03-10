@@ -6430,6 +6430,17 @@ form .input-group .form-control:last-child {
   background: white;
   box-sizing: content-box; }
 
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0; }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 ::-moz-selection {
   background-color: #319EF7;
   color: white; }
@@ -7767,6 +7778,15 @@ section.team {
     -webkit-filter: grayscale(0);
             filter: grayscale(0); }
 
+.review-item.video a {
+  width: 322px;
+  height: 322px; }
+
+.review-item.message {
+  background-size: cover; }
+  .review-item.message a {
+    background-color: rgba(0, 170, 113, 0.8); }
+
 .isotope > .message:nth-child(3n-2) {
   background: #005CBA; }
 
@@ -7877,42 +7897,39 @@ section.team {
 */
 #cboxLoadingGraphic {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30%;
+  left: 50%;
+  left: -webkit-calc(50% - 20px);
+  left: calc(50% - 20px);
   width: 40px;
   height: 40px;
-  background: blue; }
-  #cboxLoadingGraphic::before, #cboxLoadingGraphic::after {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #333;
-    opacity: 0.6;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-animation: bounce 2s infinite ease-in-out;
-            animation: bounce 2s infinite ease-in-out; }
-  #cboxLoadingGraphic::after {
-    -webkit-animation-delay: -1s;
-            animation-delay: -1s; }
+  background-color: #0780E2;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+          animation: rotateplane 1.2s infinite ease-in-out; }
 
-@-webkit-keyframes bounce {
-  0%, 100% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
   50% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
 
-@keyframes bounce {
-  0%, 100% {
-    -webkit-transform: scale(0);
-            transform: scale(0); }
+@keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
 
   50% {
-    -webkit-transform: scale(1);
-            transform: scale(1); } }
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
 
 #cboxLoadedContent {
   width: 60% !important;
@@ -7925,12 +7942,38 @@ section.team {
     display: none; }
 
 .full-content {
-  padding: 7% 5%; }
+  padding: 7% 5%;
+  -webkit-animation: fade-in 0.4s;
+          animation: fade-in 0.4s; }
   .full-content img {
     width: 100%;
     margin-bottom: 30px; }
   .full-content::-webkit-scrollbar {
     display: none; }
+  .full-content .video-wrapper {
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.4); }
+  .full-content.centeredY {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .full-content.social-content {
+    font-size: 1.7em; }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
 
 #cboxOverlay {
   background: #323132;
@@ -7985,7 +8028,7 @@ section.team {
   top: 50%;
   top: -webkit-calc(50% - 29px);
   top: calc(50% - 29px);
-  left: 10%;
+  left: 12%;
   font-size: 20px;
   border: 2px solid white;
   border-radius: 50%;
@@ -8008,7 +8051,7 @@ section.team {
   top: 50%;
   top: -webkit-calc(50% - 29px);
   top: calc(50% - 29px);
-  right: 10%;
+  right: 12%;
   font-size: 20px;
   border: 2px solid white;
   border-radius: 50%;
@@ -8029,7 +8072,7 @@ section.team {
 #cboxClose {
   position: fixed;
   top: 7%;
-  right: 10%;
+  right: 12%;
   display: block;
   font-size: 20px;
   background: transparent;

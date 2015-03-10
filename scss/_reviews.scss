@@ -144,6 +144,7 @@
 }
 
 .review-item:not(.photo):not(.video) {
+	
 	a {
 		padding: 25px 15px 20px 40px;
 	}
@@ -193,6 +194,19 @@
 		&:hover {
 			filter: grayscale(0);
 		}
+	}
+}
+
+.review-item.video a {
+	width: 322px;
+	height: 322px;
+}
+
+.review-item.message {
+	background-size: cover;
+	
+	a {
+		background-color: rgba($brand-green, 0.8);	
 	}
 }
 
@@ -272,35 +286,22 @@
 
 #cboxLoadingGraphic {
 	position:absolute;
-	top: 0;
-	left: 0;
+	top: 30%;
+	left: 50%;
+	left: calc(50% - 20px);
 	width: 40px;
 	height: 40px;
-	background: blue;
-
-	&::before, &::after {
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-		background-color: #333;
-		opacity: 0.6;
-		position: absolute;
-		top: 0;
-		left: 0;
-		
-		animation: bounce 2.0s infinite ease-in-out;
-	}
-	
-	&::after {
-		animation-delay: -1.0s;
-	}
+	background-color: $secondary-blue;
+	animation: rotateplane 1.2s infinite ease-in-out;
 }
 
-@keyframes bounce {
-	0%, 100% { 
-		transform: scale(0.0);
+@keyframes rotateplane {
+	0% { 
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg);
 	} 50% { 
-		transform: scale(1.0);
+	    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+	} 100% { 
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
 	}
 }
 
@@ -319,6 +320,7 @@
 
 .full-content {
 	padding: 7% 5%;
+	animation: fade-in 0.4s;
 	
 	img {
 		width: 100%;
@@ -328,8 +330,25 @@
 	&::-webkit-scrollbar { 
     	display: none; 
     }
+    .video-wrapper {
+	    margin-bottom: 30px;
+		background-color: rgba(black, 0.4);
+    }
+    
+    &.centeredY {
+	    position: absolute;
+	    top: 50%;
+	    transform: translateY(-50%);
+    }
+    &.social-content {
+	    font-size: 1.7em;
+    }
 }
 
+@keyframes fade-in {
+	from {opacity: 0;}	
+	to   {opacity: 1;}	
+}
 
 #cboxOverlay {
 	background: $brand-black;
@@ -393,11 +412,11 @@
   color: white;
 }
 
-#cboxPrevious{
+#cboxPrevious {
 	position: fixed; 
 	top: 50%;
 	top: calc(50% - 29px); 
-	left: 10%;
+	left: 12%;
 	font-size: 20px;
 	border: 2px solid white;
 	border-radius: 50%;
@@ -416,11 +435,11 @@
 	}
 }
  
-#cboxNext{
+#cboxNext {
 	position: fixed; 
 	top: 50%;
 	top: calc(50% - 29px); 
-	right: 10%;
+	right: 12%;
 	font-size: 20px;
 	border: 2px solid white;
 	border-radius: 50%;
@@ -442,7 +461,7 @@
 #cboxClose {
     position: fixed;
     top: 7%;
-    right: 10%;
+    right: 12%;
     display: block;
 	font-size: 20px;
 	background: transparent;

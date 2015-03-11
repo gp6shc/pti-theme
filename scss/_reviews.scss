@@ -204,23 +204,17 @@
 
 .review-item.message {
 	background-size: cover;
-	
-	a {
-		background-color: rgba($brand-green, 0.8);	
-	}
 }
 
-.isotope > .message:nth-child(3n-2) { background: $primary-blue; }
-.isotope > .message:nth-child(3n-1) { background: $brand-green; }
-.isotope > .message:nth-child(3n) { background: $brand-grey; }
+.isotope > .message:nth-child(4n-3) a { background-color: rgba($brand-green, 0.8); }
+.isotope > .message:nth-child(4n-2) a { background-color: rgba($primary-blue, 0.8); }
+.isotope > .message:nth-child(4n-1) a { background-color: rgba($brand-green, 0.8); }
+.isotope > .message:nth-child(4n) a { background-color: rgba($brand-grey, 0.8); }
 
-.isotope > .social:nth-child(3n-2) { background: $primary-blue; }
-.isotope > .social:nth-child(3n-1) { background: $brand-green; }
-.isotope > .social:nth-child(3n) { background: $brand-grey; }
-
-.isotope > .video:nth-child(3n-2) { background: $primary-blue; }
-.isotope > .video:nth-child(3n-1) { background: $brand-green; }
-.isotope > .video:nth-child(3n) { background: $brand-grey; }
+.isotope > .social:nth-child(4n-3) { background: $primary-blue; }
+.isotope > .social:nth-child(4n-2) { background: $brand-grey; }
+.isotope > .social:nth-child(4n-1) { background: $brand-green; }
+.isotope > .social:nth-child(4n) { background: $brand-grey; }
 
 
 /* responsive tweaks, add to responsive.scss when done */

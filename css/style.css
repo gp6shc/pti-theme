@@ -7784,34 +7784,29 @@ section.team {
 
 .review-item.message {
   background-size: cover; }
-  .review-item.message a {
-    background-color: rgba(0, 170, 113, 0.8); }
 
-.isotope > .message:nth-child(3n-2) {
+.isotope > .message:nth-child(4n-3) a {
+  background-color: rgba(0, 170, 113, 0.8); }
+
+.isotope > .message:nth-child(4n-2) a {
+  background-color: rgba(0, 92, 186, 0.8); }
+
+.isotope > .message:nth-child(4n-1) a {
+  background-color: rgba(0, 170, 113, 0.8); }
+
+.isotope > .message:nth-child(4n) a {
+  background-color: rgba(98, 101, 105, 0.8); }
+
+.isotope > .social:nth-child(4n-3) {
   background: #005CBA; }
 
-.isotope > .message:nth-child(3n-1) {
-  background: #00AA71; }
-
-.isotope > .message:nth-child(3n) {
+.isotope > .social:nth-child(4n-2) {
   background: #626569; }
 
-.isotope > .social:nth-child(3n-2) {
-  background: #005CBA; }
-
-.isotope > .social:nth-child(3n-1) {
+.isotope > .social:nth-child(4n-1) {
   background: #00AA71; }
 
-.isotope > .social:nth-child(3n) {
-  background: #626569; }
-
-.isotope > .video:nth-child(3n-2) {
-  background: #005CBA; }
-
-.isotope > .video:nth-child(3n-1) {
-  background: #00AA71; }
-
-.isotope > .video:nth-child(3n) {
+.isotope > .social:nth-child(4n) {
   background: #626569; }
 
 /* responsive tweaks, add to responsive.scss when done */

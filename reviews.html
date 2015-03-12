@@ -856,28 +856,30 @@
 	<script type="text/javascript" src="js/min/custom.min.js"></script>
 	<script type="text/javascript" src="js/min/jquery.mmenu.min.js"></script>
 	<script type="text/javascript" src="js/min/isotope.min.js"></script>
+	<script type="text/javascript" src="js/min/colorbox.min.js"></script>
 	
 	
 	<!-- Reviews JS -->
 	<script type="text/javascript">
-	$(window).load(function() {
-		/* Isotope init */
+	
+	$(document).ready(function() {
+		// initialize Isotope
 		var $container = $('#isotope').isotope({
-	   
-	    	//set options
+			// options
 	    	itemSelector: '.review-item',
-	    	transformsEnabled: false,
+	    	//transformsEnabled: false,
 	    	layoutMode: 'masonry',
 	    	masonry: {
 				// columnWidth: 322,
 				// gutterWidth: 5
 			}
-	   });
+		});
 
 		/* Filtering */  
 		$(document).on('click', '#filters a', function() {
 			var selector = $(this).attr('data-filter');
 			$('#isotope').isotope({ filter: selector });
+			reGroup();
 			return false;
     	});
     	 
@@ -886,37 +888,41 @@
     		$('.filter-container ul li a').removeClass('is-checked');
 			$(this).addClass('is-checked');
 		});
-    });	
-	</script>
 	
-	<script type="text/javascript" src="js/min/colorbox.min.js"></script>
-	
-	<script type="text/javascript">
-	/* ColorBox Gallery */
-	$(document).ready(function() {
-	var $group = $('.review-group').colorbox({
-			rel: 'reviews',
-			width: '75%',
-			maxWidth: '100%',
-			maxHeight: '100%'
-    	});
+
+		function reGroup() {
+			$('.review-group').colorbox({
+				rel: 'nofollow'
+			});
+			$('.review-item:not(.isotope-hidden) .review-group').colorbox({
+				rel: 'reviews',
+				loop: false,
+				width: '75%',
+				maxWidth: '100%',
+				maxHeight: '100%'
+    		});
+		}
+		
+		//init
+		reGroup();
 		
 		var	windowHeight = $(window).outerHeight();
 		
 		$('.full-content').each(function() {
 			if ($(this).outerHeight(true) < windowHeight) {
 				$(this).addClass('centeredY');
-				console.log
 			}else{
 				$(this).removeClass('centeredY');
 			}
 		});
 		
+/*
     	$('#open').on('click', function(e){
     	    e.preventDefault();
 			$group.eq(0).click();
     	});
 		
+*/
     	/* Assigning Colorbox event to item classes */
 		$(".video a").colorbox({ inline:true, href: function(){ return $(this).children('.full-content') } });
 		$(".message a").colorbox({ inline:true, href: function(){ return $(this).children('.full-content') } });

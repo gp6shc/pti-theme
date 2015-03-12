@@ -7650,11 +7650,34 @@ section.team {
     display: inline; }
   .filter-container ul li a {
     padding: 10px;
+    position: relative;
+    z-index: 1;
     color: #005CBA;
-    font-weight: 700; }
+    font-weight: 700;
+    display: inline-block;
+    -webkit-transition: background 0.3s 0.3s, color 0.3s;
+            transition: background 0.3s 0.3s, color 0.3s; }
     .filter-container ul li a:hover {
-      background: #005CBA;
       color: white; }
+      .filter-container ul li a:hover::before {
+        -webkit-transform: scale(1) skew(0);
+            -ms-transform: scale(1) skew(0);
+                transform: scale(1) skew(0);
+        background-color: #005CBA; }
+    .filter-container ul li a::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transform: scale(0.2) skew(-10deg);
+          -ms-transform: scale(0.2) skew(-10deg);
+              transform: scale(0.2) skew(-10deg);
+      -webkit-transition: -webkit-transform 0.3s, background 0.5s;
+              transition: transform 0.3s, background 0.5s; }
   .filter-container ul .is-checked {
     background: #005CBA;
     color: white; }
@@ -7955,7 +7978,8 @@ section.team {
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
   .full-content.social-content {
-    font-size: 1.7em; }
+    font-size: 1.7em;
+    line-height: 1.2; }
 
 @-webkit-keyframes fade-in {
   from {

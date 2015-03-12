@@ -27,21 +27,42 @@
 		
 		li a {
 			padding: 10px;
-			
+			position: relative;
+			z-index: 1;
 			color: $primary-blue;
 			font-weight: 700;
+			display: inline-block;
+			transition: background 0.3s 0.3s, color 0.3s;
 			
 			&:hover {
-				background: $primary-blue;
-				color: white;	
+				color: white;
+				
+				&::before {
+					transform: scale(1) skew(0);
+					background-color: $primary-blue;
+					
+				}
+			}
+			
+			&::before {
+				content: "";
+				height: 100%;
+				width: 100%;
+				background-color: transparent;
+				z-index: -1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transform: scale(0.2) skew(-10deg);
+				transition: transform 0.3s, background 0.5s;
+			
 			}
 		}
 		
 		.is-checked {
-			background: $primary-blue;;
-			color: white
+			background: $primary-blue;
+			color: white;
 		}
-		
 	}
 	
 }
@@ -336,6 +357,7 @@
     }
     &.social-content {
 	    font-size: 1.7em;
+	    line-height: 1.2;
     }
 }
 

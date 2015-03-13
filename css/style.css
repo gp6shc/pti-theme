@@ -7832,27 +7832,6 @@ section.team {
 .isotope > .social:nth-child(4n) {
   background: #626569; }
 
-/* responsive tweaks, add to responsive.scss when done */
-@media (max-width: 850px) {
-  .review-item.height2 {
-    height: 156px; }
-  .review-item p {
-    left: 5px !important;
-    top: 2px !important; } }
-
-@media (max-width: 700px) {
-  .filter-container ul li a {
-    padding: 5px 8px; } }
-
-@media (max-width: 480px) {
-  .review-item.width2 {
-    width: 156px; }
-  .filter-container ul li {
-    line-height: 36px;
-    float: left; }
-  .filter-container ul li a {
-    padding: 2px 12px; } }
-
 /*
     Colorbox Core Style:
     The following CSS is consistent between example themes and should not be altered.
@@ -8137,6 +8116,44 @@ section.team {
             transform: scale(1.1); }
     #cboxPrevious:hover::before, #cboxPrevious:hover::after, #cboxNext:hover::before, #cboxNext:hover::after, #cboxClose:hover::before, #cboxClose:hover::after {
       border-color: #0780E2; }
+
+.overflowY {
+  overflow: visible !important; }
+
+/* responsive tweaks, add to responsive.scss when done */
+@media (max-width: 700px) {
+  .filter-container ul li a {
+    padding: 5px 8px; }
+  #cboxLoadedContent {
+    width: 90% !important;
+    left: 5%; }
+  #cboxPrevious {
+    border: none;
+    left: 0;
+    width: 35px; }
+  #cboxNext {
+    border: none;
+    right: 0;
+    width: 35px; }
+  #cboxClose {
+    border: none;
+    top: 0;
+    right: 0;
+    width: 35px; } }
+
+@media (max-width: 500px) {
+  .isotope {
+    width: 100% !important; }
+  .full-content.social-content {
+    font-size: 1.2em; }
+  .review-item, .review-item.width2 {
+    width: 100%;
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px); }
+  .review-item.photo a, .review-item.video a {
+    width: 100%; }
+  .reviews .page-title {
+    font-size: 1.9em; } }
 
 /* Footer Styles
 ================================================== */

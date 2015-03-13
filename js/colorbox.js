@@ -750,9 +750,9 @@
 		var callback, speed = settings.get('transition') === "none" ? 0 : settings.get('speed');
 
 		$loaded.remove();
-
+		
 		$loaded = $tag(div, 'LoadedContent').append(object);
-
+		
 		function getWidth() {
 			settings.w = settings.w || $loaded.width();
 			settings.w = settings.mw && settings.mw < settings.w ? settings.mw : settings.w;
@@ -777,7 +777,13 @@
 		$(photo).css({'float': 'none'});
 
 		setClass(settings.get('className'));
-
+		
+		if (object.hasClass('centeredY')) {
+			$loaded.addClass('overflowY');	
+		}else{
+			console.log('nope');
+		}
+		
 		callback = function () {
 			var total = $related.length,
 				iframe,

@@ -83,6 +83,41 @@ var jq_throttle = function( delay, no_trailing, callback, debounce_mode ) {
     return wrapper;
 };
 
+
+// requestAnimationFrame shim
+
+// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+ 
+// requestAnimationFrame polyfill by Erik Möller
+// fixes from Paul Irish and Tino Zijdel
+ 
+(function() {
+    var lastTime = 0;
+    var vendors = ['ms', 'moz', 'webkit', 'o'];
+    for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+        window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+        window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
+    }
+ 
+    if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function(callback, element) {
+            var currTime = new Date().getTime();
+            var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+            var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+              timeToCall);
+            lastTime = currTime + timeToCall;
+            return id;
+		};
+	}
+ 
+    if (!window.cancelAnimationFrame) {
+        window.cancelAnimationFrame = function(id) {
+            clearTimeout(id);
+        };
+	}
+}());
+
 /* ----------------------------------------------------------- */
 /*  Scroll Events
 /* ----------------------------------------------------------- */
@@ -105,6 +140,9 @@ $(document).ready(function() {
 		
 	// Use this function to monitor all layout changes that should update on scroll
 	var updateLayout = function() {
+		// reset the tick so we can capture the next scroll
+		ticking = false;
+		
 		// hides/shows the top most bar of info
 		toggleTopBar();
 		
@@ -127,16 +165,34 @@ $(document).ready(function() {
 			$('#top').removeClass('active');
 		}
 	};
-	// Add the event listener
-	$(window).scroll( jq_throttle(150, updateLayout));
 	
-	function scrollY() {
-		return window.pageYOffset || document.documentElement.scrollTop;
+	
+	
+	// stores scroll position
+	var lastKnownScrollY = 0,
+		ticking = false;
+	
+	function requestTick() {
+		if (!ticking) {
+			requestAnimationFrame(updateLayout);
+		}
+		ticking = true;
 	}
 	
+	//update the scroll position
+	function scrollY() {
+		lastKnownScrollY = window.pageYOffset || document.documentElement.scrollTop;
+		requestTick();
+	}
+	
+	// Add the event listener
+	$(window).scroll( scrollY );
+	
+	
+	
+	
 	function toggleTopBar() {
-		var sY = scrollY();
-		if ( sY >= 70 ) {
+		if ( lastKnownScrollY >= 70 ) {
 			$('.top-bar').slideUp(300);
 			$("#header").addClass("header-fixed");	
 		}else{
@@ -146,13 +202,12 @@ $(document).ready(function() {
 	}
 	
 	function affixSidebar() {
-		var sY = scrollY();
-		if ( sY <= 0 ) {
+		if ( lastKnownScrollY <= 0 ) {
 			interiorSidebar.removeClass("affix-bottom");
 		}
-		if ( (bodyHeight - (sY + sidebarHeight + 54)) <= footerHeight) {
+		if ( (bodyHeight - (lastKnownScrollY + sidebarHeight + 54)) <= footerHeight) {
 			interiorSidebar.addClass("affix-bottom");
-		}else if (sY >= 70) {
+		}else if (lastKnownScrollY >= 70) {
 			interiorSidebar.removeClass("affix-bottom");
 		}
 	}
@@ -167,7 +222,7 @@ $(document).ready(function() {
 	}
 	
 	function toggleClassAtSixty(elem, classToBeToggled) {
-		var elementPosition = elem.offset().top - $(window).scrollTop();
+		var elementPosition = elem.offset().top - lastKnownScrollY;
 		if ( elementPosition <= ( (window.innerHeight * 3) / 5) ) { // when the element enters the 60% mark if 100% is the bottom
 			elem.addClass(classToBeToggled);	
 		}else{
@@ -177,20 +232,9 @@ $(document).ready(function() {
 	
 	// Checks if at the bottom of the page
 	function isAtBottom() {
-		var totalHeight, currentScroll, visibleHeight;
-	
-		if (document.documentElement.scrollTop) {
-			currentScroll = document.documentElement.scrollTop;
-		} else {
-			currentScroll = document.body.scrollTop;
-		}
-		
-		totalHeight = document.body.offsetHeight;
-		visibleHeight = document.documentElement.clientHeight;
-		
-		if (totalHeight <= currentScroll + visibleHeight ) {
+		if (lastKnownScrollY + window.innerHeight === bodyHeight) {
 			return true;
-		} else {
+		}else{
 			return false;
 		}
 	}

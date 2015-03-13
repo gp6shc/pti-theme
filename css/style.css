@@ -6430,6 +6430,17 @@ form .input-group .form-control:last-child {
   background: white;
   box-sizing: content-box; }
 
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0; }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 ::-moz-selection {
   background-color: #319EF7;
   color: white; }
@@ -7145,7 +7156,6 @@ form .input-group .form-control:last-child {
     top: 0;
     z-index: 0;
     width: 25%;
-    width: -webkit-calc( (100% - 738px)/2);
     width: calc( (100% - 738px)/2);
     height: 137px;
     background-color: white; }
@@ -7176,7 +7186,6 @@ form .input-group .form-control:last-child {
     color: #323132; }
   .two-panels > div {
     background: white;
-    width: -webkit-calc(50% - 2px);
     width: calc(50% - 2px);
     padding: 80px;
     border-radius: 0 0 40px 0/0 0 25px 0; }
@@ -7364,7 +7373,6 @@ form .input-group .form-control:last-child {
     border-radius: 10px;
     position: absolute;
     top: -10px;
-    left: -webkit-calc(50% - 10px);
     left: calc(50% - 10px);
     background-color: white;
     border: 3px solid #0780E2; }
@@ -7397,7 +7405,6 @@ form .input-group .form-control:last-child {
           position: absolute;
           bottom: 0;
           width: 323px;
-          left: -webkit-calc(66.66667% - 323px);
           left: calc(66.66667% - 323px); }
       .carousel-2 .top-indent .indention.right {
         border-radius: 0 0 0 40px/0 0 0 25px; }
@@ -7631,20 +7638,541 @@ form .input-group .form-control:last-child {
 
 /* Executive Team Page Styles
 ================================================== */
-section.team a {
-  display: block; }
-section.team img {
+section.team {
+  /*img {
+	    filter: grayscale(100%);
+		transition: all .5s ease-in-out;
+	  
+	    &:hover {
+		    filter: grayscale(0%);
+	    }
+	}*/ }
+  section.team a {
+    display: block; }
+  section.team h3 {
+    margin-bottom: 0; }
+  section.team h4 {
+    color: #323132; }
+
+.reviews h1 {
+  color: #005CBA;
+  font-weight: 100;
+  margin-bottom: 0; }
+.reviews .page-title {
+  font-size: 3em;
+  font-weight: 700;
+  margin-top: 0; }
+
+/* filters list */
+.filter-container ul {
+  margin: 30px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center; }
+  .filter-container ul li {
+    display: inline; }
+  .filter-container ul li a {
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    color: #005CBA;
+    font-weight: 700;
+    display: inline-block;
+    -webkit-transition: background 0.3s 0.3s, color 0.3s;
+            transition: background 0.3s 0.3s, color 0.3s; }
+    .filter-container ul li a:hover {
+      color: white; }
+      .filter-container ul li a:hover::before {
+        -webkit-transform: scale(1) skew(0);
+            -ms-transform: scale(1) skew(0);
+                transform: scale(1) skew(0);
+        background-color: #005CBA; }
+    .filter-container ul li a::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-transform: scale(0.2) skew(-10deg);
+          -ms-transform: scale(0.2) skew(-10deg);
+              transform: scale(0.2) skew(-10deg);
+      -webkit-transition: -webkit-transform 0.3s, background 0.5s;
+              transition: transform 0.3s, background 0.5s; }
+  .filter-container ul .is-checked {
+    background: #005CBA;
+    color: white; }
+
+/* isotope */
+.isotope {
+  -webkit-transition-property: height, width;
+          transition-property: height, width; }
+
+/* clear fix */
+.isotope:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.centered {
+  margin: 30px auto;
+  max-width: 100%; }
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+          transition-property: transform, opacity; }
+
+.isotope, .isotope .isotope-item {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
+
+/* These styles ensure that hidden items will not interfere with interactions. */
+.isotope-item {
+  z-index: 2; }
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1; }
+
+/* .review-item */
+.review-item {
+  position: relative;
+  float: left;
+  width: 156px;
+  height: 156px;
+  margin: 5px;
+  padding: 0;
+  font-family: Georgia, Helvetica, Arial;
+  overflow: hidden;
+  color: white;
+  opacity: 0.9; }
+  .review-item a {
+    display: block;
+    height: 100%;
+    cursor: pointer; }
+  .review-item::before {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    text-align: center;
+    font-family: FontAwesome;
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    padding: 7px;
+    color: white;
+    z-index: 1;
+    line-height: 1; }
+  .review-item.photo::before {
+    content: "\f030"; }
+  .review-item.social::before {
+    content: "\f109"; }
+  .review-item.message::before {
+    content: "\f016"; }
+  .review-item.video::before {
+    content: "\f03d";
+    background-color: rgba(0, 92, 186, 0.8); }
+  .review-item .full-content {
+    display: none; }
+
+.review-item.width2 {
+  width: 322px; }
+
+.review-item.height2 {
+  height: 322px; }
+
+.review-item:not(.photo):not(.video) a {
+  padding: 25px 15px 20px 40px; }
+.review-item:not(.photo):not(.video) h3 {
+  color: white;
+  font-weight: 700;
+  margin-top: 0; }
+.review-item:not(.photo):not(.video) h5 {
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.8px;
+  margin: 0 0 8px;
+  text-transform: lowercase; }
+.review-item:not(.photo):not(.video) p {
+  color: white;
+  margin: 0; }
+
+.review-item.photo a, .review-item.video a {
+  position: relative;
+  width: 156px;
+  height: 156px;
+  overflow: hidden; }
+.review-item.photo img, .review-item.video img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
-  -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out; }
-  section.team img:hover {
-    -webkit-filter: grayscale(0%);
-            filter: grayscale(0%); }
-section.team h3 {
-  margin-bottom: 0; }
-section.team h4 {
-  color: #323132; }
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s; }
+  .review-item.photo img:hover, .review-item.video img:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0); }
+
+.review-item.video a {
+  width: 322px;
+  height: 322px; }
+
+.review-item.message {
+  background-size: cover; }
+
+.isotope > .message:nth-child(4n-3) a {
+  background-color: rgba(0, 170, 113, 0.8); }
+
+.isotope > .message:nth-child(4n-2) a {
+  background-color: rgba(0, 92, 186, 0.8); }
+
+.isotope > .message:nth-child(4n-1) a {
+  background-color: rgba(0, 170, 113, 0.8); }
+
+.isotope > .message:nth-child(4n) a {
+  background-color: rgba(98, 101, 105, 0.8); }
+
+.isotope > .social:nth-child(4n-3) {
+  background: #005CBA; }
+
+.isotope > .social:nth-child(4n-2) {
+  background: #626569; }
+
+.isotope > .social:nth-child(4n-1) {
+  background: #00AA71; }
+
+.isotope > .social:nth-child(4n) {
+  background: #626569; }
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999; }
+
+#cboxWrapper {
+  max-width: none; }
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%; }
+
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left; }
+
+#cboxContent {
+  position: relative; }
+
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+#cboxTitle {
+  margin: 0; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer; }
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic; }
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; }
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background-color: #0780E2;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+          animation: rotateplane 1.2s infinite ease-in-out; }
+
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+@keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+
+#cboxLoadedContent {
+  width: 60% !important;
+  height: 100% !important;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 20%; }
+  #cboxLoadedContent::-webkit-scrollbar {
+    display: none; }
+
+.full-content {
+  padding: 7% 5%;
+  -webkit-animation: fade-in 0.4s;
+          animation: fade-in 0.4s; }
+  .full-content img {
+    width: 100%;
+    margin-bottom: 30px; }
+  .full-content::-webkit-scrollbar {
+    display: none; }
+  .full-content .video-wrapper {
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.4); }
+  .full-content.centeredY {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .full-content.social-content {
+    font-size: 1.7em;
+    line-height: 1.2; }
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+#cboxOverlay {
+  background: #323132;
+  filter: alpha(opacity=90);
+  opacity: 0.95 !important; }
+
+#colorbox {
+  outline: 0;
+  height: auto;
+  overflow: visible !important; }
+
+#cboxContent {
+  margin: auto;
+  background: transparent;
+  color: white; }
+  #cboxContent p {
+    color: white;
+    font-size: 1.3em;
+    font-weight: 400; }
+
+.cboxIframe {
+  background: transparent; }
+
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc; }
+
+#cboxTitle {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: white; }
+
+#cboxCurrent {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  color: white; }
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0; }
+
+#cboxSlideshow {
+  position: absolute;
+  top: -20px;
+  right: 90px;
+  color: white; }
+
+#cboxPrevious {
+  position: fixed;
+  top: 50%;
+  top: calc(50% - 29px);
+  left: 12%;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  line-height: 58px;
+  height: 58px;
+  width: 58px;
+  text-align: center; }
+  #cboxPrevious::before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    -webkit-transform: translate(-30%, -50%) rotate(-45deg);
+        -ms-transform: translate(-30%, -50%) rotate(-45deg);
+            transform: translate(-30%, -50%) rotate(-45deg); }
+
+#cboxNext {
+  position: fixed;
+  top: 50%;
+  top: calc(50% - 29px);
+  right: 12%;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 50%;
+  line-height: 58px;
+  height: 58px;
+  width: 58px;
+  text-align: center; }
+  #cboxNext::before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    -webkit-transform: translate(-70%, -50%) rotate(45deg);
+        -ms-transform: translate(-70%, -50%) rotate(45deg);
+            transform: translate(-70%, -50%) rotate(45deg); }
+
+#cboxClose {
+  position: fixed;
+  top: 7%;
+  right: 12%;
+  display: block;
+  font-size: 20px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 50%;
+  line-height: 55px;
+  height: 58px;
+  width: 58px;
+  text-align: center; }
+  #cboxClose::before {
+    content: "";
+    height: 24px;
+    width: 0;
+    border-right: 2px solid white;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        -ms-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg); }
+  #cboxClose::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 24px;
+    width: 0;
+    border-left: 2px solid white;
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+        -ms-transform: translate(-50%, -50%) rotate(-45deg);
+            transform: translate(-50%, -50%) rotate(-45deg); }
+
+#cboxPrevious, #cboxNext, #cboxClose {
+  -webkit-transition: all 0.5s;
+          transition: all 0.5s; }
+  #cboxPrevious:before, #cboxNext:before, #cboxClose:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: all 0.2s;
+            transition: all 0.2s; }
+  #cboxPrevious:hover, #cboxNext:hover, #cboxClose:hover {
+    border-color: #0780E2;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); }
+    #cboxPrevious:hover::before, #cboxPrevious:hover::after, #cboxNext:hover::before, #cboxNext:hover::after, #cboxClose:hover::before, #cboxClose:hover::after {
+      border-color: #0780E2; }
+
+.overflowY {
+  overflow: visible !important; }
+
+/* responsive tweaks, add to responsive.scss when done */
+@media (max-width: 700px) {
+  .filter-container ul li a {
+    padding: 5px 8px; }
+  #cboxLoadedContent {
+    width: 90% !important;
+    left: 5%; }
+  #cboxPrevious {
+    border: none;
+    left: 0;
+    width: 35px; }
+  #cboxNext {
+    border: none;
+    right: 0;
+    width: 35px; }
+  #cboxClose {
+    border: none;
+    top: 0;
+    right: 0;
+    width: 35px; } }
+
+@media (max-width: 500px) {
+  .isotope {
+    width: 100% !important; }
+  .full-content.social-content {
+    font-size: 1.2em; }
+  .review-item, .review-item.width2 {
+    width: 100%;
+    width: calc(100% - 10px); }
+  .review-item.photo a, .review-item.video a {
+    width: 100%; }
+  .reviews .page-title {
+    font-size: 1.9em; } }
 
 /* Footer Styles
 ================================================== */
@@ -8257,10 +8785,8 @@ html.mm-right.mm-opening .mm-slideout {
       display: block; }
     .branch::before, .branch::after {
       height: 96px;
-      width: -webkit-calc((100% - 513px)/2);
       width: calc((100% - 513px)/2); }
   .two-panels > div {
-    width: -webkit-calc(50% - 1.5px);
     width: calc(50% - 1.5px);
     padding: 40px; }
     .two-panels > div + div {
@@ -8356,7 +8882,6 @@ html.mm-right.mm-opening .mm-slideout {
     padding-top: 15%; }
   .image-cycle .carousel-inner .item {
     height: 0;
-    padding-bottom: -webkit-calc(50% + 176px);
     padding-bottom: calc(50% + 176px); }
   .image-cycle .carousel-inner img {
     top: -10%; }
@@ -8405,7 +8930,6 @@ html.mm-right.mm-opening .mm-slideout {
     margin-top: 15px;
     padding-top: 15px; }
   .main-content {
-    width: -webkit-calc(100% - 30px);
     width: calc(100% - 30px);
     -webkit-overflow-scrolling: touch;
     -webkit-transition: all 0.6s;
@@ -8602,7 +9126,6 @@ html.mm-right.mm-opening .mm-slideout {
   .legal {
     margin-bottom: 40px; }
   #top {
-    left: -webkit-calc(50% - 29px);
     left: calc(50% - 29px);
     bottom: 0;
     right: auto;

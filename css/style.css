@@ -6205,7 +6205,8 @@ body {
   line-height: 1.4; }
 
 p {
-  font-size: 1em; }
+  font-size: 1.125em;
+  line-height: 1.45; }
 
 p.serif {
   font-family: Georgia, Helvetica, Arial; }
@@ -7422,6 +7423,16 @@ form .input-group .form-control:last-child {
   .page-intro p {
     font-size: 1.125em; }
 
+.page-hero {
+  margin-top: 140px;
+  background-color: #EAEBEC; }
+  .page-hero + .row {
+    margin-top: -25px;
+    position: relative; }
+
+.constrain {
+  max-width: 1000px; }
+
 .indention {
   background: white;
   height: 30px;
@@ -7467,6 +7478,8 @@ form .input-group .form-control:last-child {
 
 .sidebar-wrapper {
   position: fixed;
+  top: 0;
+  max-width: 370px;
   z-index: 1;
   -webkit-transform: translateY(140px);
       -ms-transform: translateY(140px);
@@ -7479,6 +7492,7 @@ form .input-group .form-control:last-child {
             transform: translateY(54px); }
   .sidebar-wrapper.affix-bottom.affix-bottom {
     position: absolute;
+    top: auto;
     bottom: 54px; }
   .sidebar-wrapper.no-affix {
     position: relative;
@@ -7532,16 +7546,16 @@ form .input-group .form-control:last-child {
     .sidebar-nav li a a:active, .sidebar-nav li a a:focus {
       text-decoration: none; }
 
-.reviews img {
+.extra img {
   width: 100%;
   height: auto;
   margin-bottom: 1em; }
-.reviews h3 {
+.extra h3 {
   color: #005CBA; }
-.reviews h5 {
+.extra h5 {
   color: #005CBA;
   text-transform: uppercase; }
-.reviews h6 {
+.extra h6 {
   text-transform: uppercase; }
 
 /* Specific Interior Page Styles
@@ -8112,6 +8126,16 @@ html.mm-right.mm-opening .mm-slideout {
 /* Responsive Styles
 ================================================== */
 /* 1600 and above */
+@media (min-width: 1800px) {
+  .main-content {
+    float: none !important;
+    margin: auto;
+    width: 1000px; }
+  .sidebar-wrapper {
+    left: 30%;
+    left: -webkit-calc(50% - 850px);
+    left: calc(50% - 850px); } }
+
 /* 1200 and above */
 /* Below 1024 */
 @media (max-width: 1024px) {

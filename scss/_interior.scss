@@ -56,6 +56,20 @@
 	}
 }
 
+.page-hero {
+	margin-top: 140px;
+	background-color: $brand-white;
+
+	+ .row {
+		margin-top: -25px;
+		position: relative;
+	}
+}
+
+.constrain {
+	max-width: 1000px;
+}
+
 .indention {
 	background: white;
 	height: 30px;
@@ -112,18 +126,18 @@
 
 .sidebar-wrapper {
 	position: fixed;
+	top: 0;
+	max-width: 370px;
 	z-index: 1;
 	transform: translateY(140px);
 	transition: all 0.6s;
 	
-	&.affix-top {
-	
-	}
 	&.affix {
 		transform: translateY(54px);
 	}
 	&.affix-bottom.affix-bottom {
 		position: absolute;
+		top: auto;
 		bottom: 54px;
 	}
 	&.no-affix {
@@ -200,7 +214,7 @@
     }
 }
 
-.reviews {
+.extra {
 	
 	img {
 		width: 100%;

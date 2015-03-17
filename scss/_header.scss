@@ -5,7 +5,7 @@
 	top: 0;
     width: 100%;
 	z-index: 3; 
-	transition: all 0.4s ease-in-out;
+	//transition: all 0.4s ease-in-out;
 	
 	a {
 		color: white;
@@ -87,7 +87,7 @@
 .pti {
 	position: relative;
 	background: $primary-blue;
-	transition: background 0.6s;
+	transition: background 300ms;
 	
 	> .container {
 		padding-top: 0;
@@ -100,8 +100,8 @@
 	padding: 0;
 }
 .navbar-brand .logo{
-	margin: 20px 0;
-	transition: margin 0.6s;
+	transform: scale(1) translateY(20px);
+	transition: transform 300ms;
 }
 
 .container > .navbar-header {
@@ -111,11 +111,6 @@
 .navbar-brand {
 	a {
 		display: block;
-	}
-	
-	.logo {
-		transform: scale(1);
-		transition: transform 0.6s;
 	}
 }
 
@@ -151,14 +146,14 @@
 }
 
 .navbar-nav > li > a {
-	background-color: $primary-blue;
+	background-color: transparent;
 	font-weight: 400;
 	color: white;
 	padding: 20px 27px 20px 10px;
 	position: relative;
 	line-height: 50px;
 	font-family: $font-heading;
-	transition: all .6s;
+	transition: padding 300ms, background 300ms;
 }
 
 .navbar-nav > li:last-child a{
@@ -210,7 +205,6 @@
 	background: none;
 	min-width: 180px;
 	transform: translateY(-100%);
-	transition: all 0.6s;
 	
 	> ul {
 		list-style: none;
@@ -287,6 +281,7 @@
 		padding: 0 20px;
 		z-index: -1;
 		border-radius: 0;
+		transition: top 300ms, transform 300ms;
 		
 		ul {
 			margin-top: 0;
@@ -309,8 +304,7 @@
 	
 	.navbar-brand {
 		.logo {
-			margin: 2px;
-			transform: scale(0.8);
+			transform: scale(0.8) translateY(2px);
 		}
 	}
 	
@@ -325,17 +319,18 @@
 		top: 20px;
 	}
 	.get-quote {
-		margin: 8px 0 0 80px;
+		transform: translateY(8px);
 	}
 	.search {
-		margin-top: 2px;
+		transform: translateY(2px);
 	}
 }
 
 /* Get a Quote */
 .get-quote {
-	margin: 26px 0 0 80px;
-	transition: margin 0.6s;
+	margin: 0 0 0 80px;
+	transform: translateY(26px);
+	transition: transform 300ms;
 	
 	button {
 		opacity: 1;
@@ -348,9 +343,9 @@
 
 /* Search */
 .search {
-	margin-top: 20px;
+	transform: translateY(20px);
 	width: 43px;
-	transition: margin 0.6s;
+	transition: transform 300ms;
 	
 	i {
 		color: white;
@@ -382,7 +377,7 @@
 		border-bottom-left-radius: 9px;
 		background-color: darken($brand-white, 5%);
 		border: 2px solid lighten($brand-grey, 13%);
-		transition: all 0.3s;
+		transition: background 300ms, border 300ms;
 		
 		&:focus {
 			background-color: white;

@@ -5,6 +5,19 @@ $screen-md: 992px;
 $screen-sm: 768px; //nav collapse breakpoint
 $screen-xs: 480px; 
 
+/* 1800 and above */
+@media (min-width: 1800px) {
+	.main-content {
+		float: none !important;
+		margin: auto;
+		width: 1300px
+	}
+	.sidebar-wrapper {
+		left: 30%;
+		left: calc(50% - 850px);
+	}
+}
+
 /* 1600 and above */
 @media (min-width: 1600px) {
 	.constrain {

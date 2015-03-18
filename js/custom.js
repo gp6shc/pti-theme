@@ -242,6 +242,10 @@ $(document).ready(function() {
 	// makes sure the layout is right after page load, not just after scrolling
 	updateLayout();
 	updateHeights();
+	
+	$(window).load(function() {
+		updateHeights(); //recalculate heights after images have loaded 
+	});
 			
 });
 	

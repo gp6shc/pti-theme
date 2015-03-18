@@ -87,7 +87,7 @@
 .pti {
 	position: relative;
 	background: $primary-blue;
-	transition: background 300ms;
+	transition: transform 300ms;
 	
 	> .container {
 		padding-top: 0;
@@ -291,15 +291,13 @@
 	
 }
 .header-fixed {
-	box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
+	.pti {
+		box-shadow: 0 3px 3px -3px rgba(0, 0, 0, 0.2);
+	}
 	
 	.ts-mainnav .container{
 		padding-top: 10px;
 		padding-bottom: 10px;
-	}
-	
-	.navbar {
-		background: $primary-blue;
 	}
 	
 	.navbar-brand {

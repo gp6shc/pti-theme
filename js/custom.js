@@ -370,11 +370,16 @@ $(document).ready(function() {
     })
 	.on( "closed.mm", function() { //reset when closed
 		document.ontouchmove = function(){ return true; };
+		$("#header").removeAttr('style');
     });
     
     $('#mmenu-hamburger').on('touchstart click', function(e) {
 	    e.preventDefault();
-	    $("#mobile-nav").trigger("open.mm");
+		$('.main-content').removeClass("open");
+	    setTimeout(function() {
+			$("#header").attr('style', 'position:absolute;top:' + $("#header").offset().top + 'px');
+		    $("#mobile-nav").trigger("open.mm");    
+		}, 200);
     });
 });
 

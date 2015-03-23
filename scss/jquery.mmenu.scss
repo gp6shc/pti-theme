@@ -265,16 +265,6 @@ html.mm-blocking #mm-blocker {
   min-width: 140px;
   max-width: 440px; }
 
-html.mm-opening .mm-slideout {
-  transform: translate(80%, 0); }
-
-@media all and (max-width: 175px) {
-  html.mm-opening .mm-slideout {
-    transform: translate(140px, 0); } }
-@media all and (min-width: 550px) {
-  html.mm-opening .mm-slideout {
-    transform: translate(440px, 0); } }
-
 /*
 	jQuery.mmenu position extension CSS
 */

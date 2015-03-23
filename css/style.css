@@ -7502,6 +7502,10 @@ form .input-group .form-control:last-child {
 .page-hero {
   margin-top: 140px;
   background-color: #EAEBEC; }
+  .page-hero img {
+    padding-top: 50px;
+    margin-top: -50px;
+    background: #EAEBEC; }
   .page-hero + .row {
     margin-top: -25px;
     position: relative; }
@@ -7560,8 +7564,8 @@ form .input-group .form-control:last-child {
   -webkit-transform: translateY(140px);
       -ms-transform: translateY(140px);
           transform: translateY(140px);
-  -webkit-transition: all 0.6s;
-          transition: all 0.6s; }
+  -webkit-transition: -webkit-transform 0.6s;
+          transition: transform 0.6s; }
   .sidebar-wrapper.affix {
     -webkit-transform: translateY(54px);
         -ms-transform: translateY(54px);
@@ -8705,23 +8709,6 @@ html.mm-opened #mm-blocker, html.mm-blocking #mm-blocker {
   min-width: 140px;
   max-width: 440px; }
 
-html.mm-opening .mm-slideout {
-  -webkit-transform: translate(80%, 0);
-      -ms-transform: translate(80%, 0);
-          transform: translate(80%, 0); }
-
-@media all and (max-width: 175px) {
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(140px, 0);
-        -ms-transform: translate(140px, 0);
-            transform: translate(140px, 0); } }
-
-@media all and (min-width: 550px) {
-  html.mm-opening .mm-slideout {
-    -webkit-transform: translate(440px, 0);
-        -ms-transform: translate(440px, 0);
-            transform: translate(440px, 0); } }
-
 /*
 	jQuery.mmenu position extension CSS
 */
@@ -9180,10 +9167,12 @@ html.mm-right.mm-opening .mm-slideout {
     height: 100px;
     -webkit-transition: -webkit-transform 300ms;
             transition: transform 300ms; }
-  .header-fixed .navbar {
-    -webkit-transform: translateY(-40px);
-        -ms-transform: translateY(-40px);
-            transform: translateY(-40px); }
+  .header-fixed {
+    height: 60px; }
+    .header-fixed .navbar {
+      -webkit-transform: translateY(-40px);
+          -ms-transform: translateY(-40px);
+              transform: translateY(-40px); }
   .two-panels {
     border-top: 4px solid #0780E2; }
     .two-panels > div {
@@ -9260,7 +9249,13 @@ html.mm-right.mm-opening .mm-slideout {
     .col-xxs-12 img {
       width: 100%; }
   .page-intro {
-    padding: 140px 15px 25px 15px; } }
+    padding: 140px 15px 25px 15px; }
+  .sidebar-wrapper {
+    width: 80%; }
+  .main-content.open {
+    -webkit-transform: translateX(80%);
+        -ms-transform: translateX(80%);
+            transform: translateX(80%); } }
 
 /* Below 350px */
 @media (max-width: 350px) {

@@ -142,7 +142,6 @@ $(document).ready(function() {
 	var updateLayout = function() {
 		// reset the tick so we can capture the next scroll
 		ticking = false;
-		
 		// hides/shows the top most bar of info
 		toggleTopBar();
 		
@@ -189,15 +188,15 @@ $(document).ready(function() {
 	$(window).scroll( scrollY );
 	
 	
-	
-	
 	function toggleTopBar() {
+	
+	
 		if ( lastKnownScrollY >= 70 ) {
 			$('.top-bar').slideUp(300);
-			$("#header").addClass("header-fixed");	
+			setTimeout($("#header").addClass("header-fixed"), 300);	
 		}else{
 			$('.top-bar').slideDown(300);
-			$("#header").removeClass("header-fixed");
+			setTimeout($("#header").removeClass("header-fixed"), 300);
 		}
 	}
 	
@@ -213,7 +212,7 @@ $(document).ready(function() {
 	}
 	
 	function sidebarIsNotTaller() {
-		if (interiorHeight <= (sidebarHeight + 25) ) { // if the sidebar (+ fudge) is longer than the page content
+		if (interiorHeight <= (sidebarHeight) ) { // if the sidebar is longer than the page content
 			interiorSidebar.addClass("no-affix");
 			return false;
 		}else{

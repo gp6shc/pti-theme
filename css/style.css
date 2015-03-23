@@ -6515,12 +6515,16 @@ form .input-group .form-control:last-child {
 
 /* Navbar: main navigation below top-bar
 ================================================== */
-.pti {
+.navbar {
   position: relative;
   background: #005CBA;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+  min-width: 320px;
   -webkit-transition: -webkit-transform 300ms;
           transition: transform 300ms; }
-  .pti > .container {
+  .navbar > .container {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #005CBA; }
@@ -6540,12 +6544,6 @@ form .input-group .form-control:last-child {
 
 .navbar-brand a {
   display: block; }
-
-.navbar {
-  border-radius: 0;
-  border: 0;
-  margin-bottom: 0;
-  min-width: 320px; }
 
 .navbar-right {
   padding-right: 0; }
@@ -6615,7 +6613,8 @@ form .input-group .form-control:last-child {
   min-width: 180px;
   -webkit-transform: translateY(-100%);
       -ms-transform: translateY(-100%);
-          transform: translateY(-100%); }
+          transform: translateY(-100%);
+  opacity: 0; }
   .dropdown-menu > ul {
     list-style: none;
     padding: 0;
@@ -6633,9 +6632,14 @@ form .input-group .form-control:last-child {
     padding: 15px 0; }
 
 .open > .dropdown-menu {
+  opacity: 1;
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
-          transform: translateY(0); }
+          transform: translateY(0);
+  -webkit-transition: top 300ms, -webkit-transform 300ms, opacity 0s;
+          transition: top 300ms, transform 300ms, opacity 0s;
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important; }
   .open > .dropdown-menu ul {
     box-shadow: 0 3px .1px rgba(0, 0, 0, 0.15); }
 
@@ -6668,8 +6672,8 @@ form .input-group .form-control:last-child {
     padding: 0 20px;
     z-index: -1;
     border-radius: 0;
-    -webkit-transition: top 300ms, -webkit-transform 300ms;
-            transition: top 300ms, transform 300ms; }
+    -webkit-transition: top 300ms, -webkit-transform 300ms, opacity 0s 300ms;
+            transition: top 300ms, transform 300ms, opacity 0s 300ms; }
     .nav > li.megamenu .dropdown-menu ul {
       margin-top: 0; }
 

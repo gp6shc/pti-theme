@@ -84,9 +84,13 @@
 
 /* Navbar: main navigation below top-bar
 ================================================== */
-.pti {
+.navbar {
 	position: relative;
 	background: $primary-blue;
+	border-radius: 0;
+	border: 0;
+	margin-bottom: 0;
+	min-width: 320px;
 	transition: transform 300ms;
 	
 	> .container {
@@ -112,13 +116,6 @@
 	a {
 		display: block;
 	}
-}
-
-.navbar{
-	border-radius: 0;
-	border: 0;
-	margin-bottom: 0;
-	min-width: 320px;
 }
 
 .navbar-right{
@@ -205,6 +202,7 @@
 	background: none;
 	min-width: 180px;
 	transform: translateY(-100%);
+	opacity: 0;
 	
 	> ul {
 		list-style: none;
@@ -229,7 +227,10 @@
 }
 
 .open > .dropdown-menu {
+	opacity: 1;
 	transform: translateY(0);
+	transition: top 300ms, transform 300ms, opacity 0s;
+	transition-delay: 0s !important;
 	
 	ul {
 		box-shadow: 0 3px .1px rgba(0,0,0,0.15);
@@ -281,7 +282,7 @@
 		padding: 0 20px;
 		z-index: -1;
 		border-radius: 0;
-		transition: top 300ms, transform 300ms;
+		transition: top 300ms, transform 300ms, opacity 0s 300ms;
 		
 		ul {
 			margin-top: 0;

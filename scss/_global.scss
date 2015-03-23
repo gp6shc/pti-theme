@@ -80,6 +80,7 @@ h1{
 h2{
     font-size: 2.375em;
     font-weight: 100;
+    color: $primary-blue;
 }
 h3{
     font-size: 1.5em;
@@ -289,7 +290,7 @@ input {
 }
 
 .rounded {
-	border-radius: 5px;
+	border-radius: 9px;
 }
 
 /* Pull/Blockquote for interior pages */

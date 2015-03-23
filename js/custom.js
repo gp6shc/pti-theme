@@ -193,10 +193,14 @@ $(document).ready(function() {
 	
 		if ( lastKnownScrollY >= 70 ) {
 			$('.top-bar').slideUp(300);
-			setTimeout($("#header").addClass("header-fixed"), 300);	
+			setTimeout( function() {
+				$("#header").addClass("header-fixed");
+			}, 300);	
 		}else{
 			$('.top-bar').slideDown(300);
-			setTimeout($("#header").removeClass("header-fixed"), 300);
+			setTimeout( function() {
+				$("#header").removeClass("header-fixed");
+			}, 300);
 		}
 	}
 	

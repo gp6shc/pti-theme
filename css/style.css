@@ -6225,7 +6225,8 @@ h1 {
 
 h2 {
   font-size: 2.375em;
-  font-weight: 100; }
+  font-weight: 100;
+  color: #005CBA; }
 
 h3 {
   font-size: 1.5em;
@@ -6409,7 +6410,7 @@ input {
   border-radius: 0; }
 
 .rounded {
-  border-radius: 5px; }
+  border-radius: 9px; }
 
 /* Pull/Blockquote for interior pages */
 .pullquote, blockquote {
@@ -7641,6 +7642,18 @@ form .input-group .form-control:last-child {
   text-transform: uppercase; }
 .extra h6 {
   text-transform: uppercase; }
+.extra button {
+  width: 100%;
+  font-size: 1.25em; }
+.extra .get-a-quote .form-group, .extra .get-a-quote button {
+  display: block;
+  width: 100%;
+  margin: 10px 0; }
+.extra .get-a-quote .input-group {
+  width: 100%; }
+.extra .get-a-quote input.form-control, .extra .get-a-quote button {
+  width: 100%;
+  border-radius: 9px !important; }
 
 /* Specific Interior Page Styles
 ================================================== */
@@ -7649,6 +7662,8 @@ form .input-group .form-control:last-child {
 #page-body {
   padding: 0 60px 60px 60px;
   background: white; }
+  #page-body h2 + p, #page-body h4 + p {
+    margin-top: 25px; }
 
 #page-content-wrapper {
   position: relative;

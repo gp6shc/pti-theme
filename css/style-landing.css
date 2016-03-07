@@ -7846,6 +7846,9 @@ section.team h4 {
     .hero {
       height: auto;
       background: #00AA71; } }
+  @media (max-width: 768px) {
+    .hero .title {
+      font-size: 1.3em; } }
   .hero .policyholder {
     padding-top: 50px; }
     @media (max-width: 768px) {

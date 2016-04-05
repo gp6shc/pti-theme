@@ -38,12 +38,29 @@ $text-blue-dark: darken($primary-blue, 18%);
 
 /* styles (added below for landing page)
 -------------------------------------------------------------- */
+// Landing typography (if reset needed)
+//h1 { font-size: 2.75em; }
+//h2 { font-size: 2.375em;}
+//h3 { font-size: 1.5em; }
+//h4 { font-size: 1.125em; }
+//h5 { font-size: 1em; }
+//h6 { font-size: 0.875em; }
+
+
 // Helper classes
+// Colors
+.text-white { color: white; }
+.text-primary { color: $primary-blue; }
+
 .bg-primary-blue { background-color: $primary-blue; }
 .bg-secondary-blue { background-color: $secondary-blue; }
 .bg-white { background-color: white; }
 
-.pad-top { padding-top: 30px; }
+// Alignments
+.pad-top-sm { padding-top: 20px; }
+.pad-top-md { padding-top: 30px; }
+.pad-top-lg { padding-top: 40px; }
+
 .align-right {
 	@media (min-width: 768px) { text-align: right; }
 }
@@ -51,7 +68,14 @@ $text-blue-dark: darken($primary-blue, 18%);
 	@media (max-width: 768px) { float: none!important; } //needed for override
 }
 
-// Header
+// Displays
+.boxed {
+	background-color: white;
+	color: $brand-grey;
+	padding: 20px 5px;
+	border-radius: 20px;
+	text-align: center;
+}
 .flex-wrapper {
 	display: flex;
 	flex-flow: row wrap;
@@ -63,6 +87,19 @@ $text-blue-dark: darken($primary-blue, 18%);
 		}
 	}
 }
+
+// Sitefinity Overrides
+.sfPublicWrapper { // needed for SF wrapper reset
+	margin: auto;
+	padding: inherit;
+	width: auto;
+	background-color: inherit;
+}
+.sfContentBlock h3 { 
+	border-bottom: none;
+}
+
+// Header
 .header {
 	flex: 1 100%;
 	max-width: 1060px;
@@ -101,29 +138,43 @@ $text-blue-dark: darken($primary-blue, 18%);
 // Section: Hero
 .hero {
 	position: relative;
-	width: 100%;
-	height: 600px;
-	background: url('../images/bg-diana.jpg');
-	background-repeat: no-repeat;
-	background-position: 50% center;
-	background-size: cover;
-	@media (max-width: 768px) {
-		height: auto;
-		background: $brand-green;
+    width: 100%;
+    
+	&.v1 {
+		height: 600px;
+		background: url('../images/bg-diana.jpg');
+		/* IN SITEFINITY USE THE FOLLOWING: 
+		background: url("../Images/PTI/bg-diana.jpg");
+		*/
+		background-repeat: no-repeat;
+		background-position: 50% center;
+		background-size: cover;
+		@media (max-width: 768px) {
+			height: auto;
+			background: $brand-green;
+		}
 	}
+	&.v2 {
+		background-color: $brand-green;
+	}
+	
 	
 	.title {
 		@media (max-width: 768px) {
 			font-size: 1.3em;
+			color: $brand-grey;
+		}
+	}
+	
+	.font-xl {
+		font-size: 3.5em;
+		font-weight: 700;
+		@media (max-width: 768px) {
+		  font-size: 2.125em;
 		}
 	}
 	
 	.policyholder {
-		padding-top: 50px;
-		
-		@media (max-width: 768px) {
-			display: none;
-		}
 	}
 	
 	.get-quote-bg,
@@ -135,15 +186,13 @@ $text-blue-dark: darken($primary-blue, 18%);
 			padding: 20px 5px;
 			border-radius: 20px;
 			text-align: center;
-	}
-	.get-a-quote input.form-control {
-		@media (max-width: 768px) {
-			border-color: $brand-green;
 		}
+	.get-a-quote input.form-control {
+		border-color: $brand-green;
 	}
 	
 		input {
-		    height: 42px;
+		    //height: 42px; SF bug, needed for local only
 		}
 	
 	}

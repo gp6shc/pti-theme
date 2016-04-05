@@ -427,83 +427,33 @@
 		</nav>
 	</header> <!--/ Mobile Navigation -->
 
-	<!-- SECTION 1: IMAGE CYCLE, SIMPLY A BETTER WAY -->
-	<section class="image-cycle top-gap">
-	    <div class="row">
-	    	<div class="col-md-12 no-padding">
-	    	     <!-- carousel -->
-		        <div id="transition-timer-carousel-opaque" class="carousel slide transition-timer-carousel" data-ride="carousel">
-					
-				<!-- Wrapper for slides -->
-					<div class="carousel-inner">
-						<!-- Slide 1 -->
-						<div id="first-slide" class="item main">
-							<img src="images/pti-logo-color.svg" />
-		                    <div class="caption">
-								<h1>Simply a Better Way</h1>
-							</div>
-		                </div>
-		                <!-- Slide 2 -->
-		                <div class="item brandy">
-		                    <img src="images/Brandy.jpg" />
-		                    <div class="quotable">
-			                    <p>"I respect how much people's homes mean to them."</p>
-			                    <h4>Brandy<br/><span>Customer Service Representative</span></h4>
-		                    </div>
-						</div>
-		                <!-- Slide 3 -->
-		                <div class="item bryan">
-		                    <img src="images/Bryan.jpg" />
-		                    <div class="quotable">
-			                    <p>"It's emotional for people after a loss, they just want their lives back."</p>
-			                    <h4>Bryan<br/><span>Senior Claims Adjustor</span></h4>
-		                    </div>
-						</div>
-						<!-- Slide 4 -->
-						<div class="item item-right	connie">
-		                    <img src="images/Connie.jpg" />
-		                    <div class="quotable">
-			                    <p>"My job is to make insurance simpler for people so they can make good choices."</p>
-			                    <h4>Connie<br/><span>Sales Representative</span></h4>
-		                    </div>
-		                </div>
-		                <!-- Slide 5 -->
-		                <div class="item ruben">
-		                    <img src="images/Ruben.jpg" />
-		                    <div class="quotable">
-			                    <p>"When your home is damaged, every minute feels like an hour."</p>
-			                    <h4>Ruben<br/><span>Rapid Response Team</span></h4>
-		                    </div>
-						</div>
-		                <!-- Slide 6 -->
-		                <div class="item sabrina">
-		                    <img src="images/Sabrina.jpg" />
-		                    <div class="quotable">
-			                    <p>"I get how important it is for insurance to be affordable."</p>
-			                    <h4>Sabrina<br/><span>Sales Representative</span></h4>
-		                    </div>
-						</div>
-						<div class="item main">
-							<img src="images/pti-logo-color.svg" />
-		                    <div class="caption">
-								<h1>Simply a Better Way</h1>
-							</div>
-							<div class="caption caption-delayed">
-								<h1>To Insure Your Florida Home</h1>
-							</div>
-		                </div>
-		            </div><!--/ .carousel-inner end -->
-		
-					<!-- Controls -->
-					<a class="left carousel-control" href="#transition-timer-carousel" data-slide="prev">
-						<i class="fa fa-arrow-circle-left fa-2x l"></i>
-					</a>
-					<a class="right carousel-control" href="#transition-timer-carousel" data-slide="next">
-						<i class="fa fa-arrow-circle-right fa-2x r"></i>
-					</a>
-	    	</div><!--/ .col -->
-	    </div><!--/ .row -->
+	<!-- SECTION 1: VIDEO -->
+	<section class="video-wrapper top-gap">
+      <div class="video">
+	    <div id="player"></div>
+      </div><!--/.video-->
+      <div class="overlay"></div>
+      <div class="title">
+        <h1>A Really Cool Title</h1>
+        <p>Some supporting text.</p>
+        <a class="btn btn-primary md" id="play-video" data-toggle="modal" data-target="#play-full"><i class="fa fa-expand"></i> Watch Video</a>
+      </div><!--/.title-->
 	</section>
+	
+	<!-- #play-full Modal -->
+	<div class="modal fade play-full" id="play-full" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+	    		<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Video Title</h4>
+				</div>
+				<div class="modal-body">
+					<iframe id="home-iframe" width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+				</div>
+	    	</div>
+		</div>
+	</div>
 	
 	<!-- SECTION 2: QUOTE -->
 	<section id="quote" class="quote content text-center">
@@ -989,6 +939,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script type="text/javascript" src="js/min/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/min/custom.min.js"></script>
+	<script type="text/javascript" src="js/video-home.js"></script>
 	<script type="text/javascript" src="js/min/jquery.mmenu.min.js"></script>
 	<!--[if IE]>
 		<script type="text/javascript" src="js/min/ie.min.js"></script>

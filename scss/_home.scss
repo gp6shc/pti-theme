@@ -202,6 +202,75 @@
 }
 
 
+/* Section 1: Video Intro
+================================================== */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    opacity: 1;
+    overflow: hidden;
+    
+    .video {
+        padding-top: 56.25%; // if youtube video only
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    
+    #player { //before video is loaded
+	    //background: url('') 0 0 no-repeat;
+	    //background-size: cover;
+    }
+    
+    iframe {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+    }
+  
+    .overlay {
+	    background-color: $brand-black;
+	    opacity: 0.5;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+    }  
+  
+    .title {
+	    position: absolute;
+	    width: 100%;
+	    top: 70%;
+	    left: 50%;
+	    color: white;
+	    text-align: center;
+	    transform: translate(-50%, -50%);
+    }
+
+}
+#play-full {} //video triggered with ID
+
+.play-full { //video modal class for styles to this modal only
+	.modal-content {
+		margin-top: 26.5%;
+	}
+}
+  
+
+
+
+
+
+
+
+
+
 /* Section 2: .quote
 ================================================== */
 .quote {

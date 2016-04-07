@@ -313,6 +313,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/vid-overlay.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2804,
+		"inputAbbreviatedPath": "\/images\/vid-overlay.png",
+		"outputAbbreviatedPath": "\/images\/vid-overlay.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/images\/vid-poster.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34740,
+		"inputAbbreviatedPath": "\/images\/vid-poster.jpg",
+		"outputAbbreviatedPath": "\/images\/vid-poster.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/warehouse.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

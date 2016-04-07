@@ -204,25 +204,39 @@
 
 /* Section 1: Video Intro
 ================================================== */
-.video-wrapper {
+.video-wrap {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 700px;
     background-color: white;
     opacity: 1;
     overflow: hidden;
+    @media (min-width: 1100px) { height: 600px; }
+    @media (min-width: 1400px) { height: 700px; }
+    @media (min-width: 1600px) { height: 800px; }
     
+    @media (max-width: 1099px) { height: 550px; }
+    @media (max-width: 999px) { height: 500px; }
+    @media (max-width: 899px) { height: 450px; }
+    @media (max-width: 799px) { height: 400px; }
+    @media (max-width: 699px) { height: 350px; }
+    @media (max-width: 599px) { height: 300px; }
+    @media (max-width: 540px) { height: 250px; }
+    @media (max-width: 480px) { height: 180px; }
+
     .video {
         padding-top: 56.25%; // if youtube video only
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        background: url( '../images/vid-poster.jpg' ) center center no-repeat;
+	    background-size: cover;
     }
     
     #player { //before video is loaded
-	    //background: url('') 0 0 no-repeat;
-	    //background-size: cover;
+	    background: black;
+	    @media (max-width: 480px) { display: none; }
     }
     
     iframe {
@@ -234,7 +248,8 @@
     }
   
     .overlay {
-	    background-color: $brand-black;
+	    background: url('../images/vid-overlay.png') 0 0 repeat;
+	    background-attachment: scroll;
 	    opacity: 0.5;
 	    position: absolute;
 	    top: 0;
@@ -249,8 +264,13 @@
 	    top: 70%;
 	    left: 50%;
 	    color: white;
+	    font-size: 100%;
 	    text-align: center;
 	    transform: translate(-50%, -50%);
+	    @media (max-width: 899px) { font-size: 90%; }
+        @media (max-width: 768px) { font-size: 80%; }
+        @media (max-width: 550px) { font-size: 60%; }
+        @media (max-width: 480px) { font-size: 55%; top: 50%; }
     }
 
 }
@@ -258,7 +278,7 @@
 
 .play-full { //video modal class for styles to this modal only
 	.modal-content {
-		margin-top: 26.5%;
+		margin-top: 185px;
 	}
 }
   

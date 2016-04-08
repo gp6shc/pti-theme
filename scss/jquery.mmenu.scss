@@ -204,7 +204,7 @@ html.mm-opened .mm-page {
     border-color: rgba(0, 0, 0, 0.15); }
   .mm-menu .mm-list > li > a.mm-subclose {
   background: $brand-black;
-  color: $brand-white; 
+  color: $brand-white;
   	&:hover {
 	  background-color: $brand-black; } }
   .mm-menu .mm-list > li > a.mm-subopen:after, .mm-menu .mm-list > li > a.mm-subclose:before {
